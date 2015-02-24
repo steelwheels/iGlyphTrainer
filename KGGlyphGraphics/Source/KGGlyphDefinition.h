@@ -5,4 +5,4 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#define KGGLYPH_VERTEX_NUM		6
+#define KGGLYPH_VERTEX_NUM		11
