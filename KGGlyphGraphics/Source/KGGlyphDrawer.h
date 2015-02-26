@@ -8,16 +8,19 @@
 #import <KCGraphicsView/KCGraphicsView.h>
 #import "KGGlyphDefinition.h"
 
-struct KGGlyphEdge {
-	const struct CNCircle *	fromVertex ;
-	const struct CNCircle * toVertex ;
+struct KGGlyphState {
 	BOOL			isActive ;
 } ;
 
 struct KGGlyphInfo {
 	CGFloat			vertexSize ;
 	struct CNCircle		vertex[KGGLYPH_VERTEX_NUM] ;
-	struct KGGlyphEdge	edge[KGGLYPH_EDGE_NUM] ;
+	struct KGGlyphState	edge[KGGLYPH_VERTEX_NUM][KGGLYPH_VERTEX_NUM] ;
+} ;
+
+struct KGGlyphEdge {
+	uint8_t			fromVertex ;
+	uint8_t			toVertex ;
 } ;
 
 @interface KGGlyphDrawer : KCGraphicsDrawer <KCGraphicsDrawing>
@@ -28,5 +31,8 @@ struct KGGlyphInfo {
 }
 
 - (instancetype) init ;
+
+- (void) setActiveEdges: (const struct KGGlyphEdge *) edges withCount: (unsigned int) count ;
+- (void) clearActiveEdges ;
 
 @end
