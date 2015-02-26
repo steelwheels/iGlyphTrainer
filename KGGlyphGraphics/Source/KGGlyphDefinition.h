@@ -6,3 +6,4 @@
  */
 
 #define KGGLYPH_VERTEX_NUM		11
+#define KGGLYPH_EDGE_NUM		14
