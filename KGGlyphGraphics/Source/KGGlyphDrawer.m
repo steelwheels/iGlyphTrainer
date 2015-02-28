@@ -9,11 +9,9 @@
 #import <CoconutGraphics/CoconutGraphics.h>
 
 static void
-clearEdges(struct KGGlyphInfo * ginfo) ;
-static void
 updateLayout(struct KGGlyphInfo * ginfo, const CGSize * size) ;
 static void
-drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo) ;
+drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke) ;
 
 @implementation KGGlyphDrawer
 
@@ -22,7 +20,6 @@ drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphIn
 	if((self = [super init]) != nil){
 		isInitialized = NO ;
 		previousSize = CGSizeMake(0.0, 0.0) ;
-		clearEdges(&glyphInfo) ;
 	}
 	return self ;
 }
@@ -39,26 +36,12 @@ drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphIn
 		updateLayout(&glyphInfo, &(boundsrect.size)) ;
 		previousSize = boundsrect.size ;
 	}
-	drawContent(context, &(boundsrect.origin), &glyphInfo) ;
+	drawContent(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
 }
 
-- (void) setActiveEdges: (const struct KGGlyphEdge *) edges withCount: (unsigned int) count
+- (void) setStroke: (const struct KGGlyphStroke *) stroke
 {
-	const struct KGGlyphEdge *	endedge = edges + count ;
-	for( ; edges < endedge ; edges++){
-		unsigned int frompt = edges->fromVertex ;
-		unsigned int topt   = edges->toVertex ;
-		if(frompt < KGGLYPH_VERTEX_NUM && topt < KGGLYPH_VERTEX_NUM){
-			glyphInfo.edge[frompt][topt].isActive = YES ;
-		} else {
-			NSLog(@"Invalid edge index") ;
-		}
-	}
-}
-
-- (void) clearActiveEdges
-{
-	clearEdges(&glyphInfo) ;
+	glyphStroke = *stroke ;
 }
 
 @end
@@ -67,17 +50,6 @@ static inline CGFloat
 min(CGFloat s0, CGFloat s1)
 {
 	return s0 <= s1 ? s0 : s1 ;
-}
-
-static void
-clearEdges(struct KGGlyphInfo * ginfo)
-{
-	unsigned i, j ;
-	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
-		for(j=0 ; j<KGGLYPH_VERTEX_NUM ; j++){
-			(ginfo->edge[i][j]).isActive = NO ;
-		}
-	}
 }
 
 static inline struct CNCircle
@@ -143,36 +115,32 @@ drawVertex(CGContextRef context, const CGPoint * origin, const struct CNCircle *
 }
 
 static void
-drawEdges(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo)
+drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke)
 {
-	BOOL		haspoints = NO ;
-	unsigned int	i, j ;
-	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
-		for(j=0 ; j<KGGLYPH_VERTEX_NUM ; j++){
-			if((ginfo->edge[i][j]).isActive){
-				const struct CNCircle * fromvertex = &(ginfo->vertex[i]) ;
-				const struct CNCircle * tovertex   = &(ginfo->vertex[j]) ;
-				CGPoint points[2] ;
-				points[0] = CNAddPoints(&(fromvertex->center), origin) ;
-				points[1] = CNAddPoints(&(tovertex->center), origin) ;
-				CGContextAddLines(context, points, 2) ;
-				haspoints = YES ;
-			}
-		}
+	unsigned int count = stroke->edgeCount ;
+	unsigned int i ;
+	for(i=0 ; i<count ; i++){
+		const struct KGGlyphEdge * edge = &(stroke->edgeArray[i]) ;
+		const struct CNCircle * fromvertex = &(ginfo->vertex[edge->fromVertex]) ;
+		const struct CNCircle * tovertex   = &(ginfo->vertex[edge->toVertex]) ;
+		CGPoint points[2] ;
+		points[0] = CNAddPoints(&(fromvertex->center), origin) ;
+		points[1] = CNAddPoints(&(tovertex->center), origin) ;
+		CGContextAddLines(context, points, 2) ;
 	}
-	if(haspoints){
+	if(count > 0){
 		CGContextStrokePath(context) ;
 	}
 }
 
 static void
-drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo)
+drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke)
 {
 	unsigned int i ;
 	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
 		drawVertex(context, origin, &(ginfo->vertex[i])) ;
 	}
-	drawEdges(context, origin, ginfo) ;
+	drawStroke(context, origin, ginfo, stroke) ;
 }
 
 

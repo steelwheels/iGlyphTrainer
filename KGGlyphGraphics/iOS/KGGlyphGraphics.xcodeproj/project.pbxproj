@@ -63,7 +63,6 @@
 		055255D81A99F81A0021E915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		055255DA1A99F81A0021E915 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		055255DD1A99F81A0021E915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		05EDC2C01A9B87D6005DB6C8 /* KGGlyphDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphDefinition.h; sourceTree = "<group>"; };
 		05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphDrawer.h; sourceTree = "<group>"; };
 		05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphDrawer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */,
-				05EDC2C01A9B87D6005DB6C8 /* KGGlyphDefinition.h */,
 				05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */,
 				05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */,
 			);
@@ -402,6 +400,7 @@
 					"-Wall",
 				);
 				OTHER_LDFLAGS = (
+					"-lKGGlyphData",
 					"-lCoconutGraphics",
 					"-ObjC",
 				);
@@ -425,6 +424,7 @@
 					"-Wall",
 				);
 				OTHER_LDFLAGS = (
+					"-lKGGlyphData",
 					"-lCoconutGraphics",
 					"-ObjC",
 				);

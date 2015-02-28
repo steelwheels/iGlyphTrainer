@@ -6,6 +6,5 @@
  */
 
 #import <KCGraphicsView/KCGraphicsView.h>
-#import "KGGlyphDefinition.h"
 #import "KGGlyphDrawer.h"
 
