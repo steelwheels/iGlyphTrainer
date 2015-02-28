@@ -7,5 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "KGGlyphKind.h"
+#import "KGGlyphModel.h"
 #import "KGGlyphStroke.h"
 

@@ -8,11 +8,11 @@
 #import "KGGlyphStroke.h"
 
 static struct KGGlyphStroke
-makeStroke(unsigned int count, const uint8_t * strokes)
+makeStroke(unsigned int count, const struct KGGlyphEdge * edges)
 {
 	struct KGGlyphStroke result = {
-		.strokeCount	= count,
-		.strokeArray	= strokes
+		.edgeCount	= count,
+		.edgeArray	= edges
 	} ;
 	return result ;
 }
@@ -20,24 +20,43 @@ makeStroke(unsigned int count, const uint8_t * strokes)
 struct KGGlyphStroke
 KGStrokeOfGlyph(KGGlyphKind kind)
 {
-#	define COUNT_OF_ARRAY(VAR)	(sizeof(VAR) / sizeof(uint8_t))
+#	define COUNT_OF_ARRAY(VAR)	(sizeof(VAR) / sizeof(struct KGGlyphEdge))
 	struct KGGlyphStroke result  ;
 	switch(kind){
 		case KGAbondonGlyph: {
-			static uint8_t	s_strokes[] = {3, 4, 9, 7, 10, 1} ;
-			result = makeStroke(COUNT_OF_ARRAY(s_strokes), s_strokes) ;
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 3,  4},
+				{ 4,  9},
+				{ 9,  7},
+				{ 7, 10},
+				{10,  1}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
 		case KGAdaptGlyph: {
-			static uint8_t	s_strokes[] = {5, 9, 7, 8} ;
-			result = makeStroke(COUNT_OF_ARRAY(s_strokes), s_strokes) ;
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 5,  9},
+				{ 9,  7},
+				{ 7,  8}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
 		case KGAdvanceGlyph: {
-			static uint8_t	s_strokes[] = {0, 6, 4} ;
-			result = makeStroke(COUNT_OF_ARRAY(s_strokes), s_strokes) ;
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 4,  6},
+				{ 6,  0}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
 		case KGAfterGlyph: {
-			static uint8_t	s_strokes[] = {1, 2, 8, 7, 10, 1} ;
-			result = makeStroke(COUNT_OF_ARRAY(s_strokes), s_strokes) ;
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 7, 10},
+				{10,  1},
+				{ 1,  2},
+				{ 2,  8},
+				{ 8,  7}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
 	}
 	return result ;

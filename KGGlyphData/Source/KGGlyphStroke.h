@@ -6,11 +6,7 @@
  */
 
 #import "KGGlyphKind.h"
-
-struct KGGlyphStroke {
-	unsigned int		strokeCount ;
-	const uint8_t *		strokeArray ;
-} ;
+#import "KGGlyphModel.h"
 
 struct KGGlyphStroke
 KGStrokeOfGlyph(KGGlyphKind kind) ;

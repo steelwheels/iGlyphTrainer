@@ -8,10 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0579142C1A9CD6E40087D704 /* KGGlyphData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0579142B1A9CD6E40087D704 /* KGGlyphData.h */; };
+		05A3E6F31AA09CBD007C7113 /* KGGlyphModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E6F21AA09CBD007C7113 /* KGGlyphModel.m */; };
+		05A3E6FA1AA0A27D007C7113 /* KGGlyphModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05A3E6F11AA09CBD007C7113 /* KGGlyphModel.h */; };
 		05BD04F81A9CD8230046DDF0 /* KGGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD04F71A9CD8230046DDF0 /* KGGlyphStroke.m */; };
 		05BD04F91A9CD8F20046DDF0 /* KGGlyphStroke.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05BD04F61A9CD8230046DDF0 /* KGGlyphStroke.h */; };
 		05BD04FB1A9CD95B0046DDF0 /* KGGlyphKind.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05BD04FA1A9CD94D0046DDF0 /* KGGlyphKind.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05A3E6F81AA0A23D007C7113 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057914201A9CD6E40087D704 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 057914271A9CD6E40087D704;
+			remoteInfo = KGGlyphData;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		057914261A9CD6E40087D704 /* CopyFiles */ = {
@@ -20,6 +32,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05A3E6FA1AA0A27D007C7113 /* KGGlyphModel.h in CopyFiles */,
 				05BD04FB1A9CD95B0046DDF0 /* KGGlyphKind.h in CopyFiles */,
 				05BD04F91A9CD8F20046DDF0 /* KGGlyphStroke.h in CopyFiles */,
 				0579142C1A9CD6E40087D704 /* KGGlyphData.h in CopyFiles */,
@@ -31,6 +44,8 @@
 /* Begin PBXFileReference section */
 		057914281A9CD6E40087D704 /* libKGGlyphData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGlyphData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0579142B1A9CD6E40087D704 /* KGGlyphData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphData.h; sourceTree = "<group>"; };
+		05A3E6F11AA09CBD007C7113 /* KGGlyphModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphModel.h; sourceTree = "<group>"; };
+		05A3E6F21AA09CBD007C7113 /* KGGlyphModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphModel.m; sourceTree = "<group>"; };
 		05BD04F61A9CD8230046DDF0 /* KGGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStroke.h; sourceTree = "<group>"; };
 		05BD04F71A9CD8230046DDF0 /* KGGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStroke.m; sourceTree = "<group>"; };
 		05BD04FA1A9CD94D0046DDF0 /* KGGlyphKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphKind.h; sourceTree = "<group>"; };
@@ -68,6 +83,8 @@
 			children = (
 				0579142B1A9CD6E40087D704 /* KGGlyphData.h */,
 				05BD04FA1A9CD94D0046DDF0 /* KGGlyphKind.h */,
+				05A3E6F11AA09CBD007C7113 /* KGGlyphModel.h */,
+				05A3E6F21AA09CBD007C7113 /* KGGlyphModel.m */,
 				05BD04F61A9CD8230046DDF0 /* KGGlyphStroke.h */,
 				05BD04F71A9CD8230046DDF0 /* KGGlyphStroke.m */,
 			);
@@ -76,6 +93,24 @@
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		05A3E6F41AA0A232007C7113 /* Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ../../Script/Install.mk";
+			buildConfigurationList = 05A3E6F51AA0A232007C7113 /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				05A3E6F91AA0A23D007C7113 /* PBXTargetDependency */,
+			);
+			name = Install;
+			passBuildSettingsInEnvironment = 1;
+			productName = Install;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		057914271A9CD6E40087D704 /* KGGlyphData */ = {
@@ -107,6 +142,9 @@
 					057914271A9CD6E40087D704 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					05A3E6F41AA0A232007C7113 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 057914231A9CD6E40087D704 /* Build configuration list for PBXProject "KGGlyphData" */;
@@ -122,6 +160,7 @@
 			projectRoot = "";
 			targets = (
 				057914271A9CD6E40087D704 /* KGGlyphData */,
+				05A3E6F41AA0A232007C7113 /* Install */,
 			);
 		};
 /* End PBXProject section */
@@ -131,11 +170,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A3E6F31AA09CBD007C7113 /* KGGlyphModel.m in Sources */,
 				05BD04F81A9CD8230046DDF0 /* KGGlyphStroke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05A3E6F91AA0A23D007C7113 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 057914271A9CD6E40087D704 /* KGGlyphData */;
+			targetProxy = 05A3E6F81AA0A23D007C7113 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0579143A1A9CD6E40087D704 /* Debug */ = {
@@ -224,6 +272,12 @@
 		0579143D1A9CD6E40087D704 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -233,9 +287,45 @@
 		0579143E1A9CD6E40087D704 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		05A3E6F61AA0A232007C7113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		05A3E6F71AA0A232007C7113 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -259,6 +349,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		05A3E6F51AA0A232007C7113 /* Build configuration list for PBXLegacyTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A3E6F61AA0A232007C7113 /* Debug */,
+				05A3E6F71AA0A232007C7113 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
