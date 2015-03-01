@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.graphicsView.backgroundColor = [UIColor blackColor] ;
 	
 	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
 	[self.graphicsView setDrawer: drawer] ;

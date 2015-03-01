@@ -28,7 +28,7 @@ drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphIn
 {
 	if(!isInitialized){
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
-		struct CNRGB strokecol = CNMakeRGBbyColor(ctable.black) ;
+		struct CNRGB strokecol = ctable.white ;
 		KGSetStrokeColor(context, &strokecol) ;
 		isInitialized = YES ;
 	}
