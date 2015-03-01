@@ -38,7 +38,15 @@
 						 //KGAbondonGlyph,
 						 //KGAdaptGlyph
 						 //KGAdvanceGlyph
-						 KGAfterGlyph
+						 //KGAfterGlyph
+						 //KGAgainGlyph
+						 //KGAllGlyph
+						 //KGAnswerGlyph
+						 //KGAttackGlyph
+						 //KGAvoidGlyph
+						 //KGBarrierGlyph
+						 //KGBeforeGlyph
+						 KGBeginGlyph
 						 ) ;
 		} break ;
 	}

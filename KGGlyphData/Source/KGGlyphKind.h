@@ -11,6 +11,18 @@ typedef enum {
 	KGAbondonGlyph,
 	KGAdaptGlyph,
 	KGAdvanceGlyph,
-	KGAfterGlyph
+	KGAfterGlyph,
+	KGAgainGlyph,
+	KGAllGlyph,
+	KGAnswerGlyph,
+	KGAttackGlyph,
+	KGAvoidGlyph,
+	KGBarrierGlyph,
+	KGBeforeGlyph,
+	KGBeginGlyph
 } KGGlyphKind ;
 
+static const KGGlyphKind	KGRepeatGlyph		= KGAgainGlyph ;
+static const KGGlyphKind	KGWarGlyph		= KGAttackGlyph ;
+static const KGGlyphKind	KGStruggleGlyph		= KGAvoidGlyph ;
+static const KGGlyphKind	KGObstacleGlyph		= KGBarrierGlyph ;
