@@ -103,27 +103,8 @@ updateLayout(struct KGGlyphInfo * ginfo, const CGSize * size)
 	ginfo->vertex[10] = CNMakeCircle(x0+dx*3.0, y0+dy*3.0, vsize) ;
 }
 
-#if 0
 static inline void
-drawVertex(CGContextRef context, const CGPoint * origin, const struct CNCircle * circle)
-{
-	CGFloat radius2 = circle->radius * 2 ;
-	struct CGRect bounds = {
-		.origin = {
-			.x = origin->x + (circle->center).x - circle->radius,
-			.y = origin->y + (circle->center).y - circle->radius
-		},
-		.size = {
-			.width	= radius2,
-			.height = radius2
-		}
-	} ;
-	CGContextStrokeEllipseInRect(context, bounds) ;
-}
-#endif
-
-static inline void
-drawVertex(CGContextRef context, const CGPoint * origin, const struct CNCircle * circle)
+drawVertex(CGContextRef context, CGGradientRef gradient, const CGPoint * origin, const struct CNCircle * circle)
 {
 	CGContextSaveGState(context);
 	
@@ -140,43 +121,43 @@ drawVertex(CGContextRef context, const CGPoint * origin, const struct CNCircle *
 			.height = outradius * 2.0
 		}
 	} ;
-	
-	CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
-	CGFloat components[] = {
-		1.0f, 1.0f, 1.0f, 1.0f,
-		0.5f, 0.5f, 0.5f, 1.0f,
-		0.0f, 0.0f, 0.0f, 1.0f,
-	};
-	CGFloat locations[] = { 0.0, 0.5, 1.0 };
-	
-	size_t count = sizeof(components)/ (sizeof(CGFloat)* 4);
-	CGGradientRef gradientRef = CGGradientCreateWithColorComponents(colorSpaceRef, components, locations, count);
-	
+
 	CGContextAddEllipseInRect(context, bounds);
 	CGContextClip(context) ;
 	
 	CGPoint center = CGPointMake(origin->x + (circle->center).x, origin->y + (circle->center).y) ;
 	CGContextDrawRadialGradient(context,
-				    gradientRef,
+				    gradient,
 				    center,
 				    inradius,
 				    center,
 				    outradius,
 				    kCGGradientDrawsAfterEndLocation);
-	
-	CGGradientRelease(gradientRef);
-	CGColorSpaceRelease(colorSpaceRef);
-	
+
 	CGContextRestoreGState(context);
 }
 
 static void
 drawVertexes(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo)
 {
+	CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+	static const CGFloat components[] = {
+		1.0f, 1.0f, 1.0f, 1.0f,
+		0.5f, 0.5f, 0.5f, 1.0f,
+		0.0f, 0.0f, 0.0f, 1.0f,
+	};
+	static const CGFloat locations[] = { 0.0, 0.5, 1.0 };
+	
+	size_t count = sizeof(components)/ (sizeof(CGFloat)* 4);
+	CGGradientRef gradient = CGGradientCreateWithColorComponents(colorspace, components, locations, count);
+	
 	unsigned int i ;
 	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
-		drawVertex(context, origin, &(ginfo->vertex[i])) ;
+		drawVertex(context, gradient, origin, &(ginfo->vertex[i])) ;
 	}
+	
+	CGGradientRelease(gradient);
+	CGColorSpaceRelease(colorspace);
 }
 
 static void
