@@ -11,7 +11,9 @@
 static void
 updateLayout(struct KGGlyphInfo * ginfo, const CGSize * size) ;
 static void
-drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke) ;
+drawVertexes(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo) ;
+static void
+drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke) ;
 
 @implementation KGGlyphDrawer
 
@@ -29,14 +31,18 @@ drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphIn
 	if(!isInitialized){
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		struct CNRGB strokecol = ctable.white ;
-		KGSetStrokeColor(context, &strokecol) ;
+		KCSetStrokeColor(context, &strokecol) ;
 		isInitialized = YES ;
 	}
 	if(!CNIsSameSize(&previousSize, &(boundsrect.size))){
 		updateLayout(&glyphInfo, &(boundsrect.size)) ;
 		previousSize = boundsrect.size ;
 	}
-	drawContent(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
+
+	drawVertexes(context, &(boundsrect.origin), &glyphInfo) ;
+	drawStroke(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
+	
+	
 }
 
 - (void) setStroke: (const struct KGGlyphStroke *) stroke
@@ -97,6 +103,7 @@ updateLayout(struct KGGlyphInfo * ginfo, const CGSize * size)
 	ginfo->vertex[10] = CNMakeCircle(x0+dx*3.0, y0+dy*3.0, vsize) ;
 }
 
+#if 0
 static inline void
 drawVertex(CGContextRef context, const CGPoint * origin, const struct CNCircle * circle)
 {
@@ -112,6 +119,64 @@ drawVertex(CGContextRef context, const CGPoint * origin, const struct CNCircle *
 		}
 	} ;
 	CGContextStrokeEllipseInRect(context, bounds) ;
+}
+#endif
+
+static inline void
+drawVertex(CGContextRef context, const CGPoint * origin, const struct CNCircle * circle)
+{
+	CGContextSaveGState(context);
+	
+	CGFloat inradius  = circle->radius ;
+	CGFloat outradius = inradius + 8.0 ;
+
+	struct CGRect bounds = {
+		.origin = {
+			.x = origin->x + (circle->center).x - outradius,
+			.y = origin->y + (circle->center).y - outradius
+		},
+		.size = {
+			.width	= outradius * 2.0,
+			.height = outradius * 2.0
+		}
+	} ;
+	
+	CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+	CGFloat components[] = {
+		1.0f, 1.0f, 1.0f, 1.0f,
+		0.5f, 0.5f, 0.5f, 1.0f,
+		0.0f, 0.0f, 0.0f, 1.0f,
+	};
+	CGFloat locations[] = { 0.0, 0.5, 1.0 };
+	
+	size_t count = sizeof(components)/ (sizeof(CGFloat)* 4);
+	CGGradientRef gradientRef = CGGradientCreateWithColorComponents(colorSpaceRef, components, locations, count);
+	
+	CGContextAddEllipseInRect(context, bounds);
+	CGContextClip(context) ;
+	
+	CGPoint center = CGPointMake(origin->x + (circle->center).x, origin->y + (circle->center).y) ;
+	CGContextDrawRadialGradient(context,
+				    gradientRef,
+				    center,
+				    inradius,
+				    center,
+				    outradius,
+				    kCGGradientDrawsAfterEndLocation);
+	
+	CGGradientRelease(gradientRef);
+	CGColorSpaceRelease(colorSpaceRef);
+	
+	CGContextRestoreGState(context);
+}
+
+static void
+drawVertexes(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo)
+{
+	unsigned int i ;
+	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
+		drawVertex(context, origin, &(ginfo->vertex[i])) ;
+	}
 }
 
 static void
@@ -133,15 +198,7 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 	}
 }
 
-static void
-drawContent(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke)
-{
-	unsigned int i ;
-	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
-		drawVertex(context, origin, &(ginfo->vertex[i])) ;
-	}
-	drawStroke(context, origin, ginfo, stroke) ;
-}
+
 
 
 
