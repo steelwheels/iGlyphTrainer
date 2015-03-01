@@ -483,6 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = (
+					"-lKGGlyphData",
 					"-lKGGlyphGraphics",
 					"-lKCGraphicsView",
 					"-lCoconutGraphics",
@@ -511,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = (
+					"-lKGGlyphData",
 					"-lKGGlyphGraphics",
 					"-lKCGraphicsView",
 					"-lCoconutGraphics",

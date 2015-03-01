@@ -23,8 +23,26 @@
 	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
 	[self.graphicsView setDrawer: drawer] ;
 	
-	static struct KGGlyphEdge edge = { .fromVertex=0, .toVertex=1 } ;
-	struct KGGlyphStroke stroke = KGMakeGlyphStroke(1, &edge) ;
+	struct KGGlyphStroke stroke ;
+	switch(1){
+		case 0: {
+			static struct KGGlyphEdge edge0 = { .fromVertex=7, .toVertex=8 } ;
+			static struct KGGlyphEdge edge1 = { .fromVertex=8, .toVertex=9 } ;
+			static struct KGGlyphEdge edges[2] ;
+			edges[0] = edge0 ;
+			edges[1] = edge1 ;
+			stroke = KGMakeGlyphStroke(2, edges) ;
+		} break ;
+		case 1: {
+			stroke = KGStrokeOfGlyph(
+						 //KGAbondonGlyph,
+						 //KGAdaptGlyph
+						 //KGAdvanceGlyph
+						 KGAfterGlyph
+						 ) ;
+		} break ;
+	}
+	
 	[drawer setStroke: &stroke] ;
 }
 

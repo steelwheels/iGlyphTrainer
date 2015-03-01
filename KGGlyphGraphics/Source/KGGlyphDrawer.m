@@ -99,8 +99,8 @@ updateLayout(struct KGGlyphInfo * ginfo, const CGSize * size)
 	x1 = (ginfo->vertex[4]).center.x ; y1 = (ginfo->vertex[4]).center.y ;
 	dx = (x1 - x0) / 4.0 ;
 	dy = (y1 - y0) / 4.0 ;
-	ginfo->vertex[ 9] = CNMakeCircle(x0+dx,     y0+dy,     vsize) ;
-	ginfo->vertex[10] = CNMakeCircle(x0+dx*3.0, y0+dy*3.0, vsize) ;
+	ginfo->vertex[ 9] = CNMakeCircle(x0+dx*3.0, y0+dy*3.0, vsize) ;
+	ginfo->vertex[10] = CNMakeCircle(x0+dx,     y0+dy,     vsize) ;
 }
 
 static inline void
@@ -163,6 +163,13 @@ drawVertexes(CGContextRef context, const CGPoint * origin, const struct KGGlyphI
 static void
 drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke)
 {
+	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+	struct CNRGB gold = [ctable goldenrod] ;
+	
+	CGContextSetLineWidth(context, ginfo->vertexSize) ;
+	CGContextSetLineCap(context, kCGLineCapRound) ;
+	KCSetStrokeColor(context, &gold) ;
+	
 	unsigned int count = stroke->edgeCount ;
 	unsigned int i ;
 	for(i=0 ; i<count ; i++){
