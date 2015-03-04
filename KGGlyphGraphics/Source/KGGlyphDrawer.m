@@ -26,8 +26,10 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 	return self ;
 }
 
-- (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) boundsrect
+- (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
 {
+	(void) level ;
+	
 	if(!isInitialized){
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		struct CNRGB strokecol = ctable.white ;

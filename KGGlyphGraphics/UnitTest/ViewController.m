@@ -15,13 +15,14 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
 	
 	self.graphicsView.backgroundColor = [UIColor blackColor] ;
 	
 	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
-	[self.graphicsView setDrawer: drawer] ;
+	[self.graphicsView setGraphicsDrawer: drawer] ;
 	
 	struct KGGlyphStroke stroke ;
 	switch(1){
