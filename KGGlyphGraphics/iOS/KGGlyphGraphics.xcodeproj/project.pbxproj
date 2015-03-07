@@ -54,7 +54,7 @@
 		0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphGraphics.h; sourceTree = "<group>"; };
 		055255C51A99F14C0021E915 /* install.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = install.mk; path = ../../Script/install.mk; sourceTree = "<group>"; };
 		055255CB1A99F81A0021E915 /* UnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		055255CE1A99F81A0021E915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../UnitTest/Info.plist; sourceTree = SOURCE_ROOT; };
+		055255CE1A99F81A0021E915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../UnitTest/Drawer/Info.plist; sourceTree = SOURCE_ROOT; };
 		055255CF1A99F81A0021E915 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		055255D11A99F81A0021E915 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		055255D21A99F81A0021E915 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +115,22 @@
 			path = ../Source;
 			sourceTree = SOURCE_ROOT;
 		};
+		0534BD9E1AAB628700D4519F /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				055255D11A99F81A0021E915 /* AppDelegate.h */,
+				055255D21A99F81A0021E915 /* AppDelegate.m */,
+				055255D41A99F81A0021E915 /* ViewController.h */,
+				055255D51A99F81A0021E915 /* ViewController.m */,
+				055255D71A99F81A0021E915 /* Main.storyboard */,
+				055255DA1A99F81A0021E915 /* Images.xcassets */,
+				055255DC1A99F81A0021E915 /* LaunchScreen.xib */,
+				055255CD1A99F81A0021E915 /* Supporting Files */,
+			);
+			name = Drawer;
+			path = ../UnitTest/Drawer;
+			sourceTree = SOURCE_ROOT;
+		};
 		055255C41A99F1360021E915 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,14 +142,7 @@
 		055255CC1A99F81A0021E915 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
-				055255D11A99F81A0021E915 /* AppDelegate.h */,
-				055255D21A99F81A0021E915 /* AppDelegate.m */,
-				055255D41A99F81A0021E915 /* ViewController.h */,
-				055255D51A99F81A0021E915 /* ViewController.m */,
-				055255D71A99F81A0021E915 /* Main.storyboard */,
-				055255DA1A99F81A0021E915 /* Images.xcassets */,
-				055255DC1A99F81A0021E915 /* LaunchScreen.xib */,
-				055255CD1A99F81A0021E915 /* Supporting Files */,
+				0534BD9E1AAB628700D4519F /* Drawer */,
 			);
 			name = UnitTest;
 			path = ../UnitTest;
@@ -483,7 +492,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(HOME)/local/include",
 				);
-				INFOPLIST_FILE = ../UnitTest/Info.plist;
+				INFOPLIST_FILE = ../UnitTest/Drawer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = (
@@ -513,7 +522,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(HOME)/local/include",
 				);
-				INFOPLIST_FILE = ../UnitTest/Info.plist;
+				INFOPLIST_FILE = ../UnitTest/Drawer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = (
