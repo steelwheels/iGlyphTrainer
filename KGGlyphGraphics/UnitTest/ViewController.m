@@ -23,6 +23,7 @@
 	
 	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
 	[self.graphicsView setGraphicsDrawer: drawer] ;
+	[self.graphicsView allocateTransparentViews: KGGlyphTransparentViewNum] ;
 	
 	struct KGGlyphStroke stroke ;
 	switch(1){

@@ -28,8 +28,6 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 
 - (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
 {
-	(void) level ;
-	
 	if(!isInitialized){
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		struct CNRGB strokecol = ctable.white ;
@@ -41,10 +39,16 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 		previousSize = boundsrect.size ;
 	}
 
-	drawVertexes(context, &(boundsrect.origin), &glyphInfo) ;
-	drawStroke(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
-	
-	
+	switch(level){
+		case KGGlyphBaseLayer: {
+			puts("level 0") ;
+			drawVertexes(context, &(boundsrect.origin), &glyphInfo) ;
+		} break ;
+		case KGGlyphStrokeLayer: {
+			puts("level 1") ;
+			drawStroke(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
+		} break ;
+	}
 }
 
 - (void) setStroke: (const struct KGGlyphStroke *) stroke
@@ -187,8 +191,4 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 		CGContextStrokePath(context) ;
 	}
 }
-
-
-
-
 

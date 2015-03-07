@@ -8,12 +8,17 @@
 #import <KCGraphicsView/KCGraphicsView.h>
 #import <KGGlyphData/KGGlyphData.h>
 
+#define	KGGlyphBaseLayer		0
+#define	KGGlyphStrokeLayer		1
+#define KGGlyphTransparentViewNum	1
+
+
 struct KGGlyphInfo {
 	CGFloat			vertexSize ;
 	struct CNCircle		vertex[KGGLYPH_VERTEX_NUM] ;
 } ;
 
-@interface KGGlyphDrawer : KCGraphicsDrawer <KCGraphicsDrawing>
+@interface KGGlyphDrawer : NSObject <KCGraphicsDrawing>
 {
 	BOOL			isInitialized ;
 	CGSize			previousSize ;
