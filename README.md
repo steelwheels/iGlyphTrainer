@@ -1,4 +1,4 @@
-# IngressGlyphTrainer
+# iGlyphTrainer
 The repository contains the application "iGlyphTrainer"
 and some frameworks to support it.
 
@@ -17,5 +17,7 @@ or [GNU LESSER GENERAL PUBLIC LICENSE Version 2.1](https://www.gnu.org/licenses/
 
 # Required software
 To build this application, following software is also required.
-1. [Coconut framework](https://github.com/steelwheels/Coconut)
+1. [KCGraphicsView framework](https://github.com/steelwheels/KiwiControls/tree/master/KCGraphicsView)
+and [KiwiControl framework](https://github.com/steelwheels/KiwiControls/tree/master/KiwiControl) in [KiwiControl package](https://github.com/steelwheels/KiwiControls)
 2. [CoconutGraphics framework](https://github.com/steelwheels/CoconutGraphics)
+3. [Coconut framework](https://github.com/steelwheels/Coconut)
