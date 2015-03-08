@@ -54,7 +54,7 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	}
 }
 
-- (BOOL) touchesMoved: (CGPoint) newpoint atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
+- (bool) touchesMoved: (CGPoint) newpoint atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
 {
 	(void) boundsrect ;
 	if(level != KGGlyphStrokeLayer){
@@ -94,16 +94,18 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	return result ;
 }
 
-- (void) touchesEnded
+- (bool) touchesEnded
 {
 	hasBeginningVertex	= false ;
 	hasEndingVertex		= false ;
+	return true ;
 }
 
-- (void) touchesCancelled
+- (bool) touchesCancelled
 {
 	hasBeginningVertex	= false ;
 	hasEndingVertex		= false ;
+	return true ;
 }
 
 @end
