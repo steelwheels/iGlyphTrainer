@@ -43,12 +43,12 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	}
 	unsigned int vid ;
 	if(getVertexId(&vid, &glyphInfo, point)){
-		printf("touchesBegin (0) : %u\n", vid) ;
+		//printf("touchesBegin (0) : %u\n", vid) ;
 		hasBeginningVertex	= true ;
 		beginningVertexId	= vid ;
 		hasEndingVertex		= false ;
 	} else {
-		puts("touchesBegin (1)") ;
+		//puts("touchesBegin (1)") ;
 		hasBeginningVertex	= false ;
 		hasEndingVertex		= false ;
 	}
@@ -64,18 +64,18 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	unsigned int	vid ;
 	if(getVertexId(&vid, &glyphInfo, newpoint)){
 		if(!hasBeginningVertex){
-			printf("touchesMoved (0) : %u\n", vid) ;
+			//printf("touchesMoved (0) : %u\n", vid) ;
 			hasBeginningVertex	= true ;
 			beginningVertexId	= vid ;
 		} else {
 			if(beginningVertexId != vid){
-				printf("touchesMoved (1) : %u\n", vid) ;
+				//printf("touchesMoved (1) : %u\n", vid) ;
 				KGAddGlyphEditableStroke(&editableStroke, beginningVertexId, vid) ;
 				hasBeginningVertex	= true ;
 				beginningVertexId	= vid ;
 				hasEndingVertex		= false ;
 			} else {
-				printf("touchesMoved (2) : %u\n", vid) ;
+				//printf("touchesMoved (2) : %u\n", vid) ;
 				hasEndingVertex		= true ;
 				endingVertexPoint	= newpoint ;
 			}
@@ -83,12 +83,12 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 		}
 	} else {
 		if(hasBeginningVertex){
-			printf("touchesMoved (3)\n") ;
+			//printf("touchesMoved (3)\n") ;
 			hasEndingVertex		= true ;
 			endingVertexPoint	= newpoint ;
 			result			= true ;
 		} else {
-			printf("touchesMoved (4)\n") ;
+			//printf("touchesMoved (4)\n") ;
 		}
 	}
 	return result ;
