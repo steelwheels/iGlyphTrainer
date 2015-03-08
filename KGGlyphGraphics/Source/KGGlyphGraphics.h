@@ -7,4 +7,6 @@
 
 #import <KCGraphicsView/KCGraphicsView.h>
 #import "KGGlyphDrawer.h"
+#import "KGGlyphEditor.h"
+#import "KGGlyphEditableStroke.h"
 

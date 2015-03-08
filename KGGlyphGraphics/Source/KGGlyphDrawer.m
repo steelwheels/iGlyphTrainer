@@ -41,11 +41,9 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 
 	switch(level){
 		case KGGlyphBaseLayer: {
-			puts("level 0") ;
 			drawVertexes(context, &(boundsrect.origin), &glyphInfo) ;
 		} break ;
 		case KGGlyphStrokeLayer: {
-			puts("level 1") ;
 			drawStroke(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
 		} break ;
 	}
