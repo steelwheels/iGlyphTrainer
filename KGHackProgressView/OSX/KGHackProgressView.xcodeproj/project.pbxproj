@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		059EFD571AB72A45001E182E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 059EFD561AB72A45001E182E /* AppDelegate.m */; };
+		059EFD591AB72A45001E182E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 059EFD581AB72A45001E182E /* main.m */; };
+		059EFD5C1AB72A45001E182E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 059EFD5B1AB72A45001E182E /* ViewController.m */; };
+		059EFD5E1AB72A45001E182E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059EFD5D1AB72A45001E182E /* Images.xcassets */; };
+		059EFD611AB72A45001E182E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059EFD5F1AB72A45001E182E /* Main.storyboard */; };
+		059EFD751AB72D40001E182E /* KGHackProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059EFD741AB72D40001E182E /* KGHackProgressView.framework */; };
+		059EFD781AB72E6E001E182E /* KGHackProgressType.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F9F95D1AB5A7B500239C76 /* KGHackProgressType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05CA548C1AB5A701002B95D3 /* KGHackProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CA548B1AB5A701002B95D3 /* KGHackProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F9F9601AB5AA0A00239C76 /* KGHackProgressViewClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F9F95E1AB5AA0A00239C76 /* KGHackProgressViewClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F9F9611AB5AA0A00239C76 /* KGHackProgressViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F9F95F1AB5AA0A00239C76 /* KGHackProgressViewClass.m */; };
+		05F9F9631AB5AACA00239C76 /* KCGraphicsView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9F9621AB5AACA00239C76 /* KCGraphicsView.framework */; };
+		05F9F9651AB5AB4F00239C76 /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9F9641AB5AB4F00239C76 /* KGGlyphData.framework */; };
+		05F9F9681AB5AD5900239C76 /* KGHackProgressDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F9F9661AB5AD5900239C76 /* KGHackProgressDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F9F9691AB5AD5900239C76 /* KGHackProgressDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F9F9671AB5AD5900239C76 /* KGHackProgressDrawer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		059EFD4B1AB72A04001E182E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CA547D1AB5A700002B95D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CA54851AB5A701002B95D3;
+			remoteInfo = KGHackProgressView;
+		};
+		059EFD761AB72E3F001E182E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CA547D1AB5A700002B95D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 059EFD471AB729F9001E182E;
+			remoteInfo = Install;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		059EFD511AB72A45001E182E /* UTHackProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTHackProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		059EFD541AB72A45001E182E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059EFD551AB72A45001E182E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		059EFD561AB72A45001E182E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		059EFD581AB72A45001E182E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		059EFD5A1AB72A45001E182E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		059EFD5B1AB72A45001E182E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		059EFD5D1AB72A45001E182E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		059EFD601AB72A45001E182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		059EFD741AB72D40001E182E /* KGHackProgressView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGHackProgressView.framework; path = ../../../../../Library/Frameworks/KGHackProgressView.framework; sourceTree = "<group>"; };
+		05CA54861AB5A701002B95D3 /* KGHackProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGHackProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CA548A1AB5A701002B95D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		05CA548B1AB5A701002B95D3 /* KGHackProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGHackProgressView.h; sourceTree = "<group>"; };
+		05F9F95D1AB5A7B500239C76 /* KGHackProgressType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGHackProgressType.h; sourceTree = "<group>"; };
+		05F9F95E1AB5AA0A00239C76 /* KGHackProgressViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgressViewClass.h; sourceTree = "<group>"; };
+		05F9F95F1AB5AA0A00239C76 /* KGHackProgressViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgressViewClass.m; sourceTree = "<group>"; };
+		05F9F9621AB5AACA00239C76 /* KCGraphicsView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KCGraphicsView.framework; path = ../../../../Library/Frameworks/KCGraphicsView.framework; sourceTree = "<group>"; };
+		05F9F9641AB5AB4F00239C76 /* KGGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphData.framework; path = ../../../../Library/Frameworks/KGGlyphData.framework; sourceTree = "<group>"; };
+		05F9F9661AB5AD5900239C76 /* KGHackProgressDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgressDrawer.h; sourceTree = "<group>"; };
+		05F9F9671AB5AD5900239C76 /* KGHackProgressDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgressDrawer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		059EFD4E1AB72A45001E182E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059EFD751AB72D40001E182E /* KGHackProgressView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CA54821AB5A701002B95D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F9F9631AB5AACA00239C76 /* KCGraphicsView.framework in Frameworks */,
+				05F9F9651AB5AB4F00239C76 /* KGGlyphData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		059EFD461AB729AD001E182E /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				059EFD521AB72A45001E182E /* UTHackProgressView */,
+			);
+			name = UnitTest;
+			path = ../UnitTest;
+			sourceTree = SOURCE_ROOT;
+		};
+		059EFD521AB72A45001E182E /* UTHackProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				059EFD551AB72A45001E182E /* AppDelegate.h */,
+				059EFD561AB72A45001E182E /* AppDelegate.m */,
+				059EFD5A1AB72A45001E182E /* ViewController.h */,
+				059EFD5B1AB72A45001E182E /* ViewController.m */,
+				059EFD5D1AB72A45001E182E /* Images.xcassets */,
+				059EFD5F1AB72A45001E182E /* Main.storyboard */,
+				059EFD531AB72A45001E182E /* Supporting Files */,
+			);
+			name = UTHackProgressView;
+			path = ../UnitTest/UTHackProgressView;
+			sourceTree = SOURCE_ROOT;
+		};
+		059EFD531AB72A45001E182E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				059EFD741AB72D40001E182E /* KGHackProgressView.framework */,
+				059EFD541AB72A45001E182E /* Info.plist */,
+				059EFD581AB72A45001E182E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05CA547C1AB5A700002B95D3 = {
+			isa = PBXGroup;
+			children = (
+				05CA54881AB5A701002B95D3 /* Source */,
+				059EFD461AB729AD001E182E /* UnitTest */,
+				05CA54871AB5A701002B95D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05CA54871AB5A701002B95D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05CA54861AB5A701002B95D3 /* KGHackProgressView.framework */,
+				059EFD511AB72A45001E182E /* UTHackProgressView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05CA54881AB5A701002B95D3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				05CA548B1AB5A701002B95D3 /* KGHackProgressView.h */,
+				05F9F95D1AB5A7B500239C76 /* KGHackProgressType.h */,
+				05F9F95E1AB5AA0A00239C76 /* KGHackProgressViewClass.h */,
+				05F9F95F1AB5AA0A00239C76 /* KGHackProgressViewClass.m */,
+				05F9F9661AB5AD5900239C76 /* KGHackProgressDrawer.h */,
+				05F9F9671AB5AD5900239C76 /* KGHackProgressDrawer.m */,
+				05CA54891AB5A701002B95D3 /* Supporting Files */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		05CA54891AB5A701002B95D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05F9F9641AB5AB4F00239C76 /* KGGlyphData.framework */,
+				05F9F9621AB5AACA00239C76 /* KCGraphicsView.framework */,
+				05CA548A1AB5A701002B95D3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05CA54831AB5A701002B95D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059EFD781AB72E6E001E182E /* KGHackProgressType.h in Headers */,
+				05F9F9681AB5AD5900239C76 /* KGHackProgressDrawer.h in Headers */,
+				05F9F9601AB5AA0A00239C76 /* KGHackProgressViewClass.h in Headers */,
+				05CA548C1AB5A701002B95D3 /* KGHackProgressView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		059EFD471AB729F9001E182E /* Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f Install.mk";
+			buildConfigurationList = 059EFD481AB729F9001E182E /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				059EFD4C1AB72A04001E182E /* PBXTargetDependency */,
+			);
+			name = Install;
+			passBuildSettingsInEnvironment = 1;
+			productName = Install;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		059EFD501AB72A45001E182E /* UTHackProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 059EFD6E1AB72A45001E182E /* Build configuration list for PBXNativeTarget "UTHackProgressView" */;
+			buildPhases = (
+				059EFD4D1AB72A45001E182E /* Sources */,
+				059EFD4E1AB72A45001E182E /* Frameworks */,
+				059EFD4F1AB72A45001E182E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				059EFD771AB72E3F001E182E /* PBXTargetDependency */,
+			);
+			name = UTHackProgressView;
+			productName = UTHackProgressView;
+			productReference = 059EFD511AB72A45001E182E /* UTHackProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05CA54851AB5A701002B95D3 /* KGHackProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CA549C1AB5A701002B95D3 /* Build configuration list for PBXNativeTarget "KGHackProgressView" */;
+			buildPhases = (
+				05CA54811AB5A701002B95D3 /* Sources */,
+				05CA54821AB5A701002B95D3 /* Frameworks */,
+				05CA54831AB5A701002B95D3 /* Headers */,
+				05CA54841AB5A701002B95D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGHackProgressView;
+			productName = KGHackProgressView;
+			productReference = 05CA54861AB5A701002B95D3 /* KGHackProgressView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05CA547D1AB5A700002B95D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Steel Wheels Project";
+				TargetAttributes = {
+					059EFD471AB729F9001E182E = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					059EFD501AB72A45001E182E = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					05CA54851AB5A701002B95D3 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 05CA54801AB5A700002B95D3 /* Build configuration list for PBXProject "KGHackProgressView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05CA547C1AB5A700002B95D3;
+			productRefGroup = 05CA54871AB5A701002B95D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05CA54851AB5A701002B95D3 /* KGHackProgressView */,
+				059EFD471AB729F9001E182E /* Install */,
+				059EFD501AB72A45001E182E /* UTHackProgressView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		059EFD4F1AB72A45001E182E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059EFD5E1AB72A45001E182E /* Images.xcassets in Resources */,
+				059EFD611AB72A45001E182E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CA54841AB5A701002B95D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		059EFD4D1AB72A45001E182E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059EFD5C1AB72A45001E182E /* ViewController.m in Sources */,
+				059EFD591AB72A45001E182E /* main.m in Sources */,
+				059EFD571AB72A45001E182E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CA54811AB5A701002B95D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F9F9691AB5AD5900239C76 /* KGHackProgressDrawer.m in Sources */,
+				05F9F9611AB5AA0A00239C76 /* KGHackProgressViewClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		059EFD4C1AB72A04001E182E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05CA54851AB5A701002B95D3 /* KGHackProgressView */;
+			targetProxy = 059EFD4B1AB72A04001E182E /* PBXContainerItemProxy */;
+		};
+		059EFD771AB72E3F001E182E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 059EFD471AB729F9001E182E /* Install */;
+			targetProxy = 059EFD761AB72E3F001E182E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		059EFD5F1AB72A45001E182E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				059EFD601AB72A45001E182E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		059EFD491AB729F9001E182E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		059EFD4A1AB729F9001E182E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		059EFD6F1AB72A45001E182E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ../UnitTest/UTHackProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		059EFD701AB72A45001E182E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = ../UnitTest/UTHackProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		05CA549A1AB5A701002B95D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		05CA549B1AB5A701002B95D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		05CA549D1AB5A701002B95D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		05CA549E1AB5A701002B95D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		059EFD481AB729F9001E182E /* Build configuration list for PBXLegacyTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059EFD491AB729F9001E182E /* Debug */,
+				059EFD4A1AB729F9001E182E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		059EFD6E1AB72A45001E182E /* Build configuration list for PBXNativeTarget "UTHackProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059EFD6F1AB72A45001E182E /* Debug */,
+				059EFD701AB72A45001E182E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		05CA54801AB5A700002B95D3 /* Build configuration list for PBXProject "KGHackProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CA549A1AB5A701002B95D3 /* Debug */,
+				05CA549B1AB5A701002B95D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05CA549C1AB5A701002B95D3 /* Build configuration list for PBXNativeTarget "KGHackProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CA549D1AB5A701002B95D3 /* Debug */,
+				05CA549E1AB5A701002B95D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05CA547D1AB5A700002B95D3 /* Project object */;
+}

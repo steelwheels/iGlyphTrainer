@@ -20,7 +20,7 @@
 	printf("objeserve: keypath=%s ", [keyPath UTF8String]) ;
 	
 	KGHackProgress * progress = object ;
-	printf("-> progress = %u", progress.currentProgress) ;
+	printf("-> current progress = %u, max progress = %u", progress.currentProgress, progress.maxProgress) ;
 	
 	fputc('\n', stdout) ;
 }
@@ -36,6 +36,9 @@ UTHackProgress(void)
 	[progress addCurrentProgressObserver: observer] ;
 	progress.currentProgress = 1 ;
 	progress.currentProgress = 2 ;
+	
+	progress.maxProgress = 1 ;
+	progress.maxProgress = 2 ;
 	
 	return YES ;
 }

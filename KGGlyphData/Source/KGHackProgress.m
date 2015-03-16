@@ -9,12 +9,13 @@
 
 @implementation KGHackProgress
 
+@synthesize maxProgress ;
 @synthesize currentProgress ;
 
 - (instancetype) initWithMaxProgress: (unsigned int) val
 {
 	if((self = [super init]) != nil){
-		maxProgress = val ;
+		self.maxProgress = val ;
 		self.currentProgress = 0 ;
 	}
 	return self ;
@@ -24,6 +25,10 @@
 {
 	[super addObserver: observer
 	        forKeyPath: @"currentProgress"
+		   options: NSKeyValueObservingOptionNew
+		   context: nil] ;
+	[super addObserver: observer
+		forKeyPath: @"maxProgress"
 		   options: NSKeyValueObservingOptionNew
 		   context: nil] ;
 }

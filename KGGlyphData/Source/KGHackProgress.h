@@ -12,10 +12,8 @@
 #define KGLimitProgressCount			5
 
 @interface KGHackProgress : CNNotifierObject
-{
-	unsigned int		maxProgress ;
-}
 
+@property (assign, nonatomic) unsigned int	maxProgress ;
 @property (assign, nonatomic) unsigned int	currentProgress ;
 
 - (instancetype) initWithMaxProgress: (unsigned int) val ;
