@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		059EFD571AB72A45001E182E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 059EFD561AB72A45001E182E /* AppDelegate.m */; };
 		059EFD591AB72A45001E182E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 059EFD581AB72A45001E182E /* main.m */; };
-		059EFD5C1AB72A45001E182E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 059EFD5B1AB72A45001E182E /* ViewController.m */; };
+		059EFD5C1AB72A45001E182E /* OSX in Sources */ = {isa = PBXBuildFile; fileRef = 059EFD5B1AB72A45001E182E /* OSX */; };
 		059EFD5E1AB72A45001E182E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059EFD5D1AB72A45001E182E /* Images.xcassets */; };
 		059EFD611AB72A45001E182E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059EFD5F1AB72A45001E182E /* Main.storyboard */; };
 		059EFD751AB72D40001E182E /* KGHackProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059EFD741AB72D40001E182E /* KGHackProgressView.framework */; };
@@ -43,11 +43,11 @@
 /* Begin PBXFileReference section */
 		059EFD511AB72A45001E182E /* UTHackProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTHackProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059EFD541AB72A45001E182E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		059EFD551AB72A45001E182E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		059EFD561AB72A45001E182E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		059EFD551AB72A45001E182E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../UnitTest/UTHackProgressView/OSX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		059EFD561AB72A45001E182E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../UnitTest/UTHackProgressView/OSX/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		059EFD581AB72A45001E182E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		059EFD5A1AB72A45001E182E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		059EFD5B1AB72A45001E182E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		059EFD5A1AB72A45001E182E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../UnitTest/UTHackProgressView/OSX/ViewController.h; sourceTree = SOURCE_ROOT; };
+		059EFD5B1AB72A45001E182E /* OSX */ = {isa = PBXFileReference; lastKnownFileType = folder; name = OSX; path = ../UnitTest/UTHackProgressView/OSX; sourceTree = SOURCE_ROOT; };
 		059EFD5D1AB72A45001E182E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		059EFD601AB72A45001E182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		059EFD741AB72D40001E182E /* KGHackProgressView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGHackProgressView.framework; path = ../../../../../Library/Frameworks/KGHackProgressView.framework; sourceTree = "<group>"; };
@@ -96,13 +96,7 @@
 		059EFD521AB72A45001E182E /* UTHackProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				059EFD551AB72A45001E182E /* AppDelegate.h */,
-				059EFD561AB72A45001E182E /* AppDelegate.m */,
-				059EFD5A1AB72A45001E182E /* ViewController.h */,
-				059EFD5B1AB72A45001E182E /* ViewController.m */,
-				059EFD5D1AB72A45001E182E /* Images.xcassets */,
-				059EFD5F1AB72A45001E182E /* Main.storyboard */,
-				059EFD531AB72A45001E182E /* Supporting Files */,
+				05E73ECA1AB743D80078D8C8 /* OSX */,
 			);
 			name = UTHackProgressView;
 			path = ../UnitTest/UTHackProgressView;
@@ -160,6 +154,21 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		05E73ECA1AB743D80078D8C8 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				059EFD551AB72A45001E182E /* AppDelegate.h */,
+				059EFD561AB72A45001E182E /* AppDelegate.m */,
+				059EFD5A1AB72A45001E182E /* ViewController.h */,
+				059EFD5B1AB72A45001E182E /* OSX */,
+				059EFD5D1AB72A45001E182E /* Images.xcassets */,
+				059EFD5F1AB72A45001E182E /* Main.storyboard */,
+				059EFD531AB72A45001E182E /* Supporting Files */,
+			);
+			name = OSX;
+			path = ../UnitTest/UTHackProgressView/OSX;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -296,7 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				059EFD5C1AB72A45001E182E /* ViewController.m in Sources */,
+				059EFD5C1AB72A45001E182E /* OSX in Sources */,
 				059EFD591AB72A45001E182E /* main.m in Sources */,
 				059EFD571AB72A45001E182E /* AppDelegate.m in Sources */,
 			);
@@ -377,7 +386,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ../UnitTest/UTHackProgressView/Info.plist;
+				INFOPLIST_FILE = ../UnitTest/UTHackProgressView/OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -393,7 +402,7 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = ../UnitTest/UTHackProgressView/Info.plist;
+				INFOPLIST_FILE = ../UnitTest/UTHackProgressView/OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -541,6 +550,7 @@
 				059EFD4A1AB729F9001E182E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		059EFD6E1AB72A45001E182E /* Build configuration list for PBXNativeTarget "UTHackProgressView" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +559,7 @@
 				059EFD701AB72A45001E182E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05CA54801AB5A700002B95D3 /* Build configuration list for PBXProject "KGHackProgressView" */ = {
 			isa = XCConfigurationList;
