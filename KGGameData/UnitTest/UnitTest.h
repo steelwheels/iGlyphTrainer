@@ -5,5 +5,6 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import <KGGlyphData/KGGlyphData.h>
+#import <KGGameData/KGGameData.h>
 
+BOOL UTHackProgress(void) ;

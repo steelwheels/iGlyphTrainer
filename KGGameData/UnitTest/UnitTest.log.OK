@@ -1,0 +1,7 @@
+****************************************
+* UTHackProgress
+****************************************
+objeserve: keypath=currentProgress -> current progress = 1, max progress = 5
+objeserve: keypath=currentProgress -> current progress = 2, max progress = 5
+objeserve: keypath=maxProgress -> current progress = 2, max progress = 1
+objeserve: keypath=maxProgress -> current progress = 2, max progress = 2

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0510F0AF1AB5942A00E33696 /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510F0AE1AB5942A00E33696 /* KGGlyphData.framework */; };
-		0510F0B11AB5945500E33696 /* UTHackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510F0B01AB5945500E33696 /* UTHackProgress.m */; };
 		05226E371AB467670089AA7D /* KGGlyphData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E311AB467670089AA7D /* KGGlyphData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05226E381AB467670089AA7D /* KGGlyphKind.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E321AB467670089AA7D /* KGGlyphKind.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05226E391AB467670089AA7D /* KGGlyphModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E331AB467670089AA7D /* KGGlyphModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,8 +15,6 @@
 		05226E3B1AB467670089AA7D /* KGGlyphStroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E351AB467670089AA7D /* KGGlyphStroke.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 05226E361AB467670089AA7D /* KGGlyphStroke.m */; };
 		05226E3E1AB468240089AA7D /* CoconutGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05226E3D1AB468240089AA7D /* CoconutGraphics.framework */; };
-		05226E411AB46A3E0089AA7D /* KGHackProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E3F1AB46A3E0089AA7D /* KGHackProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05226E421AB46A3E0089AA7D /* KGHackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 05226E401AB46A3E0089AA7D /* KGHackProgress.m */; };
 		05226E4A1AB46FC40089AA7D /* install.mk in Resources */ = {isa = PBXBuildFile; fileRef = 05226E491AB46FC40089AA7D /* install.mk */; };
 		05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AC00D61AB5917A0005E32E /* UnitTest.m */; };
 /* End PBXBuildFile section */
@@ -54,7 +51,6 @@
 /* Begin PBXFileReference section */
 		0510F0AD1AB5924F00E33696 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
 		0510F0AE1AB5942A00E33696 /* KGGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphData.framework; path = ../../../../Library/Frameworks/KGGlyphData.framework; sourceTree = "<group>"; };
-		0510F0B01AB5945500E33696 /* UTHackProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTHackProgress.m; sourceTree = "<group>"; };
 		05226E091AB466C10089AA7D /* KGGlyphData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGGlyphData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05226E0D1AB466C10089AA7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05226E311AB467670089AA7D /* KGGlyphData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphData.h; sourceTree = "<group>"; };
@@ -64,8 +60,6 @@
 		05226E351AB467670089AA7D /* KGGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStroke.h; sourceTree = "<group>"; };
 		05226E361AB467670089AA7D /* KGGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStroke.m; sourceTree = "<group>"; };
 		05226E3D1AB468240089AA7D /* CoconutGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoconutGraphics.framework; path = ../../../../Library/Frameworks/CoconutGraphics.framework; sourceTree = "<group>"; };
-		05226E3F1AB46A3E0089AA7D /* KGHackProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgress.h; sourceTree = "<group>"; };
-		05226E401AB46A3E0089AA7D /* KGHackProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgress.m; sourceTree = "<group>"; };
 		05226E491AB46FC40089AA7D /* install.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = install.mk; sourceTree = SOURCE_ROOT; };
 		05AC00D41AB5917A0005E32E /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05AC00D61AB5917A0005E32E /* UnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
@@ -118,8 +112,6 @@
 				05226E341AB467670089AA7D /* KGGlyphModel.m */,
 				05226E351AB467670089AA7D /* KGGlyphStroke.h */,
 				05226E361AB467670089AA7D /* KGGlyphStroke.m */,
-				05226E3F1AB46A3E0089AA7D /* KGHackProgress.h */,
-				05226E401AB46A3E0089AA7D /* KGHackProgress.m */,
 				05226E0C1AB466C10089AA7D /* Supporting Files */,
 			);
 			name = Source;
@@ -142,7 +134,6 @@
 				0510F0AE1AB5942A00E33696 /* KGGlyphData.framework */,
 				0510F0AD1AB5924F00E33696 /* UnitTest.h */,
 				05AC00D61AB5917A0005E32E /* UnitTest.m */,
-				0510F0B01AB5945500E33696 /* UTHackProgress.m */,
 			);
 			name = UnitTest;
 			path = ../UnitTest;
@@ -155,7 +146,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05226E411AB46A3E0089AA7D /* KGHackProgress.h in Headers */,
 				05226E371AB467670089AA7D /* KGGlyphData.h in Headers */,
 				05226E391AB467670089AA7D /* KGGlyphModel.h in Headers */,
 				05226E381AB467670089AA7D /* KGGlyphKind.h in Headers */,
@@ -277,7 +267,6 @@
 			files = (
 				05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */,
 				05226E3A1AB467670089AA7D /* KGGlyphModel.m in Sources */,
-				05226E421AB46A3E0089AA7D /* KGHackProgress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0510F0B11AB5945500E33696 /* UTHackProgress.m in Sources */,
 				05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

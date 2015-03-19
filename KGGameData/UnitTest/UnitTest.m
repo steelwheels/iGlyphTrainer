@@ -9,11 +9,13 @@
 
 static void
 printTitle(const char * title) ;
+
 int
 main(int argc, const char * argv[]) {
+	(void) argc ; (void) argv ;
 	unsigned int	errorcount = 0 ;
 	@autoreleasepool {
-		printTitle("UTHackProgress") ;	//errorcount += UTHackProgress() ? 0 : 1 ;
+		printTitle("UTHackProgress") ;	errorcount += UTHackProgress() ? 0 : 1 ;
 	}
 	return errorcount == 0 ? 0 : 1 ;
 }

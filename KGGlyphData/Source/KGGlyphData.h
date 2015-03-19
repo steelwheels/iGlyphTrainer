@@ -20,5 +20,4 @@ FOUNDATION_EXPORT const unsigned char KGGlyphDataVersionString[];
 #import "KGGlyphKind.h"
 #import "KGGlyphModel.h"
 #import "KGGlyphStroke.h"
-#import "KGHackProgress.h"
 

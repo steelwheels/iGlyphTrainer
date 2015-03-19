@@ -17,6 +17,8 @@
 		        change: (NSDictionary *) change
 		       context: (void *) context
 {
+	(void) change ; (void) context ;
+	
 	printf("objeserve: keypath=%s ", [keyPath UTF8String]) ;
 	
 	KGHackProgress * progress = object ;
