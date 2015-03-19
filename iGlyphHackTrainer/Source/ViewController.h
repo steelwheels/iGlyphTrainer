@@ -1,10 +1,9 @@
-//
-//  ViewController.h
-//  iGlyphHackTrainer
-//
-//  Created by Tomoo Hamada on 2015/03/19.
-//  Copyright (c) 2015年 Steel Wheels Project. All rights reserved.
-//
+/**
+ * @file	ViewController.h
+ * @brief	Define ViewController class
+ * @par Copyright
+ *   Copyright (C) 2015 Steel Wheels Project
+ */
 
 #import <UIKit/UIKit.h>
 
