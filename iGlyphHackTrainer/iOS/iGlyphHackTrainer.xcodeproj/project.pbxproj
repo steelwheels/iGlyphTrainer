@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E601ABABCBB00741B2D /* AboutViewController.m */; };
 		05062E641ABAC95C00741B2D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E631ABAC95C00741B2D /* SettingViewController.m */; };
-		05062E671ABACAEC00741B2D /* MainToSettingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E661ABACAEC00741B2D /* MainToSettingSegue.m */; };
-		05062E6A1ABACB1300741B2D /* MainToAboutSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E691ABACB1300741B2D /* MainToAboutSegue.m */; };
 		05A277231ABA4ABE0010E45B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277221ABA4ABE0010E45B /* main.m */; };
 		05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277251ABA4ABE0010E45B /* AppDelegate.m */; };
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
@@ -24,10 +22,6 @@
 		05062E601ABABCBB00741B2D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		05062E621ABAC95C00741B2D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		05062E631ABAC95C00741B2D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		05062E651ABACAEC00741B2D /* MainToSettingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainToSettingSegue.h; sourceTree = "<group>"; };
-		05062E661ABACAEC00741B2D /* MainToSettingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainToSettingSegue.m; sourceTree = "<group>"; };
-		05062E681ABACB1300741B2D /* MainToAboutSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainToAboutSegue.h; sourceTree = "<group>"; };
-		05062E691ABACB1300741B2D /* MainToAboutSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainToAboutSegue.m; sourceTree = "<group>"; };
 		05A2771D1ABA4ABE0010E45B /* iGlyphHackTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlyphHackTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A277211ABA4ABE0010E45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05A277221ABA4ABE0010E45B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,12 +70,8 @@
 				05A277281ABA4ABE0010E45B /* MainViewController.m */,
 				05062E621ABAC95C00741B2D /* SettingViewController.h */,
 				05062E631ABAC95C00741B2D /* SettingViewController.m */,
-				05062E651ABACAEC00741B2D /* MainToSettingSegue.h */,
-				05062E661ABACAEC00741B2D /* MainToSettingSegue.m */,
 				05062E5F1ABABCBB00741B2D /* AboutViewController.h */,
 				05062E601ABABCBB00741B2D /* AboutViewController.m */,
-				05062E681ABACB1300741B2D /* MainToAboutSegue.h */,
-				05062E691ABACB1300741B2D /* MainToAboutSegue.m */,
 				05A2772D1ABA4ABE0010E45B /* Images.xcassets */,
 				05D56A601ABA4BDE00AC57D9 /* LaunchScreen.xib */,
 				05D56A621ABA4BDE00AC57D9 /* Main.storyboard */,
@@ -170,12 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05062E671ABACAEC00741B2D /* MainToSettingSegue.m in Sources */,
 				05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */,
 				05062E641ABAC95C00741B2D /* SettingViewController.m in Sources */,
 				05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */,
 				05A277231ABA4ABE0010E45B /* main.m in Sources */,
-				05062E6A1ABACB1300741B2D /* MainToAboutSegue.m in Sources */,
 				05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

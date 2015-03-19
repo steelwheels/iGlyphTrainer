@@ -40,8 +40,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <segue destination="pnh-JI-veh" kind="custom" identifier="SegueFromMainToAbout" customClass="MainToAboutSegue" id="K3Z-co-wF2"/>
-                        <segue destination="E77-WL-vJj" kind="custom" identifier="SegueFromMainToSetting" customClass="MainToSettingSegue" id="iTJ-dH-x5E"/>
+                        <outlet property="moveToAboutViewButton" destination="2wK-1z-t0y" id="UvA-7f-W2E"/>
+                        <outlet property="moveToLevelViewButton" destination="yDS-Ub-oeP" id="60g-N5-hjh"/>
+                        <segue destination="pnh-JI-veh" kind="presentation" identifier="SegueFromMainToAbout" id="K3Z-co-wF2"/>
+                        <segue destination="E77-WL-vJj" kind="presentation" identifier="SegueFromMainToLevel" id="iTJ-dH-x5E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

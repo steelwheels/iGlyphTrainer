@@ -9,6 +9,11 @@
 
 @interface MainViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *moveToLevelViewButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *moveToAboutViewButton;
+
+- (void) moveToLevelViewButtonPressed: (UIBarButtonItem *) item ;
+- (void) moveToAboutViewButtonPressed: (UIBarButtonItem *) item ;
 
 @end
 
