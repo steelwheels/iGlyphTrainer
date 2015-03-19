@@ -16,8 +16,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.moveToLevelViewButton.target = self ;
-	self.moveToLevelViewButton.action = @selector(moveToLevelViewButtonPressed:) ;
+	self.moveToSetupViewButton.target = self ;
+	self.moveToSetupViewButton.action = @selector(moveToSetupViewButtonPressed:) ;
 	
 	self.moveToAboutViewButton.target = self ;
 	self.moveToAboutViewButton.action = @selector(moveToAboutViewButtonPressed:) ;
@@ -28,11 +28,11 @@
 	// Dispose of any resources that can be recreated.
 }
 
-- (void) moveToLevelViewButtonPressed: (UIBarButtonItem *) item
+- (void) moveToSetupViewButtonPressed: (UIBarButtonItem *) item
 {
 	(void) item ;
-	puts("moveToLevelViewButtonPressed:") ;
-	[self performSegueWithIdentifier: @"SegueFromMainToLevel" sender: self] ;
+	puts("moveToSetupViewButtonPressed:") ;
+	[self performSegueWithIdentifier: @"SegueFromMainToSetup" sender: self] ;
 }
 
 - (void) moveToAboutViewButtonPressed: (UIBarButtonItem *) item

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E601ABABCBB00741B2D /* AboutViewController.m */; };
-		05062E641ABAC95C00741B2D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E631ABAC95C00741B2D /* SettingViewController.m */; };
+		05062E641ABAC95C00741B2D /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E631ABAC95C00741B2D /* SetupViewController.m */; };
 		05A277231ABA4ABE0010E45B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277221ABA4ABE0010E45B /* main.m */; };
 		05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277251ABA4ABE0010E45B /* AppDelegate.m */; };
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
@@ -20,8 +20,8 @@
 /* Begin PBXFileReference section */
 		05062E5F1ABABCBB00741B2D /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		05062E601ABABCBB00741B2D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		05062E621ABAC95C00741B2D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		05062E631ABAC95C00741B2D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		05062E621ABAC95C00741B2D /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		05062E631ABAC95C00741B2D /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		05A2771D1ABA4ABE0010E45B /* iGlyphHackTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlyphHackTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A277211ABA4ABE0010E45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05A277221ABA4ABE0010E45B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 				05A277251ABA4ABE0010E45B /* AppDelegate.m */,
 				05A277271ABA4ABE0010E45B /* MainViewController.h */,
 				05A277281ABA4ABE0010E45B /* MainViewController.m */,
-				05062E621ABAC95C00741B2D /* SettingViewController.h */,
-				05062E631ABAC95C00741B2D /* SettingViewController.m */,
+				05062E621ABAC95C00741B2D /* SetupViewController.h */,
+				05062E631ABAC95C00741B2D /* SetupViewController.m */,
 				05062E5F1ABABCBB00741B2D /* AboutViewController.h */,
 				05062E601ABABCBB00741B2D /* AboutViewController.m */,
 				05A2772D1ABA4ABE0010E45B /* Images.xcassets */,
@@ -161,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */,
-				05062E641ABAC95C00741B2D /* SettingViewController.m in Sources */,
+				05062E641ABAC95C00741B2D /* SetupViewController.m in Sources */,
 				05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */,
 				05A277231ABA4ABE0010E45B /* main.m in Sources */,
 				05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */,

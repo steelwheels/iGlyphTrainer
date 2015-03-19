@@ -1,13 +1,13 @@
 /**
- * @file	AboutViewController.m
- * @brief	Define AboutViewController class
+ * @file	SetupViewController.m
+ * @brief	Define SetupViewController class
  * @par Copyright
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import "AboutViewController.h"
+#import "SetupViewController.h"
 
-@implementation AboutViewController
+@implementation SetupViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -24,7 +24,7 @@
 - (void) backToMainViewButtonPressed: (UIBarButtonItem *) item
 {
 	(void) item ;
-	puts("back to main view from about") ;
+	puts("back to main view from setup") ;
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
