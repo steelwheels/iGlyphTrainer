@@ -40,12 +40,32 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <segue destination="pnh-JI-veh" kind="presentation" identifier="SegueFromMainToPreference" id="K3Z-co-wF2"/>
+                        <segue destination="pnh-JI-veh" kind="custom" identifier="SegueFromMainToAbout" customClass="MainToAboutSegue" id="K3Z-co-wF2"/>
+                        <segue destination="E77-WL-vJj" kind="custom" identifier="SegueFromMainToSetting" customClass="MainToSettingSegue" id="iTJ-dH-x5E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="306" y="271"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="TOo-ai-1cw">
+            <objects>
+                <viewController id="E77-WL-vJj" customClass="SettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WWk-mC-wYc"/>
+                        <viewControllerLayoutGuide type="bottom" id="LRC-M6-z2X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBX-Pf-vpf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfe-uV-SPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="-9"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="m8D-3L-fuR">
@@ -64,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzT-u8-gaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="271"/>
+            <point key="canvasLocation" x="768" y="547"/>
         </scene>
     </scenes>
 </document>
