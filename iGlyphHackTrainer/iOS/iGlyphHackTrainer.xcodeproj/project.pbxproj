@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05062E601ABABCBB00741B2D /* AboutViewController.m */; };
 		05A277231ABA4ABE0010E45B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277221ABA4ABE0010E45B /* main.m */; };
 		05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277251ABA4ABE0010E45B /* AppDelegate.m */; };
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05062E5F1ABABCBB00741B2D /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		05062E601ABABCBB00741B2D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		05A2771D1ABA4ABE0010E45B /* iGlyphHackTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlyphHackTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A277211ABA4ABE0010E45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05A277221ABA4ABE0010E45B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				05A277251ABA4ABE0010E45B /* AppDelegate.m */,
 				05A277271ABA4ABE0010E45B /* MainViewController.h */,
 				05A277281ABA4ABE0010E45B /* MainViewController.m */,
+				05062E5F1ABABCBB00741B2D /* AboutViewController.h */,
+				05062E601ABABCBB00741B2D /* AboutViewController.m */,
 				05A2772D1ABA4ABE0010E45B /* Images.xcassets */,
 				05D56A601ABA4BDE00AC57D9 /* LaunchScreen.xib */,
 				05D56A621ABA4BDE00AC57D9 /* Main.storyboard */,
@@ -153,6 +158,7 @@
 				05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */,
 				05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */,
 				05A277231ABA4ABE0010E45B /* main.m in Sources */,
+				05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
