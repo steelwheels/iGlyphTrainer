@@ -1,17 +1,17 @@
 /**
- * @file	ViewController.m
- * @brief	Define ViewController class
+ * @file	MainViewController.m
+ * @brief	Define MainViewController class
  * @par Copyright
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
