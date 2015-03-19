@@ -33,16 +33,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-Ff-qXd">
+                                <rect key="frame" x="137" y="431" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NZb-rF-OS8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8NX-ix-YQI" secondAttribute="trailing" constant="-16" id="D0v-u6-JRK"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="YIY-Po-g1w"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121" id="jfZ-xL-UOA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z7E-Ff-qXd" secondAttribute="trailing" constant="121" id="jr0-7A-cDb"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGh-ca-IlW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="20" id="ywg-di-yKy"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="mainButton" destination="Z7E-Ff-qXd" id="PK7-1p-ubD"/>
                         <outlet property="moveToAboutViewButton" destination="2wK-1z-t0y" id="UvA-7f-W2E"/>
                         <outlet property="moveToSetupViewButton" destination="yDS-Ub-oeP" id="60g-N5-hjh"/>
                         <segue destination="pnh-JI-veh" kind="presentation" identifier="SegueFromMainToAbout" id="K3Z-co-wF2"/>
