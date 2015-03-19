@@ -12,4 +12,4 @@
 #	import <Cocoa/Cocoa.h>
 #endif
 #import <KCGraphicsView/KCGraphicsView.h>
-#import <KGGlyphData/KGGlyphData.h>
+#import <KGGameData/KGGameData.h>

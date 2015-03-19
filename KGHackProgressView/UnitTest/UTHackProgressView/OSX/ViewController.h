@@ -12,7 +12,7 @@
 
 @interface ViewController : NSViewController
 {
-	KGHackProgress *	hackProgress ;
+	KGHackProgress * hackProgress ;
 }
 
 @property (weak) IBOutlet KGHackProgressView *progressView;

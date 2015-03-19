@@ -684,7 +684,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="progressView" destination="wpb-JQ-LIr" id="S8H-LA-2wB"/>
+                        <outlet property="progressView" destination="wpb-JQ-LIr" id="an3-MB-RcP"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

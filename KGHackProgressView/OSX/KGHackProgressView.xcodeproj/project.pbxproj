@@ -14,11 +14,13 @@
 		059EFD611AB72A45001E182E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059EFD5F1AB72A45001E182E /* Main.storyboard */; };
 		059EFD751AB72D40001E182E /* KGHackProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059EFD741AB72D40001E182E /* KGHackProgressView.framework */; };
 		059EFD781AB72E6E001E182E /* KGHackProgressType.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F9F95D1AB5A7B500239C76 /* KGHackProgressType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C40FA41ABB210000AB18AC /* KGGameData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C40FA31ABB210000AB18AC /* KGGameData.framework */; };
+		05C40FA51ABB210300AB18AC /* KGGameData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C40FA31ABB210000AB18AC /* KGGameData.framework */; };
+		05C40FA71ABB234800AB18AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C40FA61ABB234800AB18AC /* ViewController.m */; };
 		05CA548C1AB5A701002B95D3 /* KGHackProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CA548B1AB5A701002B95D3 /* KGHackProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F9F9601AB5AA0A00239C76 /* KGHackProgressViewClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F9F95E1AB5AA0A00239C76 /* KGHackProgressViewClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F9F9611AB5AA0A00239C76 /* KGHackProgressViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F9F95F1AB5AA0A00239C76 /* KGHackProgressViewClass.m */; };
 		05F9F9631AB5AACA00239C76 /* KCGraphicsView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9F9621AB5AACA00239C76 /* KCGraphicsView.framework */; };
-		05F9F9651AB5AB4F00239C76 /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9F9641AB5AB4F00239C76 /* KGGlyphData.framework */; };
 		05F9F9681AB5AD5900239C76 /* KGHackProgressDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F9F9661AB5AD5900239C76 /* KGHackProgressDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F9F9691AB5AD5900239C76 /* KGHackProgressDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F9F9671AB5AD5900239C76 /* KGHackProgressDrawer.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		059EFD5D1AB72A45001E182E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		059EFD601AB72A45001E182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		059EFD741AB72D40001E182E /* KGHackProgressView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGHackProgressView.framework; path = ../../../../../Library/Frameworks/KGHackProgressView.framework; sourceTree = "<group>"; };
+		05C40FA31ABB210000AB18AC /* KGGameData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGameData.framework; path = ../../../../Library/Frameworks/KGGameData.framework; sourceTree = "<group>"; };
+		05C40FA61ABB234800AB18AC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		05CA54861AB5A701002B95D3 /* KGHackProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGHackProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CA548A1AB5A701002B95D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05CA548B1AB5A701002B95D3 /* KGHackProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGHackProgressView.h; sourceTree = "<group>"; };
@@ -58,7 +62,6 @@
 		05F9F95E1AB5AA0A00239C76 /* KGHackProgressViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgressViewClass.h; sourceTree = "<group>"; };
 		05F9F95F1AB5AA0A00239C76 /* KGHackProgressViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgressViewClass.m; sourceTree = "<group>"; };
 		05F9F9621AB5AACA00239C76 /* KCGraphicsView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KCGraphicsView.framework; path = ../../../../Library/Frameworks/KCGraphicsView.framework; sourceTree = "<group>"; };
-		05F9F9641AB5AB4F00239C76 /* KGGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphData.framework; path = ../../../../Library/Frameworks/KGGlyphData.framework; sourceTree = "<group>"; };
 		05F9F9661AB5AD5900239C76 /* KGHackProgressDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgressDrawer.h; sourceTree = "<group>"; };
 		05F9F9671AB5AD5900239C76 /* KGHackProgressDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgressDrawer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C40FA51ABB210300AB18AC /* KGGameData.framework in Frameworks */,
 				059EFD751AB72D40001E182E /* KGHackProgressView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C40FA41ABB210000AB18AC /* KGGameData.framework in Frameworks */,
 				05F9F9631AB5AACA00239C76 /* KCGraphicsView.framework in Frameworks */,
-				05F9F9651AB5AB4F00239C76 /* KGGlyphData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +152,7 @@
 		05CA54891AB5A701002B95D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				05F9F9641AB5AB4F00239C76 /* KGGlyphData.framework */,
+				05C40FA31ABB210000AB18AC /* KGGameData.framework */,
 				05F9F9621AB5AACA00239C76 /* KCGraphicsView.framework */,
 				05CA548A1AB5A701002B95D3 /* Info.plist */,
 			);
@@ -161,6 +165,7 @@
 				059EFD551AB72A45001E182E /* AppDelegate.h */,
 				059EFD561AB72A45001E182E /* AppDelegate.m */,
 				059EFD5A1AB72A45001E182E /* ViewController.h */,
+				05C40FA61ABB234800AB18AC /* ViewController.m */,
 				059EFD5B1AB72A45001E182E /* OSX */,
 				059EFD5D1AB72A45001E182E /* Images.xcassets */,
 				059EFD5F1AB72A45001E182E /* Main.storyboard */,
@@ -315,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C40FA71ABB234800AB18AC /* ViewController.m in Sources */,
 				05F9F9691AB5AD5900239C76 /* KGHackProgressDrawer.m in Sources */,
 				05F9F9611AB5AA0A00239C76 /* KGHackProgressViewClass.m in Sources */,
 			);

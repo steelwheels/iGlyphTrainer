@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		057AE0981ABB24510025B16B /* KGGameData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 057AE0971ABB24510025B16B /* KGGameData.h */; };
+		059E69011ABB24B800C6E99F /* KGGameProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E68FE1ABB24B800C6E99F /* KGGameProgress.m */; };
+		059E69021ABB24B800C6E99F /* KGHackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E69001ABB24B800C6E99F /* KGHackProgress.m */; };
+		059E69031ABB255E00C6E99F /* KGGameProgress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 059E68FD1ABB24B800C6E99F /* KGGameProgress.h */; };
+		059E69041ABB256200C6E99F /* KGHackProgress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 059E68FF1ABB24B800C6E99F /* KGHackProgress.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		059E69091ABB258C00C6E99F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057AE08C1ABB24510025B16B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 057AE0931ABB24510025B16B;
+			remoteInfo = KGGameData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		057AE0921ABB24510025B16B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				059E69041ABB256200C6E99F /* KGHackProgress.h in CopyFiles */,
+				059E69031ABB255E00C6E99F /* KGGameProgress.h in CopyFiles */,
+				057AE0981ABB24510025B16B /* KGGameData.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		057AE0941ABB24510025B16B /* libKGGameData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGameData.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		057AE0971ABB24510025B16B /* KGGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGameData.h; sourceTree = "<group>"; };
+		059E68FD1ABB24B800C6E99F /* KGGameProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGameProgress.h; sourceTree = "<group>"; };
+		059E68FE1ABB24B800C6E99F /* KGGameProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGameProgress.m; sourceTree = "<group>"; };
+		059E68FF1ABB24B800C6E99F /* KGHackProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgress.h; sourceTree = "<group>"; };
+		059E69001ABB24B800C6E99F /* KGHackProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgress.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		057AE0911ABB24510025B16B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		057AE08B1ABB24510025B16B = {
+			isa = PBXGroup;
+			children = (
+				057AE0961ABB24510025B16B /* Source */,
+				057AE0951ABB24510025B16B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		057AE0951ABB24510025B16B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				057AE0941ABB24510025B16B /* libKGGameData.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		057AE0961ABB24510025B16B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				057AE0971ABB24510025B16B /* KGGameData.h */,
+				059E68FD1ABB24B800C6E99F /* KGGameProgress.h */,
+				059E68FE1ABB24B800C6E99F /* KGGameProgress.m */,
+				059E68FF1ABB24B800C6E99F /* KGHackProgress.h */,
+				059E69001ABB24B800C6E99F /* KGHackProgress.m */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		059E69051ABB258300C6E99F /* Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ../../Script/install.mk";
+			buildConfigurationList = 059E69061ABB258300C6E99F /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				059E690A1ABB258C00C6E99F /* PBXTargetDependency */,
+			);
+			name = Install;
+			passBuildSettingsInEnvironment = 1;
+			productName = Install;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		057AE0931ABB24510025B16B /* KGGameData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057AE0A81ABB24510025B16B /* Build configuration list for PBXNativeTarget "KGGameData" */;
+			buildPhases = (
+				057AE0901ABB24510025B16B /* Sources */,
+				057AE0911ABB24510025B16B /* Frameworks */,
+				057AE0921ABB24510025B16B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGGameData;
+			productName = KGGameData;
+			productReference = 057AE0941ABB24510025B16B /* libKGGameData.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		057AE08C1ABB24510025B16B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Steel Wheels Project";
+				TargetAttributes = {
+					057AE0931ABB24510025B16B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					059E69051ABB258300C6E99F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 057AE08F1ABB24510025B16B /* Build configuration list for PBXProject "KGGameData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 057AE08B1ABB24510025B16B;
+			productRefGroup = 057AE0951ABB24510025B16B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				057AE0931ABB24510025B16B /* KGGameData */,
+				059E69051ABB258300C6E99F /* Install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		057AE0901ABB24510025B16B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059E69011ABB24B800C6E99F /* KGGameProgress.m in Sources */,
+				059E69021ABB24B800C6E99F /* KGHackProgress.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		059E690A1ABB258C00C6E99F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 057AE0931ABB24510025B16B /* KGGameData */;
+			targetProxy = 059E69091ABB258C00C6E99F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		057AE0A61ABB24510025B16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		057AE0A71ABB24510025B16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		057AE0A91ABB24510025B16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		057AE0AA1ABB24510025B16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		059E69071ABB258300C6E99F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		059E69081ABB258300C6E99F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		057AE08F1ABB24510025B16B /* Build configuration list for PBXProject "KGGameData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057AE0A61ABB24510025B16B /* Debug */,
+				057AE0A71ABB24510025B16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057AE0A81ABB24510025B16B /* Build configuration list for PBXNativeTarget "KGGameData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057AE0A91ABB24510025B16B /* Debug */,
+				057AE0AA1ABB24510025B16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		059E69061ABB258300C6E99F /* Build configuration list for PBXLegacyTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059E69071ABB258300C6E99F /* Debug */,
+				059E69081ABB258300C6E99F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 057AE08C1ABB24510025B16B /* Project object */;
+}
