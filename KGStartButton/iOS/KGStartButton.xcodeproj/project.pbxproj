@@ -7,9 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051190F41ABCEA2A001F2793 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D5909A1ABCE7EE00D1BA0B /* ViewController.m */; };
+		05CE64DC1ABCCFAA003C0BA7 /* KGStartButtonType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 051CA0C51ABB3037005CF86D /* KGStartButtonType.h */; };
+		05CE64E61ABCD001003C0BA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CE64E51ABCD001003C0BA7 /* main.m */; };
+		05CE64E91ABCD001003C0BA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CE64E81ABCD001003C0BA7 /* AppDelegate.m */; };
+		05CE64EF1ABCD001003C0BA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CE64ED1ABCD001003C0BA7 /* Main.storyboard */; };
+		05CE64F11ABCD001003C0BA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CE64F01ABCD001003C0BA7 /* Images.xcassets */; };
+		05CE64F41ABCD001003C0BA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CE64F21ABCD001003C0BA7 /* LaunchScreen.xib */; };
 		05E7CC711ABB2EFE000D4946 /* KGStartButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E7CC701ABB2EFE000D4946 /* KGStartButton.h */; };
 		05E7CC731ABB2EFE000D4946 /* KGStartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E7CC721ABB2EFE000D4946 /* KGStartButton.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		051190F51ABCEA58001F2793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E7CC651ABB2EFE000D4946 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CE64D61ABCCBEC003C0BA7;
+			remoteInfo = Install;
+		};
+		05CE64DA1ABCCBF8003C0BA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E7CC651ABB2EFE000D4946 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E7CC6C1ABB2EFE000D4946;
+			remoteInfo = KGStartButton;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		05E7CC6B1ABB2EFE000D4946 /* CopyFiles */ = {
@@ -18,6 +42,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05CE64DC1ABCCFAA003C0BA7 /* KGStartButtonType.h in CopyFiles */,
 				05E7CC711ABB2EFE000D4946 /* KGStartButton.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -26,12 +51,29 @@
 
 /* Begin PBXFileReference section */
 		051CA0C51ABB3037005CF86D /* KGStartButtonType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGStartButtonType.h; sourceTree = "<group>"; };
+		05CE64E11ABCD001003C0BA7 /* UTStartButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTStartButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CE64E41ABCD001003C0BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05CE64E51ABCD001003C0BA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		05CE64E71ABCD001003C0BA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		05CE64E81ABCD001003C0BA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		05CE64EE1ABCD001003C0BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05CE64F01ABCD001003C0BA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		05CE64F31ABCD001003C0BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		05D590991ABCE7EE00D1BA0B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		05D5909A1ABCE7EE00D1BA0B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		05E7CC6D1ABB2EFE000D4946 /* libKGStartButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGStartButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E7CC701ABB2EFE000D4946 /* KGStartButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGStartButton.h; sourceTree = "<group>"; };
 		05E7CC721ABB2EFE000D4946 /* KGStartButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGStartButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		05CE64DE1ABCD001003C0BA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E7CC6A1ABB2EFE000D4946 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,10 +84,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05CE64E21ABCD001003C0BA7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				05CE64E71ABCD001003C0BA7 /* AppDelegate.h */,
+				05CE64E81ABCD001003C0BA7 /* AppDelegate.m */,
+				05D590991ABCE7EE00D1BA0B /* ViewController.h */,
+				05D5909A1ABCE7EE00D1BA0B /* ViewController.m */,
+				05CE64ED1ABCD001003C0BA7 /* Main.storyboard */,
+				05CE64F01ABCD001003C0BA7 /* Images.xcassets */,
+				05CE64F21ABCD001003C0BA7 /* LaunchScreen.xib */,
+				05CE64E31ABCD001003C0BA7 /* Supporting Files */,
+			);
+			name = iOS;
+			path = ../UnitTest/iOS;
+			sourceTree = SOURCE_ROOT;
+		};
+		05CE64E31ABCD001003C0BA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05CE64E41ABCD001003C0BA7 /* Info.plist */,
+				05CE64E51ABCD001003C0BA7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05CE65071ABCD01F003C0BA7 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				05CE64E21ABCD001003C0BA7 /* iOS */,
+			);
+			name = UnitTest;
+			path = ../UnitTest;
+			sourceTree = SOURCE_ROOT;
+		};
 		05E7CC641ABB2EFE000D4946 = {
 			isa = PBXGroup;
 			children = (
 				05E7CC6F1ABB2EFE000D4946 /* Source */,
+				05CE65071ABCD01F003C0BA7 /* UnitTest */,
 				05E7CC6E1ABB2EFE000D4946 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				05E7CC6D1ABB2EFE000D4946 /* libKGStartButton.a */,
+				05CE64E11ABCD001003C0BA7 /* UTStartButton.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,7 +149,43 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		05CE64D61ABCCBEC003C0BA7 /* Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ../../Script/install.mk";
+			buildConfigurationList = 05CE64D91ABCCBEC003C0BA7 /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				05CE64DB1ABCCBF8003C0BA7 /* PBXTargetDependency */,
+			);
+			name = Install;
+			passBuildSettingsInEnvironment = 1;
+			productName = Install;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
+		05CE64E01ABCD001003C0BA7 /* UTStartButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CE65011ABCD001003C0BA7 /* Build configuration list for PBXNativeTarget "UTStartButton" */;
+			buildPhases = (
+				05CE64DD1ABCD001003C0BA7 /* Sources */,
+				05CE64DE1ABCD001003C0BA7 /* Frameworks */,
+				05CE64DF1ABCD001003C0BA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				051190F61ABCEA58001F2793 /* PBXTargetDependency */,
+			);
+			name = UTStartButton;
+			productName = UTStartButton;
+			productReference = 05CE64E11ABCD001003C0BA7 /* UTStartButton.app */;
+			productType = "com.apple.product-type.application";
+		};
 		05E7CC6C1ABB2EFE000D4946 /* KGStartButton */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E7CC811ABB2EFE000D4946 /* Build configuration list for PBXNativeTarget "KGStartButton" */;
@@ -98,6 +212,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
+					05CE64D61ABCCBEC003C0BA7 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					05CE64E01ABCD001003C0BA7 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					05E7CC6C1ABB2EFE000D4946 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -109,6 +229,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 05E7CC641ABB2EFE000D4946;
 			productRefGroup = 05E7CC6E1ABB2EFE000D4946 /* Products */;
@@ -116,11 +237,36 @@
 			projectRoot = "";
 			targets = (
 				05E7CC6C1ABB2EFE000D4946 /* KGStartButton */,
+				05CE64D61ABCCBEC003C0BA7 /* Install */,
+				05CE64E01ABCD001003C0BA7 /* UTStartButton */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		05CE64DF1ABCD001003C0BA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CE64EF1ABCD001003C0BA7 /* Main.storyboard in Resources */,
+				05CE64F41ABCD001003C0BA7 /* LaunchScreen.xib in Resources */,
+				05CE64F11ABCD001003C0BA7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		05CE64DD1ABCD001003C0BA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051190F41ABCEA2A001F2793 /* ViewController.m in Sources */,
+				05CE64E91ABCD001003C0BA7 /* AppDelegate.m in Sources */,
+				05CE64E61ABCD001003C0BA7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E7CC691ABB2EFE000D4946 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,7 +277,125 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		051190F61ABCEA58001F2793 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05CE64D61ABCCBEC003C0BA7 /* Install */;
+			targetProxy = 051190F51ABCEA58001F2793 /* PBXContainerItemProxy */;
+		};
+		05CE64DB1ABCCBF8003C0BA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E7CC6C1ABB2EFE000D4946 /* KGStartButton */;
+			targetProxy = 05CE64DA1ABCCBF8003C0BA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05CE64ED1ABCD001003C0BA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05CE64EE1ABCD001003C0BA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05CE64F21ABCD001003C0BA7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05CE64F31ABCD001003C0BA7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		05CE64D71ABCCBEC003C0BA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		05CE64D81ABCCBEC003C0BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		05CE65021ABCD001003C0BA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				INFOPLIST_FILE = ../UnitTest/iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				OTHER_LDFLAGS = (
+					"-lKGStartButton",
+					"-lKGGameData",
+					"-lCoconut",
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05CE65031ABCD001003C0BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_OPTIMIZATION_LEVEL = 2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				INFOPLIST_FILE = ../UnitTest/iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				OTHER_LDFLAGS = (
+					"-lKGStartButton",
+					"-lKGGameData",
+					"-lCoconut",
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		05E7CC7F1ABB2EFE000D4946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -256,6 +520,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05CE64D91ABCCBEC003C0BA7 /* Build configuration list for PBXLegacyTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CE64D71ABCCBEC003C0BA7 /* Debug */,
+				05CE64D81ABCCBEC003C0BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05CE65011ABCD001003C0BA7 /* Build configuration list for PBXNativeTarget "UTStartButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CE65021ABCD001003C0BA7 /* Debug */,
+				05CE65031ABCD001003C0BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05E7CC681ABB2EFE000D4946 /* Build configuration list for PBXProject "KGStartButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

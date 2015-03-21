@@ -31,7 +31,7 @@ FOUNDATION_EXPORT const unsigned char KGStartButtonVersionString[];
 }
 
 - (void) setGameProgress: (KGGameProgress *) progress ;
-- (void) setBUttonPressDelegate: (id <KGStartButtonDelegate>) delegate ;
+- (void) setButtonPressDelegate: (id <KGStartButtonDelegate>) delegate ;
 @end
 
 #undef KGButton

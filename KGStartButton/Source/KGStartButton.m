@@ -21,8 +21,12 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 	if((self = [super initWithCoder: decoder]) != nil){
 		self.gameProgress = nil ;
 		buttonPressDelegate = nil ;
+#		if TARGET_OS_IPHONE
+		[self addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+#		else
 		[self setTarget: self] ;
 		[self setAction: @selector(buttonPressed:)] ;
+#		endif
 	}
 	return self ;
 }
@@ -36,8 +40,12 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 	if((self = [super initWithFrame: frame]) != nil){
 		self.gameProgress = nil ;
 		buttonPressDelegate = nil ;
+#		if TARGET_OS_IPHONE
+		[self addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+#		else
 		[self setTarget: self] ;
 		[self setAction: @selector(buttonPressed:)] ;
+#		endif
 	}
 	return self ;
 }
@@ -48,7 +56,7 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 	[gameProgress addStatusObserver: self] ;
 }
 
-- (void) setBUttonPressDelegate: (id <KGStartButtonDelegate>) delegate
+- (void) setButtonPressDelegate: (id <KGStartButtonDelegate>) delegate
 {
 	buttonPressDelegate = delegate ;
 }
