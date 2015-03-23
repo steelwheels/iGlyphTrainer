@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05141A4A1AC058E00011D1E6 /* KGStartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 05141A491AC058E00011D1E6 /* KGStartButton.m */; };
+		05141A4B1AC058F30011D1E6 /* KGStartButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05141A481AC058E00011D1E6 /* KGStartButton.h */; };
+		051708EF1ABED2EB00242ABF /* KGButtons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B90BAE1ABED1D900C3E0C9 /* KGButtons.h */; };
+		051708F01ABED2F000242ABF /* KGButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B90BAC1ABED1D900C3E0C9 /* KGButton.h */; };
+		051708F11ABED2F400242ABF /* KGButtonsType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B90BAF1ABED1D900C3E0C9 /* KGButtonsType.h */; };
+		05B90BB01ABED1D900C3E0C9 /* KGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B90BAD1ABED1D900C3E0C9 /* KGButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		051708ED1ABED2C100242ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 058E56E81ABED180005BC315 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 058E56EF1ABED180005BC315;
+			remoteInfo = KGButtons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		058E56EE1ABED180005BC315 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				05141A4B1AC058F30011D1E6 /* KGStartButton.h in CopyFiles */,
+				051708F11ABED2F400242ABF /* KGButtonsType.h in CopyFiles */,
+				051708F01ABED2F000242ABF /* KGButton.h in CopyFiles */,
+				051708EF1ABED2EB00242ABF /* KGButtons.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05141A481AC058E00011D1E6 /* KGStartButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGStartButton.h; sourceTree = "<group>"; };
+		05141A491AC058E00011D1E6 /* KGStartButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGStartButton.m; sourceTree = "<group>"; };
+		058E56F01ABED180005BC315 /* libKGButtons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGButtons.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B90BAC1ABED1D900C3E0C9 /* KGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGButton.h; sourceTree = "<group>"; };
+		05B90BAD1ABED1D900C3E0C9 /* KGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGButton.m; sourceTree = "<group>"; };
+		05B90BAE1ABED1D900C3E0C9 /* KGButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGButtons.h; sourceTree = "<group>"; };
+		05B90BAF1ABED1D900C3E0C9 /* KGButtonsType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGButtonsType.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		058E56ED1ABED180005BC315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		058E56E71ABED180005BC315 = {
+			isa = PBXGroup;
+			children = (
+				058E56F21ABED180005BC315 /* Source */,
+				058E56F11ABED180005BC315 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		058E56F11ABED180005BC315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				058E56F01ABED180005BC315 /* libKGButtons.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		058E56F21ABED180005BC315 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				05B90BAE1ABED1D900C3E0C9 /* KGButtons.h */,
+				05B90BAF1ABED1D900C3E0C9 /* KGButtonsType.h */,
+				05B90BAC1ABED1D900C3E0C9 /* KGButton.h */,
+				05B90BAD1ABED1D900C3E0C9 /* KGButton.m */,
+				05141A481AC058E00011D1E6 /* KGStartButton.h */,
+				05141A491AC058E00011D1E6 /* KGStartButton.m */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		051708E91ABED2BA00242ABF /* Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ../../Script/install.mk";
+			buildConfigurationList = 051708EC1ABED2BA00242ABF /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				051708EE1ABED2C100242ABF /* PBXTargetDependency */,
+			);
+			name = Install;
+			passBuildSettingsInEnvironment = 1;
+			productName = Install;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		058E56EF1ABED180005BC315 /* KGButtons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 058E57041ABED180005BC315 /* Build configuration list for PBXNativeTarget "KGButtons" */;
+			buildPhases = (
+				058E56EC1ABED180005BC315 /* Sources */,
+				058E56ED1ABED180005BC315 /* Frameworks */,
+				058E56EE1ABED180005BC315 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGButtons;
+			productName = KGButtons;
+			productReference = 058E56F01ABED180005BC315 /* libKGButtons.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		058E56E81ABED180005BC315 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Steel Wheels Project";
+				TargetAttributes = {
+					051708E91ABED2BA00242ABF = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					058E56EF1ABED180005BC315 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 058E56EB1ABED180005BC315 /* Build configuration list for PBXProject "KGButtons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 058E56E71ABED180005BC315;
+			productRefGroup = 058E56F11ABED180005BC315 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				058E56EF1ABED180005BC315 /* KGButtons */,
+				051708E91ABED2BA00242ABF /* Install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		058E56EC1ABED180005BC315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05141A4A1AC058E00011D1E6 /* KGStartButton.m in Sources */,
+				05B90BB01ABED1D900C3E0C9 /* KGButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		051708EE1ABED2C100242ABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 058E56EF1ABED180005BC315 /* KGButtons */;
+			targetProxy = 051708ED1ABED2C100242ABF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		051708EA1ABED2BA00242ABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		051708EB1ABED2BA00242ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		058E57021ABED180005BC315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		058E57031ABED180005BC315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		058E57051ABED180005BC315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				INSTALL_PATH = "$(HOME)/local/lib";
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(HOME)/local/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(HOME)/local/include";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		058E57061ABED180005BC315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				INSTALL_PATH = "$(HOME)/local/lib";
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(HOME)/local/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(HOME)/local/include";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		051708EC1ABED2BA00242ABF /* Build configuration list for PBXLegacyTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051708EA1ABED2BA00242ABF /* Debug */,
+				051708EB1ABED2BA00242ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		058E56EB1ABED180005BC315 /* Build configuration list for PBXProject "KGButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				058E57021ABED180005BC315 /* Debug */,
+				058E57031ABED180005BC315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		058E57041ABED180005BC315 /* Build configuration list for PBXNativeTarget "KGButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				058E57051ABED180005BC315 /* Debug */,
+				058E57061ABED180005BC315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 058E56E81ABED180005BC315 /* Project object */;
+}
