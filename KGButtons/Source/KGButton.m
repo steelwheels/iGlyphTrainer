@@ -34,12 +34,26 @@
 	return self ;
 }
 
+- (void) setBorderColor: (UIColor *) color
+{
+	_borderColor = color ;
+	self.layer.borderColor = self.borderColor.CGColor ;
+}
+
+- (void) setBorderWidth:(CGFloat) width
+{
+	_borderWidth = width ;
+	self.layer.borderWidth = width ;
+}
+
 @end
 
 @implementation KGButton (KGPrivate)
 
 - (void) setupButton
 {
+	_borderColor = [UIColor blackColor] ;
+	_borderWidth = 0.0 ;
 }
 
 @end

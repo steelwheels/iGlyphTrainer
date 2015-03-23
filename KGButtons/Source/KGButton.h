@@ -13,7 +13,12 @@
 #	define KGSuperClassOfButton	NSButton
 #endif
 
+IB_DESIGNABLE
+
 @interface KGButton : KGSuperClassOfButton
+
+@property (assign, nonatomic) IBInspectable UIColor *	borderColor ;
+@property (assign, nonatomic) IBInspectable CGFloat	borderWidth ;
 
 @end
 
