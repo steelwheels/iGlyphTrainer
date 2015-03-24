@@ -34,7 +34,11 @@
 	return self ;
 }
 
+#if TARGET_OS_IPHONE
 - (void) setBorderColor: (UIColor *) color
+#else
+- (void) setBorderColor: (NSColor *) color
+#endif
 {
 	_borderColor = color ;
 	self.layer.borderColor = self.borderColor.CGColor ;
@@ -52,7 +56,11 @@
 
 - (void) setupButton
 {
+#if TARGET_OS_IPHONE
 	_borderColor = [UIColor blackColor] ;
+#else
+	_borderColor = [NSColor blackColor] ;
+#endif
 	_borderWidth = 0.0 ;
 }
 

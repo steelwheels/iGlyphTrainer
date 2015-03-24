@@ -11,6 +11,7 @@
 @interface ViewController : NSViewController
 
 @property (weak) IBOutlet KGButton *normalButton;
+@property (weak) IBOutlet KGStartButton *startButton;
 
 @end
 

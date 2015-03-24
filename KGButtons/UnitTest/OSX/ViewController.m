@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <KGGameData/KGGameData.h>
 #import <KiwiControl/KiwiControl.h>
 
 @implementation ViewController
@@ -15,11 +16,10 @@
 {
 	[super viewDidLoad];
 
-	// Do any additional setup after loading the view.
-	//struct CNRGB rgb = {1.0, 0.0, 0.0, 1.0} ;
-	//KCSetBorderColorOfView(self.aButton, rgb) ;
-	//KCSetBackgroundColorOfView(self.aButton, rgb) ;
+	KGGameProgress * progress = [[KGGameProgress alloc] init] ;
+	[self.startButton setGameProgress: progress] ;
 	
+	progress.gameStatus = KGIdleStatus ;
 }
 
 - (void)setRepresentedObject:(id)representedObject

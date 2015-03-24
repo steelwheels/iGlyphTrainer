@@ -672,17 +672,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vj-BY-ZrT" customClass="KGButton">
-                                <rect key="frame" x="100" y="148" width="82" height="32"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9vj-BY-ZrT" customClass="KGButton">
+                                <rect key="frame" x="170" y="222" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UR3-7Y-TXx"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ApO-7A-d34">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAe-KX-ecd" customClass="KGStartButton">
+                                <rect key="frame" x="170" y="189" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wOk-CG-Tbb"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qbl-hb-JQh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="9vj-BY-ZrT" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="176" id="a1J-hT-0dD"/>
+                            <constraint firstAttribute="trailing" secondItem="9vj-BY-ZrT" secondAttribute="trailing" constant="234" id="akO-8D-MXR"/>
+                            <constraint firstItem="jAe-KX-ecd" firstAttribute="top" secondItem="9vj-BY-ZrT" secondAttribute="bottom" constant="12" id="fQt-qP-hQh"/>
+                            <constraint firstItem="9vj-BY-ZrT" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pjJ-M7-o1y"/>
+                            <constraint firstItem="jAe-KX-ecd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="176" id="uVE-ct-32D"/>
+                            <constraint firstAttribute="trailing" secondItem="jAe-KX-ecd" secondAttribute="trailing" constant="234" id="yzm-ea-glv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="normalButton" destination="9vj-BY-ZrT" id="aVv-Qe-HNb"/>
+                        <outlet property="startButton" destination="jAe-KX-ecd" id="QYS-GZ-X5j"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
