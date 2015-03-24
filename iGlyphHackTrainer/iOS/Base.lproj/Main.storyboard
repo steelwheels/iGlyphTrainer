@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -33,33 +33,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-Ff-qXd">
-                                <rect key="frame" x="137" y="431" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-Ff-qXd" customClass="KGStartButton">
+                                <rect key="frame" x="58" y="420" width="205" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NZb-rF-OS8"/>
+                                    <constraint firstAttribute="height" constant="40" id="Ahk-Fs-88O"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Start"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z7E-Ff-qXd" secondAttribute="trailing" constant="41" id="5TY-JX-Gsb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8NX-ix-YQI" secondAttribute="trailing" constant="-16" id="D0v-u6-JRK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="19" id="FNx-d8-0dJ"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="Y2z-k2-mgE"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="YIY-Po-g1w"/>
-                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121" id="jfZ-xL-UOA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z7E-Ff-qXd" secondAttribute="trailing" constant="121" id="jr0-7A-cDb"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGh-ca-IlW"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="20" id="ywg-di-yKy"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="mainButton" destination="Z7E-Ff-qXd" id="PK7-1p-ubD"/>
                         <outlet property="moveToAboutViewButton" destination="2wK-1z-t0y" id="UvA-7f-W2E"/>
                         <outlet property="moveToSetupViewButton" destination="yDS-Ub-oeP" id="60g-N5-hjh"/>
+                        <outlet property="startButton" destination="Z7E-Ff-qXd" id="tMj-fp-6fq"/>
                         <segue destination="pnh-JI-veh" kind="presentation" identifier="SegueFromMainToAbout" id="K3Z-co-wF2"/>
                         <segue destination="E77-WL-vJj" kind="presentation" identifier="SegueFromMainToSetup" id="iTJ-dH-x5E"/>
                     </connections>
@@ -149,5 +145,5 @@
             <point key="canvasLocation" x="768" y="547"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

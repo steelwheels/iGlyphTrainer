@@ -17,13 +17,6 @@ IB_DESIGNABLE
 
 @interface KGButton : KGSuperClassOfButton
 
-#if TARGET_OS_IPHONE
-@property (assign, nonatomic) IBInspectable UIColor *	borderColor ;
-#else
-@property (assign, nonatomic) IBInspectable NSColor *	borderColor ;
-#endif
-@property (assign, nonatomic) IBInspectable CGFloat	borderWidth ;
-
 @end
 
 #undef KGSuperClassOfButton
