@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DeveloperName</key>
+	<string>Steel Wheels Project</string>
+	<key>DeveloperURL</key>
+	<string>https://sites.google.com/site/steelwheelsproject/</string>
+	<key>LicenseName</key>
+	<string>GNU Public License 2.0</string>
+	<key>LicenseURL</key>
+	<string>http://www.gnu.org/licenses/gpl-2.0.html</string>
+	<key>SourceCodeURL</key>
+	<string>https://github.com/steelwheels/iGlyphTrainer</string>
+	<key>ManualURL</key>
+	<string>https://sites.google.com/site/steelwheelsproject/home/products/iGlyphTrainer</string>
+	<key>ForgroundColor</key>
+	<string>cyan</string>
+	<key>BackgroundColor</key>
+	<string>black</string>
+	<key>BorderColor</key>
+	<string>cyan</string>
+</dict>
+</plist>

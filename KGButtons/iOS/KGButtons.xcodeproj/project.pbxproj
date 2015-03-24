@@ -18,6 +18,7 @@
 		051708EF1ABED2EB00242ABF /* KGButtons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B90BAE1ABED1D900C3E0C9 /* KGButtons.h */; };
 		051708F01ABED2F000242ABF /* KGButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B90BAC1ABED1D900C3E0C9 /* KGButton.h */; };
 		051708F11ABED2F400242ABF /* KGButtonsType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B90BAF1ABED1D900C3E0C9 /* KGButtonsType.h */; };
+		055B6CDB1AC1C56800B82325 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 055B6CDA1AC1C56800B82325 /* AppDefaults.plist */; };
 		05B90BB01ABED1D900C3E0C9 /* KGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B90BAD1ABED1D900C3E0C9 /* KGButton.m */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		05141A5D1AC059950011D1E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05141A5F1AC059950011D1E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		05141A621AC059950011D1E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		055B6CDA1AC1C56800B82325 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppDefaults.plist; path = ../../../iGlyphHackTrainer/iOS/AppDefaults.plist; sourceTree = "<group>"; };
 		058E56F01ABED180005BC315 /* libKGButtons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGButtons.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B90BAC1ABED1D900C3E0C9 /* KGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGButton.h; sourceTree = "<group>"; };
 		05B90BAD1ABED1D900C3E0C9 /* KGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGButton.m; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		05141A521AC059950011D1E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				055B6CDA1AC1C56800B82325 /* AppDefaults.plist */,
 				05141A531AC059950011D1E6 /* Info.plist */,
 				05141A541AC059950011D1E6 /* main.m */,
 			);
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055B6CDB1AC1C56800B82325 /* AppDefaults.plist in Resources */,
 				05141A5E1AC059950011D1E6 /* Main.storyboard in Resources */,
 				05141A631AC059950011D1E6 /* LaunchScreen.xib in Resources */,
 				05141A601AC059950011D1E6 /* Images.xcassets in Resources */,
@@ -348,6 +352,8 @@
 				OTHER_LDFLAGS = (
 					"-lKGButtons",
 					"-lKGGameData",
+					"-lKiwiControl",
+					"-lCoconutGraphics",
 					"-lCoconut",
 					"-ObjC",
 					"-all_load",
@@ -379,6 +385,8 @@
 				OTHER_LDFLAGS = (
 					"-lKGButtons",
 					"-lKGGameData",
+					"-lKiwiControl",
+					"-lCoconutGraphics",
 					"-lCoconut",
 					"-ObjC",
 					"-all_load",

@@ -41,8 +41,10 @@
 - (void) setupButton
 {
 #if TARGET_OS_IPHONE
-	self.layer.borderWidth = 1.0 ;
-	self.layer.borderColor = [[UIColor cyanColor] CGColor] ;
+	KCPreference * preference = [KCPreference sharedPreference] ;
+	UIColor * bordercol = [preference borderColor] ;
+	self.layer.borderWidth = [preference borderWidth] ;
+	self.layer.borderColor = [bordercol CGColor] ;
 #else
 	// do nothing
 #endif
