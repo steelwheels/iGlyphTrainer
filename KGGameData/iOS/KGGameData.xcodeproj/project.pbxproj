@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053EE9B61AC309F900F2D841 /* KGPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 053EE9B51AC309F900F2D841 /* KGPreference.m */; };
+		053EE9B71AC30BDC00F2D841 /* KGPreference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 053EE9B41AC309F900F2D841 /* KGPreference.h */; };
 		057AE0981ABB24510025B16B /* KGGameData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 057AE0971ABB24510025B16B /* KGGameData.h */; };
 		059E69011ABB24B800C6E99F /* KGGameProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E68FE1ABB24B800C6E99F /* KGGameProgress.m */; };
 		059E69021ABB24B800C6E99F /* KGHackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E69001ABB24B800C6E99F /* KGHackProgress.m */; };
@@ -31,6 +33,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				053EE9B71AC30BDC00F2D841 /* KGPreference.h in CopyFiles */,
 				059E69041ABB256200C6E99F /* KGHackProgress.h in CopyFiles */,
 				059E69031ABB255E00C6E99F /* KGGameProgress.h in CopyFiles */,
 				057AE0981ABB24510025B16B /* KGGameData.h in CopyFiles */,
@@ -40,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		053EE9B41AC309F900F2D841 /* KGPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGPreference.h; sourceTree = "<group>"; };
+		053EE9B51AC309F900F2D841 /* KGPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGPreference.m; sourceTree = "<group>"; };
 		057AE0941ABB24510025B16B /* libKGGameData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGameData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		057AE0971ABB24510025B16B /* KGGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGameData.h; sourceTree = "<group>"; };
 		059E68FD1ABB24B800C6E99F /* KGGameProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGameProgress.h; sourceTree = "<group>"; };
@@ -83,6 +88,8 @@
 				059E68FE1ABB24B800C6E99F /* KGGameProgress.m */,
 				059E68FF1ABB24B800C6E99F /* KGHackProgress.h */,
 				059E69001ABB24B800C6E99F /* KGHackProgress.m */,
+				053EE9B41AC309F900F2D841 /* KGPreference.h */,
+				053EE9B51AC309F900F2D841 /* KGPreference.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -167,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				059E69011ABB24B800C6E99F /* KGGameProgress.m in Sources */,
+				053EE9B61AC309F900F2D841 /* KGPreference.m in Sources */,
 				059E69021ABB24B800C6E99F /* KGHackProgress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +363,7 @@
 				059E69081ABB258300C6E99F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

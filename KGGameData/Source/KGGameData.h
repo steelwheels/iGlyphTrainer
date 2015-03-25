@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char KGGameDataVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <KGGameData/PublicHeader.h>
 #import <KGGameData/KGHackProgress.h>
 #import <KGGameData/KGGameProgress.h>
+#import <KGGameData/KGPreference.h>
+
 
