@@ -6,6 +6,7 @@
  */
 
 #import "KGGlyphDrawer.h"
+#import <KGGameData/KGGameData.h>
 #import <CoconutGraphics/CoconutGraphics.h>
 
 static void
@@ -31,7 +32,7 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 	if(!isInitialized){
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		struct CNRGB strokecol = ctable.white ;
-		KCSetStrokeColor(context, &strokecol) ;
+		KCSetStrokeColor(context, strokecol) ;
 		isInitialized = YES ;
 	}
 	if(!CNIsSameSize(&previousSize, &(boundsrect.size))){
@@ -167,12 +168,12 @@ drawVertexes(CGContextRef context, const CGPoint * origin, const struct KGGlyphI
 static void
 drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInfo * ginfo, const struct KGGlyphStroke * stroke)
 {
-	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
-	struct CNRGB gold = [ctable goldenrod] ;
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	struct CNRGB strokecol = preference.glyphColor ;
 	
 	CGContextSetLineWidth(context, ginfo->vertexSize) ;
 	CGContextSetLineCap(context, kCGLineCapRound) ;
-	KCSetStrokeColor(context, &gold) ;
+	KCSetStrokeColor(context, strokecol) ;
 	
 	unsigned int count = stroke->edgeCount ;
 	unsigned int i ;
