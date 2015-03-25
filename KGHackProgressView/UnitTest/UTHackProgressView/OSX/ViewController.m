@@ -15,6 +15,9 @@
 
 	hackProgress = [[KGHackProgress alloc] initWithMaxProgress: 3] ;
 	[self.progressView setHackProgress: hackProgress] ;
+	
+	hackProgress.currentProgress = 1 ;
+	
 }
 
 - (void)setRepresentedObject:(id)representedObject {

@@ -6,6 +6,7 @@
  */
 
 #import "KGHackProgressDrawer.h"
+#import <KGGameData/KGGameData.h>
 
 static void
 updateHexagonLayout(struct CNHexagon hexagon[], KGHackProgress * progress, CGRect bounds) ;
@@ -34,10 +35,12 @@ drawHexagon(CGContextRef context, KGHackProgress * progress, struct CNHexagon he
 	if(hackProgress == nil){
 		return  ;
 	}
+	
 	if(!CGRectEqualToRect(previousBounds, bounds)){
 		updateHexagonLayout(hackHexagon, hackProgress, bounds) ;
 		previousBounds = bounds ;
 	}
+
 	drawHexagon(context, hackProgress, hackHexagon) ;
 }
 
@@ -64,6 +67,11 @@ updateHexagonLayout(struct CNHexagon hexagon[], KGHackProgress * progress, CGRec
 static void
 drawHexagon(CGContextRef context, KGHackProgress * progress, struct CNHexagon hexagon[])
 {
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	struct CNRGB glyphcolor = preference.glyphColor ;
+	KCSetFillColor(context, glyphcolor) ;
+	KCSetStrokeColor(context, glyphcolor) ;
+	
 	unsigned int	maxprogress = progress.maxProgress ;
 	unsigned int	curprogress = progress.currentProgress ;
 	unsigned int	i ;
