@@ -7,4 +7,4 @@
 
 #import <KGGameData/KGGameData.h>
 
-BOOL UTHackProgress(void) ;
+BOOL UTGameStatus(void) ;

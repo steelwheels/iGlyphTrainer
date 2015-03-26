@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0502B6E21AC460FF004130C8 /* KGGameStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 0502B6E01AC460FF004130C8 /* KGGameStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0502B6E31AC460FF004130C8 /* KGGameStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0502B6E11AC460FF004130C8 /* KGGameStatus.m */; };
 		053EE9BA1AC30C0200F2D841 /* KGPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = 053EE9B81AC30C0200F2D841 /* KGPreference.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		053EE9BB1AC30C0200F2D841 /* KGPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 053EE9B91AC30C0200F2D841 /* KGPreference.m */; };
-		0548662F1ABB05F000231BA5 /* KGGameProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 0548662D1ABB05F000231BA5 /* KGGameProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		054866301ABB05F000231BA5 /* KGGameProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0548662E1ABB05F000231BA5 /* KGGameProgress.m */; };
 		057403D61ABB0238009D42F0 /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C56A9B1ABB00AA00FB1740 /* UnitTest.m */; };
-		057403D71ABB023C009D42F0 /* UTHackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C56A9C1ABB00AA00FB1740 /* UTHackProgress.m */; };
+		057403D71ABB023C009D42F0 /* UTGameStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C56A9C1ABB00AA00FB1740 /* UTGameStatus.m */; };
 		057403D81ABB0267009D42F0 /* Coconut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C56A8F1ABB000A00FB1740 /* Coconut.framework */; };
-		05C56A8D1ABAFFD700FB1740 /* KGHackProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C56A8B1ABAFFD700FB1740 /* KGHackProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05C56A8E1ABAFFD700FB1740 /* KGHackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C56A8C1ABAFFD700FB1740 /* KGHackProgress.m */; };
 		05C56A901ABB000A00FB1740 /* Coconut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C56A8F1ABB000A00FB1740 /* Coconut.framework */; };
 		05C56A921ABB005B00FB1740 /* install.mk in Resources */ = {isa = PBXBuildFile; fileRef = 05C56A911ABB005B00FB1740 /* install.mk */; };
 		05DC73EA1ABAF4C500094091 /* KGGameData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DC73E91ABAF4C500094091 /* KGGameData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,17 +56,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0502B6E01AC460FF004130C8 /* KGGameStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGameStatus.h; sourceTree = "<group>"; };
+		0502B6E11AC460FF004130C8 /* KGGameStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGameStatus.m; sourceTree = "<group>"; };
 		053EE9B81AC30C0200F2D841 /* KGPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGPreference.h; sourceTree = "<group>"; };
 		053EE9B91AC30C0200F2D841 /* KGPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGPreference.m; sourceTree = "<group>"; };
-		0548662D1ABB05F000231BA5 /* KGGameProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGameProgress.h; sourceTree = "<group>"; };
-		0548662E1ABB05F000231BA5 /* KGGameProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGameProgress.m; sourceTree = "<group>"; };
-		05C56A8B1ABAFFD700FB1740 /* KGHackProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgress.h; sourceTree = "<group>"; };
-		05C56A8C1ABAFFD700FB1740 /* KGHackProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgress.m; sourceTree = "<group>"; };
 		05C56A8F1ABB000A00FB1740 /* Coconut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Coconut.framework; path = ../../../../Library/Frameworks/Coconut.framework; sourceTree = "<group>"; };
 		05C56A911ABB005B00FB1740 /* install.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = install.mk; sourceTree = SOURCE_ROOT; };
 		05C56A9A1ABB00AA00FB1740 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitTest.h; path = ../UnitTest/UnitTest.h; sourceTree = SOURCE_ROOT; };
 		05C56A9B1ABB00AA00FB1740 /* UnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitTest.m; path = ../UnitTest/UnitTest.m; sourceTree = SOURCE_ROOT; };
-		05C56A9C1ABB00AA00FB1740 /* UTHackProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UTHackProgress.m; path = ../UnitTest/UTHackProgress.m; sourceTree = SOURCE_ROOT; };
+		05C56A9C1ABB00AA00FB1740 /* UTGameStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UTGameStatus.m; path = ../UnitTest/UTGameStatus.m; sourceTree = SOURCE_ROOT; };
 		05C56AA41ABB00EC00FB1740 /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC73E41ABAF4C500094091 /* KGGameData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGGameData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC73E81ABAF4C500094091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -100,7 +96,7 @@
 			children = (
 				05C56A9A1ABB00AA00FB1740 /* UnitTest.h */,
 				05C56A9B1ABB00AA00FB1740 /* UnitTest.m */,
-				05C56A9C1ABB00AA00FB1740 /* UTHackProgress.m */,
+				05C56A9C1ABB00AA00FB1740 /* UTGameStatus.m */,
 			);
 			name = UnitTest;
 			path = ../UnitTest;
@@ -128,10 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				05DC73E91ABAF4C500094091 /* KGGameData.h */,
-				0548662D1ABB05F000231BA5 /* KGGameProgress.h */,
-				0548662E1ABB05F000231BA5 /* KGGameProgress.m */,
-				05C56A8B1ABAFFD700FB1740 /* KGHackProgress.h */,
-				05C56A8C1ABAFFD700FB1740 /* KGHackProgress.m */,
+				0502B6E01AC460FF004130C8 /* KGGameStatus.h */,
+				0502B6E11AC460FF004130C8 /* KGGameStatus.m */,
 				053EE9B81AC30C0200F2D841 /* KGPreference.h */,
 				053EE9B91AC30C0200F2D841 /* KGPreference.m */,
 				05DC73E71ABAF4C500094091 /* Supporting Files */,
@@ -157,9 +151,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0502B6E21AC460FF004130C8 /* KGGameStatus.h in Headers */,
 				053EE9BA1AC30C0200F2D841 /* KGPreference.h in Headers */,
-				0548662F1ABB05F000231BA5 /* KGGameProgress.h in Headers */,
-				05C56A8D1ABAFFD700FB1740 /* KGHackProgress.h in Headers */,
 				05DC73EA1ABAF4C500094091 /* KGGameData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057403D71ABB023C009D42F0 /* UTHackProgress.m in Sources */,
+				057403D71ABB023C009D42F0 /* UTGameStatus.m in Sources */,
 				057403D61ABB0238009D42F0 /* UnitTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,9 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C56A8E1ABAFFD700FB1740 /* KGHackProgress.m in Sources */,
 				053EE9BB1AC30C0200F2D841 /* KGPreference.m in Sources */,
-				054866301ABB05F000231BA5 /* KGGameProgress.m in Sources */,
+				0502B6E31AC460FF004130C8 /* KGGameStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +384,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -402,6 +399,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

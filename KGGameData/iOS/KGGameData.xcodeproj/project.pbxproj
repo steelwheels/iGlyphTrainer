@@ -10,10 +10,8 @@
 		053EE9B61AC309F900F2D841 /* KGPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 053EE9B51AC309F900F2D841 /* KGPreference.m */; };
 		053EE9B71AC30BDC00F2D841 /* KGPreference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 053EE9B41AC309F900F2D841 /* KGPreference.h */; };
 		057AE0981ABB24510025B16B /* KGGameData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 057AE0971ABB24510025B16B /* KGGameData.h */; };
-		059E69011ABB24B800C6E99F /* KGGameProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E68FE1ABB24B800C6E99F /* KGGameProgress.m */; };
-		059E69021ABB24B800C6E99F /* KGHackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E69001ABB24B800C6E99F /* KGHackProgress.m */; };
-		059E69031ABB255E00C6E99F /* KGGameProgress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 059E68FD1ABB24B800C6E99F /* KGGameProgress.h */; };
-		059E69041ABB256200C6E99F /* KGHackProgress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 059E68FF1ABB24B800C6E99F /* KGHackProgress.h */; };
+		059EF68F1AC46F4A00409666 /* KGGameStatus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05F5213C1AC45D140029F41B /* KGGameStatus.h */; };
+		05F5213E1AC45D140029F41B /* KGGameStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F5213D1AC45D140029F41B /* KGGameStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +31,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				059EF68F1AC46F4A00409666 /* KGGameStatus.h in CopyFiles */,
 				053EE9B71AC30BDC00F2D841 /* KGPreference.h in CopyFiles */,
-				059E69041ABB256200C6E99F /* KGHackProgress.h in CopyFiles */,
-				059E69031ABB255E00C6E99F /* KGGameProgress.h in CopyFiles */,
 				057AE0981ABB24510025B16B /* KGGameData.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,10 +44,8 @@
 		053EE9B51AC309F900F2D841 /* KGPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGPreference.m; sourceTree = "<group>"; };
 		057AE0941ABB24510025B16B /* libKGGameData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGameData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		057AE0971ABB24510025B16B /* KGGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGameData.h; sourceTree = "<group>"; };
-		059E68FD1ABB24B800C6E99F /* KGGameProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGameProgress.h; sourceTree = "<group>"; };
-		059E68FE1ABB24B800C6E99F /* KGGameProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGameProgress.m; sourceTree = "<group>"; };
-		059E68FF1ABB24B800C6E99F /* KGHackProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgress.h; sourceTree = "<group>"; };
-		059E69001ABB24B800C6E99F /* KGHackProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgress.m; sourceTree = "<group>"; };
+		05F5213C1AC45D140029F41B /* KGGameStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGameStatus.h; sourceTree = "<group>"; };
+		05F5213D1AC45D140029F41B /* KGGameStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGameStatus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				057AE0971ABB24510025B16B /* KGGameData.h */,
-				059E68FD1ABB24B800C6E99F /* KGGameProgress.h */,
-				059E68FE1ABB24B800C6E99F /* KGGameProgress.m */,
-				059E68FF1ABB24B800C6E99F /* KGHackProgress.h */,
-				059E69001ABB24B800C6E99F /* KGHackProgress.m */,
+				05F5213C1AC45D140029F41B /* KGGameStatus.h */,
+				05F5213D1AC45D140029F41B /* KGGameStatus.m */,
 				053EE9B41AC309F900F2D841 /* KGPreference.h */,
 				053EE9B51AC309F900F2D841 /* KGPreference.m */,
 			);
@@ -173,9 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				059E69011ABB24B800C6E99F /* KGGameProgress.m in Sources */,
+				05F5213E1AC45D140029F41B /* KGGameStatus.m in Sources */,
 				053EE9B61AC309F900F2D841 /* KGPreference.m in Sources */,
-				059E69021ABB24B800C6E99F /* KGHackProgress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

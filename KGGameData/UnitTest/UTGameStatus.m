@@ -21,8 +21,9 @@
 	
 	printf("objeserve: keypath=%s ", [keyPath UTF8String]) ;
 	
-	KGHackProgress * progress = object ;
-	printf("-> current progress = %u, max progress = %u", progress.currentProgress, progress.maxProgress) ;
+	KGGameStatus * status = object ;
+	printf("-> current status = %u, max glyph num = %u, processed glyph no = %u",
+	       status.state, status.maxGlyphNum, status.processedGlyphNum) ;
 	
 	fputc('\n', stdout) ;
 }
@@ -30,17 +31,19 @@
 @end
 
 BOOL
-UTHackProgress(void)
+UTGameStatus(void)
 {
-	KGHackProgress *	progress = [[KGHackProgress alloc] initWithMaxProgress: 5] ;
-	UTObserver *		observer = [[UTObserver alloc] init] ;
+	KGGameStatus *	status = [[KGGameStatus alloc] init] ;
+	UTObserver *	observer = [[UTObserver alloc] init] ;
 	
-	[progress addCurrentProgressObserver: observer] ;
-	progress.currentProgress = 1 ;
-	progress.currentProgress = 2 ;
+	[status addStateObserver: observer] ;
+	status.maxGlyphNum		= 3 ;
+	status.processedGlyphNum	= 1 ;
+	status.state			= KGPresentationState ;
 	
-	progress.maxProgress = 1 ;
-	progress.maxProgress = 2 ;
+	status.maxGlyphNum		= 3 ;
+	status.processedGlyphNum	= 2 ;
+	status.state			= KGPresentationState ;
 	
 	return YES ;
 }
