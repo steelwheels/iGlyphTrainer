@@ -18,12 +18,15 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-	KGHackProgress * progress = [[KGHackProgress alloc] initWithMaxProgress: 5] ;
+	KGGameStatus * status = [[KGGameStatus alloc] init] ;
+	[status addStateObserver: self.hackProgressView] ;
+	
 	KGHackProgressDrawer * drawer = [[KGHackProgressDrawer alloc] init] ;
 	[self.hackProgressView setGraphicsDrawer: drawer] ;
-	[self.hackProgressView setHackProgress: progress] ;
 
-	progress.currentProgress = 2 ;
+	status.maxGlyphNum		= 4 ;
+	status.processedGlyphNum	= 2 ;
+	status.state			= KGPresentationState ;
 }
 
 - (void)didReceiveMemoryWarning {

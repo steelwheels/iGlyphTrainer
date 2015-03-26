@@ -13,11 +13,12 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	hackProgress = [[KGHackProgress alloc] initWithMaxProgress: 3] ;
-	[self.progressView setHackProgress: hackProgress] ;
+	gameStatus = [[KGGameStatus alloc] init] ;
+	[gameStatus addStateObserver: self.progressView] ;
 	
-	hackProgress.currentProgress = 1 ;
-	
+	gameStatus.maxGlyphNum		= 5 ;
+	gameStatus.processedGlyphNum	= 2 ;
+	gameStatus.state		= KGPresentationState ;
 }
 
 - (void)setRepresentedObject:(id)representedObject {

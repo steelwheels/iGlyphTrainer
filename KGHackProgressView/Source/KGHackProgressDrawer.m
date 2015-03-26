@@ -9,55 +9,55 @@
 #import <KGGameData/KGGameData.h>
 
 static void
-updateHexagonLayout(struct CNHexagon hexagon[], KGHackProgress * progress, CGRect bounds) ;
+updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect bounds) ;
 static void
-drawHexagon(CGContextRef context, KGHackProgress * progress, struct CNHexagon hexagon[]) ;
+drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curno, struct CNHexagon hexagon[]) ;
 
 @implementation KGHackProgressDrawer
+
+@synthesize maxGlyphNum, processedGlyphNum ;
 
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
-		hackProgress = nil ;
-		previousBounds = CGRectMake(0.0, 0.0, 0.0, 0.0) ;
+		previousBounds		= CGRectMake(0.0, 0.0, 0.0, 0.0) ;
+		maxGlyphNum		= 0 ;
+		processedGlyphNum	= 0 ;
+		prevMaxGlyphNum		= 0 ;
 	}
 	return self ;
-}
-
-- (void) setHackProgress: (KGHackProgress *) progress
-{
-	hackProgress = progress ;
 }
 
 - (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) bounds
 {
 	(void) level ;
-	if(hackProgress == nil){
-		return  ;
+	
+	if(maxGlyphNum == 0){
+		return ;
 	}
 	
-	if(!CGRectEqualToRect(previousBounds, bounds)){
-		updateHexagonLayout(hackHexagon, hackProgress, bounds) ;
-		previousBounds = bounds ;
+	if(!CGRectEqualToRect(previousBounds, bounds) || prevMaxGlyphNum != maxGlyphNum){
+		updateHexagonLayout(hackHexagon, maxGlyphNum, bounds) ;
+		previousBounds  = bounds ;
+		prevMaxGlyphNum = maxGlyphNum ;
 	}
 
-	drawHexagon(context, hackProgress, hackHexagon) ;
+	drawHexagon(context, maxGlyphNum, processedGlyphNum, hackHexagon) ;
 }
 
 @end
 
 static void
-updateHexagonLayout(struct CNHexagon hexagon[], KGHackProgress * progress, CGRect bounds)
+updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect bounds)
 {
 	CGFloat hexwidth  = bounds.size.width / KGLimitProgressCount ;
 	CGFloat radius = MIN(hexwidth, bounds.size.height) / 2.0 ;
 	
-	unsigned int maxprogress = progress.maxProgress ;
-	CGFloat totalwidth = hexwidth * maxprogress ;
+	CGFloat totalwidth = hexwidth * maxnum ;
 	CGFloat offset = (bounds.size.width - totalwidth) / 2.0 ;
 	
 	CGFloat ycenter = bounds.size.height / 2.0 + bounds.origin.y ;
-	for(unsigned int i=0 ; i<maxprogress ; i++){
+	for(unsigned int i=0 ; i<maxnum ; i++){
 		CGPoint center = CGPointMake(offset + radius + bounds.origin.x, ycenter) ;
 		hexagon[i] = CNMakeHexagon(center, radius) ;
 		offset += radius * 2.0 ;
@@ -65,20 +65,18 @@ updateHexagonLayout(struct CNHexagon hexagon[], KGHackProgress * progress, CGRec
 }
 
 static void
-drawHexagon(CGContextRef context, KGHackProgress * progress, struct CNHexagon hexagon[])
+drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curnum, struct CNHexagon hexagon[])
 {
 	KGPreference * preference = [KGPreference sharedPreference] ;
 	struct CNRGB glyphcolor = preference.glyphColor ;
 	KCSetFillColor(context, glyphcolor) ;
 	KCSetStrokeColor(context, glyphcolor) ;
 	
-	unsigned int	maxprogress = progress.maxProgress ;
-	unsigned int	curprogress = progress.currentProgress ;
 	unsigned int	i ;
-	for(i=0 ; i<curprogress ; i++){
+	for(i=0 ; i<curnum ; i++){
 		KCFillHexagon(context, &(hexagon[i])) ;
 	}
-	for(i=curprogress ; i<maxprogress ; i++){
+	for(i=curnum ; i<maxnum ; i++){
 		KCDrawHexagon(context, &(hexagon[i])) ;
 	}
 }

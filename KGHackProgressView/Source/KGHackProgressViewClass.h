@@ -7,11 +7,6 @@
 
 #import "KGHackProgressType.h"
 
-@interface KGHackProgressView : KCGraphicsView
-{
-	KGHackProgress *	hackProgress ;
-}
-
-- (void) setHackProgress: (KGHackProgress *) progress ;
+@interface KGHackProgressView : KCGraphicsView 
 
 @end

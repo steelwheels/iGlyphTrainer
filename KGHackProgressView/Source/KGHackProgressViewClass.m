@@ -13,7 +13,6 @@
 - (instancetype) initWithCoder:(NSCoder *) decoder
 {
 	if((self = [super initWithCoder: decoder]) != nil){
-		hackProgress = nil ;
 		KGHackProgressDrawer * drawer = [[KGHackProgressDrawer alloc] init] ;
 		[super setGraphicsDrawer: drawer] ;
 	}
@@ -27,29 +26,38 @@
 #endif
 {
 	if((self = [super initWithFrame: frame]) != nil){
-		hackProgress = nil ;
 		KGHackProgressDrawer * drawer = [[KGHackProgressDrawer alloc] init] ;
 		[super setGraphicsDrawer: drawer] ;
 	}
 	return self ;
 }
 
-- (void) setHackProgress: (KGHackProgress *) progress
-{
-	hackProgress = progress ;
-	[hackProgress addCurrentProgressObserver: self] ;
-	KGHackProgressDrawer * drawer = (KGHackProgressDrawer *) [self graphicsDrawer] ;
-	[drawer setHackProgress: progress] ;
-}
-
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
 {
-	(void) keyPath ; (void) object ; (void) change ; (void) context ;
-#	if TARGET_OS_IPHONE
-	[self setNeedsDisplay] ;
-#	else
-	[self setNeedsDisplay: YES] ;
-#	endif
+	(void) keyPath ; (void) change ; (void) context ;
+	if([object isKindOfClass: [KGGameStatus class]]){
+		KGGameStatus *		status = object ;
+		switch(status.state){
+			case KGIdleState:
+			case KGStrokeState:
+			case KGEvaluateState: {
+				/* Do nothing */
+			} break ;
+			case KGPresentationState: {
+				KGHackProgressDrawer *	drawer = [self graphicsDrawer] ;
+				/* Pass the state */
+				drawer.maxGlyphNum       = status.maxGlyphNum ;
+				drawer.processedGlyphNum = status.processedGlyphNum ;
+#				if TARGET_OS_IPHONE
+				[self setNeedsDisplay] ;
+#				else
+				[self setNeedsDisplay: YES] ;
+#				endif
+			} break ;
+		}
+	} else {
+		NSLog(@"Unknown object") ;
+	}
 }
 
 @end

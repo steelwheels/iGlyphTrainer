@@ -9,12 +9,14 @@
 
 @interface KGHackProgressDrawer : NSObject <KCGraphicsDrawing>
 {
-	KGHackProgress *	hackProgress ;
 	CGRect			previousBounds ;
 	struct CNHexagon	hackHexagon[KGLimitProgressCount] ;
+	unsigned int		prevMaxGlyphNum ;
 }
 
+@property (assign, nonatomic) unsigned int	maxGlyphNum ;
+@property (assign, nonatomic) unsigned int	processedGlyphNum ;
+
 - (instancetype) init ;
-- (void) setHackProgress: (KGHackProgress *) progress ;
 
 @end
