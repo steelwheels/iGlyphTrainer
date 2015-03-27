@@ -8,7 +8,7 @@
 #import "KGStartButton.h"
 
 static void
-setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
+setButtonStatus(KGStartButton * button, KGGameState stat) ;
 
 @interface KGStartButton (KGPrivate)
 - (void) buttonPressed: (id) button ;
@@ -19,7 +19,6 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 - (instancetype) initWithCoder:(NSCoder *) decoder
 {
 	if((self = [super initWithCoder: decoder]) != nil){
-		self.gameProgress = nil ;
 		buttonPressDelegate = nil ;
 #		if TARGET_OS_IPHONE
 		[self addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -38,7 +37,6 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 #endif
 {
 	if((self = [super initWithFrame: frame]) != nil){
-		self.gameProgress = nil ;
 		buttonPressDelegate = nil ;
 #		if TARGET_OS_IPHONE
 		[self addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -50,12 +48,6 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 	return self ;
 }
 
-- (void) setGameProgress: (KGGameProgress *) progress
-{
-	gameProgress = progress ;
-	[gameProgress addStatusObserver: self] ;
-}
-
 - (void) setButtonPressDelegate: (id <KGStartButtonDelegate>) delegate
 {
 	buttonPressDelegate = delegate ;
@@ -63,10 +55,12 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
 {
-	if(gameProgress == object  && [keyPath isEqualToString: @"gameStatus"]){
-		setButtonStatus(self, gameProgress.gameStatus) ;
+	(void) change ; (void) context ;
+	if([object isKindOfClass: [KGGameStatus class]] && [keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
+		KGGameStatus * stat = (KGGameStatus *) object ;
+		setButtonStatus(self, stat.state) ;
 	} else {
-		[super observeValueForKeyPath: keyPath ofObject: object change: change context: context] ;
+		assert(false) ;
 	}
 }
 
@@ -78,17 +72,17 @@ setButtonStatus(KGStartButton * button, KGGameStatus stat) ;
 {
 	(void) button ;
 	if(buttonPressDelegate){
-		[buttonPressDelegate startButtonPressedWithStatus: gameProgress.gameStatus] ;
+		[buttonPressDelegate startButtonPressed] ;
 	}
 }
 
 @end
 
 static void
-setButtonStatus(KGStartButton * button, KGGameStatus stat)
+setButtonStatus(KGStartButton * button, KGGameState stat)
 {
 	NSString * labstr ;
-	if(stat == KGIdleStatus){
+	if(stat == KGIdleState){
 		labstr = @"Start" ;
 	} else {
 		labstr = @"Stop" ;

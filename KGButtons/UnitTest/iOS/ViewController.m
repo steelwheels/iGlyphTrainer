@@ -18,10 +18,10 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
-	KGGameProgress * progress = [[KGGameProgress alloc] init] ;
-	[self.startButton setGameProgress: progress] ;
+	KGGameStatus * status = [[KGGameStatus alloc] init] ;
+	[status addStateObserver: self.startButton] ;
 	
-	progress.gameStatus = KGPresentationStatus ;
+	status.state = KGIdleState ;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,16 +9,14 @@
 #import <KGGameData/KGGameData.h>
 
 @protocol  KGStartButtonDelegate <NSObject>
-- (void) startButtonPressedWithStatus: (KGGameStatus) status ;
+- (void) startButtonPressed ;
 @end
 
 @interface KGStartButton : KGButton
 {
-	KGGameProgress *		gameProgress ;
 	id <KGStartButtonDelegate>	buttonPressDelegate ;
 }
 
-- (void) setGameProgress: (KGGameProgress *) progress ;
 - (void) setButtonPressDelegate: (id <KGStartButtonDelegate>) delegate ;
 @end
 

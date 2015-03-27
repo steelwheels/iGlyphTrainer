@@ -16,10 +16,10 @@
 {
 	[super viewDidLoad];
 
-	KGGameProgress * progress = [[KGGameProgress alloc] init] ;
-	[self.startButton setGameProgress: progress] ;
+	KGGameStatus * status = [[KGGameStatus alloc] init] ;
+	[status addStateObserver: self.startButton] ;
 	
-	progress.gameStatus = KGIdleStatus ;
+	status.state = KGIdleState ;
 }
 
 - (void)setRepresentedObject:(id)representedObject
