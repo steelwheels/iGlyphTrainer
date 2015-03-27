@@ -13,6 +13,16 @@
 
 @implementation AppDelegate
 
+@synthesize gameStatus ;
+
+- (instancetype) init
+{
+	if((self = [super init]) != nil){
+		puts("Hello") ;
+		self.gameStatus = [[KGGameStatus alloc] init] ;
+	}
+	return self ;
+}
 
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions:(NSDictionary *) launchOptions
 {

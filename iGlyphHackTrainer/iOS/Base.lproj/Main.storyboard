@@ -27,7 +27,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="iGlyph Hack Trainer" id="jBC-Ra-ZPZ">
+                                    <navigationItem id="jBC-Ra-ZPZ">
                                         <barButtonItem key="leftBarButtonItem" title="Setup" id="yDS-Ub-oeP"/>
                                         <barButtonItem key="rightBarButtonItem" title="About" id="2wK-1z-t0y"/>
                                     </navigationItem>
@@ -38,21 +38,33 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ahk-Fs-88O"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Start"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34w-lM-D2R" customClass="KGHackProgressView">
+                                <rect key="frame" x="16" y="64" width="288" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="aNB-2s-AQk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Z7E-Ff-qXd" secondAttribute="trailing" constant="41" id="5TY-JX-Gsb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8NX-ix-YQI" secondAttribute="trailing" constant="-16" id="D0v-u6-JRK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="19" id="FNx-d8-0dJ"/>
+                            <constraint firstItem="34w-lM-D2R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hrn-Wj-QMu"/>
+                            <constraint firstItem="34w-lM-D2R" firstAttribute="top" secondItem="8NX-ix-YQI" secondAttribute="bottom" id="JvY-tG-4GV"/>
                             <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="Y2z-k2-mgE"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="YIY-Po-g1w"/>
+                            <constraint firstItem="34w-lM-D2R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pNU-7Q-nxY"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGh-ca-IlW"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="hackProgressView" destination="34w-lM-D2R" id="1iN-bN-4so"/>
                         <outlet property="moveToAboutViewButton" destination="2wK-1z-t0y" id="UvA-7f-W2E"/>
                         <outlet property="moveToSetupViewButton" destination="yDS-Ub-oeP" id="60g-N5-hjh"/>
                         <outlet property="startButton" destination="Z7E-Ff-qXd" id="tMj-fp-6fq"/>

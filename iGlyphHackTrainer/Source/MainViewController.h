@@ -6,13 +6,15 @@
  */
 
 #import <KGButtons/KGButtons.h>
+#import <KGHackProgressView/KGHackProgressView.h>
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem * moveToSetupViewButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem * moveToAboutViewButton;
-@property (weak, nonatomic) IBOutlet KGStartButton *startButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *		moveToSetupViewButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *		moveToAboutViewButton;
+@property (weak, nonatomic) IBOutlet KGStartButton *		startButton;
+@property (weak, nonatomic) IBOutlet KGHackProgressView *	hackProgressView;
 
 - (void) moveToSetupViewButtonPressed: (UIBarButtonItem *) item ;
 - (void) moveToAboutViewButtonPressed: (UIBarButtonItem *) item ;

@@ -6,6 +6,15 @@
  */
 
 #import "MainViewController.h"
+#import "AppDelegate.h"
+
+static inline KGGameStatus *
+gameStatus(void)
+{
+	UIApplication * app = [UIApplication sharedApplication] ;
+	AppDelegate * delegate = app.delegate ;
+	return delegate.gameStatus ;
+}
 
 @interface MainViewController ()
 
@@ -13,7 +22,8 @@
 
 @implementation MainViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
 	
 	self.moveToSetupViewButton.target = self ;
@@ -21,6 +31,10 @@
 	
 	self.moveToAboutViewButton.target = self ;
 	self.moveToAboutViewButton.action = @selector(moveToAboutViewButtonPressed:) ;
+	
+	KGGameStatus * status = gameStatus() ;
+	[status addStateObserver: self.startButton] ;
+	[status addStateObserver: self.hackProgressView] ;
 }
 
 - (void)didReceiveMemoryWarning {

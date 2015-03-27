@@ -291,6 +291,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lKGButtons",
+					"-lKGHackProgressView",
+					"-lKCGraphicsView",
 					"-lKGGameData",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
@@ -321,6 +323,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lKGButtons",
+					"-lKGHackProgressView",
+					"-lKCGraphicsView",
 					"-lKGGameData",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
