@@ -23,7 +23,7 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 #	define COUNT_OF_ARRAY(VAR)	(sizeof(VAR) / sizeof(struct KGGlyphEdge))
 	struct KGGlyphStroke result  ;
 	switch(kind){
-		case KGAbondonGlyph: {
+		case KGAbandonGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 3,  4},
 				{ 4,  9},
