@@ -276,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +295,7 @@
 					"-lKGHackProgressView",
 					"-lKCGraphicsView",
 					"-lKGGameData",
+					"-lKGTimer",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
 					"-lCoconut",
@@ -308,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -326,6 +329,7 @@
 					"-lKGHackProgressView",
 					"-lKCGraphicsView",
 					"-lKGGameData",
+					"-lKGTimer",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
 					"-lCoconut",
