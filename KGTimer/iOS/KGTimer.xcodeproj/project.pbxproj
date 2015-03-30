@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05CE31871AC83FB60030802F /* KGTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CE31851AC83FB60030802F /* KGTimerLabel.m */; };
+		05CE318E1AC841860030802F /* KGTimer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05CE31831AC83FB60030802F /* KGTimer.h */; };
+		05CE318F1AC8418B0030802F /* KGTimerType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05CE31861AC83FB60030802F /* KGTimerType.h */; };
+		05CE31901AC841910030802F /* KGTimerLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05CE31841AC83FB60030802F /* KGTimerLabel.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05CE318C1AC841580030802F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CE31611AC83F7A0030802F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CE31681AC83F7A0030802F;
+			remoteInfo = KGTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05CE31671AC83F7A0030802F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				05CE31901AC841910030802F /* KGTimerLabel.h in CopyFiles */,
+				05CE318F1AC8418B0030802F /* KGTimerType.h in CopyFiles */,
+				05CE318E1AC841860030802F /* KGTimer.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05CE31691AC83F7A0030802F /* libKGTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGTimer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CE31831AC83FB60030802F /* KGTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTimer.h; sourceTree = "<group>"; };
+		05CE31841AC83FB60030802F /* KGTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTimerLabel.h; sourceTree = "<group>"; };
+		05CE31851AC83FB60030802F /* KGTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGTimerLabel.m; sourceTree = "<group>"; };
+		05CE31861AC83FB60030802F /* KGTimerType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTimerType.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05CE31661AC83F7A0030802F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05CE31601AC83F7A0030802F = {
+			isa = PBXGroup;
+			children = (
+				05CE316B1AC83F7A0030802F /* Source */,
+				05CE316A1AC83F7A0030802F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05CE316A1AC83F7A0030802F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05CE31691AC83F7A0030802F /* libKGTimer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05CE316B1AC83F7A0030802F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				05CE31831AC83FB60030802F /* KGTimer.h */,
+				05CE31861AC83FB60030802F /* KGTimerType.h */,
+				05CE31841AC83FB60030802F /* KGTimerLabel.h */,
+				05CE31851AC83FB60030802F /* KGTimerLabel.m */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		05CE31881AC8414D0030802F /* Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ../../Script/Install.mk";
+			buildConfigurationList = 05CE31891AC8414D0030802F /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				05CE318D1AC841580030802F /* PBXTargetDependency */,
+			);
+			name = Install;
+			passBuildSettingsInEnvironment = 1;
+			productName = Install;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		05CE31681AC83F7A0030802F /* KGTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CE317D1AC83F7A0030802F /* Build configuration list for PBXNativeTarget "KGTimer" */;
+			buildPhases = (
+				05CE31651AC83F7A0030802F /* Sources */,
+				05CE31661AC83F7A0030802F /* Frameworks */,
+				05CE31671AC83F7A0030802F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGTimer;
+			productName = KGTimer;
+			productReference = 05CE31691AC83F7A0030802F /* libKGTimer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05CE31611AC83F7A0030802F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Steel Wheels Project";
+				TargetAttributes = {
+					05CE31681AC83F7A0030802F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					05CE31881AC8414D0030802F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 05CE31641AC83F7A0030802F /* Build configuration list for PBXProject "KGTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05CE31601AC83F7A0030802F;
+			productRefGroup = 05CE316A1AC83F7A0030802F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05CE31681AC83F7A0030802F /* KGTimer */,
+				05CE31881AC8414D0030802F /* Install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05CE31651AC83F7A0030802F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CE31871AC83FB60030802F /* KGTimerLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05CE318D1AC841580030802F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05CE31681AC83F7A0030802F /* KGTimer */;
+			targetProxy = 05CE318C1AC841580030802F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05CE317B1AC83F7A0030802F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		05CE317C1AC83F7A0030802F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05CE317E1AC83F7A0030802F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-lCoconut",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		05CE317F1AC83F7A0030802F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/local/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-lCoconut",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+		05CE318A1AC8414D0030802F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		05CE318B1AC8414D0030802F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05CE31641AC83F7A0030802F /* Build configuration list for PBXProject "KGTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CE317B1AC83F7A0030802F /* Debug */,
+				05CE317C1AC83F7A0030802F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05CE317D1AC83F7A0030802F /* Build configuration list for PBXNativeTarget "KGTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CE317E1AC83F7A0030802F /* Debug */,
+				05CE317F1AC83F7A0030802F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		05CE31891AC8414D0030802F /* Build configuration list for PBXLegacyTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CE318A1AC8414D0030802F /* Debug */,
+				05CE318B1AC8414D0030802F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05CE31611AC83F7A0030802F /* Project object */;
+}

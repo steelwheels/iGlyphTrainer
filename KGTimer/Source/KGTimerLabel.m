@@ -23,9 +23,15 @@
 	}
 	
 	NSString * str = [[NSString alloc] initWithUTF8String: buf] ;
+#	if TARGET_OS_IPHONE
+	[self performSelectorOnMainThread: @selector(setText:)
+			       withObject: str
+			    waitUntilDone: YES] ;
+#	else
 	[self performSelectorOnMainThread: @selector(setStringValue:)
 			       withObject: str
 			    waitUntilDone: YES] ;
+#	endif
 }
 
 - (void) wakeupByTimerInterval: (double) time
