@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <KGControls/KGControls.h>
+#import <KGGameData/KGGameData.h>
 
 @interface ViewController : UIViewController
+{
+	KGGameStatus *		gameStatus ;
+}
 
+@property (weak, nonatomic) IBOutlet KGButton *normalButton;
+@property (weak, nonatomic) IBOutlet KGStartButton *startButton;
 
 @end
 

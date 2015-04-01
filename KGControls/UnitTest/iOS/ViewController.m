@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -16,7 +17,12 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
+	gameStatus = [[KGGameStatus alloc] init] ;
+	[gameStatus addStateObserver: self.startButton] ;
+	
+	gameStatus.state = KGIdleState ;
 }
 
 - (void)didReceiveMemoryWarning {
