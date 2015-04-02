@@ -20,5 +20,7 @@
 	<string>black</string>
 	<key>BorderColor</key>
 	<string>cyan</string>
+	<key>FontColor</key>
+	<string>gold2</string>
 </dict>
 </plist>
