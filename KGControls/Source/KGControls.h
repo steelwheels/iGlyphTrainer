@@ -18,6 +18,8 @@ FOUNDATION_EXPORT const unsigned char KGControlsVersionString[];
  */
 #import <KGControls/KGStartButton.h>
 #import <KGControls/KGButton.h>
+#import <KGControls/KGLabel.h>
+
 
 
 

@@ -13,8 +13,6 @@
 #	define KGSuperClassOfButton	NSButton
 #endif
 
-IB_DESIGNABLE
-
 @interface KGButton : KGSuperClassOfButton
 
 @end

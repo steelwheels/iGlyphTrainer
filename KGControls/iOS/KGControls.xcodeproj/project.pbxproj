@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		050BA6961ACAEE4500BB8029 /* KGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 050BA6911ACAEE4500BB8029 /* KGButton.m */; };
 		050BA6971ACAEE4500BB8029 /* KGStartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 050BA6951ACAEE4500BB8029 /* KGStartButton.m */; };
+		052128E51ACDA65D000F7DF6 /* KGGlyphNameLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 052128E41ACDA65D000F7DF6 /* KGGlyphNameLabel.m */; };
 		052AB9961ACB069300B85639 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 052AB9951ACB069300B85639 /* AppDefaults.plist */; };
 		0533C8611ACAF64E00D26BF7 /* KGButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 050BA6901ACAEE4500BB8029 /* KGButton.h */; };
 		0533C8631ACAF65800D26BF7 /* KGStartButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 050BA6941ACAEE4500BB8029 /* KGStartButton.h */; };
 		0533C8921ACAFB3D00D26BF7 /* KGControlType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 050BA6931ACAEE4500BB8029 /* KGControlType.h */; };
+		0596C6931ACD990500593298 /* KGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0596C6921ACD990500593298 /* KGLabel.m */; };
+		0596C6941ACD992700593298 /* KGLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0596C6911ACD990500593298 /* KGLabel.h */; };
 		05C1A9341ACB04C10013C59C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C1A9331ACB04C10013C59C /* main.m */; };
 		05C1A9371ACB04C10013C59C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C1A9361ACB04C10013C59C /* AppDelegate.m */; };
 		05C1A93A1ACB04C10013C59C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C1A9391ACB04C10013C59C /* ViewController.m */; };
@@ -46,6 +49,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				0596C6941ACD992700593298 /* KGLabel.h in CopyFiles */,
 				0533C8921ACAFB3D00D26BF7 /* KGControlType.h in CopyFiles */,
 				0533C8631ACAF65800D26BF7 /* KGStartButton.h in CopyFiles */,
 				0533C8611ACAF64E00D26BF7 /* KGButton.h in CopyFiles */,
@@ -61,7 +65,11 @@
 		050BA6931ACAEE4500BB8029 /* KGControlType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGControlType.h; sourceTree = "<group>"; };
 		050BA6941ACAEE4500BB8029 /* KGStartButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGStartButton.h; sourceTree = "<group>"; };
 		050BA6951ACAEE4500BB8029 /* KGStartButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGStartButton.m; sourceTree = "<group>"; };
+		052128E31ACDA65D000F7DF6 /* KGGlyphNameLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphNameLabel.h; sourceTree = "<group>"; };
+		052128E41ACDA65D000F7DF6 /* KGGlyphNameLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphNameLabel.m; sourceTree = "<group>"; };
 		052AB9951ACB069300B85639 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppDefaults.plist; path = ../../../iGlyphHackTrainer/iOS/AppDefaults.plist; sourceTree = "<group>"; };
+		0596C6911ACD990500593298 /* KGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGLabel.h; sourceTree = "<group>"; };
+		0596C6921ACD990500593298 /* KGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGLabel.m; sourceTree = "<group>"; };
 		05C1A92F1ACB04C10013C59C /* UTControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C1A9321ACB04C10013C59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05C1A9331ACB04C10013C59C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +160,10 @@
 			children = (
 				05C8BE301ACAED320012B664 /* KGControls.h */,
 				050BA6931ACAEE4500BB8029 /* KGControlType.h */,
+				0596C6911ACD990500593298 /* KGLabel.h */,
+				0596C6921ACD990500593298 /* KGLabel.m */,
+				052128E31ACDA65D000F7DF6 /* KGGlyphNameLabel.h */,
+				052128E41ACDA65D000F7DF6 /* KGGlyphNameLabel.m */,
 				050BA6901ACAEE4500BB8029 /* KGButton.h */,
 				050BA6911ACAEE4500BB8029 /* KGButton.m */,
 				050BA6941ACAEE4500BB8029 /* KGStartButton.h */,
@@ -286,6 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052128E51ACDA65D000F7DF6 /* KGGlyphNameLabel.m in Sources */,
+				0596C6931ACD990500593298 /* KGLabel.m in Sources */,
 				050BA6971ACAEE4500BB8029 /* KGStartButton.m in Sources */,
 				050BA6961ACAEE4500BB8029 /* KGButton.m in Sources */,
 			);
