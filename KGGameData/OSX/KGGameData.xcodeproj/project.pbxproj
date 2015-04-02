@@ -17,6 +17,7 @@
 		05C56A901ABB000A00FB1740 /* Coconut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C56A8F1ABB000A00FB1740 /* Coconut.framework */; };
 		05C56A921ABB005B00FB1740 /* install.mk in Resources */ = {isa = PBXBuildFile; fileRef = 05C56A911ABB005B00FB1740 /* install.mk */; };
 		05DC73EA1ABAF4C500094091 /* KGGameData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DC73E91ABAF4C500094091 /* KGGameData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E18AEC1ACDA7F20085EF64 /* KGGameData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E18AEB1ACDA7F20085EF64 /* KGGameData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		05DC73E41ABAF4C500094091 /* KGGameData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGGameData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DC73E81ABAF4C500094091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05DC73E91ABAF4C500094091 /* KGGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGameData.h; sourceTree = "<group>"; };
+		05E18AEB1ACDA7F20085EF64 /* KGGameData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGameData.framework; path = ../../../../Library/Frameworks/KGGameData.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E18AEC1ACDA7F20085EF64 /* KGGameData.framework in Frameworks */,
 				05C56A901ABB000A00FB1740 /* Coconut.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +140,9 @@
 		05DC73E71ABAF4C500094091 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				05C56A911ABB005B00FB1740 /* install.mk */,
 				05C56A8F1ABB000A00FB1740 /* Coconut.framework */,
+				05E18AEB1ACDA7F20085EF64 /* KGGameData.framework */,
+				05C56A911ABB005B00FB1740 /* install.mk */,
 				05DC73E81ABAF4C500094091 /* Info.plist */,
 			);
 			name = "Supporting Files";
