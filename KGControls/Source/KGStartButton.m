@@ -6,52 +6,12 @@
  */
 
 #import "KGStartButton.h"
+#import <KGGameData/KGGameData.h>
 
 static void
 setButtonStatus(KGStartButton * button, KGGameState stat) ;
 
-@interface KGStartButton (KGPrivate)
-- (void) buttonPressed: (id) button ;
-@end
-
 @implementation KGStartButton
-
-- (instancetype) initWithCoder:(NSCoder *) decoder
-{
-	if((self = [super initWithCoder: decoder]) != nil){
-		buttonPressDelegate = nil ;
-#		if TARGET_OS_IPHONE
-		[self addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-#		else
-		[self setTarget: self] ;
-		[self setAction: @selector(buttonPressed:)] ;
-#		endif
-	}
-	return self ;
-}
-
-#if TARGET_OS_IPHONE
-- (instancetype) initWithFrame:(CGRect)frame
-#else
-- (instancetype) initWithFrame:(NSRect)frame
-#endif
-{
-	if((self = [super initWithFrame: frame]) != nil){
-		buttonPressDelegate = nil ;
-#		if TARGET_OS_IPHONE
-		[self addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-#		else
-		[self setTarget: self] ;
-		[self setAction: @selector(buttonPressed:)] ;
-#		endif
-	}
-	return self ;
-}
-
-- (void) setButtonPressDelegate: (id <KGStartButtonDelegate>) delegate
-{
-	buttonPressDelegate = delegate ;
-}
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
 {
@@ -61,18 +21,6 @@ setButtonStatus(KGStartButton * button, KGGameState stat) ;
 		setButtonStatus(self, stat.state) ;
 	} else {
 		assert(false) ;
-	}
-}
-
-@end
-
-@implementation KGStartButton (KGPrivate)
-
-- (void) buttonPressed: (id) button
-{
-	(void) button ;
-	if(buttonPressDelegate){
-		[buttonPressDelegate startButtonPressed] ;
 	}
 }
 

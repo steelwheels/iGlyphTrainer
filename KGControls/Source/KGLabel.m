@@ -45,7 +45,7 @@
 	UIColor * fontcol = [preference fontColor] ;
 	self.textColor = fontcol ;
 #else
-	// do nothing
+	[self setEditable: NO] ;
 #endif
 }
 

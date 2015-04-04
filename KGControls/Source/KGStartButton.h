@@ -6,18 +6,8 @@
  */
 
 #import "KGButton.h"
-#import <KGGameData/KGGameData.h>
-
-@protocol  KGStartButtonDelegate <NSObject>
-- (void) startButtonPressed ;
-@end
 
 @interface KGStartButton : KGButton
-{
-	id <KGStartButtonDelegate>	buttonPressDelegate ;
-}
-
-- (void) setButtonPressDelegate: (id <KGStartButtonDelegate>) delegate ;
 
 @end
 

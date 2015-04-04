@@ -21,13 +21,37 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	gameStatus = [[KGGameStatus alloc] init] ;
 	[gameStatus addStateObserver: self.startButton] ;
+	[gameStatus addStateObserver: self.glyphNameLabel] ;
+	
+	[self.normalButton addTarget: self action: @selector(pressNormalButton:) forControlEvents: UIControlEventTouchUpInside] ;
+	[self.startButton addTarget: self action: @selector(pressStartButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	
 	gameStatus.state = KGIdleState ;
+	gameStatus.presentingGlyph = KGAdvanceGlyph ;
 }
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+- (void) pressNormalButton: (UIButton *) sender
+{
+	(void) sender ;
+	puts("normal button pressed") ;
+}
+
+- (void) pressStartButton: (UIButton *) sender
+{
+	(void) sender ;
+	puts("start button pressed") ;
+	if(gameStatus.state == KGIdleState){
+		gameStatus.state = KGPresentationState ;
+		gameStatus.presentingGlyph = KGAbandonGlyph ;
+	} else {
+		gameStatus.state = KGIdleState ;
+		gameStatus.presentingGlyph = KGAdaptGlyph ;
+	}
 }
 
 @end

@@ -14,9 +14,14 @@
 {
 	KGGameStatus *		gameStatus ;
 }
+@property (weak, nonatomic) IBOutlet KGLabel *normalLabel;
 
+@property (weak, nonatomic) IBOutlet KGGlyphNameLabel * glyphNameLabel;
 @property (weak, nonatomic) IBOutlet KGButton *normalButton;
 @property (weak, nonatomic) IBOutlet KGStartButton *startButton;
+
+- (void) pressNormalButton: (UIButton *) sender ;
+- (void) pressStartButton: (UIButton *) sender ;
 
 @end
 

@@ -14,6 +14,11 @@
 		053D144A1ACAEFD700DF381B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053D14491ACAEFD700DF381B /* Images.xcassets */; };
 		053D144D1ACAEFD700DF381B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053D144B1ACAEFD700DF381B /* Main.storyboard */; };
 		054227801AC9BAEE009956B2 /* KGControls.h in Headers */ = {isa = PBXBuildFile; fileRef = 0542277F1AC9BAEE009956B2 /* KGControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0568B67F1AD043240065596A /* KGGlyphNameLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0568B67B1AD043240065596A /* KGGlyphNameLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0568B6801AD043240065596A /* KGGlyphNameLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568B67C1AD043240065596A /* KGGlyphNameLabel.m */; };
+		0568B6811AD043240065596A /* KGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0568B67D1AD043240065596A /* KGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0568B6821AD043240065596A /* KGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568B67E1AD043240065596A /* KGLabel.m */; };
+		0568B6851AD047320065596A /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0568B6841AD047320065596A /* KGGlyphData.framework */; };
 		059BBEBD1AC9BBCB00F0FAAD /* KGButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 059BBEBB1AC9BBCB00F0FAAD /* KGButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		059BBEBE1AC9BBCB00F0FAAD /* KGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 059BBEBC1AC9BBCB00F0FAAD /* KGButton.m */; };
 		059BBEC01AC9BBD900F0FAAD /* KGControlType.h in Headers */ = {isa = PBXBuildFile; fileRef = 059BBEBF1AC9BBD900F0FAAD /* KGControlType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,6 +59,11 @@
 		0542277A1AC9BAEE009956B2 /* KGControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0542277E1AC9BAEE009956B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		0542277F1AC9BAEE009956B2 /* KGControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGControls.h; sourceTree = "<group>"; };
+		0568B67B1AD043240065596A /* KGGlyphNameLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphNameLabel.h; sourceTree = "<group>"; };
+		0568B67C1AD043240065596A /* KGGlyphNameLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphNameLabel.m; sourceTree = "<group>"; };
+		0568B67D1AD043240065596A /* KGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGLabel.h; sourceTree = "<group>"; };
+		0568B67E1AD043240065596A /* KGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGLabel.m; sourceTree = "<group>"; };
+		0568B6841AD047320065596A /* KGGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphData.framework; path = ../../../../Library/Frameworks/KGGlyphData.framework; sourceTree = "<group>"; };
 		059BBEBB1AC9BBCB00F0FAAD /* KGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGButton.h; sourceTree = "<group>"; };
 		059BBEBC1AC9BBCB00F0FAAD /* KGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGButton.m; sourceTree = "<group>"; };
 		059BBEBF1AC9BBD900F0FAAD /* KGControlType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGControlType.h; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				053D14311ACAEF0700DF381B /* KGGameData.framework in Frameworks */,
+				0568B6851AD047320065596A /* KGGlyphData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +150,10 @@
 			children = (
 				0542277F1AC9BAEE009956B2 /* KGControls.h */,
 				059BBEBF1AC9BBD900F0FAAD /* KGControlType.h */,
+				0568B67D1AD043240065596A /* KGLabel.h */,
+				0568B67E1AD043240065596A /* KGLabel.m */,
+				0568B67B1AD043240065596A /* KGGlyphNameLabel.h */,
+				0568B67C1AD043240065596A /* KGGlyphNameLabel.m */,
 				059BBEC11AC9BBE400F0FAAD /* KGStartButton.h */,
 				059BBEC21AC9BBE400F0FAAD /* KGStartButton.m */,
 				059BBEBB1AC9BBCB00F0FAAD /* KGButton.h */,
@@ -152,6 +167,7 @@
 		0542277D1AC9BAEE009956B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0568B6841AD047320065596A /* KGGlyphData.framework */,
 				053D14381ACAEF7800DF381B /* install.mk */,
 				053D14301ACAEF0700DF381B /* KGGameData.framework */,
 				0542277E1AC9BAEE009956B2 /* Info.plist */,
@@ -166,6 +182,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0568B67F1AD043240065596A /* KGGlyphNameLabel.h in Headers */,
+				0568B6811AD043240065596A /* KGLabel.h in Headers */,
 				059BBEBD1AC9BBCB00F0FAAD /* KGButton.h in Headers */,
 				059BBEC31AC9BBE400F0FAAD /* KGStartButton.h in Headers */,
 				059BBEC01AC9BBD900F0FAAD /* KGControlType.h in Headers */,
@@ -306,6 +324,8 @@
 			files = (
 				059BBEC41AC9BBE400F0FAAD /* KGStartButton.m in Sources */,
 				059BBEBE1AC9BBCB00F0FAAD /* KGButton.m in Sources */,
+				0568B6821AD043240065596A /* KGLabel.m in Sources */,
+				0568B6801AD043240065596A /* KGGlyphNameLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,12 +391,18 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = ../UnitTest/OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -391,8 +417,14 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = ../UnitTest/OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

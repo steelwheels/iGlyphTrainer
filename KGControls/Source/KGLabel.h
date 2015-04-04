@@ -10,7 +10,7 @@
 #if TARGET_OS_IPHONE
 #	define KGSuperClassOfLabel	UILabel
 #else
-#	define KGSuperClassOfLabel	NSLabel
+#	define KGSuperClassOfLabel	NSTextField
 #endif
 
 @interface KGLabel : KGSuperClassOfLabel

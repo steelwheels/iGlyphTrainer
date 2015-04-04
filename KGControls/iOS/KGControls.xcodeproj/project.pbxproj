@@ -14,6 +14,7 @@
 		0533C8611ACAF64E00D26BF7 /* KGButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 050BA6901ACAEE4500BB8029 /* KGButton.h */; };
 		0533C8631ACAF65800D26BF7 /* KGStartButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 050BA6941ACAEE4500BB8029 /* KGStartButton.h */; };
 		0533C8921ACAFB3D00D26BF7 /* KGControlType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 050BA6931ACAEE4500BB8029 /* KGControlType.h */; };
+		0589DAFD1AD03A0D00DD3610 /* KGGlyphNameLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 052128E31ACDA65D000F7DF6 /* KGGlyphNameLabel.h */; };
 		0596C6931ACD990500593298 /* KGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0596C6921ACD990500593298 /* KGLabel.m */; };
 		0596C6941ACD992700593298 /* KGLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0596C6911ACD990500593298 /* KGLabel.h */; };
 		05C1A9341ACB04C10013C59C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C1A9331ACB04C10013C59C /* main.m */; };
@@ -49,6 +50,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				0589DAFD1AD03A0D00DD3610 /* KGGlyphNameLabel.h in CopyFiles */,
 				0596C6941ACD992700593298 /* KGLabel.h in CopyFiles */,
 				0533C8921ACAFB3D00D26BF7 /* KGControlType.h in CopyFiles */,
 				0533C8631ACAF65800D26BF7 /* KGStartButton.h in CopyFiles */,
@@ -396,6 +398,7 @@
 				OTHER_LDFLAGS = (
 					"-lKGControls",
 					"-lKGGameData",
+					"-lKGGlyphData",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
 					"-lCoconut",
@@ -429,6 +432,7 @@
 				OTHER_LDFLAGS = (
 					"-lKGControls",
 					"-lKGGameData",
+					"-lKGGlyphData",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
 					"-lCoconut",
