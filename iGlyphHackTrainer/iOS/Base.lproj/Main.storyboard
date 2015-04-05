@@ -58,7 +58,7 @@
                                 <color key="textColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glyph Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpb-zy-5Qj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glyph Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpb-zy-5Qj" customClass="KGGlyphNameLabel">
                                 <rect key="frame" x="16" y="108" width="288" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Tm7-5T-5yr"/>
@@ -92,6 +92,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="glyphNameLabel" destination="Wpb-zy-5Qj" id="Yrl-40-2Bv"/>
                         <outlet property="hackProgressView" destination="34w-lM-D2R" id="1iN-bN-4so"/>
                         <outlet property="moveToAboutViewButton" destination="2wK-1z-t0y" id="UvA-7f-W2E"/>
                         <outlet property="moveToSetupViewButton" destination="yDS-Ub-oeP" id="60g-N5-hjh"/>
