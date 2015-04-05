@@ -17,9 +17,9 @@ FOUNDATION_EXPORT const unsigned char KGGlyphDataVersionString[];
 
 #endif
 
-#import "KGGlyphKind.h"
-#import "KGGlyphModel.h"
-#import "KGGlyphStroke.h"
-#import "KGGlyphName.h"
-
+#import <KGGlyphData/KGGlyphKind.h>
+#import <KGGlyphData/KGGlyphModel.h>
+#import <KGGlyphData/KGGlyphStroke.h>
+#import <KGGlyphData/KGGlyphName.h>
+#import <KGGlyphData/KGGlyphSentence.h>
 

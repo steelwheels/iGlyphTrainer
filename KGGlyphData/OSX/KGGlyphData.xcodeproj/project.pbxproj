@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05104CF91AD168B200C614BB /* KGGlyphSentence.h in Headers */ = {isa = PBXBuildFile; fileRef = 05104CF71AD168B200C614BB /* KGGlyphSentence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05104CFA1AD168B200C614BB /* KGGlyphSentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 05104CF81AD168B200C614BB /* KGGlyphSentence.m */; };
 		0510F0AF1AB5942A00E33696 /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510F0AE1AB5942A00E33696 /* KGGlyphData.framework */; };
 		05226E371AB467670089AA7D /* KGGlyphData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E311AB467670089AA7D /* KGGlyphData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05226E381AB467670089AA7D /* KGGlyphKind.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E321AB467670089AA7D /* KGGlyphKind.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05104CF71AD168B200C614BB /* KGGlyphSentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphSentence.h; sourceTree = "<group>"; };
+		05104CF81AD168B200C614BB /* KGGlyphSentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphSentence.m; sourceTree = "<group>"; };
 		0510F0AD1AB5924F00E33696 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
 		0510F0AE1AB5942A00E33696 /* KGGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphData.framework; path = ../../../../Library/Frameworks/KGGlyphData.framework; sourceTree = "<group>"; };
 		05226E091AB466C10089AA7D /* KGGlyphData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGGlyphData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,8 @@
 				05226E361AB467670089AA7D /* KGGlyphStroke.m */,
 				054B44431AC9B22C007E35BE /* KGGlyphName.h */,
 				054B44441AC9B22C007E35BE /* KGGlyphName.m */,
+				05104CF71AD168B200C614BB /* KGGlyphSentence.h */,
+				05104CF81AD168B200C614BB /* KGGlyphSentence.m */,
 				05226E0C1AB466C10089AA7D /* Supporting Files */,
 			);
 			name = Source;
@@ -152,6 +158,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05104CF91AD168B200C614BB /* KGGlyphSentence.h in Headers */,
 				054B44451AC9B22C007E35BE /* KGGlyphName.h in Headers */,
 				05226E371AB467670089AA7D /* KGGlyphData.h in Headers */,
 				05226E391AB467670089AA7D /* KGGlyphModel.h in Headers */,
@@ -275,6 +282,7 @@
 				05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */,
 				054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */,
 				05226E3A1AB467670089AA7D /* KGGlyphModel.m in Sources */,
+				05104CFA1AD168B200C614BB /* KGGlyphSentence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
