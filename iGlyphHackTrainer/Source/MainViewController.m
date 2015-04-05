@@ -7,6 +7,7 @@
 
 #import "MainViewController.h"
 #import "AppDelegate.h"
+#import <KGGlyphGraphics/KGGlyphGraphics.h>
 
 static inline KGGameStatus *
 gameStatus(void)
@@ -35,6 +36,9 @@ gameStatus(void)
 	KGGameStatus * status = gameStatus() ;
 	[status addStateObserver: self.startButton] ;
 	[status addStateObserver: self.hackProgressView] ;
+	
+	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
+	[self.glyphGraphicsView setGraphicsDrawer: drawer] ;
 }
 
 - (void)didReceiveMemoryWarning {

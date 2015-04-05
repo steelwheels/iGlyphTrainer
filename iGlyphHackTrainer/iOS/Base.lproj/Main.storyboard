@@ -34,10 +34,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-Ff-qXd" customClass="KGStartButton">
-                                <rect key="frame" x="58" y="420" width="205" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-Ff-qXd" customClass="KGStartButton">
+                                <rect key="frame" x="16" y="432" width="288" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Ahk-Fs-88O"/>
+                                    <constraint firstAttribute="height" constant="40" id="pCo-4c-5VW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Start"/>
@@ -67,24 +67,32 @@
                                 <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7c-c4-WkV" customClass="KCGraphicsView">
+                                <rect key="frame" x="16" y="149" width="288" height="283"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z7E-Ff-qXd" secondAttribute="trailing" constant="41" id="5TY-JX-Gsb"/>
+                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Apr-YH-avh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8NX-ix-YQI" secondAttribute="trailing" constant="-16" id="D0v-u6-JRK"/>
                             <constraint firstItem="hWV-ka-ckA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DtD-jY-fLO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="19" id="FNx-d8-0dJ"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wp7-Ly-HGI"/>
-                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="Y2z-k2-mgE"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="YIY-Po-g1w"/>
                             <constraint firstItem="Wpb-zy-5Qj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZdL-z7-6WH"/>
+                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="top" secondItem="Wpb-zy-5Qj" secondAttribute="bottom" constant="8" id="aNq-lB-tIi"/>
                             <constraint firstItem="hWV-ka-ckA" firstAttribute="top" secondItem="8NX-ix-YQI" secondAttribute="bottom" constant="4" id="bBd-6k-Tub"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bRr-IZ-mqC"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="top" secondItem="Q7c-c4-WkV" secondAttribute="bottom" id="bU5-pa-Gg3"/>
                             <constraint firstItem="34w-lM-D2R" firstAttribute="top" secondItem="8NX-ix-YQI" secondAttribute="bottom" id="cNd-OE-ZAk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8NX-ix-YQI" secondAttribute="trailing" constant="-16" id="dmc-gF-2Ni"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="8" id="eJX-TM-ZDz"/>
                             <constraint firstItem="Wpb-zy-5Qj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kD5-hQ-7VN"/>
+                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="np0-d7-Y4R"/>
                             <constraint firstItem="hWV-ka-ckA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ox5-dJ-oGY"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="p6M-eF-FF9"/>
                             <constraint firstItem="Wpb-zy-5Qj" firstAttribute="top" secondItem="hWV-ka-ckA" secondAttribute="bottom" constant="8" id="suv-ox-rnL"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tlw-pm-MlP"/>
                             <constraint firstItem="34w-lM-D2R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v4n-xg-Y2u"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGh-ca-IlW"/>
                             <constraint firstItem="34w-lM-D2R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wTE-Hp-CEq"/>
@@ -92,6 +100,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="glyphGraphicsView" destination="Q7c-c4-WkV" id="QDk-cX-a28"/>
                         <outlet property="glyphNameLabel" destination="Wpb-zy-5Qj" id="Yrl-40-2Bv"/>
                         <outlet property="hackProgressView" destination="34w-lM-D2R" id="1iN-bN-4so"/>
                         <outlet property="moveToAboutViewButton" destination="2wK-1z-t0y" id="UvA-7f-W2E"/>

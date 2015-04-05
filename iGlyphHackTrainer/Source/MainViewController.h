@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet KGStartButton *		startButton;
 @property (weak, nonatomic) IBOutlet KGHackProgressView *	hackProgressView;
 @property (weak, nonatomic) IBOutlet KGTimerLabel *timerLabel;
+@property (weak, nonatomic) IBOutlet KCGraphicsView *glyphGraphicsView;
 
 - (void) moveToSetupViewButtonPressed: (UIBarButtonItem *) item ;
 - (void) moveToAboutViewButtonPressed: (UIBarButtonItem *) item ;
