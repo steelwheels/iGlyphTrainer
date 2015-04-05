@@ -18,18 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSX-tX-4IP" customClass="KGButton">
-                                <rect key="frame" x="16" y="78" width="343" height="30"/>
+                                <rect key="frame" x="16" y="107" width="343" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="CPg-oa-oEZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Wos-cf-tIT"/>
                                 </constraints>
                                 <state key="normal" title="Normal Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1m3-kL-VXM" customClass="KGStartButton">
-                                <rect key="frame" x="16" y="116" width="343" height="30"/>
+                                <rect key="frame" x="16" y="145" width="343" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="EJJ-gH-753"/>
+                                    <constraint firstAttribute="height" constant="30" id="VIL-bT-9h0"/>
                                 </constraints>
                                 <state key="normal" title="Start Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,22 +53,34 @@
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnK-IK-qij" customClass="KGTimerLabel">
+                                <rect key="frame" x="16" y="78" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="F5o-XS-21e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="iSX-tX-4IP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="23c-M9-cpL"/>
+                            <constraint firstItem="1m3-kL-VXM" firstAttribute="top" secondItem="iSX-tX-4IP" secondAttribute="bottom" constant="8" id="0xZ-iZ-5Cw"/>
                             <constraint firstItem="XO6-x2-98f" firstAttribute="top" secondItem="0mr-QT-6Hp" secondAttribute="bottom" constant="8" id="2JW-7H-Uxs"/>
                             <constraint firstItem="0mr-QT-6Hp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7Vl-OH-W5Z"/>
                             <constraint firstItem="0mr-QT-6Hp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8vF-oD-j3m"/>
                             <constraint firstItem="XO6-x2-98f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ass-rt-9N5"/>
-                            <constraint firstItem="iSX-tX-4IP" firstAttribute="top" secondItem="XO6-x2-98f" secondAttribute="bottom" constant="8" id="b4r-wo-wiO"/>
+                            <constraint firstItem="pnK-IK-qij" firstAttribute="top" secondItem="XO6-x2-98f" secondAttribute="bottom" constant="8" id="DhE-Ij-uuh"/>
+                            <constraint firstItem="iSX-tX-4IP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J6H-Dy-wIf"/>
+                            <constraint firstItem="1m3-kL-VXM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KR7-Ki-tmY"/>
+                            <constraint firstItem="iSX-tX-4IP" firstAttribute="top" secondItem="pnK-IK-qij" secondAttribute="bottom" constant="8" id="S5k-SZ-SgP"/>
+                            <constraint firstItem="pnK-IK-qij" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YHz-g5-iyb"/>
                             <constraint firstItem="XO6-x2-98f" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ce8-vv-D7B"/>
-                            <constraint firstItem="iSX-tX-4IP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gWx-Nu-lO9"/>
+                            <constraint firstItem="1m3-kL-VXM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="htj-pN-njc"/>
+                            <constraint firstItem="iSX-tX-4IP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nCf-2E-9Gr"/>
+                            <constraint firstItem="pnK-IK-qij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nlg-3P-VDF"/>
                             <constraint firstItem="0mr-QT-6Hp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nys-3Y-qg9"/>
-                            <constraint firstItem="1m3-kL-VXM" firstAttribute="top" secondItem="iSX-tX-4IP" secondAttribute="bottom" constant="8" id="q6S-gH-meS"/>
-                            <constraint firstItem="1m3-kL-VXM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tmg-ub-79S"/>
-                            <constraint firstItem="1m3-kL-VXM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ugR-vQ-4Ra"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -77,6 +89,7 @@
                         <outlet property="normalButton" destination="iSX-tX-4IP" id="5KS-Z6-D2y"/>
                         <outlet property="normalLabel" destination="0mr-QT-6Hp" id="IVn-Jp-i4d"/>
                         <outlet property="startButton" destination="1m3-kL-VXM" id="Tnz-Df-Omy"/>
+                        <outlet property="timerLabel" destination="pnK-IK-qij" id="tal-wd-QKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

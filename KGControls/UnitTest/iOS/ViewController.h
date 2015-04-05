@@ -13,8 +13,10 @@
 @interface ViewController : UIViewController
 {
 	KGGameStatus *		gameStatus ;
+	CNCountTimer *		countTimer ;
 }
 @property (weak, nonatomic) IBOutlet KGLabel *normalLabel;
+@property (weak, nonatomic) IBOutlet KGTimerLabel *timerLabel;
 
 @property (weak, nonatomic) IBOutlet KGGlyphNameLabel * glyphNameLabel;
 @property (weak, nonatomic) IBOutlet KGButton *normalButton;
