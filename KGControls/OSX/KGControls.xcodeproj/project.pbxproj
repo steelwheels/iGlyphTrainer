@@ -19,6 +19,8 @@
 		0568B6811AD043240065596A /* KGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0568B67D1AD043240065596A /* KGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0568B6821AD043240065596A /* KGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0568B67E1AD043240065596A /* KGLabel.m */; };
 		0568B6851AD047320065596A /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0568B6841AD047320065596A /* KGGlyphData.framework */; };
+		059732741AD1122C0075B842 /* KGTimerLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 059732721AD1122C0075B842 /* KGTimerLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		059732751AD1122C0075B842 /* KGTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 059732731AD1122C0075B842 /* KGTimerLabel.m */; };
 		059BBEBD1AC9BBCB00F0FAAD /* KGButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 059BBEBB1AC9BBCB00F0FAAD /* KGButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		059BBEBE1AC9BBCB00F0FAAD /* KGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 059BBEBC1AC9BBCB00F0FAAD /* KGButton.m */; };
 		059BBEC01AC9BBD900F0FAAD /* KGControlType.h in Headers */ = {isa = PBXBuildFile; fileRef = 059BBEBF1AC9BBD900F0FAAD /* KGControlType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +66,8 @@
 		0568B67D1AD043240065596A /* KGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGLabel.h; sourceTree = "<group>"; };
 		0568B67E1AD043240065596A /* KGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGLabel.m; sourceTree = "<group>"; };
 		0568B6841AD047320065596A /* KGGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphData.framework; path = ../../../../Library/Frameworks/KGGlyphData.framework; sourceTree = "<group>"; };
+		059732721AD1122C0075B842 /* KGTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTimerLabel.h; sourceTree = "<group>"; };
+		059732731AD1122C0075B842 /* KGTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGTimerLabel.m; sourceTree = "<group>"; };
 		059BBEBB1AC9BBCB00F0FAAD /* KGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGButton.h; sourceTree = "<group>"; };
 		059BBEBC1AC9BBCB00F0FAAD /* KGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGButton.m; sourceTree = "<group>"; };
 		059BBEBF1AC9BBD900F0FAAD /* KGControlType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGControlType.h; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				059BBEBF1AC9BBD900F0FAAD /* KGControlType.h */,
 				0568B67D1AD043240065596A /* KGLabel.h */,
 				0568B67E1AD043240065596A /* KGLabel.m */,
+				059732721AD1122C0075B842 /* KGTimerLabel.h */,
+				059732731AD1122C0075B842 /* KGTimerLabel.m */,
 				0568B67B1AD043240065596A /* KGGlyphNameLabel.h */,
 				0568B67C1AD043240065596A /* KGGlyphNameLabel.m */,
 				059BBEC11AC9BBE400F0FAAD /* KGStartButton.h */,
@@ -182,6 +188,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059732741AD1122C0075B842 /* KGTimerLabel.h in Headers */,
 				0568B67F1AD043240065596A /* KGGlyphNameLabel.h in Headers */,
 				0568B6811AD043240065596A /* KGLabel.h in Headers */,
 				059BBEBD1AC9BBCB00F0FAAD /* KGButton.h in Headers */,
@@ -326,6 +333,7 @@
 				059BBEBE1AC9BBCB00F0FAAD /* KGButton.m in Sources */,
 				0568B6821AD043240065596A /* KGLabel.m in Sources */,
 				0568B6801AD043240065596A /* KGGlyphNameLabel.m in Sources */,
+				059732751AD1122C0075B842 /* KGTimerLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

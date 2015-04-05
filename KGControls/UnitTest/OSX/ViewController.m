@@ -17,11 +17,15 @@
 	[gameStatus addStateObserver: self.startButton] ;
 	[gameStatus addStateObserver: self.glyphNameLabel] ;
 	
+	countTimer = nil ;
+	
 	self.startButton.target  = self ;
 	self.startButton.action  = @selector(pressStartButton:) ;
 	
 	self.normalButton.target = self ;
 	self.normalButton.action = @selector(pressNormalButton:) ;
+	
+	[self.timerLabel setTimerLabel: 0.0] ;
 	
 	gameStatus.state = KGIdleState ;
 	gameStatus.presentingGlyph = KGAdvanceGlyph ;
@@ -46,6 +50,10 @@
 	if(gameStatus.state == KGIdleState){
 		gameStatus.state = KGPresentationState ;
 		gameStatus.presentingGlyph = KGAbandonGlyph ;
+		
+		countTimer = [[CNCountTimer alloc] init] ;
+		[countTimer addDelegate: self.timerLabel] ;
+		[countTimer startFromTime: 0.0 toTime: 10.0 withInterval: 0.2] ;
 	} else {
 		gameStatus.state = KGIdleState ;
 		gameStatus.presentingGlyph = KGAgainGlyph ;

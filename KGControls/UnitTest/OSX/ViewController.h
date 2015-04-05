@@ -9,16 +9,19 @@
 #import <Cocoa/Cocoa.h>
 #import <KGControls/KGControls.h>
 #import <KGGameData/KGGameData.h>
+#import <Coconut/Coconut.h>
 
 @interface ViewController : NSViewController
 {
-	KGGameStatus *	gameStatus ;
+	KGGameStatus *		gameStatus ;
+	CNCountTimer *		countTimer ;
 }
 
 @property (weak) IBOutlet KGLabel *normalLabel;
 @property (weak) IBOutlet KGGlyphNameLabel *glyphNameLabel;
 @property (weak) IBOutlet KGButton *normalButton;
 @property (weak) IBOutlet KGStartButton *startButton;
+@property (weak) IBOutlet KGTimerLabel *timerLabel;
 
 - (void) pressNormalButton: (id) sender ;
 - (void) pressStartButton: (id) sender ;

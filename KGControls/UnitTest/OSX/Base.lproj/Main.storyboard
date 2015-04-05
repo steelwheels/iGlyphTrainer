@@ -669,64 +669,78 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="484" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fro-Rn-06V" customClass="KGButton">
-                                <rect key="frame" x="175" y="172" width="130" height="32"/>
+                                <rect key="frame" x="175" y="147" width="130" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="4VQ-sS-e92"/>
+                                    <constraint firstAttribute="height" constant="21" id="YQI-Sr-ZZ0"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Normal Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W5l-IO-mSk">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-m4-I8Q" customClass="KGLabel">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-m4-I8Q" customClass="KGLabel">
                                 <rect key="frame" x="197" y="233" width="86" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="h1b-bl-2br"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Normal Label" id="gvl-r1-vq8">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Normal Label" id="gvl-r1-vq8">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K7d-Ft-qSE" customClass="KGGlyphNameLabel">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7d-Ft-qSE" customClass="KGGlyphNameLabel">
                                 <rect key="frame" x="181" y="208" width="118" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="XC8-Sk-hjR"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Glyph Name Label" id="HVo-1D-3CX">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Glyph Name Label" id="HVo-1D-3CX">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fcm-LC-Gh3" customClass="KGStartButton">
-                                <rect key="frame" x="183" y="139" width="115" height="32"/>
+                                <rect key="frame" x="183" y="114" width="115" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="WF1-zE-Bdx"/>
+                                    <constraint firstAttribute="height" constant="21" id="azd-7u-SCf"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Start Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uzb-2x-Sda">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ih6-Hh-YSa" customClass="KGTimerLabel">
+                                <rect key="frame" x="202" y="183" width="81" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="BCV-Kz-oph"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Timer Label" id="07B-jm-AsJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="fro-Rn-06V" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="181" id="2jP-6d-Y75"/>
+                            <constraint firstItem="fro-Rn-06V" firstAttribute="top" secondItem="Ih6-Hh-YSa" secondAttribute="bottom" constant="8" id="49Y-Tc-A9L"/>
                             <constraint firstItem="eVQ-m4-I8Q" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Duc-9Z-krg"/>
+                            <constraint firstItem="Ih6-Hh-YSa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="204" id="EDa-iD-rgE"/>
+                            <constraint firstItem="Fcm-LC-Gh3" firstAttribute="top" secondItem="fro-Rn-06V" secondAttribute="bottom" constant="12" id="HXx-JH-lln"/>
+                            <constraint firstAttribute="trailing" secondItem="Fcm-LC-Gh3" secondAttribute="trailing" constant="192" id="ImP-EB-Ov8"/>
                             <constraint firstAttribute="trailing" secondItem="K7d-Ft-qSE" secondAttribute="trailing" constant="183" id="Jbc-Jf-mGp"/>
-                            <constraint firstItem="fro-Rn-06V" firstAttribute="top" secondItem="K7d-Ft-qSE" secondAttribute="bottom" constant="8" id="RXP-MK-ots"/>
+                            <constraint firstAttribute="trailing" secondItem="Ih6-Hh-YSa" secondAttribute="trailing" constant="203" id="Kmd-uT-5Q2"/>
                             <constraint firstItem="K7d-Ft-qSE" firstAttribute="top" secondItem="eVQ-m4-I8Q" secondAttribute="bottom" constant="8" id="cKh-Tk-daf"/>
                             <constraint firstAttribute="trailing" secondItem="eVQ-m4-I8Q" secondAttribute="trailing" constant="199" id="dHT-YB-57r"/>
-                            <constraint firstAttribute="trailing" secondItem="Fcm-LC-Gh3" secondAttribute="trailing" constant="188" id="lDU-Ts-d28"/>
-                            <constraint firstItem="Fcm-LC-Gh3" firstAttribute="top" secondItem="fro-Rn-06V" secondAttribute="bottom" constant="12" id="mOI-BE-L6W"/>
+                            <constraint firstAttribute="trailing" secondItem="fro-Rn-06V" secondAttribute="trailing" constant="185" id="fyK-dG-yd2"/>
                             <constraint firstItem="K7d-Ft-qSE" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="183" id="mQb-mc-6St"/>
-                            <constraint firstAttribute="trailing" secondItem="fro-Rn-06V" secondAttribute="trailing" constant="181" id="sC4-Gp-Hf0"/>
-                            <constraint firstItem="Fcm-LC-Gh3" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="189" id="ujF-Sc-LeN"/>
+                            <constraint firstItem="Ih6-Hh-YSa" firstAttribute="top" secondItem="K7d-Ft-qSE" secondAttribute="bottom" constant="8" id="nVU-fS-C5u"/>
+                            <constraint firstItem="Fcm-LC-Gh3" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="189" id="qS7-6v-3o3"/>
+                            <constraint firstItem="fro-Rn-06V" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="181" id="sd6-5E-IlU"/>
                             <constraint firstItem="eVQ-m4-I8Q" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="199" id="vM6-gG-JwF"/>
                         </constraints>
                     </view>
@@ -735,6 +749,7 @@
                         <outlet property="normalButton" destination="fro-Rn-06V" id="c8z-lk-YjB"/>
                         <outlet property="normalLabel" destination="eVQ-m4-I8Q" id="brK-Fe-xFL"/>
                         <outlet property="startButton" destination="Fcm-LC-Gh3" id="7j9-xB-lWz"/>
+                        <outlet property="timerLabel" destination="Ih6-Hh-YSa" id="4kA-Xs-SR8"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
