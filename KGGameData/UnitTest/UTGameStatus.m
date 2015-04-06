@@ -39,11 +39,11 @@ UTGameStatus(void)
 	[status addStateObserver: observer] ;
 	status.maxGlyphNum		= 3 ;
 	status.processedGlyphNum	= 1 ;
-	status.state			= KGPresentationState ;
+	status.state			= KGDisplayQuestionState ;
 	
 	status.maxGlyphNum		= 3 ;
 	status.processedGlyphNum	= 2 ;
-	status.state			= KGPresentationState ;
+	status.state			= KGDisplayQuestionState ;
 	
 	return YES ;
 }
