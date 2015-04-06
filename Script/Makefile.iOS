@@ -1,0 +1,63 @@
+#
+#
+#
+
+all: KGGlyphData KGGameData KGGlyphGraphics KGHackProgressView \
+     KGControls 
+
+iGlyphHackTrainer: dummy
+	(cd iGlyphHackTrainer/iOS && \
+	 make PROJECT_NAME=iGlyphHackTrainer \
+	      PROJECT_DIR=. \
+	      BUILD_DIR=~/build/iGlyphHackTrainer.tmp \
+	      BUILD_ROOT=~/build/iGlyphHackTrainer.tmp \
+	      -f ../../Script/install.mk \
+	)
+
+KGControls: dummy
+	(cd KGControls/iOS && \
+	 make PROJECT_NAME=KGControls \
+	      PROJECT_DIR=. \
+	      BUILD_DIR=~/build/KGControls.tmp \
+	      BUILD_ROOT=~/build/KGControls.tmp \
+	      -f ../../Script/install.mk \
+	)
+
+KGHackProgressView: dummy
+	(cd KGHackProgressView/iOS && \
+	 make PROJECT_NAME=KGHackProgressView \
+	      PROJECT_DIR=. \
+	      BUILD_DIR=~/build/KGHackProgressView.tmp \
+	      BUILD_ROOT=~/build/KGHackProgressView.tmp \
+	      -f ../../Script/install.mk \
+	)
+
+KGGlyphGraphics: dummy
+	(cd KGGlyphGraphics/iOS && \
+	 make PROJECT_NAME=KGGlyphGraphics \
+	      PROJECT_DIR=. \
+	      BUILD_DIR=~/build/KGGlyphGraphics.tmp \
+	      BUILD_ROOT=~/build/KGGlyphGraphics.tmp \
+	      -f ../../Script/install.mk \
+	)
+
+KGGameData: dummy
+	(cd KGGameData/iOS && \
+	 make PROJECT_NAME=KGGameData \
+	      PROJECT_DIR=. \
+	      BUILD_DIR=~/build/KGGameData.tmp \
+	      BUILD_ROOT=~/build/KGGameData.tmp \
+	      -f ../../Script/install.mk \
+	)
+
+KGGlyphData: dummy
+	(cd KGGlyphData/iOS && \
+	 make PROJECT_NAME=KGGlyphData \
+	      PROJECT_DIR=. \
+	      BUILD_DIR=~/build/KGGlyphData.tmp \
+	      BUILD_ROOT=~/build/KGGlyphData.tmp \
+	      -f ../../Script/install.mk \
+	)
+
+dummy:
+

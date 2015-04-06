@@ -9,6 +9,10 @@
 
 static MainStateMachine *		sharedStateMachine ;
 
+@interface MainStateMachine ()
+- (void) transferFromIdleToQuestion ;
+@end
+
 @implementation MainStateMachine
 
 + (void) initialize
@@ -30,6 +34,23 @@ static MainStateMachine *		sharedStateMachine ;
 		gameStatus = status ;
 	}
 	return self ;
+}
+
+- (void) start
+{
+	switch(gameStatus.state){
+		case KGIdleState: {
+			[self transferFromIdleToQuestion] ;
+		} break ;
+		default: {
+			/* do nothing */
+		} break ;
+	}
+}
+
+- (void) transferFromIdleToQuestion
+{
+	
 }
 
 @end

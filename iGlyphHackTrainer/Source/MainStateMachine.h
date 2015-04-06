@@ -17,5 +17,7 @@
 
 - (instancetype) initWithGameStatus: (KGGameStatus *) status ;
 
+- (void) start ;
+
 @end
 
