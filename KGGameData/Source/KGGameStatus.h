@@ -12,7 +12,7 @@
 
 typedef enum {
 	KGIdleState,
-	KGPresentationState,
+	KGDisplayQuestionState,
 	KGStrokeState,
 	KGEvaluateState
 } KGGameState ;
