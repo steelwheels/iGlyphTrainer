@@ -6,6 +6,7 @@
  */
 
 #import "MainViewController.h"
+#import "MainStateMachine.h"
 #import "AppDelegate.h"
 #import <KGGlyphGraphics/KGGlyphGraphics.h>
 
@@ -18,7 +19,9 @@ gameStatus(void)
 }
 
 @interface MainViewController ()
-
+- (void) moveToSetupViewButtonPressed: (UIBarButtonItem *) item ;
+- (void) moveToAboutViewButtonPressed: (UIBarButtonItem *) item ;
+- (void) startButtonPressed: (KGStartButton *) button ;
 @end
 
 @implementation MainViewController
@@ -32,6 +35,10 @@ gameStatus(void)
 	
 	self.moveToAboutViewButton.target = self ;
 	self.moveToAboutViewButton.action = @selector(moveToAboutViewButtonPressed:) ;
+	
+	[self.startButton addTarget: self
+			     action: @selector(startButtonPressed:)
+		   forControlEvents: UIControlEventTouchUpInside] ;
 	
 	KGGameStatus * status = gameStatus() ;
 	[status addStateObserver: self.startButton] ;
@@ -58,6 +65,12 @@ gameStatus(void)
 	(void) item ;
 	puts("moveToAboutViewButtonPressed: ") ;
 	[self performSegueWithIdentifier: @"SegueFromMainToAbout" sender: self] ;
+}
+
+- (void) startButtonPressed: (KGStartButton *) button
+{
+	(void) button ;
+	puts("Start button pressed") ;
 }
 
 @end

@@ -16,6 +16,7 @@
 		05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277251ABA4ABE0010E45B /* AppDelegate.m */; };
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
 		05A2772E1ABA4ABE0010E45B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2772D1ABA4ABE0010E45B /* Images.xcassets */; };
+		05FBDF461AD2C79400BC048E /* MainStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDF451AD2C79400BC048E /* MainStateMachine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		05A2772D1ABA4ABE0010E45B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		05D56A611ABA4BDE00AC57D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		05D56A631ABA4BDE00AC57D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		05FBDF441AD2C79400BC048E /* MainStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStateMachine.h; sourceTree = "<group>"; };
+		05FBDF451AD2C79400BC048E /* MainStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStateMachine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				05A277251ABA4ABE0010E45B /* AppDelegate.m */,
 				05A277271ABA4ABE0010E45B /* MainViewController.h */,
 				05A277281ABA4ABE0010E45B /* MainViewController.m */,
+				05FBDF441AD2C79400BC048E /* MainStateMachine.h */,
+				05FBDF451AD2C79400BC048E /* MainStateMachine.m */,
 				05062E621ABAC95C00741B2D /* SetupViewController.h */,
 				05062E631ABAC95C00741B2D /* SetupViewController.m */,
 				05062E5F1ABABCBB00741B2D /* AboutViewController.h */,
@@ -166,6 +171,7 @@
 			files = (
 				05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */,
 				05062E641ABAC95C00741B2D /* SetupViewController.m in Sources */,
+				05FBDF461AD2C79400BC048E /* MainStateMachine.m in Sources */,
 				05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */,
 				05A277231ABA4ABE0010E45B /* main.m in Sources */,
 				05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */,

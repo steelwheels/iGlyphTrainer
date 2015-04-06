@@ -36,6 +36,14 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Complex) ;
 			CASE(Conflict) ;
 			CASE(Consequence) ;
+			CASE(Contemplate) ;
+			CASE(Contact) ;
+			CASE(Courage) ;
+			CASE(Create) ;
+			CASE(Creativity) ;
+			CASE(Mind) ;
+			CASE(Danger) ;
+			CASE(Data) ;
 	}
 	return result ;
 #	undef CASE

@@ -29,7 +29,15 @@ typedef enum {
 	KGClearAllGlyph,
 	KGComplexGlyph,
 	KGConflictGlyph,
-	KGConsequenceGlyph
+	KGConsequenceGlyph,
+	KGContemplateGlyph,
+	KGContactGlyph,
+	KGCourageGlyph,
+	KGCreateGlyph,
+	KGCreativityGlyph,
+	KGMindGlyph,
+	KGDangerGlyph,
+	KGDataGlyph
 } KGGlyphKind ;
 
 static const KGGlyphKind	KGRepeatGlyph		= KGAgainGlyph ;
@@ -39,3 +47,10 @@ static const KGGlyphKind	KGObstacleGlyph		= KGBarrierGlyph ;
 static const KGGlyphKind	KGHumanGlyph		= KGBeforeGlyph ;
 static const KGGlyphKind	KGShellGlyph		= KGBodyGlyph ;
 static const KGGlyphKind	KGModifyGlyph		= KGChangeGlyph ;
+static const KGGlyphKind	KGReduceGlyph		= KGContactGlyph ;
+static const KGGlyphKind	KGCreationGlyph		= KGCreateGlyph ;
+static const KGGlyphKind	KGThroughtGlyph		= KGMindGlyph ;
+static const KGGlyphKind	KGIdeaGlyph		= KGMindGlyph ;
+static const KGGlyphKind	KGSignalGlyph		= KGDataGlyph ;
+static const KGGlyphKind	KGMessageGlyph		= KGDataGlyph ;
+
