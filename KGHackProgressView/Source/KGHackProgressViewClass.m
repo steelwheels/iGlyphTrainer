@@ -43,7 +43,7 @@
 			case KGEvaluateState: {
 				/* Do nothing */
 			} break ;
-			case KGPresentationState: {
+			case KGDisplayQuestionState: {
 				KGHackProgressDrawer *	drawer = [self graphicsDrawer] ;
 				/* Pass the state */
 				drawer.maxGlyphNum       = status.maxGlyphNum ;

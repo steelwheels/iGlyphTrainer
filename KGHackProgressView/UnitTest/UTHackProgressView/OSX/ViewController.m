@@ -18,7 +18,7 @@
 	
 	gameStatus.maxGlyphNum		= 5 ;
 	gameStatus.processedGlyphNum	= 2 ;
-	gameStatus.state		= KGPresentationState ;
+	gameStatus.state		= KGDisplayQuestionState ;
 }
 
 - (void)setRepresentedObject:(id)representedObject {

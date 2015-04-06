@@ -26,7 +26,7 @@
 
 	status.maxGlyphNum		= 4 ;
 	status.processedGlyphNum	= 2 ;
-	status.state			= KGPresentationState ;
+	status.state			= KGDisplayQuestionState ;
 }
 
 - (void)didReceiveMemoryWarning {
