@@ -9,9 +9,17 @@
 
 #define KGMaxGlyphWordNum			5
 
-struct KGGlyphSentence {
+struct KGGlyphWords {
 	KGGlyphKind		glyphWords[KGMaxGlyphWordNum] ;
 } ;
 
+struct KGGlyphSentence {
+	unsigned int		wordNum ;
+	struct KGGlyphWords	wordArray ;
+} ;
+
 unsigned int
-KGGet2WordSentence(const struct KGGlyphSentence ** ptr) ;
+KGGet2WordSentenceNum(void) ;
+
+struct KGGlyphSentence
+KGGet2WordSentence(unsigned int index) ;

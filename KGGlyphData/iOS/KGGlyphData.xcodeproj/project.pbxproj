@@ -17,6 +17,8 @@
 		05BD04F81A9CD8230046DDF0 /* KGGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD04F71A9CD8230046DDF0 /* KGGlyphStroke.m */; };
 		05BD04F91A9CD8F20046DDF0 /* KGGlyphStroke.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05BD04F61A9CD8230046DDF0 /* KGGlyphStroke.h */; };
 		05BD04FB1A9CD95B0046DDF0 /* KGGlyphKind.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05BD04FA1A9CD94D0046DDF0 /* KGGlyphKind.h */; };
+		05DA45EC1AD2F06D008A6C3B /* KGGlyphSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DA45EB1AD2F06D008A6C3B /* KGGlyphSelector.m */; };
+		05DA45ED1AD2F08E008A6C3B /* KGGlyphSelector.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05DA45EA1AD2F06D008A6C3B /* KGGlyphSelector.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05DA45ED1AD2F08E008A6C3B /* KGGlyphSelector.h in CopyFiles */,
 				05725CC71AD2CC78007A5F4E /* KGGlyphSentence.h in CopyFiles */,
 				052BBCB41AC9AFA900E47CC6 /* KGGlyphName.h in CopyFiles */,
 				05A3E6FA1AA0A27D007C7113 /* KGGlyphModel.h in CopyFiles */,
@@ -59,6 +62,8 @@
 		05BD04F61A9CD8230046DDF0 /* KGGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStroke.h; sourceTree = "<group>"; };
 		05BD04F71A9CD8230046DDF0 /* KGGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStroke.m; sourceTree = "<group>"; };
 		05BD04FA1A9CD94D0046DDF0 /* KGGlyphKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphKind.h; sourceTree = "<group>"; };
+		05DA45EA1AD2F06D008A6C3B /* KGGlyphSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphSelector.h; sourceTree = "<group>"; };
+		05DA45EB1AD2F06D008A6C3B /* KGGlyphSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphSelector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,8 @@
 				052BBCB21AC9AEEA00E47CC6 /* KGGlyphName.m */,
 				05725CC41AD2CC6C007A5F4E /* KGGlyphSentence.h */,
 				05725CC51AD2CC6C007A5F4E /* KGGlyphSentence.m */,
+				05DA45EA1AD2F06D008A6C3B /* KGGlyphSelector.h */,
+				05DA45EB1AD2F06D008A6C3B /* KGGlyphSelector.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -186,6 +193,7 @@
 			files = (
 				05A3E6F31AA09CBD007C7113 /* KGGlyphModel.m in Sources */,
 				052BBCB31AC9AEEA00E47CC6 /* KGGlyphName.m in Sources */,
+				05DA45EC1AD2F06D008A6C3B /* KGGlyphSelector.m in Sources */,
 				05BD04F81A9CD8230046DDF0 /* KGGlyphStroke.m in Sources */,
 				05725CC61AD2CC6C007A5F4E /* KGGlyphSentence.m in Sources */,
 			);
