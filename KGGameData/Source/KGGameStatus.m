@@ -9,7 +9,7 @@
 
 @implementation KGGameStatus
 
-@synthesize state, maxGlyphNum, processedGlyphNum, presentingGlyph ;
+@synthesize state, maxGlyphNum, processedGlyphNum, questionGlyph ;
 
 + (NSString *) stateKeyPath
 {
@@ -22,6 +22,7 @@
 		self.state		= KGIdleState ;
 		self.maxGlyphNum	= 0 ;
 		self.processedGlyphNum	= 0 ;
+		self.questionGlyph	= KGNilGlyph ;
 	}
 	return self ;
 }
