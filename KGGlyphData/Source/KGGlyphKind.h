@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
+	KGNilGlyph,		/* Nil glyph	*/
 	KGAbandonGlyph,
 	KGAdaptGlyph,
 	KGAdvanceGlyph,

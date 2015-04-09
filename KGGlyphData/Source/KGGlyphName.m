@@ -14,6 +14,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 #	define CASE(NAME) \
 		case KG ## NAME ## Glyph : result = @#NAME ; break
 	switch(kind){
+			CASE(Nil) ;
 			CASE(Abandon) ;
 			CASE(Adapt) ;
 			CASE(Advance) ;
