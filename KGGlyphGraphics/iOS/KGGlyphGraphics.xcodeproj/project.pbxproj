@@ -24,6 +24,9 @@
 		0594DA831AAC3F0E0066D4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA811AAC3F0E0066D4D5 /* Main.storyboard */; };
 		0594DA851AAC3F0E0066D4D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA841AAC3F0E0066D4D5 /* Images.xcassets */; };
 		0594DA881AAC3F0E0066D4D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA861AAC3F0E0066D4D5 /* LaunchScreen.xib */; };
+		05B5DEDE1AD570DD00BFE3E6 /* KGGlyphSequenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B5DEDD1AD570DD00BFE3E6 /* KGGlyphSequenceView.m */; };
+		05B5DEE01AD571A900BFE3E6 /* KGGlyphForwarders.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */; };
+		05B5DEE11AD571AE00BFE3E6 /* KGGlyphSequenceView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B5DEDC1AD570DD00BFE3E6 /* KGGlyphSequenceView.h */; };
 		05F5ABE81A99F97D0053EC4B /* KGGlyphDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */; };
 		05F5ABE91A99FACD0053EC4B /* KGGlyphDrawer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */; };
 /* End PBXBuildFile section */
@@ -59,6 +62,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05B5DEE11AD571AE00BFE3E6 /* KGGlyphSequenceView.h in CopyFiles */,
+				05B5DEE01AD571A900BFE3E6 /* KGGlyphForwarders.h in CopyFiles */,
 				0591311D1AABC8B1006BEB9C /* KGGlyphEditableStroke.h in CopyFiles */,
 				0534BDA21AAB63CA00D4519F /* KGGlyphEditor.h in CopyFiles */,
 				05F5ABE91A99FACD0053EC4B /* KGGlyphDrawer.h in CopyFiles */,
@@ -96,6 +101,9 @@
 		0594DA821AAC3F0E0066D4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0594DA841AAC3F0E0066D4D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0594DA871AAC3F0E0066D4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		05B5DEDC1AD570DD00BFE3E6 /* KGGlyphSequenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphSequenceView.h; sourceTree = "<group>"; };
+		05B5DEDD1AD570DD00BFE3E6 /* KGGlyphSequenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphSequenceView.m; sourceTree = "<group>"; };
+		05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphForwarders.h; sourceTree = "<group>"; };
 		05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphDrawer.h; sourceTree = "<group>"; };
 		05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphDrawer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,12 +157,15 @@
 			isa = PBXGroup;
 			children = (
 				0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */,
+				05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */,
 				05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */,
 				05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */,
 				0534BD9F1AAB636300D4519F /* KGGlyphEditor.h */,
 				0534BDA01AAB636300D4519F /* KGGlyphEditor.m */,
 				0591311A1AABC701006BEB9C /* KGGlyphEditableStroke.h */,
 				0591311B1AABC701006BEB9C /* KGGlyphEditableStroke.m */,
+				05B5DEDC1AD570DD00BFE3E6 /* KGGlyphSequenceView.h */,
+				05B5DEDD1AD570DD00BFE3E6 /* KGGlyphSequenceView.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -385,6 +396,7 @@
 			files = (
 				0591311C1AABC701006BEB9C /* KGGlyphEditableStroke.m in Sources */,
 				05F5ABE81A99F97D0053EC4B /* KGGlyphDrawer.m in Sources */,
+				05B5DEDE1AD570DD00BFE3E6 /* KGGlyphSequenceView.m in Sources */,
 				0534BDA11AAB636300D4519F /* KGGlyphEditor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,7 +45,9 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 			drawVertexes(context, &(boundsrect.origin), &glyphInfo) ;
 		} break ;
 		case KGGlyphStrokeLayer: {
-			drawStroke(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
+			if(glyphStroke.edgeCount > 0){
+				drawStroke(context, &(boundsrect.origin), &glyphInfo, &glyphStroke) ;
+			}
 		} break ;
 	}
 }
