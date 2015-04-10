@@ -26,7 +26,7 @@ typedef enum {
 /**
  * questionGlyph has valid value when the state is KGDisplayQuestionState
  */
-@property (assign, nonatomic) KGGlyphKind	questionGlyph ;
+@property (assign, nonatomic) KGGlyphKind	currentGlyphKind ;
 
 + (NSString *) stateKeyPath ;
 
