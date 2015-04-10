@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	
 	// Do any additional setup after loading the view, typically from a nib.
+	gameStatus = [[KGGameStatus alloc] init] ;
+	[gameStatus addStateObserver: self.nameLabel] ;
+	[gameStatus addStateObserver: self.sequenceView] ;
+
+	gameStatus.currentGlyphKind = KGAbandonGlyph ;
+	gameStatus.state = KGDisplayQuestionState ;
+
 }
 
 - (void)didReceiveMemoryWarning {

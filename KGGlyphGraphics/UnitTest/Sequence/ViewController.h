@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <KGGlyphGraphics/KGGlyphGraphics.h>
+#import <KGGameData/KGGameData.h>
 #import <KGControls/KGControls.h>
 
 @interface ViewController : UIViewController
+{
+	KGGameStatus *		gameStatus ;
+}
 
 @property (weak, nonatomic) IBOutlet KGGlyphNameLabel *nameLabel;
 @property (weak, nonatomic) IBOutlet KGGlyphSequenceView *sequenceView;

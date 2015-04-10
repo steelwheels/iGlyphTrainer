@@ -22,6 +22,7 @@
 		055255D91A99F81A0021E915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055255D71A99F81A0021E915 /* Main.storyboard */; };
 		055255DB1A99F81A0021E915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055255DA1A99F81A0021E915 /* Images.xcassets */; };
 		055255DE1A99F81A0021E915 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055255DC1A99F81A0021E915 /* LaunchScreen.xib */; };
+		058C3F1A1AD81EC6002CAAE8 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 058C3F191AD81EC6002CAAE8 /* AppDefaults.plist */; };
 		0591311C1AABC701006BEB9C /* KGGlyphEditableStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0591311B1AABC701006BEB9C /* KGGlyphEditableStroke.m */; };
 		0591311D1AABC8B1006BEB9C /* KGGlyphEditableStroke.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0591311A1AABC701006BEB9C /* KGGlyphEditableStroke.h */; };
 		0594DA7A1AAC3F0E0066D4D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594DA791AAC3F0E0066D4D5 /* main.m */; };
@@ -112,6 +113,7 @@
 		055255D81A99F81A0021E915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		055255DA1A99F81A0021E915 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		055255DD1A99F81A0021E915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		058C3F191AD81EC6002CAAE8 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppDefaults.plist; path = ../../../iGlyphHackTrainer/iOS/AppDefaults.plist; sourceTree = "<group>"; };
 		0591311A1AABC701006BEB9C /* KGGlyphEditableStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphEditableStroke.h; sourceTree = "<group>"; };
 		0591311B1AABC701006BEB9C /* KGGlyphEditableStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphEditableStroke.m; sourceTree = "<group>"; };
 		0594DA751AAC3F0E0066D4D5 /* UTGlyphEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTGlyphEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 		05213F451AD6E0350093EBC8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				058C3F191AD81EC6002CAAE8 /* AppDefaults.plist */,
 				05213F461AD6E0350093EBC8 /* Info.plist */,
 				05213F471AD6E0350093EBC8 /* main.m */,
 			);
@@ -450,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058C3F1A1AD81EC6002CAAE8 /* AppDefaults.plist in Resources */,
 				05213F511AD6E0350093EBC8 /* Main.storyboard in Resources */,
 				05213F561AD6E0350093EBC8 /* LaunchScreen.xib in Resources */,
 				05213F531AD6E0350093EBC8 /* Images.xcassets in Resources */,

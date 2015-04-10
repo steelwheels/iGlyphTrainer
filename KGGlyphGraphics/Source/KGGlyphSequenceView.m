@@ -52,10 +52,12 @@
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
 			KGGameStatus * status = object ;
 			if(status.state == KGDisplayQuestionState){
-				KGGlyphKind gkind = status.questionGlyph ;
-				struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
-				[glyphDrawer setStroke: &gstroke] ;
-				[self setNeedsDisplay] ;
+				KGGlyphKind gkind = status.currentGlyphKind ;
+				if(gkind != KGNilGlyph){
+					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
+					[glyphDrawer setStroke: &gstroke] ;
+					[self setNeedsDisplay] ;
+				}
 			}
 		}
 	}
