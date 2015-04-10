@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 
-
 @interface ViewController ()
 
 @end
@@ -27,7 +26,7 @@
 	[self.startButton addTarget: self action: @selector(pressStartButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	
 	gameStatus.state = KGIdleState ;
-	gameStatus.presentingGlyph = KGAdvanceGlyph ;
+	gameStatus.currentGlyphKind = KGAdvanceGlyph ;
 	
 	countTimer = nil ;
 	[self.timerLabel setTimerLabel: 0.0] ;
@@ -49,15 +48,15 @@
 	(void) sender ;
 	puts("start button pressed") ;
 	if(gameStatus.state == KGIdleState){
-		gameStatus.state = KGPresentationState ;
-		gameStatus.presentingGlyph = KGAbandonGlyph ;
+		gameStatus.currentGlyphKind = KGAbandonGlyph ;
+		gameStatus.state = KGDisplayQuestionState ;
 		
 		countTimer = [[CNCountTimer alloc] init] ;
 		[countTimer addDelegate: self.timerLabel] ;
 		[countTimer startFromTime: 10.0 toTime: 0.0 withInterval: -0.1] ;
 	} else {
+		gameStatus.currentGlyphKind = KGNilGlyph ;
 		gameStatus.state = KGIdleState ;
-		gameStatus.presentingGlyph = KGAdaptGlyph ;
 	}
 }
 
