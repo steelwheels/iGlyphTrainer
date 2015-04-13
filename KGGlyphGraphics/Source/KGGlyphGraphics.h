@@ -10,6 +10,5 @@
 #import "KGGlyphDrawer.h"
 #import "KGGlyphEditor.h"
 #import "KGGlyphEditableStroke.h"
-#import "KGGlyphSequenceView.h"
 
 

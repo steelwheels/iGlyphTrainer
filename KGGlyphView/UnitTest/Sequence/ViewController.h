@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <KGGlyphGraphics/KGGlyphGraphics.h>
+#import <KGGlyphView/KGGlyphView.h>
 #import <KGGameData/KGGameData.h>
 #import <KGControls/KGControls.h>
 

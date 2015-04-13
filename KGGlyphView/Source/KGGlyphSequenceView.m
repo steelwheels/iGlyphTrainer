@@ -7,7 +7,6 @@
 
 #import "KGGlyphSequenceView.h"
 #import <KGGameData/KGGameData.h>
-#import "KGGlyphDrawer.h"
 
 @interface KGGlyphSequenceView ()
 - (void) setupGlyphSequenceView ;

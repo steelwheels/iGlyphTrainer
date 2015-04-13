@@ -5,8 +5,7 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import <KCGraphicsView/KCGraphicsView.h>
-#import "KGGlyphForwarders.h"
+#import <KGGlyphGraphics/KGGlyphGraphics.h>
 
 @interface KGGlyphSequenceView : KCGraphicsView
 {

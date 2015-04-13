@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05213F481AD6E0350093EBC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05213F471AD6E0350093EBC8 /* main.m */; };
-		05213F4B1AD6E0350093EBC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05213F4A1AD6E0350093EBC8 /* AppDelegate.m */; };
-		05213F4E1AD6E0350093EBC8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05213F4D1AD6E0350093EBC8 /* ViewController.m */; };
-		05213F511AD6E0350093EBC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05213F4F1AD6E0350093EBC8 /* Main.storyboard */; };
-		05213F531AD6E0350093EBC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05213F521AD6E0350093EBC8 /* Images.xcassets */; };
-		05213F561AD6E0350093EBC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05213F541AD6E0350093EBC8 /* LaunchScreen.xib */; };
 		0522E2381A99F00900080BE3 /* KGGlyphGraphics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */; };
 		0534BDA11AAB636300D4519F /* KGGlyphEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0534BDA01AAB636300D4519F /* KGGlyphEditor.m */; };
 		0534BDA21AAB63CA00D4519F /* KGGlyphEditor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0534BD9F1AAB636300D4519F /* KGGlyphEditor.h */; };
@@ -22,7 +16,6 @@
 		055255D91A99F81A0021E915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055255D71A99F81A0021E915 /* Main.storyboard */; };
 		055255DB1A99F81A0021E915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055255DA1A99F81A0021E915 /* Images.xcassets */; };
 		055255DE1A99F81A0021E915 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055255DC1A99F81A0021E915 /* LaunchScreen.xib */; };
-		058C3F1A1AD81EC6002CAAE8 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 058C3F191AD81EC6002CAAE8 /* AppDefaults.plist */; };
 		0591311C1AABC701006BEB9C /* KGGlyphEditableStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0591311B1AABC701006BEB9C /* KGGlyphEditableStroke.m */; };
 		0591311D1AABC8B1006BEB9C /* KGGlyphEditableStroke.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0591311A1AABC701006BEB9C /* KGGlyphEditableStroke.h */; };
 		0594DA7A1AAC3F0E0066D4D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594DA791AAC3F0E0066D4D5 /* main.m */; };
@@ -31,21 +24,12 @@
 		0594DA831AAC3F0E0066D4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA811AAC3F0E0066D4D5 /* Main.storyboard */; };
 		0594DA851AAC3F0E0066D4D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA841AAC3F0E0066D4D5 /* Images.xcassets */; };
 		0594DA881AAC3F0E0066D4D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA861AAC3F0E0066D4D5 /* LaunchScreen.xib */; };
-		05B5DEDE1AD570DD00BFE3E6 /* KGGlyphSequenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B5DEDD1AD570DD00BFE3E6 /* KGGlyphSequenceView.m */; };
 		05B5DEE01AD571A900BFE3E6 /* KGGlyphForwarders.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */; };
-		05B5DEE11AD571AE00BFE3E6 /* KGGlyphSequenceView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B5DEDC1AD570DD00BFE3E6 /* KGGlyphSequenceView.h */; };
 		05F5ABE81A99F97D0053EC4B /* KGGlyphDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */; };
 		05F5ABE91A99FACD0053EC4B /* KGGlyphDrawer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05213F691AD6E0600093EBC8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0522E22C1A99F00900080BE3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 055255C01A99F12D0021E915;
-			remoteInfo = Install;
-		};
 		0594DA9D1AAC48DB0066D4D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0522E22C1A99F00900080BE3 /* Project object */;
@@ -76,7 +60,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				05B5DEE11AD571AE00BFE3E6 /* KGGlyphSequenceView.h in CopyFiles */,
 				05B5DEE01AD571A900BFE3E6 /* KGGlyphForwarders.h in CopyFiles */,
 				0591311D1AABC8B1006BEB9C /* KGGlyphEditableStroke.h in CopyFiles */,
 				0534BDA21AAB63CA00D4519F /* KGGlyphEditor.h in CopyFiles */,
@@ -88,16 +71,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		05213F431AD6E0350093EBC8 /* UTSequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTSequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		05213F461AD6E0350093EBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05213F471AD6E0350093EBC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		05213F491AD6E0350093EBC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		05213F4A1AD6E0350093EBC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		05213F4C1AD6E0350093EBC8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		05213F4D1AD6E0350093EBC8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		05213F501AD6E0350093EBC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		05213F521AD6E0350093EBC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		05213F551AD6E0350093EBC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0522E2341A99F00900080BE3 /* libKGGlyphGraphics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGlyphGraphics.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphGraphics.h; sourceTree = "<group>"; };
 		0534BD9F1AAB636300D4519F /* KGGlyphEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphEditor.h; sourceTree = "<group>"; };
@@ -113,7 +86,6 @@
 		055255D81A99F81A0021E915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		055255DA1A99F81A0021E915 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		055255DD1A99F81A0021E915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		058C3F191AD81EC6002CAAE8 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppDefaults.plist; path = ../../../iGlyphHackTrainer/iOS/AppDefaults.plist; sourceTree = "<group>"; };
 		0591311A1AABC701006BEB9C /* KGGlyphEditableStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphEditableStroke.h; sourceTree = "<group>"; };
 		0591311B1AABC701006BEB9C /* KGGlyphEditableStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphEditableStroke.m; sourceTree = "<group>"; };
 		0594DA751AAC3F0E0066D4D5 /* UTGlyphEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTGlyphEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,21 +98,12 @@
 		0594DA821AAC3F0E0066D4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0594DA841AAC3F0E0066D4D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0594DA871AAC3F0E0066D4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		05B5DEDC1AD570DD00BFE3E6 /* KGGlyphSequenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphSequenceView.h; sourceTree = "<group>"; };
-		05B5DEDD1AD570DD00BFE3E6 /* KGGlyphSequenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphSequenceView.m; sourceTree = "<group>"; };
 		05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphForwarders.h; sourceTree = "<group>"; };
 		05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphDrawer.h; sourceTree = "<group>"; };
 		05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphDrawer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05213F401AD6E0350093EBC8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0522E2311A99F00900080BE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,32 +128,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05213F441AD6E0350093EBC8 /* Sequence */ = {
-			isa = PBXGroup;
-			children = (
-				05213F491AD6E0350093EBC8 /* AppDelegate.h */,
-				05213F4A1AD6E0350093EBC8 /* AppDelegate.m */,
-				05213F4C1AD6E0350093EBC8 /* ViewController.h */,
-				05213F4D1AD6E0350093EBC8 /* ViewController.m */,
-				05213F4F1AD6E0350093EBC8 /* Main.storyboard */,
-				05213F521AD6E0350093EBC8 /* Images.xcassets */,
-				05213F541AD6E0350093EBC8 /* LaunchScreen.xib */,
-				05213F451AD6E0350093EBC8 /* Supporting Files */,
-			);
-			name = Sequence;
-			path = ../UnitTest/Sequence;
-			sourceTree = SOURCE_ROOT;
-		};
-		05213F451AD6E0350093EBC8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				058C3F191AD81EC6002CAAE8 /* AppDefaults.plist */,
-				05213F461AD6E0350093EBC8 /* Info.plist */,
-				05213F471AD6E0350093EBC8 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		0522E22B1A99F00900080BE3 = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +144,6 @@
 				0522E2341A99F00900080BE3 /* libKGGlyphGraphics.a */,
 				055255CB1A99F81A0021E915 /* UnitTest.app */,
 				0594DA751AAC3F0E0066D4D5 /* UTGlyphEditor.app */,
-				05213F431AD6E0350093EBC8 /* UTSequence.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,8 +159,6 @@
 				0534BDA01AAB636300D4519F /* KGGlyphEditor.m */,
 				0591311A1AABC701006BEB9C /* KGGlyphEditableStroke.h */,
 				0591311B1AABC701006BEB9C /* KGGlyphEditableStroke.m */,
-				05B5DEDC1AD570DD00BFE3E6 /* KGGlyphSequenceView.h */,
-				05B5DEDD1AD570DD00BFE3E6 /* KGGlyphSequenceView.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -257,7 +191,6 @@
 		055255CC1A99F81A0021E915 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
-				05213F441AD6E0350093EBC8 /* Sequence */,
 				0594DA9B1AAC3FBE0066D4D5 /* Editor */,
 				0534BD9E1AAB628700D4519F /* Drawer */,
 			);
@@ -329,24 +262,6 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		05213F421AD6E0350093EBC8 /* UTSequence */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 05213F671AD6E0350093EBC8 /* Build configuration list for PBXNativeTarget "UTSequence" */;
-			buildPhases = (
-				05213F3F1AD6E0350093EBC8 /* Sources */,
-				05213F401AD6E0350093EBC8 /* Frameworks */,
-				05213F411AD6E0350093EBC8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				05213F6A1AD6E0600093EBC8 /* PBXTargetDependency */,
-			);
-			name = UTSequence;
-			productName = UTSequence;
-			productReference = 05213F431AD6E0350093EBC8 /* UTSequence.app */;
-			productType = "com.apple.product-type.application";
-		};
 		0522E2331A99F00900080BE3 /* KGGlyphGraphics */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0522E2481A99F00900080BE3 /* Build configuration list for PBXNativeTarget "KGGlyphGraphics" */;
@@ -409,9 +324,6 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
-					05213F421AD6E0350093EBC8 = {
-						CreatedOnToolsVersion = 6.3;
-					};
 					0522E2331A99F00900080BE3 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -443,23 +355,11 @@
 				055255C01A99F12D0021E915 /* Install */,
 				055255CA1A99F81A0021E915 /* UnitTest */,
 				0594DA741AAC3F0E0066D4D5 /* UTGlyphEditor */,
-				05213F421AD6E0350093EBC8 /* UTSequence */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		05213F411AD6E0350093EBC8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				058C3F1A1AD81EC6002CAAE8 /* AppDefaults.plist in Resources */,
-				05213F511AD6E0350093EBC8 /* Main.storyboard in Resources */,
-				05213F561AD6E0350093EBC8 /* LaunchScreen.xib in Resources */,
-				05213F531AD6E0350093EBC8 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		055255C91A99F81A0021E915 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,23 +383,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		05213F3F1AD6E0350093EBC8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05213F4E1AD6E0350093EBC8 /* ViewController.m in Sources */,
-				05213F4B1AD6E0350093EBC8 /* AppDelegate.m in Sources */,
-				05213F481AD6E0350093EBC8 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0522E2301A99F00900080BE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0591311C1AABC701006BEB9C /* KGGlyphEditableStroke.m in Sources */,
 				05F5ABE81A99F97D0053EC4B /* KGGlyphDrawer.m in Sources */,
-				05B5DEDE1AD570DD00BFE3E6 /* KGGlyphSequenceView.m in Sources */,
 				0534BDA11AAB636300D4519F /* KGGlyphEditor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,11 +416,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		05213F6A1AD6E0600093EBC8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 055255C01A99F12D0021E915 /* Install */;
-			targetProxy = 05213F691AD6E0600093EBC8 /* PBXContainerItemProxy */;
-		};
 		0594DA9E1AAC48DB0066D4D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 055255C01A99F12D0021E915 /* Install */;
@@ -550,22 +434,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		05213F4F1AD6E0350093EBC8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05213F501AD6E0350093EBC8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		05213F541AD6E0350093EBC8 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05213F551AD6E0350093EBC8 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		055255D71A99F81A0021E915 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -601,89 +469,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		05213F631AD6E0350093EBC8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(HOME)/local/include",
-				);
-				INFOPLIST_FILE = ../UnitTest/Sequence/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
-				OTHER_CFLAGS = (
-					"-W",
-					"-Wall",
-				);
-				OTHER_LDFLAGS = (
-					"-lKGGlyphGraphics",
-					"-lKGGlyphData",
-					"-lKGGameData",
-					"-lKCGraphicsView",
-					"-lKGControls",
-					"-lKiwiControl",
-					"-lCoconutGraphics",
-					"-lCoconut",
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		05213F641AD6E0350093EBC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(HOME)/local/include",
-				);
-				INFOPLIST_FILE = ../UnitTest/Sequence/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
-				OTHER_CFLAGS = (
-					"-W",
-					"-Wall",
-				);
-				OTHER_LDFLAGS = (
-					"-lKGGlyphGraphics",
-					"-lKGGlyphData",
-					"-lKGGameData",
-					"-lKCGraphicsView",
-					"-lKGControls",
-					"-lKiwiControl",
-					"-lCoconutGraphics",
-					"-lCoconut",
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		0522E2461A99F00900080BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -981,15 +766,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05213F671AD6E0350093EBC8 /* Build configuration list for PBXNativeTarget "UTSequence" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				05213F631AD6E0350093EBC8 /* Debug */,
-				05213F641AD6E0350093EBC8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0522E22F1A99F00900080BE3 /* Build configuration list for PBXProject "KGGlyphGraphics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
