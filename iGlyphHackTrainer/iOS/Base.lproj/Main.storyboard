@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="8NX-ix-YQI">
@@ -35,9 +35,9 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-Ff-qXd" customClass="KGStartButton">
-                                <rect key="frame" x="16" y="432" width="288" height="40"/>
+                                <rect key="frame" x="16" y="520" width="288" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="pCo-4c-5VW"/>
+                                    <constraint firstAttribute="height" constant="40" id="HW5-Ik-52C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Start"/>
@@ -68,37 +68,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7c-c4-WkV" customClass="KCGraphicsView">
-                                <rect key="frame" x="16" y="145" width="288" height="287"/>
+                                <rect key="frame" x="16" y="145" width="288" height="374"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="69l-Xa-9WQ"/>
                             <constraint firstItem="hWV-ka-ckA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9tn-ut-kc0"/>
                             <constraint firstItem="hWV-ka-ckA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ARr-C1-esb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8NX-ix-YQI" secondAttribute="trailing" constant="-16" id="D0v-u6-JRK"/>
-                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="top" secondItem="Q7c-c4-WkV" secondAttribute="bottom" id="E6A-ld-Vw1"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="E8k-FT-mop"/>
                             <constraint firstItem="Wpb-zy-5Qj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JVr-Im-d2E"/>
-                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Tve-KA-G5Z"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RYl-gM-nGZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="8" id="SHX-2p-yjD"/>
+                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WO2-tI-YFa"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wp7-Ly-HGI"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="YIY-Po-g1w"/>
-                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bRr-IZ-mqC"/>
+                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="top" secondItem="Q7c-c4-WkV" secondAttribute="bottom" constant="1" id="byK-Qb-Uaj"/>
                             <constraint firstItem="34w-lM-D2R" firstAttribute="top" secondItem="8NX-ix-YQI" secondAttribute="bottom" id="cNd-OE-ZAk"/>
                             <constraint firstItem="hWV-ka-ckA" firstAttribute="top" secondItem="8NX-ix-YQI" secondAttribute="bottom" id="cbP-9E-Lgi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8NX-ix-YQI" secondAttribute="trailing" constant="-16" id="dmc-gF-2Ni"/>
                             <constraint firstItem="Wpb-zy-5Qj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e3l-5L-Do0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z7E-Ff-qXd" secondAttribute="bottom" constant="8" id="eJX-TM-ZDz"/>
                             <constraint firstItem="Wpb-zy-5Qj" firstAttribute="top" secondItem="hWV-ka-ckA" secondAttribute="bottom" constant="8" id="hoK-cn-XSx"/>
+                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="top" secondItem="Wpb-zy-5Qj" secondAttribute="bottom" constant="8" id="moE-l0-lqp"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="p6M-eF-FF9"/>
-                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="top" secondItem="Wpb-zy-5Qj" secondAttribute="bottom" constant="8" id="pOH-ds-IHC"/>
-                            <constraint firstItem="Z7E-Ff-qXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tlw-pm-MlP"/>
+                            <constraint firstItem="Q7c-c4-WkV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="usq-MP-HGE"/>
                             <constraint firstItem="34w-lM-D2R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v4n-xg-Y2u"/>
                             <constraint firstItem="8NX-ix-YQI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wGh-ca-IlW"/>
                             <constraint firstItem="34w-lM-D2R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wTE-Hp-CEq"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="glyphGraphicsView" destination="Q7c-c4-WkV" id="QDk-cX-a28"/>
                         <outlet property="glyphNameLabel" destination="Wpb-zy-5Qj" id="Yrl-40-2Bv"/>

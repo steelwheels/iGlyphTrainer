@@ -10,7 +10,8 @@
 static MainStateMachine *		sharedStateMachine ;
 
 @interface MainStateMachine ()
-- (void) transferFromIdleToQuestion ;
+- (BOOL) transferFromIdleToQuestion ;
+- (void) questionState ;
 @end
 
 @implementation MainStateMachine
@@ -28,19 +29,27 @@ static MainStateMachine *		sharedStateMachine ;
 	return sharedStateMachine ;
 }
 
-- (instancetype) initWithGameStatus: (KGGameStatus *) status
+- (instancetype) init
 {
 	if((self = [super init]) != nil){
-		gameStatus = status ;
+		gameStatus = nil ;
 	}
 	return self ;
+}
+
+- (void) setGameStatus: (KGGameStatus *) status
+{
+	gameStatus = status ;
 }
 
 - (void) start
 {
 	switch(gameStatus.state){
 		case KGIdleState: {
-			[self transferFromIdleToQuestion] ;
+			if([self transferFromIdleToQuestion]){
+				[self questionState] ;
+			}
+			
 		} break ;
 		default: {
 			/* do nothing */
@@ -48,9 +57,21 @@ static MainStateMachine *		sharedStateMachine ;
 	}
 }
 
-- (void) transferFromIdleToQuestion
+- (BOOL) transferFromIdleToQuestion
 {
-	
+	/* Select next question */
+	struct KGGlyphSentence sentence = KGSelectGlyphSentence() ;
+	gameStatus.currentSentence = sentence ;
+	gameStatus.currentGlyphKind = sentence.wordNum > 0 ? sentence.wordArray.glyphWords[0] : KGNilGlyph ;
+	gameStatus.maxGlyphNum = sentence.wordNum ;
+	gameStatus.processedGlyphNum = 0 ;
+	return sentence.wordNum > 0 ;
+}
+
+- (void) questionState
+{
+	gameStatus.state = KGDisplayQuestionState ;
 }
 
 @end
+

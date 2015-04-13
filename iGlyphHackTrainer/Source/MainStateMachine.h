@@ -15,7 +15,8 @@
 + (void) initialize ;
 + (MainStateMachine *) sharedMainStateMachine ;
 
-- (instancetype) initWithGameStatus: (KGGameStatus *) status ;
+- (instancetype) init ;
+- (void) setGameStatus: (KGGameStatus *) status ;
 
 - (void) start ;
 

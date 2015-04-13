@@ -44,6 +44,9 @@ gameStatus(void)
 	[status addStateObserver: self.startButton] ;
 	[status addStateObserver: self.hackProgressView] ;
 	
+	stateMachine = [MainStateMachine sharedMainStateMachine] ;
+	[stateMachine setGameStatus: status] ;
+	
 	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
 	[self.glyphGraphicsView setGraphicsDrawer: drawer] ;
 }
@@ -71,6 +74,8 @@ gameStatus(void)
 {
 	(void) button ;
 	puts("Start button pressed") ;
+	stateMachine = [MainStateMachine sharedMainStateMachine] ;
+	[stateMachine start] ;
 }
 
 @end

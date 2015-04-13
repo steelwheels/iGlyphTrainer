@@ -8,8 +8,12 @@
 #import <KGControls/KGControls.h>
 #import <KGHackProgressView/KGHackProgressView.h>
 #import <UIKit/UIKit.h>
+#import "MainStateMachine.h"
 
 @interface MainViewController : UIViewController
+{
+	MainStateMachine *		stateMachine ;
+}
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *		moveToSetupViewButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *		moveToAboutViewButton;
