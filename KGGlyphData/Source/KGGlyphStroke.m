@@ -134,6 +134,16 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
+		case KGBeingGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 6, 10},
+				{10,  8},
+				{ 8,  3},
+				{ 3,  9},
+				{ 9,  6}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
 		case KGBodyGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 7,   6},

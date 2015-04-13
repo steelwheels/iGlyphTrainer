@@ -27,6 +27,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Barrier) ;
 			CASE(Before) ;
 			CASE(Begin) ;
+			CASE(Being) ;
 			CASE(Body) ;
 			CASE(Breath) ;
 			CASE(Capture) ;
