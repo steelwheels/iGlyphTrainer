@@ -20,9 +20,13 @@
 {
 	if((self = [super init]) != nil){
 		self.state		= KGIdleState ;
+		
+		self.currentSentence	= KGGetEmptySentence() ;
+		self.currentGlyphKind	= KGNilGlyph ;
+
 		self.maxGlyphNum	= 0 ;
 		self.processedGlyphNum	= 0 ;
-		self.currentGlyphKind	= KGNilGlyph ;
+		
 	}
 	return self ;
 }

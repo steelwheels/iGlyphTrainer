@@ -20,13 +20,17 @@ typedef enum {
 @interface KGGameStatus : CNNotifierObject
 
 @property (assign, nonatomic) KGGameState	state ;
-@property (assign, nonatomic) unsigned int	maxGlyphNum ;
-@property (assign, nonatomic) unsigned int	processedGlyphNum ;
 
 /**
  * questionGlyph has valid value when the state is KGDisplayQuestionState
  */
-@property (assign, nonatomic) KGGlyphKind	currentGlyphKind ;
+@property (assign, nonatomic) struct KGGlyphSentence	currentSentence ;
+@property (assign, nonatomic) KGGlyphKind		currentGlyphKind ;
+
+@property (assign, nonatomic) unsigned int	maxGlyphNum ;
+@property (assign, nonatomic) unsigned int	processedGlyphNum ;
+
+
 
 + (NSString *) stateKeyPath ;
 
