@@ -215,8 +215,7 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			static struct KGGlyphEdge s_stroke[] = {
 				{10,   6},
 				{ 6,   7},
-				{ 7,   9},
-				{ 9,   8}
+				{ 7,   9}
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
@@ -313,6 +312,76 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
+		case KGDefendGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 5,   9},
+				{ 9,   3},
+				{ 3,   8},
+				{ 8,   1}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGDestinationGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 1,   2},
+				{ 2,   3}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGDestinyGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 6,   7},
+				{ 7,  10},
+				{10,   8},
+				{ 8,   9},
+				{ 9,   3}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGDestroyGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 5,   6},
+				{ 6,   7},
+				{ 7,   8},
+				{ 8,   2}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGDeteriorateGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 6,   7},
+				{ 7,   9},
+				{ 9,   4}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGDieGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 4,   9},
+				{ 9,   7},
+				{ 7,   8},
+				{ 8,   2}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGDifficultGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 9,   7},
+				{ 7,   8},
+				{ 8,  10},
+				{10,   1}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGDiscoverGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 1,   2},
+				{ 2,   3},
+				{ 3,   4}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+			
 	}
 	return result ;
 }

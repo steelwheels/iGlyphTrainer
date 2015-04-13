@@ -46,6 +46,14 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Mind) ;
 			CASE(Danger) ;
 			CASE(Data) ;
+			CASE(Defend) ;
+			CASE(Destination) ;
+			CASE(Destiny) ;
+			CASE(Destroy) ;
+			CASE(Deteriorate) ;
+			CASE(Die) ;
+			CASE(Difficult) ;
+			CASE(Discover) ;
 	}
 	return result ;
 #	undef CASE
