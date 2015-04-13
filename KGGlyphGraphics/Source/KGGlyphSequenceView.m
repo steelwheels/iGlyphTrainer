@@ -56,11 +56,20 @@
 				if(gkind != KGNilGlyph){
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
 					[glyphDrawer setStroke: &gstroke] ;
-					[self setNeedsDisplay] ;
+					[self setAllNeedsDisplay] ;
 				}
 			}
 		}
 	}
+}
+
+- (void) setAllNeedsDisplay
+{
+	NSArray * subviews = self.subviews ;
+	for(UIView * subview in subviews){
+		[subview setNeedsDisplay] ;
+	}
+	[self setNeedsDisplay] ;
 }
 
 @end

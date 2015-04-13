@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+- (void) pressNextButton: (UIButton *) button ;
 @end
 
 @implementation ViewController
@@ -21,15 +21,32 @@
 	gameStatus = [[KGGameStatus alloc] init] ;
 	[gameStatus addStateObserver: self.nameLabel] ;
 	[gameStatus addStateObserver: self.sequenceView] ;
+	
+	[self.nextButton addTarget: self action:@selector(pressNextButton:) forControlEvents: UIControlEventTouchUpInside] ;
 
 	gameStatus.currentGlyphKind = KGAbandonGlyph ;
 	gameStatus.state = KGDisplayQuestionState ;
 
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+- (void) pressNextButton: (UIButton *) button
+{
+	(void) button ;
+	KGGlyphKind curkind = gameStatus.currentGlyphKind ;
+	KGGlyphKind nextkind ;
+	if(curkind < KGLastClyph){
+		nextkind = curkind + 1 ;
+	} else {
+		nextkind = KGFirstClyph ;
+	}
+	gameStatus.currentGlyphKind = nextkind ;
+	gameStatus.state = KGDisplayQuestionState ;
 }
 
 @end

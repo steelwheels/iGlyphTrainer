@@ -20,4 +20,6 @@
 - (instancetype) initWithFrame:(NSRect)frame ;
 #endif
 
+- (void) setAllNeedsDisplay ;
+
 @end

@@ -39,7 +39,6 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphInf
 		updateLayout(&glyphInfo, &(boundsrect.size)) ;
 		previousSize = boundsrect.size ;
 	}
-
 	switch(level){
 		case KGGlyphBaseLayer: {
 			drawVertexes(context, &(boundsrect.origin), &glyphInfo) ;
