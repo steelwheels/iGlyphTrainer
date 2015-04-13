@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 - (void) pressNextButton: (UIButton *) button ;
+- (void) pressPrevButton: (UIButton *) button ;
 @end
 
 @implementation ViewController
@@ -23,7 +24,8 @@
 	[gameStatus addStateObserver: self.sequenceView] ;
 	
 	[self.nextButton addTarget: self action:@selector(pressNextButton:) forControlEvents: UIControlEventTouchUpInside] ;
-
+	[self.prevButton addTarget: self action:@selector(pressPrevButton:) forControlEvents: UIControlEventTouchUpInside] ;
+	
 	gameStatus.currentGlyphKind = KGAbandonGlyph ;
 	gameStatus.state = KGDisplayQuestionState ;
 
@@ -44,6 +46,20 @@
 		nextkind = curkind + 1 ;
 	} else {
 		nextkind = KGFirstClyph ;
+	}
+	gameStatus.currentGlyphKind = nextkind ;
+	gameStatus.state = KGDisplayQuestionState ;
+}
+
+- (void) pressPrevButton: (UIButton *) button
+{
+	(void) button ;
+	KGGlyphKind curkind = gameStatus.currentGlyphKind ;
+	KGGlyphKind nextkind ;
+	if(curkind > KGFirstClyph){
+		nextkind = curkind - 1 ;
+	} else {
+		nextkind = KGLastClyph ;
 	}
 	gameStatus.currentGlyphKind = nextkind ;
 	gameStatus.state = KGDisplayQuestionState ;

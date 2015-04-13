@@ -20,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet KGGlyphSequenceView *sequenceView;
 
 @property (weak, nonatomic) IBOutlet KGButton *nextButton;
+@property (weak, nonatomic) IBOutlet KGButton *prevButton;
+
 @end
 
