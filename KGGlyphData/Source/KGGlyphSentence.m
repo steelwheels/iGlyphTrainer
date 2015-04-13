@@ -7,6 +7,8 @@
 
 #import "KGGlyphSentence.h"
 
+static const struct KGGlyphWords	s_0word = {} ;
+
 static const struct KGGlyphWords	s_2words[] = {
 	{
 		{KGWarGlyph, KGChangeGlyph}
@@ -19,6 +21,16 @@ unsigned int
 KGGet2WordSentenceNum(void)
 {
 	return COUNT_OF_ARRAY(s_2words) ;
+}
+
+struct KGGlyphSentence
+KGGetEmptySentence(void)
+{
+	struct KGGlyphSentence sentence = {
+		.wordNum	= 0,
+		.wordArray	= s_0word
+	} ;
+	return sentence ;
 }
 
 struct KGGlyphSentence

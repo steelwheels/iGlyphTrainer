@@ -22,4 +22,7 @@ unsigned int
 KGGet2WordSentenceNum(void) ;
 
 struct KGGlyphSentence
+KGGetEmptySentence(void) ;
+
+struct KGGlyphSentence
 KGGet2WordSentence(unsigned int index) ;
