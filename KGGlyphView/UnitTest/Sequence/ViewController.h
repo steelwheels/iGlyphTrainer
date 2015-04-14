@@ -16,6 +16,8 @@
 	KGGameStatus *		gameStatus ;
 }
 
+@property (weak, nonatomic) IBOutlet KGHackNavigationBar *navigationBar;
+
 @property (weak, nonatomic) IBOutlet KGGlyphNameLabel *nameLabel;
 @property (weak, nonatomic) IBOutlet KGGlyphSequenceView *sequenceView;
 

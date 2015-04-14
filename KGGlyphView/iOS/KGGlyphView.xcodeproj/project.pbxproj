@@ -16,6 +16,12 @@
 		05132ADF1ADBA4D8002AC8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05132ADD1ADBA4D8002AC8E0 /* Main.storyboard */; };
 		05132AE11ADBA4FB002AC8E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05132AE01ADBA4FB002AC8E0 /* Images.xcassets */; };
 		05132AE71ADBA528002AC8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05132AE51ADBA528002AC8E0 /* LaunchScreen.xib */; };
+		05351B961ADD69DA0098CF59 /* KGHackProgressDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05351B931ADD69DA0098CF59 /* KGHackProgressDrawer.m */; };
+		05351B971ADD69DA0098CF59 /* KGHackProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05351B951ADD69DA0098CF59 /* KGHackProgressView.m */; };
+		05351B9B1ADD6E520098CF59 /* KGHackNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 05351B9A1ADD6E520098CF59 /* KGHackNavigationBar.m */; };
+		05351B9C1ADD6EAE0098CF59 /* KGHackProgressDrawer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05351B921ADD69DA0098CF59 /* KGHackProgressDrawer.h */; };
+		05351B9D1ADD6EB20098CF59 /* KGHackProgressView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05351B941ADD69DA0098CF59 /* KGHackProgressView.h */; };
+		05351B9E1ADD6EB60098CF59 /* KGHackNavigationBar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05351B991ADD6E520098CF59 /* KGHackNavigationBar.h */; };
 		0567FFE61ADB985200508A6E /* KGGlyphView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0567FFE51ADB985200508A6E /* KGGlyphView.h */; };
 		0567FFE81ADB985200508A6E /* KGGlyphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0567FFE71ADB985200508A6E /* KGGlyphView.m */; };
 		05DC28221ADBA9E600683224 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05DC28211ADBA9E600683224 /* AppDefaults.plist */; };
@@ -45,6 +51,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05351B9E1ADD6EB60098CF59 /* KGHackNavigationBar.h in CopyFiles */,
+				05351B9D1ADD6EB20098CF59 /* KGHackProgressView.h in CopyFiles */,
+				05351B9C1ADD6EAE0098CF59 /* KGHackProgressDrawer.h in CopyFiles */,
 				050F1FBA1ADB9DD30059EC35 /* KGGlyphSequenceView.h in CopyFiles */,
 				0567FFE61ADB985200508A6E /* KGGlyphView.h in CopyFiles */,
 			);
@@ -65,6 +74,13 @@
 		05132ADE1ADBA4D8002AC8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../UnitTest/Sequence/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05132AE01ADBA4FB002AC8E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../UnitTest/Sequence/Images.xcassets; sourceTree = "<group>"; };
 		05132AE61ADBA528002AC8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ../../UnitTest/Sequence/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		05351B921ADD69DA0098CF59 /* KGHackProgressDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgressDrawer.h; sourceTree = "<group>"; };
+		05351B931ADD69DA0098CF59 /* KGHackProgressDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgressDrawer.m; sourceTree = "<group>"; };
+		05351B941ADD69DA0098CF59 /* KGHackProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgressView.h; sourceTree = "<group>"; };
+		05351B951ADD69DA0098CF59 /* KGHackProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgressView.m; sourceTree = "<group>"; };
+		05351B981ADD6A370098CF59 /* KGGlyphViewType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphViewType.h; sourceTree = "<group>"; };
+		05351B991ADD6E520098CF59 /* KGHackNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackNavigationBar.h; sourceTree = "<group>"; };
+		05351B9A1ADD6E520098CF59 /* KGHackNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackNavigationBar.m; sourceTree = "<group>"; };
 		0567FFE21ADB985200508A6E /* libKGGlyphView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGlyphView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0567FFE51ADB985200508A6E /* KGGlyphView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphView.h; sourceTree = "<group>"; };
 		0567FFE71ADB985200508A6E /* KGGlyphView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGGlyphView.m; sourceTree = "<group>"; };
@@ -139,8 +155,15 @@
 			children = (
 				0567FFE51ADB985200508A6E /* KGGlyphView.h */,
 				0567FFE71ADB985200508A6E /* KGGlyphView.m */,
+				05351B981ADD6A370098CF59 /* KGGlyphViewType.h */,
 				0500CB8B1ADB9A03001D3E5C /* KGGlyphSequenceView.h */,
 				0500CB8C1ADB9A03001D3E5C /* KGGlyphSequenceView.m */,
+				05351B921ADD69DA0098CF59 /* KGHackProgressDrawer.h */,
+				05351B931ADD69DA0098CF59 /* KGHackProgressDrawer.m */,
+				05351B941ADD69DA0098CF59 /* KGHackProgressView.h */,
+				05351B951ADD69DA0098CF59 /* KGHackProgressView.m */,
+				05351B991ADD6E520098CF59 /* KGHackNavigationBar.h */,
+				05351B9A1ADD6E520098CF59 /* KGHackNavigationBar.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -272,8 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05351B971ADD69DA0098CF59 /* KGHackProgressView.m in Sources */,
 				0500CB8D1ADB9A03001D3E5C /* KGGlyphSequenceView.m in Sources */,
+				05351B961ADD69DA0098CF59 /* KGHackProgressDrawer.m in Sources */,
 				0567FFE81ADB985200508A6E /* KGGlyphView.m in Sources */,
+				05351B9B1ADD6E520098CF59 /* KGHackNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,12 @@
  */
 
 #import <KGGlyphGraphics/KGGlyphGraphics.h>
+#import "KGGlyphViewType.h"
 #import "KGGlyphSequenceView.h"
+#import "KGHackProgressDrawer.h"
+#import "KGHackProgressView.h"
+#import "KGHackNavigationBar.h"
+
+
 
 

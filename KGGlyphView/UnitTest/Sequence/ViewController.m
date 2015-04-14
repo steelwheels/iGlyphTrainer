@@ -23,12 +23,17 @@
 	[gameStatus addStateObserver: self.nameLabel] ;
 	[gameStatus addStateObserver: self.sequenceView] ;
 	
+	[self.navigationBar setupProgressBar] ;
+	KGHackProgressView * progressview = [self.navigationBar progressView] ;
+	[gameStatus addStateObserver: progressview] ;
+	
 	[self.nextButton addTarget: self action:@selector(pressNextButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	[self.prevButton addTarget: self action:@selector(pressPrevButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	
 	gameStatus.currentGlyphKind = KGAbandonGlyph ;
+	gameStatus.maxGlyphNum = 5 ;
+	gameStatus.processedGlyphNum = 2 ;
 	gameStatus.state = KGDisplayQuestionState ;
-
 }
 
 - (void)didReceiveMemoryWarning

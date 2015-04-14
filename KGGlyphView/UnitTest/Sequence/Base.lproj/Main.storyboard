@@ -18,63 +18,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKF-4p-F1d" customClass="KGGlyphSequenceView">
-                                <rect key="frame" x="16" y="49" width="343" height="375"/>
+                                <rect key="frame" x="16" y="101" width="343" height="508"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="375" id="GJb-of-FT0"/>
-                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oE-a1-5Oc" customClass="KGGlyphNameLabel">
-                                <rect key="frame" x="16" y="20" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Exg-nQ-SrB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-0p-8s9" customClass="KGButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-0p-8s9" customClass="KGButton">
                                 <rect key="frame" x="259" y="617" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Kho-e8-Bv3"/>
-                                    <constraint firstAttribute="width" constant="100" id="w8S-nL-0iP"/>
-                                </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-b8-Qg9" customClass="KGButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-b8-Qg9" customClass="KGButton">
                                 <rect key="frame" x="16" y="617" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="3RB-hN-AB0"/>
-                                    <constraint firstAttribute="height" constant="30" id="T6M-SM-asU"/>
-                                </constraints>
                                 <state key="normal" title="Prev">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQY-Cn-uLL" customClass="KGHackNavigationBar">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jDM-ns-MyH"/>
+                                </constraints>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Title" id="yTr-UN-H3q"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oE-a1-5Oc" customClass="KGGlyphNameLabel">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2NM-z4-lVz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5oE-a1-5Oc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5ax-Uk-Rn4"/>
-                            <constraint firstItem="5oE-a1-5Oc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8mc-CN-Ch1"/>
-                            <constraint firstItem="FY9-b8-Qg9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9u3-ee-ciU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FY9-b8-Qg9" secondAttribute="bottom" constant="20" id="Agp-XW-Yfn"/>
-                            <constraint firstItem="5oE-a1-5Oc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IB6-U4-tbe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dX1-0p-8s9" secondAttribute="bottom" constant="20" id="Izh-ng-k73"/>
-                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="top" secondItem="5oE-a1-5Oc" secondAttribute="bottom" constant="8" id="Qmx-Wc-XYm"/>
-                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kmA-hv-4uf"/>
-                            <constraint firstItem="dX1-0p-8s9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ttW-VZ-xib"/>
-                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zib-jt-sLw"/>
+                            <constraint firstItem="5oE-a1-5Oc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0tQ-zE-fGc"/>
+                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2qB-Kh-9z5"/>
+                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="top" secondItem="5oE-a1-5Oc" secondAttribute="bottom" constant="8" id="5XZ-6h-LcX"/>
+                            <constraint firstItem="FY9-b8-Qg9" firstAttribute="top" secondItem="ZKF-4p-F1d" secondAttribute="bottom" constant="8" id="7e2-Ux-R4t"/>
+                            <constraint firstItem="5oE-a1-5Oc" firstAttribute="top" secondItem="UQY-Cn-uLL" secondAttribute="bottom" constant="8" id="A2I-kL-9iP"/>
+                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="leading" secondItem="FY9-b8-Qg9" secondAttribute="leading" id="FFD-2m-xhZ"/>
+                            <constraint firstItem="5oE-a1-5Oc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JjE-xf-Nyr"/>
+                            <constraint firstItem="dX1-0p-8s9" firstAttribute="top" secondItem="ZKF-4p-F1d" secondAttribute="bottom" constant="8" symbolic="YES" id="OaV-Ts-Mf4"/>
+                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="trailing" secondItem="dX1-0p-8s9" secondAttribute="trailing" id="Wv8-vq-8E0"/>
+                            <constraint firstAttribute="bottom" secondItem="ZKF-4p-F1d" secondAttribute="bottom" constant="58" id="a63-v6-qeM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UQY-Cn-uLL" secondAttribute="trailing" constant="-16" id="h5J-39-5Rl"/>
+                            <constraint firstItem="UQY-Cn-uLL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="r3o-as-av6"/>
+                            <constraint firstItem="UQY-Cn-uLL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rcD-cg-gQQ"/>
+                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="usa-Bz-sVR"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="nameLabel" destination="5oE-a1-5Oc" id="Ogr-0f-ZWv"/>
+                        <outlet property="navigationBar" destination="UQY-Cn-uLL" id="8ss-zG-9eS"/>
                         <outlet property="nextButton" destination="dX1-0p-8s9" id="H7P-q7-HQc"/>
                         <outlet property="prevButton" destination="FY9-b8-Qg9" id="MgC-Ai-UAc"/>
                         <outlet property="sequenceView" destination="ZKF-4p-F1d" id="ifA-tu-XzI"/>
