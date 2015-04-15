@@ -22,15 +22,23 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-0p-8s9" customClass="KGButton">
-                                <rect key="frame" x="259" y="617" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-0p-8s9" customClass="KGButton">
+                                <rect key="frame" x="219" y="617" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="1tf-ie-XAN"/>
+                                    <constraint firstAttribute="height" constant="30" id="9rg-lU-VOE"/>
+                                </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-b8-Qg9" customClass="KGButton">
-                                <rect key="frame" x="16" y="617" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-b8-Qg9" customClass="KGButton">
+                                <rect key="frame" x="16" y="617" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="CjQ-Ue-vkx"/>
+                                    <constraint firstAttribute="height" constant="30" id="IUS-gx-rz7"/>
+                                </constraints>
                                 <state key="normal" title="Prev">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,17 +70,17 @@
                             <constraint firstItem="5oE-a1-5Oc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0tQ-zE-fGc"/>
                             <constraint firstItem="ZKF-4p-F1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2qB-Kh-9z5"/>
                             <constraint firstItem="ZKF-4p-F1d" firstAttribute="top" secondItem="5oE-a1-5Oc" secondAttribute="bottom" constant="8" id="5XZ-6h-LcX"/>
-                            <constraint firstItem="FY9-b8-Qg9" firstAttribute="top" secondItem="ZKF-4p-F1d" secondAttribute="bottom" constant="8" id="7e2-Ux-R4t"/>
                             <constraint firstItem="5oE-a1-5Oc" firstAttribute="top" secondItem="UQY-Cn-uLL" secondAttribute="bottom" constant="8" id="A2I-kL-9iP"/>
-                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="leading" secondItem="FY9-b8-Qg9" secondAttribute="leading" id="FFD-2m-xhZ"/>
                             <constraint firstItem="5oE-a1-5Oc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JjE-xf-Nyr"/>
-                            <constraint firstItem="dX1-0p-8s9" firstAttribute="top" secondItem="ZKF-4p-F1d" secondAttribute="bottom" constant="8" symbolic="YES" id="OaV-Ts-Mf4"/>
-                            <constraint firstItem="ZKF-4p-F1d" firstAttribute="trailing" secondItem="dX1-0p-8s9" secondAttribute="trailing" id="Wv8-vq-8E0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FY9-b8-Qg9" secondAttribute="bottom" constant="20" id="Lok-lV-9Ko"/>
                             <constraint firstAttribute="bottom" secondItem="ZKF-4p-F1d" secondAttribute="bottom" constant="58" id="a63-v6-qeM"/>
+                            <constraint firstItem="FY9-b8-Qg9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aDT-dS-vJK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dX1-0p-8s9" secondAttribute="bottom" constant="20" id="cqk-06-7mS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UQY-Cn-uLL" secondAttribute="trailing" constant="-16" id="h5J-39-5Rl"/>
                             <constraint firstItem="UQY-Cn-uLL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="r3o-as-av6"/>
                             <constraint firstItem="UQY-Cn-uLL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rcD-cg-gQQ"/>
                             <constraint firstItem="ZKF-4p-F1d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="usa-Bz-sVR"/>
+                            <constraint firstItem="dX1-0p-8s9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vqL-tv-s8e"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

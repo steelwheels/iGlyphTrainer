@@ -53,7 +53,7 @@ updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect boun
 	CGFloat hexwidth  = bounds.size.width / KGLimitProgressCount ;
 	CGFloat radius = MIN(hexwidth, bounds.size.height) / 2.0 ;
 	
-	CGFloat totalwidth = hexwidth * maxnum ;
+	CGFloat totalwidth = radius * 2.0 * maxnum ;
 	CGFloat offset = (bounds.size.width - totalwidth) / 2.0 ;
 	
 	CGFloat ycenter = bounds.size.height / 2.0 + bounds.origin.y ;

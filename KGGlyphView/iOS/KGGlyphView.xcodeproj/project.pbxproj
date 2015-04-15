@@ -158,12 +158,12 @@
 				05351B981ADD6A370098CF59 /* KGGlyphViewType.h */,
 				0500CB8B1ADB9A03001D3E5C /* KGGlyphSequenceView.h */,
 				0500CB8C1ADB9A03001D3E5C /* KGGlyphSequenceView.m */,
-				05351B921ADD69DA0098CF59 /* KGHackProgressDrawer.h */,
-				05351B931ADD69DA0098CF59 /* KGHackProgressDrawer.m */,
-				05351B941ADD69DA0098CF59 /* KGHackProgressView.h */,
-				05351B951ADD69DA0098CF59 /* KGHackProgressView.m */,
 				05351B991ADD6E520098CF59 /* KGHackNavigationBar.h */,
 				05351B9A1ADD6E520098CF59 /* KGHackNavigationBar.m */,
+				05351B941ADD69DA0098CF59 /* KGHackProgressView.h */,
+				05351B951ADD69DA0098CF59 /* KGHackProgressView.m */,
+				05351B921ADD69DA0098CF59 /* KGHackProgressDrawer.h */,
+				05351B931ADD69DA0098CF59 /* KGHackProgressDrawer.m */,
 			);
 			name = Source;
 			path = ../Source;
