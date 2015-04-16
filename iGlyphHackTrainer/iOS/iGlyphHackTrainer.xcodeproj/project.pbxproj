@@ -298,8 +298,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lKGControls",
+					"-lKGGlyphView",
 					"-lKGGlyphGraphics",
-					"-lKGHackProgressView",
 					"-lKCGraphicsView",
 					"-lKGGameData",
 					"-lKGGlyphData",
@@ -333,8 +333,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"-lKGControls",
+					"-lKGGlyphView",
 					"-lKGGlyphGraphics",
-					"-lKGHackProgressView",
 					"-lKCGraphicsView",
 					"-lKGGameData",
 					"-lKGGlyphData",

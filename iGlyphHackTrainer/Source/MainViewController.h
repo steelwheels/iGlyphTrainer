@@ -6,7 +6,7 @@
  */
 
 #import <KGControls/KGControls.h>
-#import <KGHackProgressView/KGHackProgressView.h>
+#import <KGGlyphView/KGGlyphView.h>
 #import <UIKit/UIKit.h>
 #import "MainStateMachine.h"
 
@@ -15,11 +15,12 @@
 	MainStateMachine *		stateMachine ;
 }
 
+@property (weak, nonatomic) IBOutlet KGHackNavigationBar *navigationBar;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *		moveToSetupViewButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *		moveToAboutViewButton;
 @property (weak, nonatomic) IBOutlet KGGlyphNameLabel *		glyphNameLabel;
 @property (weak, nonatomic) IBOutlet KGStartButton *		startButton;
-@property (weak, nonatomic) IBOutlet KGHackProgressView *	hackProgressView;
 @property (weak, nonatomic) IBOutlet KGTimerLabel *		timerLabel;
 @property (weak, nonatomic) IBOutlet KCGraphicsView *		glyphGraphicsView;
 

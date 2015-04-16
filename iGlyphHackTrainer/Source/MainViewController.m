@@ -42,7 +42,7 @@ gameStatus(void)
 	
 	KGGameStatus * status = gameStatus() ;
 	[status addStateObserver: self.startButton] ;
-	[status addStateObserver: self.hackProgressView] ;
+	[status addStateObserver: self.navigationBar.progressView] ;
 	
 	stateMachine = [MainStateMachine sharedMainStateMachine] ;
 	[stateMachine setGameStatus: status] ;
