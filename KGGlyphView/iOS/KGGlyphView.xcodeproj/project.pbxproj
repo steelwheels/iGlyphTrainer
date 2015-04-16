@@ -24,6 +24,7 @@
 		05351B9E1ADD6EB60098CF59 /* KGHackNavigationBar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05351B991ADD6E520098CF59 /* KGHackNavigationBar.h */; };
 		0567FFE61ADB985200508A6E /* KGGlyphView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0567FFE51ADB985200508A6E /* KGGlyphView.h */; };
 		0567FFE81ADB985200508A6E /* KGGlyphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0567FFE71ADB985200508A6E /* KGGlyphView.m */; };
+		058DF68F1AE012850033F47E /* KGGlyphViewType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05351B981ADD6A370098CF59 /* KGGlyphViewType.h */; };
 		05DC28221ADBA9E600683224 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05DC28211ADBA9E600683224 /* AppDefaults.plist */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				058DF68F1AE012850033F47E /* KGGlyphViewType.h in CopyFiles */,
 				05351B9E1ADD6EB60098CF59 /* KGHackNavigationBar.h in CopyFiles */,
 				05351B9D1ADD6EB20098CF59 /* KGHackProgressView.h in CopyFiles */,
 				05351B9C1ADD6EAE0098CF59 /* KGHackProgressDrawer.h in CopyFiles */,
