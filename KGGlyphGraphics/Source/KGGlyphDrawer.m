@@ -72,6 +72,8 @@ makeVertex(CGFloat hcenter, CGFloat vcenter, CGFloat radius, CGFloat angle)
 	return CNMakeCircle(x, y, radius/20.0) ;
 }
 
+static const CGFloat	OUT_RADIUS_DIFF = 8.0 ;
+
 static void
 updateLayout(struct KGGlyphInfo * ginfo, const CGSize * size)
 {
@@ -79,6 +81,7 @@ updateLayout(struct KGGlyphInfo * ginfo, const CGSize * size)
 	CGFloat vcenter = size->height / 2.0 ;
 	CGFloat radius  = min(size->width, size->height) / 2.0 ;
 	CGFloat vsize   = radius / 20.0 ;
+	radius = radius - vsize - OUT_RADIUS_DIFF ;
 	
 	ginfo->vertexSize = vsize ;
 	
@@ -115,7 +118,7 @@ drawVertex(CGContextRef context, CGGradientRef gradient, const CGPoint * origin,
 	CGContextSaveGState(context);
 	
 	CGFloat inradius  = circle->radius ;
-	CGFloat outradius = inradius + 8.0 ;
+	CGFloat outradius = inradius + OUT_RADIUS_DIFF ;
 
 	struct CGRect bounds = {
 		.origin = {
