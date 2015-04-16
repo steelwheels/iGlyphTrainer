@@ -2,7 +2,7 @@
 #
 #
 
-all: KGGlyphData KGGameData KGGlyphGraphics KGGlyphView KGHackProgressView \
+all: KGGlyphData KGGameData KGGlyphGraphics KGGlyphView \
      KGControls 
 
 iGlyphHackTrainer: dummy
@@ -20,15 +20,6 @@ KGControls: dummy
 	      PROJECT_DIR=. \
 	      BUILD_DIR=~/build/KGControls.tmp \
 	      BUILD_ROOT=~/build/KGControls.tmp \
-	      -f ../../Script/install.mk \
-	)
-
-KGHackProgressView: dummy
-	(cd KGHackProgressView/iOS && \
-	 make PROJECT_NAME=KGHackProgressView \
-	      PROJECT_DIR=. \
-	      BUILD_DIR=~/build/KGHackProgressView.tmp \
-	      BUILD_ROOT=~/build/KGHackProgressView.tmp \
 	      -f ../../Script/install.mk \
 	)
 
