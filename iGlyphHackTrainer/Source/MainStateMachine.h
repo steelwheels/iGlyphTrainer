@@ -12,12 +12,7 @@
 	KGGameStatus *		gameStatus ;
 }
 
-+ (void) initialize ;
-+ (MainStateMachine *) sharedMainStateMachine ;
-
-- (instancetype) init ;
-- (void) setGameStatus: (KGGameStatus *) status ;
-
+- (instancetype) initWithStatus: (KGGameStatus *) status ;
 - (void) start ;
 
 @end

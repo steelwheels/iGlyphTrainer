@@ -7,8 +7,6 @@
 
 #import "MainStateMachine.h"
 
-static MainStateMachine *		sharedStateMachine ;
-
 @interface MainStateMachine ()
 - (BOOL) transferFromIdleToQuestion ;
 - (void) questionState ;
@@ -16,34 +14,17 @@ static MainStateMachine *		sharedStateMachine ;
 
 @implementation MainStateMachine
 
-+ (void) initialize
-{
-	static dispatch_once_t once;
-	dispatch_once( &once, ^{
-		sharedStateMachine = [[MainStateMachine alloc] init] ;
-	});
-}
-
-+ (MainStateMachine *) sharedMainStateMachine
-{
-	return sharedStateMachine ;
-}
-
-- (instancetype) init
+- (instancetype) initWithStatus: (KGGameStatus *) status
 {
 	if((self = [super init]) != nil){
-		gameStatus = nil ;
+		gameStatus = status ;
 	}
 	return self ;
 }
 
-- (void) setGameStatus: (KGGameStatus *) status
-{
-	gameStatus = status ;
-}
-
 - (void) start
 {
+	puts("* start state") ;
 	switch(gameStatus.state){
 		case KGIdleState: {
 			if([self transferFromIdleToQuestion]){
@@ -70,6 +51,7 @@ static MainStateMachine *		sharedStateMachine ;
 
 - (void) questionState
 {
+	puts("* question state") ;
 	gameStatus.state = KGDisplayQuestionState ;
 }
 

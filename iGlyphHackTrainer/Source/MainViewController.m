@@ -7,16 +7,8 @@
 
 #import "MainViewController.h"
 #import "MainStateMachine.h"
-#import "AppDelegate.h"
+#import "MainModel.h"
 #import <KGGlyphGraphics/KGGlyphGraphics.h>
-
-static inline KGGameStatus *
-gameStatus(void)
-{
-	UIApplication * app = [UIApplication sharedApplication] ;
-	AppDelegate * delegate = app.delegate ;
-	return delegate.gameStatus ;
-}
 
 @interface MainViewController ()
 - (void) moveToSetupViewButtonPressed: (UIBarButtonItem *) item ;
@@ -40,15 +32,19 @@ gameStatus(void)
 			     action: @selector(startButtonPressed:)
 		   forControlEvents: UIControlEventTouchUpInside] ;
 	
-	KGGameStatus * status = gameStatus() ;
+	KGGameStatus * status = [MainModel sharedStatus] ;
 	[status addStateObserver: self.startButton] ;
-	[status addStateObserver: self.navigationBar.progressView] ;
+	[status addStateObserver: self.glyphNameLabel] ;
 	
-	stateMachine = [MainStateMachine sharedMainStateMachine] ;
-	[stateMachine setGameStatus: status] ;
+	[self.navigationBar setupProgressBar] ;
+	KGHackProgressView * progressview = [self.navigationBar progressView] ;
+	[status addStateObserver: progressview] ;
 	
 	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
 	[self.glyphGraphicsView setGraphicsDrawer: drawer] ;
+	
+	/* initialize the state */
+	status.state = KGIdleState ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,8 +70,8 @@ gameStatus(void)
 {
 	(void) button ;
 	puts("Start button pressed") ;
-	stateMachine = [MainStateMachine sharedMainStateMachine] ;
-	[stateMachine start] ;
+	MainStateMachine * statemachine = [MainModel sharedStateMachine] ;
+	[statemachine start] ;
 }
 
 @end

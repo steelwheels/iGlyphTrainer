@@ -16,6 +16,7 @@
 		05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277251ABA4ABE0010E45B /* AppDelegate.m */; };
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
 		05A2772E1ABA4ABE0010E45B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2772D1ABA4ABE0010E45B /* Images.xcassets */; };
+		05BBEB5E1AE25E6500901422 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBEB5D1AE25E6500901422 /* MainModel.m */; };
 		05FBDF461AD2C79400BC048E /* MainStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDF451AD2C79400BC048E /* MainStateMachine.m */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		05A277271ABA4ABE0010E45B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		05A277281ABA4ABE0010E45B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		05A2772D1ABA4ABE0010E45B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		05BBEB5C1AE25E6500901422 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		05BBEB5D1AE25E6500901422 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		05D56A611ABA4BDE00AC57D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		05D56A631ABA4BDE00AC57D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		05FBDF441AD2C79400BC048E /* MainStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStateMachine.h; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 			children = (
 				05A277241ABA4ABE0010E45B /* AppDelegate.h */,
 				05A277251ABA4ABE0010E45B /* AppDelegate.m */,
+				05BBEB5C1AE25E6500901422 /* MainModel.h */,
+				05BBEB5D1AE25E6500901422 /* MainModel.m */,
 				05A277271ABA4ABE0010E45B /* MainViewController.h */,
 				05A277281ABA4ABE0010E45B /* MainViewController.m */,
 				05FBDF441AD2C79400BC048E /* MainStateMachine.h */,
@@ -175,6 +180,7 @@
 				05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */,
 				05A277231ABA4ABE0010E45B /* main.m in Sources */,
 				05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */,
+				05BBEB5E1AE25E6500901422 /* MainModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

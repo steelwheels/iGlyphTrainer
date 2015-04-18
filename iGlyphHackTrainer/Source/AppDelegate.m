@@ -13,13 +13,13 @@
 
 @implementation AppDelegate
 
-@synthesize gameStatus ;
+@synthesize status, stateMachine ;
 
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
-		puts("Hello") ;
-		self.gameStatus = [[KGGameStatus alloc] init] ;
+		self.status = [[KGGameStatus alloc] init] ;
+		self.stateMachine = [[MainStateMachine alloc] initWithStatus: self.status] ;
 	}
 	return self ;
 }
@@ -65,3 +65,5 @@
 }
 
 @end
+
+
