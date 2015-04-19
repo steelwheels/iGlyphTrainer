@@ -27,8 +27,11 @@ typedef enum {
 	KGCaptureGlyph,
 	KGChangeGlyph,
 	KGChaosGlyph,
+	KGCityGlyph,		/* KGGovernmentGlyph	*/
+	KGCivillizationGlyph,	/* KGGovernmentGlyph	*/
 	KGClearGlyph,
 	KGClearAllGlyph,
+	KGCloseGlyph,		/* KGEndGlyph		*/
 	KGComplexGlyph,
 	KGConflictGlyph,
 	KGConsequenceGlyph,
@@ -36,6 +39,7 @@ typedef enum {
 	KGContactGlyph,
 	KGCourageGlyph,
 	KGCreateGlyph,
+	KGCreationGlyph,	/* KGCreateGlyph	*/
 	KGCreativityGlyph,
 	KGMindGlyph,
 	KGDangerGlyph,
@@ -44,6 +48,7 @@ typedef enum {
 	KGDestinationGlyph,
 	KGDestinyGlyph,
 	KGDestroyGlyph,
+	KGDestructionGlyph,	/* KGDestroyGlyph	*/
 	KGDeteriorateGlyph,
 	KGDieGlyph,
 	KGDifficultGlyph,
@@ -52,46 +57,46 @@ typedef enum {
 	KGEasyGlyph,
 	KGEndGlyph,
 	KGEnlightenedGlyph,
+	KGEnlightenmentGlyph,	/* KGEnlightenedGlyph	*/
 	KGEqualGlyph,
+	KGErodeGlyph,		/* KGDeteriorateGlyph	*/
 	KGEscapeGlyph,
 	KGEvolutionGlyph,
 	KGFailureGlyph,
 	KGFearGlyph,
+	KGFinalityGlyph,	/* KGEndGlyph		*/
 	KGFollowGlyph,
 	KGForgetGlyph,
+	KGForwardGlyph,		/* KGFutureGlyph	*/
 	KGFutureGlyph,
 	KGGainGlyph,
 	KGGovernmentGlyph,
-	KGGrowGlyph
+	KGGrowGlyph,
+	
+	KGHarmGlyph,
+	KGHarmonyGlyph,
+	KGPeaceGlyph,
+	KGHaveGlyph,
+	KGHelpGlyph,
+	
+	KGHumanGlyph,		/* KGBeingGlyph		*/
+	KGIdeaGlyph,		/* KGMindGlyph		*/
+	KGMessageGlyph,		/* KGDataGlyph		*/
+	KGModifyGlyph,		/* KGChangeGlyph	*/
+	KGObstacleGlyph,	/* KGBarrierGlyph	*/
+	KGOutsideGlyph,		/* KGDistanceGlyph	*/
+	KGProgressGlyph,	/* KGEvolutionGlyph	*/
+	KGRepeatGlyph,		/* KGAgainGlyph		*/
+	KGReduceGlyph,		/* KGContactGlyph	*/
+	KGShellGlyph,		/* KGBodyGlyph		*/
+	KGSignalGlyph,		/* KGDataGlyph		*/
+	KGStructureGlyph,	/* KGGovernmentGlyph	*/
+	KGStruggleGlyph,	/* KGAvoidGlyph		*/
+	KGSuccessGlyph,		/* KGEvolutionGlyph	*/
+	KGThoughtGlyph,		/* KGMindGlyph		*/
+	KGWarGlyph,		/* KGAttackGlyph	*/
 } KGGlyphKind ;
 
 static const KGGlyphKind	KGFirstClyph		= KGAbandonGlyph ;
 static const KGGlyphKind	KGLastClyph		= KGGrowGlyph ;
-
-static const KGGlyphKind	KGRepeatGlyph		= KGAgainGlyph ;
-static const KGGlyphKind	KGWarGlyph		= KGAttackGlyph ;
-static const KGGlyphKind	KGStruggleGlyph		= KGAvoidGlyph ;
-static const KGGlyphKind	KGObstacleGlyph		= KGBarrierGlyph ;
-static const KGGlyphKind	KGHumanGlyph		= KGBeingGlyph ;
-static const KGGlyphKind	KGShellGlyph		= KGBodyGlyph ;
-static const KGGlyphKind	KGModifyGlyph		= KGChangeGlyph ;
-static const KGGlyphKind	KGReduceGlyph		= KGContactGlyph ;
-static const KGGlyphKind	KGCreationGlyph		= KGCreateGlyph ;
-static const KGGlyphKind	KGThroughtGlyph		= KGMindGlyph ;
-static const KGGlyphKind	KGIdeaGlyph		= KGMindGlyph ;
-static const KGGlyphKind	KGSignalGlyph		= KGDataGlyph ;
-static const KGGlyphKind	KGMessageGlyph		= KGDataGlyph ;
-static const KGGlyphKind	KGDestructionGlyph	= KGDestroyGlyph ;
-static const KGGlyphKind	KGErodeGlyph		= KGDeteriorateGlyph ;
-static const KGGlyphKind	KGOutsideGlyph		= KGDistanceGlyph ;
-static const KGGlyphKind	KGCloseGlyph		= KGEndGlyph ;
-static const KGGlyphKind	KGFinalityGlyph		= KGEndGlyph ;
-static const KGGlyphKind	KGEnlightenmentGlyph	= KGEnlightenedGlyph ;
-static const KGGlyphKind	KGSuccessGlyph		= KGEvolutionGlyph ;
-static const KGGlyphKind	KGProgressGlyph		= KGEvolutionGlyph ;
-static const KGGlyphKind	KGForwardGlyph		= KGFutureGlyph ;
-static const KGGlyphKind	KGCityGlyph		= KGGovernmentGlyph ;
-static const KGGlyphKind	KGCivillizationGlyph	= KGGovernmentGlyph ;
-static const KGGlyphKind	KGStructureGlyph	= KGGovernmentGlyph ;
-
 

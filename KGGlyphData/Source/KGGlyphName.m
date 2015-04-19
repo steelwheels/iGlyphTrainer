@@ -33,8 +33,11 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Capture) ;
 			CASE(Change) ;
 			CASE(Chaos) ;
+			CASE(City) ;
+			CASE(Civillization) ;
 			CASE(Clear) ;
 			CASE(ClearAll) ;
+			CASE(Close) ;
 			CASE(Complex) ;
 			CASE(Conflict) ;
 			CASE(Consequence) ;
@@ -42,6 +45,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Contact) ;
 			CASE(Courage) ;
 			CASE(Create) ;
+			CASE(Creation) ;
 			CASE(Creativity) ;
 			CASE(Mind) ;
 			CASE(Danger) ;
@@ -50,6 +54,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Destination) ;
 			CASE(Destiny) ;
 			CASE(Destroy) ;
+			CASE(Destruction) ;
 			CASE(Deteriorate) ;
 			CASE(Die) ;
 			CASE(Difficult) ;
@@ -58,18 +63,44 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Easy) ;
 			CASE(End) ;
 			CASE(Enlightened) ;
+			CASE(Enlightenment) ;
 			CASE(Equal) ;
+			CASE(Erode) ;
 			CASE(Escape) ;
 			CASE(Evolution) ;
 			
 			CASE(Failure) ;
 			CASE(Fear) ;
+			CASE(Finality) ;
 			CASE(Follow) ;
 			CASE(Forget) ;
 			CASE(Future) ;
+			CASE(Forward) ;
 			CASE(Gain) ;
 			CASE(Government) ;
 			CASE(Grow) ;
+			CASE(Harm) ;
+			CASE(Harmony) ;
+			CASE(Have) ;
+			CASE(Help) ;
+			
+			CASE(Idea) ;
+			CASE(Human) ;
+			CASE(Message) ;
+			CASE(Modify) ;
+			CASE(Obstacle) ;
+			CASE(Outside) ;
+			CASE(Peace) ;
+			CASE(Progress) ;
+			CASE(Reduce) ;
+			CASE(Repeat) ;
+			CASE(Shell) ;
+			CASE(Signal) ;
+			CASE(Structure) ;
+			CASE(Struggle) ;
+			CASE(Success) ;
+			CASE(Thought) ;
+			CASE(War) ;
 	}
 	return result ;
 #	undef CASE
