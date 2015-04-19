@@ -37,24 +37,29 @@
 	(void) keyPath ; (void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		KGGameStatus *		status = object ;
+		
+		unsigned int maxnum, currentnum ;
 		switch(status.state){
 			case KGIdleState:
 			case KGStrokeState:
 			case KGEvaluateState: {
-				/* Do nothing */
+				maxnum     = 0 ;
+				currentnum = 0 ;
 			} break ;
 			case KGDisplayQuestionState: {
-				KGHackProgressDrawer *	drawer = [self graphicsDrawer] ;
-				/* Pass the state */
-				drawer.maxGlyphNum       = status.maxGlyphNum ;
-				drawer.processedGlyphNum = status.processedGlyphNum ;
-#				if TARGET_OS_IPHONE
-				[self setNeedsDisplay] ;
-#				else
-				[self setNeedsDisplay: YES] ;
-#				endif
+				maxnum     = status.maxGlyphNum ;
+				currentnum = status.processedGlyphNum ;
 			} break ;
 		}
+				
+		KGHackProgressDrawer *	drawer = [self graphicsDrawer] ;
+		drawer.maxGlyphNum       = maxnum ;
+		drawer.processedGlyphNum = currentnum ;
+#		if TARGET_OS_IPHONE
+		[self setNeedsDisplay] ;
+#		else
+		[self setNeedsDisplay: YES] ;
+#		endif
 	} else {
 		NSLog(@"Unknown object") ;
 	}
