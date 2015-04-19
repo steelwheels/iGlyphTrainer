@@ -10,6 +10,8 @@
 @interface MainStateMachine : NSObject
 {
 	KGGameStatus *		gameStatus ;
+	
+	CNCountTimer *		countDownTimer ;
 }
 
 - (instancetype) initWithStatus: (KGGameStatus *) status ;

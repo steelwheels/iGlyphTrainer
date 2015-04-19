@@ -12,12 +12,16 @@
 - (void) questionState ;
 @end
 
+@interface MainStateMachine (DisplayQuestionState) <CNCountTimerDelegate>
+@end
+
 @implementation MainStateMachine
 
 - (instancetype) initWithStatus: (KGGameStatus *) status
 {
 	if((self = [super init]) != nil){
 		gameStatus = status ;
+		countDownTimer = nil ;
 	}
 	return self ;
 }
@@ -53,7 +57,29 @@
 {
 	puts("* question state") ;
 	gameStatus.state = KGDisplayQuestionState ;
+	
+	countDownTimer = [[CNCountTimer alloc] init] ;
+	[countDownTimer repeatWithCount: gameStatus.maxGlyphNum
+			   withInterval: 1.0
+			   withDelegate: self] ;
 }
 
 @end
+
+@implementation MainStateMachine (DisplayQuestionState)
+
+- (void) repeatForCount: (unsigned int) count
+{
+	printf("repeatForCount: %u\n", count) ;
+	gameStatus.currentGlyphKind = gameStatus.currentSentence.wordArray.glyphWords[count] ;
+	gameStatus.state = KGDisplayQuestionState ;
+}
+
+- (void) repeatDone
+{
+	gameStatus.state = KGIdleState ;
+}
+
+@end
+
 
