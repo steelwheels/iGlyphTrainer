@@ -56,10 +56,12 @@
 - (void) questionState
 {
 	puts("* question state") ;
+	gameStatus.currentGlyphKind = gameStatus.currentSentence.wordArray.glyphWords[0] ;
+	gameStatus.processedGlyphNum = 1 ;
 	gameStatus.state = KGDisplayQuestionState ;
 	
 	countDownTimer = [[CNCountTimer alloc] init] ;
-	[countDownTimer repeatWithCount: gameStatus.maxGlyphNum
+	[countDownTimer repeatWithCount: gameStatus.maxGlyphNum - 1
 			   withInterval: 1.0
 			   withDelegate: self] ;
 }
@@ -71,12 +73,14 @@
 - (void) repeatForCount: (unsigned int) count
 {
 	printf("repeatForCount: %u\n", count) ;
-	gameStatus.currentGlyphKind = gameStatus.currentSentence.wordArray.glyphWords[count] ;
+	gameStatus.currentGlyphKind = gameStatus.currentSentence.wordArray.glyphWords[count+1] ;
+	gameStatus.processedGlyphNum += 1 ;
 	gameStatus.state = KGDisplayQuestionState ;
 }
 
 - (void) repeatDone
 {
+	gameStatus.processedGlyphNum = 0 ;
 	gameStatus.state = KGIdleState ;
 }
 

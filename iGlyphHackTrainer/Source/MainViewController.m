@@ -41,7 +41,8 @@
 	[status addStateObserver: progressview] ;
 	
 	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
-	[self.glyphGraphicsView setGraphicsDrawer: drawer] ;
+	[self.glyphSequenceView setGraphicsDrawer: drawer] ;
+	[status addStateObserver: self.glyphSequenceView] ;
 	
 	/* initialize the state */
 	status.state = KGIdleState ;

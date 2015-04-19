@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet KGGlyphNameLabel *		glyphNameLabel;
 @property (weak, nonatomic) IBOutlet KGStartButton *		startButton;
 @property (weak, nonatomic) IBOutlet KGTimerLabel *		timerLabel;
-@property (weak, nonatomic) IBOutlet KCGraphicsView *		glyphGraphicsView;
+@property (weak, nonatomic) IBOutlet KGGlyphSequenceView *	glyphSequenceView;
 
 @end
 
