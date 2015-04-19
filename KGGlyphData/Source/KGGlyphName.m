@@ -61,6 +61,15 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Equal) ;
 			CASE(Escape) ;
 			CASE(Evolution) ;
+			
+			CASE(Failure) ;
+			CASE(Fear) ;
+			CASE(Follow) ;
+			CASE(Forget) ;
+			CASE(Future) ;
+			CASE(Gain) ;
+			CASE(Government) ;
+			CASE(Grow) ;
 	}
 	return result ;
 #	undef CASE
