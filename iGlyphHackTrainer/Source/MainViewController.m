@@ -44,6 +44,8 @@
 	[self.glyphSequenceView setGraphicsDrawer: drawer] ;
 	[status addStateObserver: self.glyphSequenceView] ;
 	
+	[self.timerLabel clearTimerLabel] ;
+	
 	/* initialize the state */
 	status.state = KGIdleState ;
 }
