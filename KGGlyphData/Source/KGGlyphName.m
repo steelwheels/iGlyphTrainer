@@ -68,7 +68,6 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Erode) ;
 			CASE(Escape) ;
 			CASE(Evolution) ;
-			
 			CASE(Failure) ;
 			CASE(Fear) ;
 			CASE(Finality) ;
@@ -83,7 +82,6 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Harmony) ;
 			CASE(Have) ;
 			CASE(Help) ;
-			
 			CASE(I) ;
 			CASE(Idea) ;
 			CASE(Ignore) ;
@@ -92,6 +90,16 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Impure) ;
 			CASE(Interrupt) ;
 			CASE(Journey) ;
+			CASE(Knowledge) ;
+			CASE(Lead) ;
+			CASE(Legacy) ;
+			CASE(Less) ;
+			CASE(Liberate) ;
+			CASE(Lie) ;
+			CASE(LiveAgain) ;
+			CASE(Lose) ;
+			CASE(Loss) ;
+			CASE(Reincarnate) ;
 			CASE(Hide) ;
 			CASE(Human) ;
 			CASE(Me) ;

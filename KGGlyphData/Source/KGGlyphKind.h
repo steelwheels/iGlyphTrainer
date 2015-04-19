@@ -77,9 +77,7 @@ typedef enum {
 	KGPeaceGlyph,
 	KGHaveGlyph,
 	KGHelpGlyph,
-	
 	KGHideGlyph,
-
 	KGHumanGlyph,		/* KGBeingGlyph		*/
 	KGIGlyph,		/* KGHideGlyph		*/
 	KGIdeaGlyph,		/* KGMindGlyph		*/
@@ -89,6 +87,16 @@ typedef enum {
 	KGImpureGlyph,
 	KGInterruptGlyph,
 	KGJourneyGlyph,
+	KGKnowledgeGlyph,
+	KGLeadGlyph,
+	KGLegacyGlyph,
+	KGLessGlyph,
+	KGLiberateGlyph,
+	KGLieGlyph,
+	KGLiveAgainGlyph,
+	KGReincarnateGlyph,
+	KGLoseGlyph,
+	KGLossGlyph,
 	KGMeGlyph,		/* KGHideGlyph		*/
 	KGMessageGlyph,		/* KGDataGlyph		*/
 	KGModifyGlyph,		/* KGChangeGlyph	*/

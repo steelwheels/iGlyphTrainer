@@ -17,12 +17,6 @@ static const struct KGGlyphWords	s_2words[] = {
 
 #define COUNT_OF_ARRAY(V)	(sizeof(V) / sizeof(struct KGGlyphSentence))
 
-unsigned int
-KGGet2WordSentenceNum(void)
-{
-	return COUNT_OF_ARRAY(s_2words) ;
-}
-
 struct KGGlyphSentence
 KGGetEmptySentence(void)
 {
@@ -31,6 +25,12 @@ KGGetEmptySentence(void)
 		.wordArray	= s_0word
 	} ;
 	return sentence ;
+}
+
+unsigned int
+KGGet2WordSentenceNum(void)
+{
+	return COUNT_OF_ARRAY(s_2words) ;
 }
 
 struct KGGlyphSentence

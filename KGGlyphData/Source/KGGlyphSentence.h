@@ -18,11 +18,11 @@ struct KGGlyphSentence {
 	struct KGGlyphWords	wordArray ;
 } ;
 
-unsigned int
-KGGet2WordSentenceNum(void) ;
-
 struct KGGlyphSentence
 KGGetEmptySentence(void) ;
+
+unsigned int
+KGGet2WordSentenceNum(void) ;
 
 struct KGGlyphSentence
 KGGet2WordSentence(unsigned int index) ;
