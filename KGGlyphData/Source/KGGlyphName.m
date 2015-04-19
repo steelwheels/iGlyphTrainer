@@ -84,8 +84,17 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Have) ;
 			CASE(Help) ;
 			
+			CASE(I) ;
 			CASE(Idea) ;
+			CASE(Ignore) ;
+			CASE(Imperfect) ;
+			CASE(Improve) ;
+			CASE(Impure) ;
+			CASE(Interrupt) ;
+			CASE(Journey) ;
+			CASE(Hide) ;
 			CASE(Human) ;
+			CASE(Me) ;
 			CASE(Message) ;
 			CASE(Modify) ;
 			CASE(Obstacle) ;
@@ -94,6 +103,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Progress) ;
 			CASE(Reduce) ;
 			CASE(Repeat) ;
+			CASE(Self) ;
 			CASE(Shell) ;
 			CASE(Signal) ;
 			CASE(Structure) ;

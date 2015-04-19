@@ -72,15 +72,24 @@ typedef enum {
 	KGGainGlyph,
 	KGGovernmentGlyph,
 	KGGrowGlyph,
-	
 	KGHarmGlyph,
 	KGHarmonyGlyph,
 	KGPeaceGlyph,
 	KGHaveGlyph,
 	KGHelpGlyph,
 	
+	KGHideGlyph,
+
 	KGHumanGlyph,		/* KGBeingGlyph		*/
+	KGIGlyph,		/* KGHideGlyph		*/
 	KGIdeaGlyph,		/* KGMindGlyph		*/
+	KGIgnoreGlyph,
+	KGImperfectGlyph,
+	KGImproveGlyph,
+	KGImpureGlyph,
+	KGInterruptGlyph,
+	KGJourneyGlyph,
+	KGMeGlyph,		/* KGHideGlyph		*/
 	KGMessageGlyph,		/* KGDataGlyph		*/
 	KGModifyGlyph,		/* KGChangeGlyph	*/
 	KGObstacleGlyph,	/* KGBarrierGlyph	*/
@@ -88,6 +97,7 @@ typedef enum {
 	KGProgressGlyph,	/* KGEvolutionGlyph	*/
 	KGRepeatGlyph,		/* KGAgainGlyph		*/
 	KGReduceGlyph,		/* KGContactGlyph	*/
+	KGSelfGlyph,		/* KGIGlyph		*/
 	KGShellGlyph,		/* KGBodyGlyph		*/
 	KGSignalGlyph,		/* KGDataGlyph		*/
 	KGStructureGlyph,	/* KGGovernmentGlyph	*/
@@ -98,5 +108,5 @@ typedef enum {
 } KGGlyphKind ;
 
 static const KGGlyphKind	KGFirstClyph		= KGAbandonGlyph ;
-static const KGGlyphKind	KGLastClyph		= KGGrowGlyph ;
+static const KGGlyphKind	KGLastClyph		= KGWarGlyph ;
 
