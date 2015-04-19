@@ -48,13 +48,11 @@
 	(void) sender ;
 	puts("start button pressed") ;
 	if(gameStatus.state == KGIdleState){
+		[self.timerLabel setTimerLabel: 10.0] ;
 		gameStatus.currentGlyphKind = KGAbandonGlyph ;
 		gameStatus.state = KGDisplayQuestionState ;
-		
-		countTimer = [[CNCountTimer alloc] init] ;
-		[countTimer addDelegate: self.timerLabel] ;
-		[countTimer startFromTime: 10.0 toTime: 0.0 withInterval: -0.1] ;
 	} else {
+		[self.timerLabel clearTimerLabel] ;
 		gameStatus.currentGlyphKind = KGNilGlyph ;
 		gameStatus.state = KGIdleState ;
 	}

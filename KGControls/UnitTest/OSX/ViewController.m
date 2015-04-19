@@ -28,7 +28,6 @@
 	[self.timerLabel setTimerLabel: 0.0] ;
 	
 	gameStatus.state = KGIdleState ;
-	gameStatus.presentingGlyph = KGAdvanceGlyph ;
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -48,15 +47,12 @@
 	(void) sender ;
 	puts("start button pressed") ;
 	if(gameStatus.state == KGIdleState){
-		gameStatus.state = KGPresentationState ;
-		gameStatus.presentingGlyph = KGAbandonGlyph ;
-		
-		countTimer = [[CNCountTimer alloc] init] ;
-		[countTimer addDelegate: self.timerLabel] ;
-		[countTimer startFromTime: 0.0 toTime: 10.0 withInterval: 0.2] ;
+		[self.timerLabel setTimerLabel: 10.0] ;
+		gameStatus.currentGlyphKind = KGAbandonGlyph ;
+		gameStatus.state = KGDisplayQuestionState ;
 	} else {
+		[self.timerLabel clearTimerLabel] ;
 		gameStatus.state = KGIdleState ;
-		gameStatus.presentingGlyph = KGAgainGlyph ;
 	}
 }
 

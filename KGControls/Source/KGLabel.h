@@ -15,6 +15,8 @@
 
 @interface KGLabel : KGSuperClassOfLabel
 
+- (void) setTitle: (NSString *) title ;
+
 @end
 
 #undef KGSuperClassOfLabel

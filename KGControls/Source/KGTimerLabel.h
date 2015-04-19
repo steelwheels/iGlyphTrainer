@@ -8,8 +8,9 @@
 #import "KGLabel.h"
 #import <Coconut/Coconut.h>
 
-@interface KGTimerLabel : KGLabel <CNTimerWakeupDelegate>
+@interface KGTimerLabel : KGLabel
 
 - (void) setTimerLabel: (double) timval ;
+- (void) clearTimerLabel ;
 
 @end
