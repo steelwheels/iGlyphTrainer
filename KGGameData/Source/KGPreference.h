@@ -10,6 +10,7 @@
 @interface KGPreference : NSObject
 
 @property (readonly, nonatomic) struct CNRGB	glyphColor ;
+@property (readonly, nonatomic) double		questionInterval ;
 
 + (KGPreference *) sharedPreference ;
 

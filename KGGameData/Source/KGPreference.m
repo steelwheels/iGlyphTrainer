@@ -9,11 +9,12 @@
 
 @interface KGPreference ()
 @property (assign, nonatomic) struct CNRGB	glyphColor ;
+@property (assign, nonatomic) double		questionInterval ;
 @end
 
 @implementation KGPreference
 
-@synthesize glyphColor ;
+@synthesize glyphColor, questionInterval ;
 
 + (KGPreference *) sharedPreference
 {
@@ -30,6 +31,7 @@
 	if((self = [super init]) != nil){
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		self.glyphColor = ctable.goldenrod ;
+		self.questionInterval = 1.0 ;
 	}
 	return self ;
 }

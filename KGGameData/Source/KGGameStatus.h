@@ -30,8 +30,6 @@ typedef enum {
 @property (assign, nonatomic) unsigned int	maxGlyphNum ;
 @property (assign, nonatomic) unsigned int	processedGlyphNum ;
 
-
-
 + (NSString *) stateKeyPath ;
 
 - (instancetype) init ;
