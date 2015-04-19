@@ -47,11 +47,18 @@ typedef enum {
 	KGDeteriorateGlyph,
 	KGDieGlyph,
 	KGDifficultGlyph,
-	KGDiscoverGlyph
+	KGDiscoverGlyph,
+	KGDistanceGlyph,
+	KGEasyGlyph,
+	KGEndGlyph,
+	KGEnlightenedGlyph,
+	KGEqualGlyph,
+	KGEscapeGlyph,
+	KGEvolutionGlyph
 } KGGlyphKind ;
 
 static const KGGlyphKind	KGFirstClyph		= KGAbandonGlyph ;
-static const KGGlyphKind	KGLastClyph		= KGDiscoverGlyph ;
+static const KGGlyphKind	KGLastClyph		= KGEvolutionGlyph ;
 
 static const KGGlyphKind	KGRepeatGlyph		= KGAgainGlyph ;
 static const KGGlyphKind	KGWarGlyph		= KGAttackGlyph ;
@@ -68,4 +75,12 @@ static const KGGlyphKind	KGSignalGlyph		= KGDataGlyph ;
 static const KGGlyphKind	KGMessageGlyph		= KGDataGlyph ;
 static const KGGlyphKind	KGDestructionGlyph	= KGDestroyGlyph ;
 static const KGGlyphKind	KGErodeGlyph		= KGDeteriorateGlyph ;
+static const KGGlyphKind	KGOutsideGlyph		= KGDistanceGlyph ;
+static const KGGlyphKind	KGCloseGlyph		= KGEndGlyph ;
+static const KGGlyphKind	KGFinalityGlyph		= KGEndGlyph ;
+static const KGGlyphKind	KGEnlightenmentGlyph	= KGEnlightenedGlyph ;
+static const KGGlyphKind	KGSuccessGlyph		= KGEvolutionGlyph ;
+static const KGGlyphKind	KGProgressGlyph		= KGEvolutionGlyph ;
+
+
 

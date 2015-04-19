@@ -54,6 +54,13 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Die) ;
 			CASE(Difficult) ;
 			CASE(Discover) ;
+			CASE(Distance) ;
+			CASE(Easy) ;
+			CASE(End) ;
+			CASE(Enlightened) ;
+			CASE(Equal) ;
+			CASE(Escape) ;
+			CASE(Evolution) ;
 	}
 	return result ;
 #	undef CASE
