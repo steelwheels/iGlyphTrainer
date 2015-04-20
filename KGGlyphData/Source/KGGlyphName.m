@@ -16,7 +16,9 @@ KGNameOfGlyph(KGGlyphKind kind)
 	switch(kind){
 			CASE(Nil) ;
 			CASE(Abandon) ;
+			CASE(Absent) ;
 			CASE(Adapt) ;
+			CASE(Accept) ;
 			CASE(Advance) ;
 			CASE(After) ;
 			CASE(Again) ;
@@ -24,6 +26,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Answer) ;
 			CASE(Attack) ;
 			CASE(Avoid) ;
+			CASE(Barance) ;
 			CASE(Barrier) ;
 			CASE(Before) ;
 			CASE(Begin) ;
@@ -60,6 +63,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Difficult) ;
 			CASE(Discover) ;
 			CASE(Distance) ;
+			CASE(Doorway) ;
 			CASE(Easy) ;
 			CASE(End) ;
 			CASE(Enlightened) ;
@@ -85,6 +89,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(I) ;
 			CASE(Idea) ;
 			CASE(Ignore) ;
+			CASE(Inside) ;
 			CASE(Imperfect) ;
 			CASE(Improve) ;
 			CASE(Impure) ;
@@ -105,9 +110,30 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Me) ;
 			CASE(Message) ;
 			CASE(Modify) ;
+			CASE(More) ;
+			CASE(Mystery) ;
+			CASE(Nature) ;
+			CASE(New) ;
+			CASE(No) ;
+			CASE(Not) ;
+			CASE(Nourish) ;
+			CASE(Now) ;
+			CASE(Old) ;
+			CASE(Open) ;
+			CASE(Opening) ;
+			CASE(OpenAll) ;
+			CASE(Nzeer) ;
 			CASE(Obstacle) ;
 			CASE(Outside) ;
+			CASE(Past) ;
+			CASE(Path) ;
 			CASE(Peace) ;
+			CASE(Perfection) ;
+			CASE(Perspective) ;
+			CASE(Portal) ;
+			CASE(Potencial) ;
+			CASE(Presence) ;
+			CASE(Present) ;
 			CASE(Progress) ;
 			CASE(Reduce) ;
 			CASE(Repeat) ;
