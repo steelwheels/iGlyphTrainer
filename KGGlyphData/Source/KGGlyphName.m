@@ -141,8 +141,18 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Purity) ;
 			CASE(Pursue) ;
 			CASE(Question) ;
+			CASE(React) ;
+			CASE(Rebel) ;
+			CASE(Recharge) ;
+			CASE(Regist) ;
+			CASE(Registance) ;
 			CASE(Reduce) ;
 			CASE(Repeat) ;
+			CASE(Rescue) ;
+			CASE(Save) ;
+			CASE(Search) ;
+			CASE(See) ;
+			CASE(Seek) ;
 			CASE(Self) ;
 			CASE(Shell) ;
 			CASE(Signal) ;

@@ -577,8 +577,7 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
 		case KGIGlyph:
-		case KGMeGlyph:
-		case KGSelfGlyph: {
+		case KGMeGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 6,  10},
 				{10,   3},
@@ -956,7 +955,77 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
-		
+		case KGReactGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{10,   6},
+				{ 6,   7},
+				{ 7,   8},
+				{ 8,   2}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGRebelGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 5,   9},
+				{ 9,   7},
+				{ 7,  10},
+				{10,   1},
+				{ 1,   2}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGRechargeGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 0,   7},
+				{ 7,   6},
+				{ 6,   5},
+				{ 5,   0},
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGRegistGlyph:
+		case KGRegistanceGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{10,   6},
+				{ 6,   0},
+				{ 0,   7},
+				{ 7,   3},
+				{ 3,   9}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGSaveGlyph:
+		case KGRescueGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 1,   8},
+				{ 8,   7},
+				{ 7,   9}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGSeeGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 0,   6}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGSeekGlyph:
+		case KGSearchGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 7,  10},
+				{10,   6},
+				{ 6,   9},
+				{ 9,   8}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGSelfGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 2,   3},
+				{ 3,   4}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
 	}
 	return result ;
 }

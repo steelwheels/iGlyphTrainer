@@ -134,9 +134,19 @@ typedef enum {
 	KGPurityGlyph,		/* KGPureGlyph		*/
 	KGPursueGlyph,
 	KGQuestionGlyph,
+	KGReactGlyph,
+	KGRebelGlyph,
+	KGRechargeGlyph,
+	KGRegistGlyph,
+	KGRegistanceGlyph,
 	KGReincarnateGlyph,
 	KGReduceGlyph,		/* KGContactGlyph	*/
 	KGRepeatGlyph,		/* KGAgainGlyph		*/
+	KGRescueGlyph,
+	KGSaveGlyph,
+	KGSeeGlyph,
+	KGSeekGlyph,
+	KGSearchGlyph,
 	KGSelfGlyph,		/* KGIGlyph		*/
 	KGShellGlyph,		/* KGBodyGlyph		*/
 	KGSignalGlyph,		/* KGDataGlyph		*/
