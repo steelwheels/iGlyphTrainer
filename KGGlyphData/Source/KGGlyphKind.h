@@ -18,6 +18,7 @@ typedef enum {
 	KGAgainGlyph,
 	KGAllGlyph,
 	KGAnswerGlyph,
+	KGAspirationGlyph,
 	KGAttackGlyph,
 	KGAvoidGlyph,
 	KGBaranceGlyph,
@@ -30,6 +31,7 @@ typedef enum {
 	KGCaptureGlyph,
 	KGChangeGlyph,
 	KGChaosGlyph,
+	KGChaseGlyph,
 	KGCityGlyph,		/* KGGovernmentGlyph	*/
 	KGCivillizationGlyph,	/* KGGovernmentGlyph	*/
 	KGClearGlyph,
@@ -44,7 +46,6 @@ typedef enum {
 	KGCreateGlyph,
 	KGCreationGlyph,	/* KGCreateGlyph	*/
 	KGCreativityGlyph,
-	KGMindGlyph,
 	KGDangerGlyph,
 	KGDataGlyph,
 	KGDefendGlyph,
@@ -78,10 +79,6 @@ typedef enum {
 	KGGrowGlyph,
 	KGHarmGlyph,
 	KGHarmonyGlyph,
-	KGPastGlyph,
-	KGPathGlyph,
-	KGPerfectionGlyph,
-	KGPeaceGlyph,
 	KGHaveGlyph,
 	KGHelpGlyph,
 	KGHideGlyph,
@@ -102,11 +99,11 @@ typedef enum {
 	KGLiberateGlyph,
 	KGLieGlyph,
 	KGLiveAgainGlyph,
-	KGReincarnateGlyph,
 	KGLoseGlyph,
 	KGLossGlyph,
 	KGMeGlyph,		/* KGHideGlyph		*/
 	KGMessageGlyph,		/* KGDataGlyph		*/
+	KGMindGlyph,
 	KGModifyGlyph,		/* KGChangeGlyph	*/
 	KGMoreGlyph,
 	KGMysteryGlyph,
@@ -123,16 +120,23 @@ typedef enum {
 	KGOpenAllGlyph,
 	KGOpeningGlyph,
 	KGOutsideGlyph,		/* KGDistanceGlyph	*/
-	
+	KGPastGlyph,
+	KGPathGlyph,
+	KGPerfectionGlyph,
+	KGPeaceGlyph,
 	KGPerspectiveGlyph,
 	KGPotencialGlyph,
 	KGPresenceGlyph,
 	KGPresentGlyph,
-	
-	KGPortalGlyph,		/* KGOpeningGlyph	*/
 	KGProgressGlyph,	/* KGEvolutionGlyph	*/
-	KGRepeatGlyph,		/* KGAgainGlyph		*/
+	KGPortalGlyph,		/* KGOpeningGlyph	*/
+	KGPureGlyph,
+	KGPurityGlyph,		/* KGPureGlyph		*/
+	KGPursueGlyph,
+	KGQuestionGlyph,
+	KGReincarnateGlyph,
 	KGReduceGlyph,		/* KGContactGlyph	*/
+	KGRepeatGlyph,		/* KGAgainGlyph		*/
 	KGSelfGlyph,		/* KGIGlyph		*/
 	KGShellGlyph,		/* KGBodyGlyph		*/
 	KGSignalGlyph,		/* KGDataGlyph		*/

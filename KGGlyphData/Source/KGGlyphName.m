@@ -24,6 +24,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Again) ;
 			CASE(All) ;
 			CASE(Answer) ;
+			CASE(Aspiration) ;
 			CASE(Attack) ;
 			CASE(Avoid) ;
 			CASE(Barance) ;
@@ -36,6 +37,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Capture) ;
 			CASE(Change) ;
 			CASE(Chaos) ;
+			CASE(Chase) ;
 			CASE(City) ;
 			CASE(Civillization) ;
 			CASE(Clear) ;
@@ -135,6 +137,10 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Presence) ;
 			CASE(Present) ;
 			CASE(Progress) ;
+			CASE(Pure) ;
+			CASE(Purity) ;
+			CASE(Pursue) ;
+			CASE(Question) ;
 			CASE(Reduce) ;
 			CASE(Repeat) ;
 			CASE(Self) ;
