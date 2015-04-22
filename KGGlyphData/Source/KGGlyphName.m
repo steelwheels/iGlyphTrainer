@@ -43,6 +43,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Clear) ;
 			CASE(ClearAll) ;
 			CASE(Close) ;
+			CASE(Collective) ;
 			CASE(Complex) ;
 			CASE(Conflict) ;
 			CASE(Consequence) ;
@@ -103,6 +104,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Less) ;
 			CASE(Liberate) ;
 			CASE(Lie) ;
+			CASE(LifeForce) ;
 			CASE(LiveAgain) ;
 			CASE(Lose) ;
 			CASE(Loss) ;
@@ -149,17 +151,30 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Reduce) ;
 			CASE(Repeat) ;
 			CASE(Rescue) ;
+			CASE(Restraint) ;
+			CASE(Retreat) ;
+			CASE(Safety) ;
 			CASE(Save) ;
 			CASE(Search) ;
 			CASE(See) ;
 			CASE(Seek) ;
 			CASE(Self) ;
+			CASE(Separate) ;
+			CASE(Shaper) ;
+			CASE(Share) ;
 			CASE(Shell) ;
 			CASE(Signal) ;
+			CASE(Simple) ;
+			CASE(Soul) ;
+			CASE(Split) ;
+			CASE(Stability) ;
+			CASE(Stay) ;
+			CASE(Strong) ;
 			CASE(Structure) ;
 			CASE(Struggle) ;
 			CASE(Success) ;
 			CASE(Thought) ;
+			CASE(Together) ;
 			CASE(War) ;
 	}
 	return result ;

@@ -37,6 +37,7 @@ typedef enum {
 	KGClearGlyph,
 	KGClearAllGlyph,
 	KGCloseGlyph,		/* KGEndGlyph		*/
+	KGCollectiveGlyph,
 	KGComplexGlyph,
 	KGConflictGlyph,
 	KGConsequenceGlyph,
@@ -98,6 +99,7 @@ typedef enum {
 	KGLessGlyph,
 	KGLiberateGlyph,
 	KGLieGlyph,
+	KGLifeForceGlyph,
 	KGLiveAgainGlyph,
 	KGLoseGlyph,
 	KGLossGlyph,
@@ -143,17 +145,30 @@ typedef enum {
 	KGReduceGlyph,		/* KGContactGlyph	*/
 	KGRepeatGlyph,		/* KGAgainGlyph		*/
 	KGRescueGlyph,
+	KGRestraintGlyph,
+	KGRetreatGlyph,
+	KGSafetyGlyph,
 	KGSaveGlyph,
 	KGSeeGlyph,
 	KGSeekGlyph,
 	KGSearchGlyph,
 	KGSelfGlyph,		/* KGIGlyph		*/
+	KGSeparateGlyph,
+	KGShaperGlyph,
+	KGShareGlyph,
 	KGShellGlyph,		/* KGBodyGlyph		*/
 	KGSignalGlyph,		/* KGDataGlyph		*/
+	KGSimpleGlyph,
+	KGSoulGlyph,
+	KGSplitGlyph,
+	KGStabilityGlyph,
+	KGStayGlyph,
+	KGStrongGlyph,
 	KGStructureGlyph,	/* KGGovernmentGlyph	*/
 	KGStruggleGlyph,	/* KGAvoidGlyph		*/
 	KGSuccessGlyph,		/* KGEvolutionGlyph	*/
 	KGThoughtGlyph,		/* KGMindGlyph		*/
+	KGTogetherGlyph,
 	KGWarGlyph,		/* KGAttackGlyph	*/
 } KGGlyphKind ;
 
