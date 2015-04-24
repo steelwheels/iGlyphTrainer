@@ -94,8 +94,8 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 		case KGAspirationGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 5,   6},
-				{ 6,   8},
-				{ 8,  10},
+				{ 6,   0},
+				{ 0,  10},
 				{10,   7}
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
@@ -142,9 +142,11 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 		case KGBeginGlyph:
 		case KGHumanGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
-				{ 0,  9},
-				{ 9,  3},
-				{ 3,  8}
+				{ 6, 10},
+				{10,  8},
+				{ 8,  3},
+				{ 3,  9},
+				{ 9,  6}
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
@@ -870,7 +872,7 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
 		case KGPerfectionGlyph:
-		case KGBaranceGlyph: {
+		case KGBalanceGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 0,   7},
 				{ 7,   9},
@@ -884,16 +886,14 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 		} break ;
 		case KGPerspectiveGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
-				{ 4,   9},
-				{ 9,   7},
-				{ 7,  10},
-				{10,   1},
-				{ 1,   0},
-				{ 0,   5},
-				{ 5,   6},
-				{ 6,   7},
-				{ 7,   8},
-				{ 8,   2}
+				{ 2,   8},
+				{ 8,   7},
+				{ 7,   6},
+				{ 6,   0},
+				{ 0,  10},
+				{10,   7},
+				{ 7,   9},
+				{ 9,   4}
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
@@ -939,10 +939,9 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 		} break ;
 		case KGPursueGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
-				{10,   7},
-				{ 7,   8},
-				{ 8,  10},
-				{10,   7}
+				{ 5,   6},
+				{ 6,   0},
+				{ 0,  10}
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
@@ -991,8 +990,8 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
-		case KGRegistGlyph:
-		case KGRegistanceGlyph: {
+		case KGResistGlyph:
+		case KGResistanceGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{10,   6},
 				{ 6,   0},
@@ -1062,7 +1061,7 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 				{ 2,   8},
 				{ 8,   9},
 				{ 9,   4},
-				{ 9,   3}
+				{ 4,   3}
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
@@ -1133,6 +1132,101 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 				{10,   7},
 				{ 7,   9},
 				{ 9,   4}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGTruthGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 7,   9},
+				{ 9,   6},
+				{ 6,   7},
+				{ 7,   8},
+				{ 8,  10},
+				{10,   7}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGUnboundedGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 7,  10},
+				{10,   6},
+				{ 6,   9},
+				{ 9,   8},
+				{ 8,   1},
+				{ 1,   0},
+				{ 0,   5},
+				{ 5,   4},
+				{ 4,   3},
+				{ 3,   2}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGUseGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 7,   8},
+				{ 8,   1}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGVictoryGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 0,  10},
+				{10,   3},
+				{ 3,   6},
+				{ 6,   0}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGWantGlyph:
+		case KGDesireGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 4,   9},
+				{ 9,   3},
+				{ 3,   8}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGWeGlyph:
+		case KGUsGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 6,  10},
+				{10,   3}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGWeakGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 5,   6},
+				{ 6,  10},
+				{10,   8}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGWorthGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 5,   9},
+				{ 9,   7},
+				{ 7,   8},
+				{ 8,   1}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGXMGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 6,  10},
+				{10,   8},
+				{ 8,   7},
+				{ 7,   9},
+				{ 9,   6}
+			} ;
+			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
+		} break ;
+		case KGYouGlyph:
+		case KGOtherGlyph: {
+			static struct KGGlyphEdge s_stroke[] = {
+				{ 0,   8},
+				{ 9,   9},
+				{ 9,   0}
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;

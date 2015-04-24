@@ -21,7 +21,7 @@ typedef enum {
 	KGAspirationGlyph,
 	KGAttackGlyph,
 	KGAvoidGlyph,
-	KGBaranceGlyph,
+	KGBalanceGlyph,
 	KGBarrierGlyph,
 	KGBeforeGlyph,
 	KGBeginGlyph,
@@ -50,6 +50,7 @@ typedef enum {
 	KGDangerGlyph,
 	KGDataGlyph,
 	KGDefendGlyph,
+	KGDesireGlyph,
 	KGDestinationGlyph,
 	KGDestinyGlyph,
 	KGDestroyGlyph,
@@ -121,6 +122,7 @@ typedef enum {
 	KGOpenGlyph,
 	KGOpenAllGlyph,
 	KGOpeningGlyph,
+	KGOtherGlyph,
 	KGOutsideGlyph,		/* KGDistanceGlyph	*/
 	KGPastGlyph,
 	KGPathGlyph,
@@ -139,8 +141,8 @@ typedef enum {
 	KGReactGlyph,
 	KGRebelGlyph,
 	KGRechargeGlyph,
-	KGRegistGlyph,
-	KGRegistanceGlyph,
+	KGResistGlyph,
+	KGResistanceGlyph,
 	KGReincarnateGlyph,
 	KGReduceGlyph,		/* KGContactGlyph	*/
 	KGRepeatGlyph,		/* KGAgainGlyph		*/
@@ -169,7 +171,18 @@ typedef enum {
 	KGSuccessGlyph,		/* KGEvolutionGlyph	*/
 	KGThoughtGlyph,		/* KGMindGlyph		*/
 	KGTogetherGlyph,
+	KGTruthGlyph,
+	KGUseGlyph,
+	KGWantGlyph,
 	KGWarGlyph,		/* KGAttackGlyph	*/
+	KGWeGlyph,
+	KGWeakGlyph,
+	KGWorthGlyph,
+	KGUnboundedGlyph,
+	KGUsGlyph,
+	KGVictoryGlyph,
+	KGXMGlyph,
+	KGYouGlyph,
 } KGGlyphKind ;
 
 static const KGGlyphKind	KGFirstClyph		= KGAbandonGlyph ;

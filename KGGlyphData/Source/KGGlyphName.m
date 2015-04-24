@@ -27,7 +27,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Aspiration) ;
 			CASE(Attack) ;
 			CASE(Avoid) ;
-			CASE(Barance) ;
+			CASE(Balance) ;
 			CASE(Barrier) ;
 			CASE(Before) ;
 			CASE(Begin) ;
@@ -64,6 +64,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Deteriorate) ;
 			CASE(Die) ;
 			CASE(Difficult) ;
+			CASE(Desire) ;
 			CASE(Discover) ;
 			CASE(Distance) ;
 			CASE(Doorway) ;
@@ -126,6 +127,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Open) ;
 			CASE(Opening) ;
 			CASE(OpenAll) ;
+			CASE(Other) ;
 			CASE(Nzeer) ;
 			CASE(Obstacle) ;
 			CASE(Outside) ;
@@ -146,8 +148,8 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(React) ;
 			CASE(Rebel) ;
 			CASE(Recharge) ;
-			CASE(Regist) ;
-			CASE(Registance) ;
+			CASE(Resist) ;
+			CASE(Resistance) ;
 			CASE(Reduce) ;
 			CASE(Repeat) ;
 			CASE(Rescue) ;
@@ -175,7 +177,18 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Success) ;
 			CASE(Thought) ;
 			CASE(Together) ;
+			CASE(Truth) ;
+			CASE(Unbounded) ;
+			CASE(Use) ;
+			CASE(Us) ;
+			CASE(Victory) ;
+			CASE(Want) ;
 			CASE(War) ;
+			CASE(We) ;
+			CASE(Weak) ;
+			CASE(Worth) ;
+			CASE(XM) ;
+			CASE(You) ;
 	}
 	return result ;
 #	undef CASE
