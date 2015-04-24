@@ -27,8 +27,8 @@ typedef enum {
 @property (assign, nonatomic) struct KGGlyphSentence	currentSentence ;
 @property (assign, nonatomic) KGGlyphKind		currentGlyphKind ;
 
-@property (assign, nonatomic) unsigned int	maxGlyphNum ;
-@property (assign, nonatomic) unsigned int	processedGlyphNum ;
+@property (assign, nonatomic) unsigned int		maxGlyphNum ;
+@property (assign, nonatomic) unsigned int		processedGlyphNum ;
 
 + (NSString *) stateKeyPath ;
 

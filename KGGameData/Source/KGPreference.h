@@ -12,6 +12,9 @@
 @property (readonly, nonatomic) struct CNRGB	glyphColor ;
 @property (readonly, nonatomic) double		questionInterval ;
 
+@property (readonly, nonatomic)	unsigned int	maxQuestionSentenceLength ;
+@property (readonly, nonatomic) unsigned int	minQuestionSentenceLength ;
+
 + (KGPreference *) sharedPreference ;
 
 - (instancetype) init ;
