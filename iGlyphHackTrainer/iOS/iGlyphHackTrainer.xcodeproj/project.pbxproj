@@ -17,6 +17,7 @@
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
 		05A2772E1ABA4ABE0010E45B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2772D1ABA4ABE0010E45B /* Images.xcassets */; };
 		05BBEB5E1AE25E6500901422 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBEB5D1AE25E6500901422 /* MainModel.m */; };
+		05D70AEF1AEBBF6B00EDDA03 /* GlyphSentenceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D70AEE1AEBBF6B00EDDA03 /* GlyphSentenceSelector.m */; };
 		05FBDF461AD2C79400BC048E /* MainStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDF451AD2C79400BC048E /* MainStateMachine.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		05BBEB5D1AE25E6500901422 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		05D56A611ABA4BDE00AC57D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		05D56A631ABA4BDE00AC57D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		05D70AED1AEBBF6B00EDDA03 /* GlyphSentenceSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlyphSentenceSelector.h; sourceTree = "<group>"; };
+		05D70AEE1AEBBF6B00EDDA03 /* GlyphSentenceSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlyphSentenceSelector.m; sourceTree = "<group>"; };
 		05FBDF441AD2C79400BC048E /* MainStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStateMachine.h; sourceTree = "<group>"; };
 		05FBDF451AD2C79400BC048E /* MainStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStateMachine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +83,8 @@
 				05A277281ABA4ABE0010E45B /* MainViewController.m */,
 				05FBDF441AD2C79400BC048E /* MainStateMachine.h */,
 				05FBDF451AD2C79400BC048E /* MainStateMachine.m */,
+				05D70AED1AEBBF6B00EDDA03 /* GlyphSentenceSelector.h */,
+				05D70AEE1AEBBF6B00EDDA03 /* GlyphSentenceSelector.m */,
 				05062E621ABAC95C00741B2D /* SetupViewController.h */,
 				05062E631ABAC95C00741B2D /* SetupViewController.m */,
 				05062E5F1ABABCBB00741B2D /* AboutViewController.h */,
@@ -179,6 +184,7 @@
 				05FBDF461AD2C79400BC048E /* MainStateMachine.m in Sources */,
 				05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */,
 				05A277231ABA4ABE0010E45B /* main.m in Sources */,
+				05D70AEF1AEBBF6B00EDDA03 /* GlyphSentenceSelector.m in Sources */,
 				05062E611ABABCBB00741B2D /* AboutViewController.m in Sources */,
 				05BBEB5E1AE25E6500901422 /* MainModel.m in Sources */,
 			);

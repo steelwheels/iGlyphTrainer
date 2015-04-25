@@ -6,6 +6,7 @@
  */
 
 #import "MainStateMachine.h"
+#import "GlyphSentenceSelector.h"
 
 @interface MainStateMachine ()
 - (BOOL) transferFromIdleToQuestion ;
@@ -45,9 +46,9 @@
 - (BOOL) transferFromIdleToQuestion
 {
 	/* Select next question */
-	struct KGGlyphSentence sentence = KGSelectGlyphSentence() ;
+	struct KGGlyphSentence sentence = SelectGlyphSentence() ;
 	gameStatus.currentSentence = sentence ;
-	gameStatus.currentGlyphKind = sentence.wordNum > 0 ? sentence.wordArray.glyphWords[0] : KGNilGlyph ;
+	gameStatus.currentGlyphKind = sentence.wordNum > 0 ? sentence.glyphWords[0] : KGNilGlyph ;
 	gameStatus.maxGlyphNum = sentence.wordNum ;
 	gameStatus.processedGlyphNum = 0 ;
 	return sentence.wordNum > 0 ;
@@ -56,7 +57,7 @@
 - (void) questionState
 {
 	puts("* question state") ;
-	gameStatus.currentGlyphKind = gameStatus.currentSentence.wordArray.glyphWords[0] ;
+	gameStatus.currentGlyphKind = gameStatus.currentSentence.glyphWords[0] ;
 	gameStatus.processedGlyphNum = 1 ;
 	gameStatus.state = KGDisplayQuestionState ;
 	
@@ -73,7 +74,7 @@
 - (void) repeatForCount: (unsigned int) count
 {
 	printf("repeatForCount: %u\n", count) ;
-	gameStatus.currentGlyphKind = gameStatus.currentSentence.wordArray.glyphWords[count+1] ;
+	gameStatus.currentGlyphKind = gameStatus.currentSentence.glyphWords[count+1] ;
 	gameStatus.processedGlyphNum += 1 ;
 	gameStatus.state = KGDisplayQuestionState ;
 }
