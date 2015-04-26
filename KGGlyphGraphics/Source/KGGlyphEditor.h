@@ -20,5 +20,6 @@
 }
 
 - (instancetype) init ;
+- (const struct KGGlyphStroke *) glyphStroke ;
 
 @end

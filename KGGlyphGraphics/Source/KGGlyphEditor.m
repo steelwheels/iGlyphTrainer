@@ -23,6 +23,11 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	return self ;
 }
 
+- (const struct KGGlyphStroke *) glyphStroke
+{
+	return &(editableStroke.strokeBody) ;
+}
+
 - (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
 {
 	[super setStroke: &(editableStroke.strokeBody)] ;
