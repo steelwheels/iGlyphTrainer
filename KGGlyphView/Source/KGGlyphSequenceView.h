@@ -14,7 +14,6 @@
 
 @interface KGGlyphSequenceView : KCGraphicsView <KCGraphicsDelegate>
 {
-	KGGlyphDrawer *			glyphDrawer ;
 	KGGlyphEditor *			glyphEditor ;
 	id <KGGlyphSequenceEditiing>	glyphDelegate ;
 }
@@ -27,6 +26,7 @@
 #endif
 
 - (void) setDelegate: (id <KGGlyphSequenceEditiing>) delegate ;
+- (void) setEditable: (BOOL) flag ;
 - (void) setAllNeedsDisplay ;
 
 @end

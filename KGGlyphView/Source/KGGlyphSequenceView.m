@@ -37,11 +37,11 @@
 - (void) setupGlyphSequenceView
 {
 	struct KGGlyphStroke stroke = KGStrokeOfGlyph(KGNilGlyph) ;
-	glyphDrawer = [[KGGlyphDrawer alloc] init] ;
-	[glyphDrawer setStroke: &stroke] ;
-	[self setGraphicsDrawer: glyphDrawer] ;
+	
 	
 	glyphEditor = [[KGGlyphEditor alloc] init] ;
+	[glyphEditor setStroke: &stroke] ;
+	[self setGraphicsDrawer: glyphEditor] ;
 	[self setGraphicsEditor: glyphEditor] ;
 	
 	glyphDelegate = nil ;
@@ -60,24 +60,31 @@
 				case KGDisplayQuestionState: {
 					KGGlyphKind gkind = status.currentGlyphKind ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
-					[glyphDrawer setStroke: &gstroke] ;
+					[glyphEditor setStroke: &gstroke] ;
 					[glyphEditor setEditable: NO] ;
 					[self setAllNeedsDisplay] ;
 				} break ;
 				case KGInputAnswerState: {
+					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
+					[glyphEditor setStroke: &gstroke] ;
 					[glyphEditor setEditable: YES] ;
 					[self setAllNeedsDisplay] ;
 				} break ;
 				case KGIdleState:
 				case KGEvaluateState: {
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
-					[glyphDrawer setStroke: &gstroke] ;
+					[glyphEditor setStroke: &gstroke] ;
 					[glyphEditor setEditable: NO] ;
 					[self setAllNeedsDisplay] ;
 				} break ;
 			}
 		}
 	}
+}
+
+- (void) setEditable: (BOOL) flag
+{
+	[glyphEditor setEditable: flag] ;
 }
 
 - (void) setAllNeedsDisplay
@@ -98,7 +105,8 @@
 {
 	if(glyphDelegate){
 		if([glyphEditor isEditable]){
-			[glyphDelegate glyphEditingCancelled] ;
+			const struct KGGlyphStroke * stroke = [glyphEditor glyphStroke] ;
+			[glyphDelegate glyphEditingEnded: stroke] ;
 		}
 	}
 }
@@ -107,8 +115,7 @@
 {
 	if(glyphDelegate){
 		if([glyphEditor isEditable]){
-			const struct KGGlyphStroke * stroke = [glyphEditor glyphStroke] ;
-			[glyphDelegate glyphEditingEnded: stroke] ;
+			[glyphDelegate glyphEditingCancelled] ;
 		}
 	}
 }
