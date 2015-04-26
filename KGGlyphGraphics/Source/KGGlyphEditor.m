@@ -15,6 +15,7 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
+		isEditableFlag = NO ;
 		hasBeginningVertex = hasEndingVertex = false ;
 		KGInitGlyphEditableStroke(&editableStroke) ;
 		[super setStroke: &(editableStroke.strokeBody)] ;
@@ -33,6 +34,16 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 		CGContextAddLines(context, drawpoints, 2) ;
 		CGContextStrokePath(context) ;
 	}
+}
+
+- (BOOL) isEditable
+{
+	return isEditableFlag ;
+}
+
+- (void) setEditable: (BOOL) flag
+{
+	isEditableFlag = flag ;
 }
 
 - (void) touchesBegan: (CGPoint) point atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect

@@ -11,6 +11,7 @@
 
 @interface KGGlyphEditor : KGGlyphDrawer <KCGraphicsEditing>
 {
+	BOOL				isEditableFlag ;
 	bool				hasBeginningVertex ;
 	unsigned int			beginningVertexId ;
 	bool				hasEndingVertex ;

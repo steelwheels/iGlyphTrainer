@@ -23,6 +23,7 @@
 	[self.graphicsView setGraphicsDrawer: editor] ;
 	[self.graphicsView setGraphicsEditor: editor] ;
 	[self.graphicsView allocateTransparentViews: KGGlyphTransparentViewNum] ;
+	[editor setEditable: YES] ;
 }
 
 - (void)didReceiveMemoryWarning {
