@@ -35,4 +35,7 @@ typedef enum {
 - (instancetype) init ;
 - (void) addStateObserver: (NSObject *) observer ;
 
+- (void) setNextState: (KGGameState) nextstate withGlyphSentence: (struct KGGlyphSentence) sentence withGlyphKind: (KGGlyphKind) kind
+      withMaxGlyphNum: (unsigned int) maxnum withProcessedGlyphNum: (unsigned int) procnum ;
+
 @end

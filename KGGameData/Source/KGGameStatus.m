@@ -39,4 +39,14 @@
 		   context: nil] ;
 }
 
+- (void) setNextState: (KGGameState) nextstate withGlyphSentence: (struct KGGlyphSentence) sentence withGlyphKind: (KGGlyphKind) kind
+      withMaxGlyphNum: (unsigned int) maxnum withProcessedGlyphNum: (unsigned int) procnum
+{
+	self.currentSentence	= sentence ;
+	self.currentGlyphKind	= kind ;
+	self.maxGlyphNum	= maxnum ;
+	self.processedGlyphNum	= procnum ;
+	self.state		= nextstate ;
+}
+
 @end
