@@ -36,11 +36,29 @@ struct KG5WordSentence {
 } ;
 
 static const struct KG2WordSentence s_2words[] = {
-	{KGCivillizationGlyph,	KGChaosGlyph									},
-	{KGPursueGlyph,		KGXMGlyph									},
-	{KGPursueGlyph,		KGTruthGlyph									},
-	{KGSeparateGlyph,	KGWarGlyph									},
-	{KGCreateGlyph,		KGDangerGlyph									}
+	{KGCivillizationGlyph,	KGChaosGlyph			},
+	{KGPursueGlyph,		KGXMGlyph			},
+	{KGPursueGlyph,		KGTruthGlyph			},
+	{KGSeparateGlyph,	KGWarGlyph			},
+	{KGCreateGlyph,		KGDangerGlyph			},
+	{KGPathGlyph,		KGPerfectionGlyph		},
+	{KGDiscoverGlyph,	KGSafetyGlyph			},
+	{KGDiscoverGlyph,	KGLieGlyph			},
+	{KGDiscoverGlyph,	KGPortalGlyph			},
+	{KGAttackGlyph,		KGChaosGlyph			},
+	{KGAttackGlyph,		KGDifficultGlyph		},
+	{KGLiberateGlyph,	KGXMGlyph			},
+	{KGQuestionGlyph,	KGWarGlyph			},
+	{KGLeadGlyph,		KGEnlightenedGlyph		},
+	{KGSearchGlyph,		KGPotencialGlyph		},
+	{KGSearchGlyph,		KGPastGlyph			},
+	{KGCaptureGlyph,	KGPortalGlyph			},
+	{KGPureGlyph,		KGTruthGlyph			},
+	{KGPureGlyph,		KGBodyGlyph			},
+	{KGPureGlyph,		KGHumanGlyph			},
+	{KGNourishGlyph,	KGJourneyGlyph			},
+	{KGAllGlyph,		KGChaosGlyph			},
+	{KGOpenAllGlyph,	KGTruthGlyph			}
 } ;
 
 static const struct KG3WordSentence s_3words[] = {
