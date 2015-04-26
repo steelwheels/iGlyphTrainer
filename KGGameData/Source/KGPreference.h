@@ -14,6 +14,8 @@
 
 @property (readonly, nonatomic)	unsigned int	maxQuestionSentenceLength ;
 @property (readonly, nonatomic) unsigned int	minQuestionSentenceLength ;
+@property (readonly, nonatomic) BOOL		doDisplayGlyphNameAtQuestionState ;
+@property (readonly, nonatomic) BOOL		doDisplayGlyphNameAtAnswerState ;
 
 + (KGPreference *) sharedPreference ;
 

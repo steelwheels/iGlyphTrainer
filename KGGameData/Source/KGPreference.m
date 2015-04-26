@@ -12,6 +12,8 @@
 @property (assign, nonatomic) double		questionInterval ;
 @property (assign, nonatomic) unsigned int	maxQuestionSentenceLength ;
 @property (assign, nonatomic) unsigned int	minQuestionSentenceLength ;
+@property (assign, nonatomic) BOOL		doDisplayGlyphNameAtQuestionState ;
+@property (assign, nonatomic) BOOL		doDisplayGlyphNameAtAnswerState ;
 @end
 
 @implementation KGPreference
@@ -32,10 +34,12 @@
 {
 	if((self = [super init]) != nil){
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
-		self.glyphColor			= ctable.goldenrod ;
-		self.questionInterval		= 1.0 ;
-		self.maxQuestionSentenceLength	= 5 ;
-		self.minQuestionSentenceLength	= 2 ;
+		self.glyphColor				= ctable.goldenrod ;
+		self.questionInterval			= 1.0 ;
+		self.maxQuestionSentenceLength		= 5 ;
+		self.minQuestionSentenceLength		= 2 ;
+		self.doDisplayGlyphNameAtQuestionState	= YES ;
+		self.doDisplayGlyphNameAtAnswerState	= YES ;
 	}
 	return self ;
 }
