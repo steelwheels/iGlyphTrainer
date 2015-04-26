@@ -6,16 +6,19 @@
  */
 
 #import <KGGameData/KGGameData.h>
+#import <KGGlyphView/KGGlyphView.h>
 
 @interface MainStateMachine : NSObject
 {
 	KGGameStatus *		gameStatus ;
-	
 	CNCountTimer *		countDownTimer ;
 }
 
 - (instancetype) initWithStatus: (KGGameStatus *) status ;
 - (void) start ;
 
+@end
+
+@interface MainStateMachine (InputAnswerState) <KGGlyphSequenceEditiing>
 @end
 

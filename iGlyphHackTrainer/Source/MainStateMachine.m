@@ -9,8 +9,10 @@
 #import "GlyphSentenceSelector.h"
 
 @interface MainStateMachine ()
-- (BOOL) transferFromIdleToQuestion ;
+- (void) setNextState: (KGGameState) newstate ;
+- (void) idleState ;
 - (void) questionState ;
+- (void) answerState ;
 @end
 
 @interface MainStateMachine (DisplayQuestionState) <CNCountTimerDelegate>
@@ -27,44 +29,71 @@
 	return self ;
 }
 
-- (void) start
+- (void) setNextState: (KGGameState) newstate
 {
-	puts("* start state") ;
-	switch(gameStatus.state){
-		case KGIdleState: {
-			if([self transferFromIdleToQuestion]){
-				[self questionState] ;
-			}
-			
-		} break ;
-		default: {
-			/* do nothing */
-		} break ;
-	}
+	dispatch_async(dispatch_get_main_queue(), ^{
+		switch(gameStatus.state){
+			case KGIdleState: {
+				if(newstate == KGDisplayQuestionState){
+					[self questionState] ;
+				}
+			} break ;
+			case KGDisplayQuestionState: {
+				switch(newstate){
+					case KGIdleState: {
+						[self idleState] ;
+					} break ;
+					case KGInputAnswerState: {
+						[self answerState] ;
+					} break ;
+					case KGDisplayQuestionState: {
+						/* No change */
+					} break ;
+					case KGEvaluateState: {
+						[self idleState] ;
+					} break ;
+				}
+			} break ;
+			case KGInputAnswerState: {
+				
+			} break ;
+			case KGEvaluateState: {
+				
+			} break ;
+		}
+	});
 }
 
-- (BOOL) transferFromIdleToQuestion
+- (void) start
 {
-	/* Select next question */
-	struct KGGlyphSentence sentence = SelectGlyphSentence() ;
-	gameStatus.currentSentence = sentence ;
-	gameStatus.currentGlyphKind = sentence.wordNum > 0 ? sentence.glyphWords[0] : KGNilGlyph ;
-	gameStatus.maxGlyphNum = sentence.wordNum ;
-	gameStatus.processedGlyphNum = 0 ;
-	return sentence.wordNum > 0 ;
+	[self setNextState: KGDisplayQuestionState] ;
+}
+
+- (void) idleState
+{
+	struct KGGlyphSentence sentence = KGGetEmptySentence() ;
+	[gameStatus setNextState: KGIdleState withGlyphSentence: sentence withGlyphKind: KGNilGlyph withMaxGlyphNum: 0 withProcessedGlyphNum: 0] ;
 }
 
 - (void) questionState
 {
 	puts("* question state") ;
-	gameStatus.currentGlyphKind = gameStatus.currentSentence.glyphWords[0] ;
-	gameStatus.processedGlyphNum = 1 ;
-	gameStatus.state = KGDisplayQuestionState ;
+	
+	struct KGGlyphSentence sentence = SelectGlyphSentence() ;
+	KGGlyphKind firstkind = sentence.glyphWords[0] ;
+	unsigned int maxnum = sentence.wordNum ;
+	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence withGlyphKind: firstkind withMaxGlyphNum: maxnum withProcessedGlyphNum: 1] ;
 	
 	countDownTimer = [[CNCountTimer alloc] init] ;
-	[countDownTimer repeatWithCount: gameStatus.maxGlyphNum - 1
+	[countDownTimer repeatWithCount: maxnum - 1
 			   withInterval: 1.0
 			   withDelegate: self] ;
+}
+
+- (void) answerState
+{
+	puts("* answer state") ;
+	[self idleState] ;
 }
 
 @end
@@ -82,7 +111,22 @@
 - (void) repeatDone
 {
 	gameStatus.processedGlyphNum = 0 ;
-	gameStatus.state = KGIdleState ;
+	[self setNextState: KGInputAnswerState] ;
+}
+
+@end
+
+@implementation MainStateMachine (InputAnswerState)
+
+- (void) glyphEditingEnded: (const struct KGGlyphStroke *) stroke
+{
+	(void) stroke ;
+	[self setNextState: KGInputAnswerState] ;
+}
+
+- (void) glyphEditingCancelled
+{
+	[self setNextState: KGIdleState] ;
 }
 
 @end

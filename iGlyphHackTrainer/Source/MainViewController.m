@@ -39,10 +39,11 @@
 	[self.navigationBar setupProgressBar] ;
 	KGHackProgressView * progressview = [self.navigationBar progressView] ;
 	[status addStateObserver: progressview] ;
-	
-	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
-	[self.glyphSequenceView setGraphicsDrawer: drawer] ;
+
+	MainStateMachine * statemachine = [MainModel sharedStateMachine] ;
+	[self.glyphSequenceView setDelegate: statemachine] ;
 	[status addStateObserver: self.glyphSequenceView] ;
+	
 	
 	[self.timerLabel clearTimerLabel] ;
 	
