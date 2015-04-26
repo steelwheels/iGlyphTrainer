@@ -41,12 +41,12 @@
 		unsigned int maxnum, currentnum ;
 		switch(status.state){
 			case KGIdleState:
-			case KGStrokeState:
 			case KGEvaluateState: {
 				maxnum     = 0 ;
 				currentnum = 0 ;
 			} break ;
-			case KGDisplayQuestionState: {
+			case KGDisplayQuestionState:
+			case KGInputAnswerState: {
 				maxnum     = status.maxGlyphNum ;
 				currentnum = status.processedGlyphNum ;
 			} break ;
