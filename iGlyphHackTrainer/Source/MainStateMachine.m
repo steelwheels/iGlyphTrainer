@@ -93,7 +93,8 @@
 - (void) answerState
 {
 	puts("* answer state") ;
-	[self idleState] ;
+	struct KGGlyphSentence sentence = KGGetEmptySentence() ;
+	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence withGlyphKind: KGNilGlyph withMaxGlyphNum: 0 withProcessedGlyphNum: 0] ;
 }
 
 @end
