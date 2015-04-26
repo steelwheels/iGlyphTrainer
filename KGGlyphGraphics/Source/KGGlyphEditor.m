@@ -30,14 +30,18 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 
 - (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
 {
-	[super setStroke: &(editableStroke.strokeBody)] ;
-	[super drawWithContext: context atLevel: level inBoundsRect: boundsrect] ;
-	if(level == KGGlyphStrokeLayer && hasBeginningVertex && hasEndingVertex){
-		CGPoint		drawpoints[2] ;
-		drawpoints[0] = glyphInfo.vertex[beginningVertexId].center ;
-		drawpoints[1] = endingVertexPoint ;
-		CGContextAddLines(context, drawpoints, 2) ;
-		CGContextStrokePath(context) ;
+	if(isEditableFlag){
+		[super setStroke: &(editableStroke.strokeBody)] ;
+		[super drawWithContext: context atLevel: level inBoundsRect: boundsrect] ;
+		if(level == KGGlyphStrokeLayer && hasBeginningVertex && hasEndingVertex){
+			CGPoint		drawpoints[2] ;
+			drawpoints[0] = glyphInfo.vertex[beginningVertexId].center ;
+			drawpoints[1] = endingVertexPoint ;
+			CGContextAddLines(context, drawpoints, 2) ;
+			CGContextStrokePath(context) ;
+		}
+	} else {
+		[super drawWithContext: context atLevel: level inBoundsRect: boundsrect] ;
 	}
 }
 

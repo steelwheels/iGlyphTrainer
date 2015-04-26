@@ -8,7 +8,6 @@
 #import "KGGlyphDrawer.h"
 #import "KGGlyphEditableStroke.h"
 
-
 @interface KGGlyphEditor : KGGlyphDrawer <KCGraphicsEditing>
 {
 	BOOL				isEditableFlag ;
