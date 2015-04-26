@@ -39,8 +39,13 @@
 	struct KGGlyphStroke stroke = KGStrokeOfGlyph(KGNilGlyph) ;
 	glyphDrawer = [[KGGlyphDrawer alloc] init] ;
 	[glyphDrawer setStroke: &stroke] ;
-	
 	[self setGraphicsDrawer: glyphDrawer] ;
+	
+	glyphEditor = [[KGGlyphEditor alloc] init] ;
+	[self setGraphicsEditor: glyphEditor] ;
+	
+	glyphDelegate = nil ;
+	
 	[self allocateTransparentViews: KGGlyphTransparentViewNum] ;
 }
 
@@ -50,15 +55,27 @@
 	if([object isKindOfClass: [KGGameStatus class]]){
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
 			KGGameStatus * status = object ;
-			KGGlyphKind gkind ;
-			if(status.state == KGDisplayQuestionState){
-				gkind = status.currentGlyphKind ;
-			} else {
-				gkind = KGNilGlyph ;
+			
+			switch(status.state){
+				case KGDisplayQuestionState: {
+					KGGlyphKind gkind = status.currentGlyphKind ;
+					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
+					[glyphDrawer setStroke: &gstroke] ;
+					[glyphEditor setEditable: NO] ;
+					[self setAllNeedsDisplay] ;
+				} break ;
+				case KGInputAnswerState: {
+					[glyphEditor setEditable: YES] ;
+					[self setAllNeedsDisplay] ;
+				} break ;
+				case KGIdleState:
+				case KGEvaluateState: {
+					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
+					[glyphDrawer setStroke: &gstroke] ;
+					[glyphEditor setEditable: NO] ;
+					[self setAllNeedsDisplay] ;
+				} break ;
 			}
-			struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
-			[glyphDrawer setStroke: &gstroke] ;
-			[self setAllNeedsDisplay] ;
 		}
 	}
 }
@@ -70,6 +87,30 @@
 		[subview setNeedsDisplay] ;
 	}
 	[self setNeedsDisplay] ;
+}
+
+- (void) setDelegate: (id <KGGlyphSequenceEditiing>) delegate
+{
+	glyphDelegate = delegate ;
+}
+
+- (void) editingGraphicsEnded
+{
+	if(glyphDelegate){
+		if([glyphEditor isEditable]){
+			[glyphDelegate glyphEditingCancelled] ;
+		}
+	}
+}
+
+- (void) editingGraphicsCancelled
+{
+	if(glyphDelegate){
+		if([glyphEditor isEditable]){
+			const struct KGGlyphStroke * stroke = [glyphEditor glyphStroke] ;
+			[glyphDelegate glyphEditingEnded: stroke] ;
+		}
+	}
 }
 
 @end

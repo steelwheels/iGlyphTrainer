@@ -7,9 +7,16 @@
 
 #import <KGGlyphGraphics/KGGlyphGraphics.h>
 
-@interface KGGlyphSequenceView : KCGraphicsView
+@protocol KGGlyphSequenceEditiing <NSObject>
+- (void) glyphEditingEnded: (const struct KGGlyphStroke *) stroke ;
+- (void) glyphEditingCancelled ;
+@end
+
+@interface KGGlyphSequenceView : KCGraphicsView <KCGraphicsDelegate>
 {
-	KGGlyphDrawer *		glyphDrawer ;
+	KGGlyphDrawer *			glyphDrawer ;
+	KGGlyphEditor *			glyphEditor ;
+	id <KGGlyphSequenceEditiing>	glyphDelegate ;
 }
 
 - (instancetype) initWithCoder:(NSCoder *) decoder ;
@@ -19,6 +26,7 @@
 - (instancetype) initWithFrame:(NSRect)frame ;
 #endif
 
+- (void) setDelegate: (id <KGGlyphSequenceEditiing>) delegate ;
 - (void) setAllNeedsDisplay ;
 
 @end
