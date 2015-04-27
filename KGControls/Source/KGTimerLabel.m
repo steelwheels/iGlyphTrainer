@@ -6,6 +6,7 @@
  */
 
 #import "KGTimerLabel.h"
+#import <KGGameData/KGGameData.h>
 
 @implementation KGTimerLabel
 
@@ -29,6 +30,31 @@
 - (void) clearTimerLabel
 {
 	[self setTitle: @""] ;
+}
+
+- (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
+{
+	(void) change ; (void) context ;
+	if([object isKindOfClass: [KGGameStatus class]]){
+		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
+			KGGameStatus * status = object ;
+			switch(status.state){
+				case KGIdleState:
+				case KGDisplayQuestionState:
+				case KGEvaluateState: {
+					[self clearTimerLabel] ;
+				} break ;
+				case KGInputAnswerState: {
+					double curtime = status.currentTime ;
+					if(curtime != KGNoValidTime){
+						[self setTimerLabel: curtime] ;
+					} else {
+						[self clearTimerLabel] ;
+					}
+				} break ;
+			}
+		}
+	}
 }
 
 @end

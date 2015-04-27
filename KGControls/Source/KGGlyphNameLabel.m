@@ -42,7 +42,7 @@
 			/* Display no glyph */
 		} break ;
 		case KGDisplayQuestionState: {
-			if(preference.doDisplayGlyphNameAtAnswerState){
+			if(preference.doDisplayGlyphNameAtQuestionState){
 				glyphname = KGNameOfGlyph(status.currentGlyphKind) ;
 			}
 		} break ;
