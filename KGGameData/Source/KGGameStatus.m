@@ -10,6 +10,7 @@
 @implementation KGGameStatus
 
 @synthesize state, maxGlyphNum, processedGlyphNum, currentGlyphKind ;
+@synthesize currentTime, timerInterval ;
 
 + (NSString *) stateKeyPath
 {
@@ -27,6 +28,8 @@
 		self.maxGlyphNum	= 0 ;
 		self.processedGlyphNum	= 0 ;
 		
+		self.currentTime	= KGNoValidTime ;
+		self.timerInterval	= KGNoValidTime ;
 	}
 	return self ;
 }

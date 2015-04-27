@@ -19,6 +19,7 @@
 @implementation KGPreference
 
 @synthesize glyphColor, questionInterval, maxQuestionSentenceLength, minQuestionSentenceLength ;
+@synthesize doDisplayGlyphNameAtQuestionState, doDisplayGlyphNameAtAnswerState ;
 
 + (KGPreference *) sharedPreference
 {

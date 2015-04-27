@@ -17,6 +17,8 @@ typedef enum {
 	KGEvaluateState
 } KGGameState ;
 
+static const double	KGNoValidTime		= -1.0 ;
+
 @interface KGGameStatus : CNNotifierObject
 
 @property (assign, nonatomic) KGGameState	state ;
@@ -29,6 +31,8 @@ typedef enum {
 
 @property (assign, nonatomic) unsigned int		maxGlyphNum ;
 @property (assign, nonatomic) unsigned int		processedGlyphNum ;
+@property (assign, nonatomic) double			currentTime ;
+@property (assign, nonatomic) double			timerInterval ;
 
 + (NSString *) stateKeyPath ;
 
