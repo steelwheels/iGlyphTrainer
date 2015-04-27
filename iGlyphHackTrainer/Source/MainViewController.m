@@ -44,8 +44,8 @@
 	[self.glyphSequenceView setDelegate: statemachine] ;
 	[status addStateObserver: self.glyphSequenceView] ;
 	
-	
 	[self.timerLabel clearTimerLabel] ;
+	[status addStateObserver: self.timerLabel] ;
 	
 	/* initialize the state */
 	status.state = KGIdleState ;

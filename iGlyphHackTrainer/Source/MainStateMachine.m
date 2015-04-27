@@ -92,9 +92,18 @@
 
 - (void) answerState
 {
-	puts("* answer state") ;
-	struct KGGlyphSentence sentence = KGGetEmptySentence() ;
+	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence withGlyphKind: KGNilGlyph withMaxGlyphNum: 0 withProcessedGlyphNum: 0] ;
+
+	double timelimit = sentence.wordNum * 1.0 ;
+	double interval  = 0.2 ;
+	
+	gameStatus.currentTime		= 0.0 ;
+	gameStatus.timerInterval	= interval ;
+	countDownTimer = [[CNCountTimer alloc] init] ;
+	[countDownTimer repeatWithCount: timelimit / interval
+			   withInterval: interval
+			   withDelegate: self] ;
 }
 
 @end
@@ -103,16 +112,44 @@
 
 - (void) repeatForCount: (unsigned int) count
 {
-	printf("repeatForCount: %u\n", count) ;
-	gameStatus.currentGlyphKind = gameStatus.currentSentence.glyphWords[count+1] ;
-	gameStatus.processedGlyphNum += 1 ;
-	gameStatus.state = KGDisplayQuestionState ;
+	switch(gameStatus.state){
+		case KGIdleState: {
+			/* Do nothing */
+		} break ;
+		case KGDisplayQuestionState: {
+			gameStatus.currentGlyphKind = gameStatus.currentSentence.glyphWords[count+1] ;
+			gameStatus.processedGlyphNum += 1 ;
+			gameStatus.state = KGDisplayQuestionState ;
+		} break ;
+		case KGInputAnswerState: {
+			gameStatus.currentTime += gameStatus.timerInterval ;
+			gameStatus.state = KGInputAnswerState ;
+		} break ;
+		case KGEvaluateState: {
+			/* Do nothing */
+		} break ;
+	}
 }
 
 - (void) repeatDone
 {
-	gameStatus.processedGlyphNum = 0 ;
-	[self setNextState: KGInputAnswerState] ;
+	switch(gameStatus.state){
+		case KGIdleState: {
+			/* Do nothing */
+		} break ;
+		case KGDisplayQuestionState: {
+			gameStatus.processedGlyphNum = 0 ;
+			[self setNextState: KGInputAnswerState] ;
+		} break ;
+		case KGInputAnswerState: {
+			gameStatus.currentTime		= KGNoValidTime ;
+			gameStatus.timerInterval	= KGNoValidTime ;
+			[self setNextState: KGIdleState] ;
+		} break ;
+		case KGEvaluateState: {
+			
+		} break ;
+	}
 }
 
 @end
