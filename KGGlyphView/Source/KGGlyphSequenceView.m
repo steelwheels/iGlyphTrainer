@@ -58,7 +58,9 @@
 			
 			switch(status.state){
 				case KGDisplayQuestionState: {
-					KGGlyphKind gkind = status.currentGlyphKind ;
+					struct KGGlyphSentence sentence = status.currentSentence ;
+					unsigned int index = status.currentGlyphIndex ;
+					KGGlyphKind gkind = sentence.glyphWords[index] ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
 					[glyphEditor setStroke: &gstroke] ;
 					[glyphEditor setEditable: NO] ;

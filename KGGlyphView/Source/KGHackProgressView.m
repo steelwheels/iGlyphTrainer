@@ -47,8 +47,9 @@
 			} break ;
 			case KGDisplayQuestionState:
 			case KGInputAnswerState: {
-				maxnum     = status.maxGlyphNum ;
-				currentnum = status.processedGlyphNum ;
+				struct KGGlyphSentence sentence = status.currentSentence ;
+				maxnum	   = sentence.wordNum ;
+				currentnum = status.currentGlyphIndex + 1 ;
 			} break ;
 		}
 				

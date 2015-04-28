@@ -32,66 +32,64 @@
 
 - (void) setNextState: (KGGameState) newstate
 {
-	dispatch_async(dispatch_get_main_queue(), ^{
-		switch(gameStatus.state){
-			case KGIdleState: {
-				if(newstate == KGDisplayQuestionState){
-					[self questionState] ;
-				}
-			} break ;
-			case KGDisplayQuestionState: {
-				switch(newstate){
-					case KGIdleState: {
-						[self idleState] ;
-					} break ;
-					case KGInputAnswerState: {
-						[self answerState] ;
-					} break ;
-					case KGDisplayQuestionState: {
-						/* No change */
-					} break ;
-					case KGEvaluateState: {
-						[self idleState] ;
-					} break ;
-				}
-			} break ;
-			case KGInputAnswerState: {
-				switch(newstate){
-					case KGIdleState: {
-						[self idleState] ;
-					} break ;
-					case KGInputAnswerState: {
-						/* No change */
-					} break ;
-					case KGDisplayQuestionState: {
-						/* Can not happen */
-						puts("Invalid trans") ;
-					} break ;
-					case KGEvaluateState: {
-						[self evaluateState] ;
-					} break ;
-				}
-			} break ;
-			case KGEvaluateState: {
-				switch(newstate){
-					case KGIdleState: {
-						[self idleState] ;
-					} break ;
-					case KGInputAnswerState: {
-						/* Can not happen */
-						puts("Invalid trans") ;
-					} break ;
-					case KGDisplayQuestionState: {
-						/* Can not happen */
-						puts("Invalid trans") ;
-					} break ;
-					case KGEvaluateState: {
-						/* No change */
-					} break ;
-				}
-			} break ;
-		}
-	});
+	switch(gameStatus.state){
+		case KGIdleState: {
+			if(newstate == KGDisplayQuestionState){
+				[self questionState] ;
+			}
+		} break ;
+		case KGDisplayQuestionState: {
+			switch(newstate){
+				case KGIdleState: {
+					[self idleState] ;
+				} break ;
+				case KGInputAnswerState: {
+					[self answerState] ;
+				} break ;
+				case KGDisplayQuestionState: {
+					/* No change */
+				} break ;
+				case KGEvaluateState: {
+					[self idleState] ;
+				} break ;
+			}
+		} break ;
+		case KGInputAnswerState: {
+			switch(newstate){
+				case KGIdleState: {
+					[self idleState] ;
+				} break ;
+				case KGInputAnswerState: {
+					/* No change */
+				} break ;
+				case KGDisplayQuestionState: {
+					/* Can not happen */
+					puts("Invalid trans") ;
+				} break ;
+				case KGEvaluateState: {
+					[self evaluateState] ;
+				} break ;
+			}
+		} break ;
+		case KGEvaluateState: {
+			switch(newstate){
+				case KGIdleState: {
+					[self idleState] ;
+				} break ;
+				case KGInputAnswerState: {
+					/* Can not happen */
+					puts("Invalid trans") ;
+				} break ;
+				case KGDisplayQuestionState: {
+					/* Can not happen */
+					puts("Invalid trans") ;
+				} break ;
+				case KGEvaluateState: {
+					/* No change */
+				} break ;
+			}
+		} break ;
+	}
 }
 
 - (void) start
@@ -102,17 +100,14 @@
 - (void) idleState
 {
 	struct KGGlyphSentence sentence = KGGetEmptySentence() ;
-	[gameStatus setNextState: KGIdleState withGlyphSentence: sentence withGlyphKind: KGNilGlyph withMaxGlyphNum: 0 withProcessedGlyphNum: 0] ;
+	[gameStatus setNextState: KGIdleState withGlyphSentence: sentence] ;
 }
 
 - (void) questionState
 {
-	puts("* question state") ;
-	
 	struct KGGlyphSentence sentence = SelectGlyphSentence() ;
-	KGGlyphKind firstkind = sentence.glyphWords[0] ;
 	unsigned int maxnum = sentence.wordNum ;
-	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence withGlyphKind: firstkind withMaxGlyphNum: maxnum withProcessedGlyphNum: 1] ;
+	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence] ;
 	
 	countDownTimer = [[CNCountTimer alloc] init] ;
 	[countDownTimer repeatWithCount: maxnum - 1
@@ -123,7 +118,7 @@
 - (void) answerState
 {
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence withGlyphKind: KGNilGlyph withMaxGlyphNum: 0 withProcessedGlyphNum: 0] ;
+	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence] ;
 
 	double timelimit = sentence.wordNum * 1.0 ;
 	double interval  = 0.2 ;
@@ -139,8 +134,7 @@
 - (void) evaluateState
 {
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence withGlyphKind: KGNilGlyph withMaxGlyphNum: 0 withProcessedGlyphNum: 0] ;
-
+	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence] ;
 	[self setNextState: KGIdleState] ;
 }
 
@@ -150,13 +144,17 @@
 
 - (void) repeatForCount: (unsigned int) count
 {
+	(void) count ;
 	switch(gameStatus.state){
 		case KGIdleState: {
 			/* Do nothing */
 		} break ;
 		case KGDisplayQuestionState: {
-			gameStatus.currentGlyphKind = gameStatus.currentSentence.glyphWords[count+1] ;
-			gameStatus.processedGlyphNum += 1 ;
+			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
+			unsigned int index = gameStatus.currentGlyphIndex ;
+			if(index < sentence.wordNum-1){
+				gameStatus.currentGlyphIndex = ++index ;
+			}
 			gameStatus.state = KGDisplayQuestionState ;
 		} break ;
 		case KGInputAnswerState: {
@@ -176,7 +174,7 @@
 			/* Do nothing */
 		} break ;
 		case KGDisplayQuestionState: {
-			gameStatus.processedGlyphNum = 0 ;
+			gameStatus.currentGlyphIndex = 0 ;
 			[self setNextState: KGInputAnswerState] ;
 		} break ;
 		case KGInputAnswerState: {

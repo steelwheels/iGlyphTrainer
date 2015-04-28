@@ -8,6 +8,8 @@
 #import "KGGlyphNameLabel.h"
 #import <KGGameData/KGGameData.h>
 
+static NSString * currentGlyphName(KGGameStatus * status) ;
+
 @interface KGGlyphNameLabel ()
 - (NSString *) glyphName: (KGGameStatus *) status ;
 @end
@@ -43,19 +45,27 @@
 		} break ;
 		case KGDisplayQuestionState: {
 			if(preference.doDisplayGlyphNameAtQuestionState){
-				glyphname = KGNameOfGlyph(status.currentGlyphKind) ;
+				glyphname = currentGlyphName(status) ;
 			}
 		} break ;
 		case KGInputAnswerState: {
 			if(preference.doDisplayGlyphNameAtAnswerState){
-				glyphname = KGNameOfGlyph(status.currentGlyphKind) ;
+				glyphname = currentGlyphName(status) ;
 			}
 		} break ;
 		case KGEvaluateState: {
-			glyphname = KGNameOfGlyph(status.currentGlyphKind) ;
+			glyphname = currentGlyphName(status) ;
 		} break ;
 	}
 	return glyphname ;
 }
 
 @end
+
+static NSString *
+currentGlyphName(KGGameStatus * status)
+{
+	struct KGGlyphSentence sentence = status.currentSentence ;
+	KGGlyphKind kind = sentence.glyphWords[status.currentGlyphIndex] ;
+	return KGNameOfGlyph(kind) ;
+}

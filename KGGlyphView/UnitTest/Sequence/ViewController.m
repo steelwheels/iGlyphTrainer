@@ -30,10 +30,8 @@
 	[self.nextButton addTarget: self action:@selector(pressNextButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	[self.prevButton addTarget: self action:@selector(pressPrevButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	
-	gameStatus.currentGlyphKind = KGAbandonGlyph ;
-	gameStatus.maxGlyphNum = 5 ;
-	gameStatus.processedGlyphNum = 2 ;
-	gameStatus.state = KGDisplayQuestionState ;
+	struct KGGlyphSentence sentence = KGGet2WordSentence(0) ;
+	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence] ;
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,28 +43,28 @@
 - (void) pressNextButton: (UIButton *) button
 {
 	(void) button ;
-	KGGlyphKind curkind = gameStatus.currentGlyphKind ;
-	KGGlyphKind nextkind ;
-	if(curkind < KGLastClyph){
-		nextkind = curkind + 1 ;
+	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
+	unsigned int index = gameStatus.currentGlyphIndex ;
+	if(index < sentence.wordNum-1){
+		index++ ;
 	} else {
-		nextkind = KGFirstClyph ;
+		index = 0 ;
 	}
-	gameStatus.currentGlyphKind = nextkind ;
+	gameStatus.currentGlyphIndex = index ;
 	gameStatus.state = KGDisplayQuestionState ;
 }
 
 - (void) pressPrevButton: (UIButton *) button
 {
 	(void) button ;
-	KGGlyphKind curkind = gameStatus.currentGlyphKind ;
-	KGGlyphKind nextkind ;
-	if(curkind > KGFirstClyph){
-		nextkind = curkind - 1 ;
+	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
+	unsigned int index = gameStatus.currentGlyphIndex ;
+	if(index > 0){
+		index-- ;
 	} else {
-		nextkind = KGLastClyph ;
+		index = sentence.wordNum - 1 ;
 	}
-	gameStatus.currentGlyphKind = nextkind ;
+	gameStatus.currentGlyphIndex = index ;
 	gameStatus.state = KGDisplayQuestionState ;
 }
 

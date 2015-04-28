@@ -25,8 +25,8 @@
 	[self.normalButton addTarget: self action: @selector(pressNormalButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	[self.startButton addTarget: self action: @selector(pressStartButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	
-	gameStatus.state = KGIdleState ;
-	gameStatus.currentGlyphKind = KGAdvanceGlyph ;
+	struct KGGlyphSentence sentence = KGGetEmptySentence() ;
+	[gameStatus setNextState: KGIdleState withGlyphSentence: sentence] ;
 	
 	countTimer = nil ;
 	[self.timerLabel setTimerLabel: 0.0] ;
@@ -49,12 +49,12 @@
 	puts("start button pressed") ;
 	if(gameStatus.state == KGIdleState){
 		[self.timerLabel setTimerLabel: 10.0] ;
-		gameStatus.currentGlyphKind = KGAbandonGlyph ;
-		gameStatus.state = KGDisplayQuestionState ;
+		struct KGGlyphSentence sentence = KGGet3WordSentence(1) ;
+		[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence] ;
 	} else {
 		[self.timerLabel clearTimerLabel] ;
-		gameStatus.currentGlyphKind = KGNilGlyph ;
-		gameStatus.state = KGIdleState ;
+		struct KGGlyphSentence sentence = KGGetEmptySentence() ;
+		[gameStatus setNextState: KGIdleState withGlyphSentence: sentence] ;
 	}
 }
 
