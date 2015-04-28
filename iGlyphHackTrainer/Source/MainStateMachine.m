@@ -13,6 +13,7 @@
 - (void) idleState ;
 - (void) questionState ;
 - (void) answerState ;
+- (void) evaluateState ;
 @end
 
 @interface MainStateMachine (DisplayQuestionState) <CNCountTimerDelegate>
@@ -55,10 +56,39 @@
 				}
 			} break ;
 			case KGInputAnswerState: {
-				
+				switch(newstate){
+					case KGIdleState: {
+						[self idleState] ;
+					} break ;
+					case KGInputAnswerState: {
+						/* No change */
+					} break ;
+					case KGDisplayQuestionState: {
+						/* Can not happen */
+						puts("Invalid trans") ;
+					} break ;
+					case KGEvaluateState: {
+						[self evaluateState] ;
+					} break ;
+				}
 			} break ;
 			case KGEvaluateState: {
-				
+				switch(newstate){
+					case KGIdleState: {
+						[self idleState] ;
+					} break ;
+					case KGInputAnswerState: {
+						/* Can not happen */
+						puts("Invalid trans") ;
+					} break ;
+					case KGDisplayQuestionState: {
+						/* Can not happen */
+						puts("Invalid trans") ;
+					} break ;
+					case KGEvaluateState: {
+						/* No change */
+					} break ;
+				}
 			} break ;
 		}
 	});
@@ -106,6 +136,14 @@
 			   withDelegate: self] ;
 }
 
+- (void) evaluateState
+{
+	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
+	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence withGlyphKind: KGNilGlyph withMaxGlyphNum: 0 withProcessedGlyphNum: 0] ;
+
+	[self setNextState: KGIdleState] ;
+}
+
 @end
 
 @implementation MainStateMachine (DisplayQuestionState)
@@ -144,10 +182,10 @@
 		case KGInputAnswerState: {
 			gameStatus.currentTime		= KGNoValidTime ;
 			gameStatus.timerInterval	= KGNoValidTime ;
-			[self setNextState: KGIdleState] ;
+			[self setNextState: KGEvaluateState] ;
 		} break ;
 		case KGEvaluateState: {
-			
+			/* Do nothing */
 		} break ;
 	}
 }
