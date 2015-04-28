@@ -9,7 +9,7 @@
 
 @implementation KGGameStatus
 
-@synthesize state, maxGlyphNum, processedGlyphNum, currentGlyphKind ;
+@synthesize state, currentSentence, currentGlyphIndex ;
 @synthesize currentTime, timerInterval ;
 
 + (NSString *) stateKeyPath
@@ -23,10 +23,7 @@
 		self.state		= KGIdleState ;
 		
 		self.currentSentence	= KGGetEmptySentence() ;
-		self.currentGlyphKind	= KGNilGlyph ;
-
-		self.maxGlyphNum	= 0 ;
-		self.processedGlyphNum	= 0 ;
+		self.currentGlyphIndex	= 0 ;
 		
 		self.currentTime	= KGNoValidTime ;
 		self.timerInterval	= KGNoValidTime ;
@@ -42,13 +39,10 @@
 		   context: nil] ;
 }
 
-- (void) setNextState: (KGGameState) nextstate withGlyphSentence: (struct KGGlyphSentence) sentence withGlyphKind: (KGGlyphKind) kind
-      withMaxGlyphNum: (unsigned int) maxnum withProcessedGlyphNum: (unsigned int) procnum
+- (void) setNextState: (KGGameState) nextstate withGlyphSentence: (struct KGGlyphSentence) sentence
 {
 	self.currentSentence	= sentence ;
-	self.currentGlyphKind	= kind ;
-	self.maxGlyphNum	= maxnum ;
-	self.processedGlyphNum	= procnum ;
+	self.currentGlyphIndex	= 0 ;
 	self.state		= nextstate ;
 }
 

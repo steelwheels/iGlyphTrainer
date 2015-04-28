@@ -27,10 +27,7 @@ static const double	KGNoValidTime		= -1.0 ;
  * questionGlyph has valid value when the state is KGDisplayQuestionState
  */
 @property (assign, nonatomic) struct KGGlyphSentence	currentSentence ;
-@property (assign, nonatomic) KGGlyphKind		currentGlyphKind ;
-
-@property (assign, nonatomic) unsigned int		maxGlyphNum ;
-@property (assign, nonatomic) unsigned int		processedGlyphNum ;
+@property (assign, nonatomic) unsigned int		currentGlyphIndex ;
 @property (assign, nonatomic) double			currentTime ;
 @property (assign, nonatomic) double			timerInterval ;
 
@@ -39,7 +36,6 @@ static const double	KGNoValidTime		= -1.0 ;
 - (instancetype) init ;
 - (void) addStateObserver: (NSObject *) observer ;
 
-- (void) setNextState: (KGGameState) nextstate withGlyphSentence: (struct KGGlyphSentence) sentence withGlyphKind: (KGGlyphKind) kind
-      withMaxGlyphNum: (unsigned int) maxnum withProcessedGlyphNum: (unsigned int) procnum ;
+- (void) setNextState: (KGGameState) nextstate withGlyphSentence: (struct KGGlyphSentence) sentence ;
 
 @end
