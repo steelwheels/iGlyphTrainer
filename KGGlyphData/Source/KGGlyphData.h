@@ -23,5 +23,6 @@ FOUNDATION_EXPORT const unsigned char KGGlyphDataVersionString[];
 #import <KGGlyphData/KGGlyphStrokeArray.h>
 #import <KGGlyphData/KGGlyphName.h>
 #import <KGGlyphData/KGGlyphSentence.h>
+#import <KGGlyphData/KGGlyphHackTime.h>
 
 

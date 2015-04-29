@@ -21,6 +21,8 @@
 		054B44451AC9B22C007E35BE /* KGGlyphName.h in Headers */ = {isa = PBXBuildFile; fileRef = 054B44431AC9B22C007E35BE /* KGGlyphName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B44441AC9B22C007E35BE /* KGGlyphName.m */; };
 		05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AC00D61AB5917A0005E32E /* UnitTest.m */; };
+		05C2A5881AF147AB00C96902 /* KGGlyphHackTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C2A5861AF147AB00C96902 /* KGGlyphHackTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C2A5891AF147AB00C96902 /* KGGlyphHackTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C2A5871AF147AB00C96902 /* KGGlyphHackTime.m */; };
 		05DB0A0E1AF0F9C60033B7DC /* KGGlyphStrokeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DB0A0C1AF0F9C60033B7DC /* KGGlyphStrokeArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DB0A0F1AF0F9C60033B7DC /* KGGlyphStrokeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DB0A0D1AF0F9C60033B7DC /* KGGlyphStrokeArray.m */; };
 		05DB0A111AF0FA4E0033B7DC /* UTGlyphStrokeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DB0A101AF0FA4E0033B7DC /* UTGlyphStrokeArray.m */; };
@@ -82,6 +84,8 @@
 		054B44441AC9B22C007E35BE /* KGGlyphName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphName.m; sourceTree = "<group>"; };
 		05AC00D41AB5917A0005E32E /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05AC00D61AB5917A0005E32E /* UnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
+		05C2A5861AF147AB00C96902 /* KGGlyphHackTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphHackTime.h; sourceTree = "<group>"; };
+		05C2A5871AF147AB00C96902 /* KGGlyphHackTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphHackTime.m; sourceTree = "<group>"; };
 		05DB0A0C1AF0F9C60033B7DC /* KGGlyphStrokeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStrokeArray.h; sourceTree = "<group>"; };
 		05DB0A0D1AF0F9C60033B7DC /* KGGlyphStrokeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStrokeArray.m; sourceTree = "<group>"; };
 		05DB0A101AF0FA4E0033B7DC /* UTGlyphStrokeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTGlyphStrokeArray.m; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				054B44441AC9B22C007E35BE /* KGGlyphName.m */,
 				05104CF71AD168B200C614BB /* KGGlyphSentence.h */,
 				05104CF81AD168B200C614BB /* KGGlyphSentence.m */,
+				05C2A5861AF147AB00C96902 /* KGGlyphHackTime.h */,
+				05C2A5871AF147AB00C96902 /* KGGlyphHackTime.m */,
 				05226E0C1AB466C10089AA7D /* Supporting Files */,
 			);
 			name = Source;
@@ -179,6 +185,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C2A5881AF147AB00C96902 /* KGGlyphHackTime.h in Headers */,
 				05DB0A0E1AF0F9C60033B7DC /* KGGlyphStrokeArray.h in Headers */,
 				05104CF91AD168B200C614BB /* KGGlyphSentence.h in Headers */,
 				054B44451AC9B22C007E35BE /* KGGlyphName.h in Headers */,
@@ -320,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C2A5891AF147AB00C96902 /* KGGlyphHackTime.m in Sources */,
 				05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */,
 				054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */,
 				05DB0A0F1AF0F9C60033B7DC /* KGGlyphStrokeArray.m in Sources */,
@@ -620,6 +628,7 @@
 				05DB0A171AF0FF4A0033B7DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
