@@ -19,7 +19,5 @@ SelectGlyphSentence(void)
 	unsigned int sentnum = KGGetSentenceNum(sentlen) ;
 	unsigned int sentidx = (unsigned int) [CNRandom randomIntegerBetween: 0 and: sentnum-1] ;
 	
-	printf("select sentence: len %u, index %u (min %u -> max %u)\n", sentlen, sentidx, minlen, maxlen) ;
-	
 	return KGGetSentence(sentlen, sentidx) ;
 }

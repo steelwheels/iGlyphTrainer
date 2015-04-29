@@ -26,6 +26,7 @@
 	if((self = [super init]) != nil){
 		gameStatus = status ;
 		countDownTimer = nil ;
+		KGInitGlyphStrokeArray(&inputStrokes) ;
 	}
 	return self ;
 }
@@ -104,7 +105,6 @@
 
 - (void) glyphEditingEnded: (const struct KGGlyphStroke *) stroke
 {
-	(void) stroke ;
 	switch(gameStatus.state){
 		case KGIdleState:
 		case KGDisplayQuestionState:
@@ -112,6 +112,9 @@
 			
 		} break ;
 		case KGInputAnswerState: {
+			/* Keep the input stroke */
+			KGAddStrokeToArray(&inputStrokes, stroke) ;
+
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 			unsigned int index = gameStatus.currentGlyphIndex ;
 			printf("*** %s current index : %u\n", __func__, index) ;
@@ -148,7 +151,8 @@
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence] ;
 
-	double timelimit = sentence.wordNum * 3.0 ;
+	KGInitGlyphStrokeArray(&inputStrokes) ;
+	double timelimit = KGCalcTimeForHacking(&sentence) ;
 	double interval  = 0.2 ;
 	
 	gameStatus.currentTime		= 0.0 ;
@@ -163,6 +167,9 @@
 {
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence] ;
+	
+	/* Transfer to next */
+	KGDestroyGlyphStrokeArray(&inputStrokes) ;
 	[self setNextState: KGIdleState] ;
 }
 
