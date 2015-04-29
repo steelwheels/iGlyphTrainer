@@ -148,7 +148,9 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 {
 	unsigned int i ;
 	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
-		CGRect bounds = CNBoundsOfCircle(&(ginfo->vertex[i])) ;
+		struct CNCircle vertex = ginfo->vertex[i] ;
+		vertex.radius *= 2.0 ;
+		CGRect bounds = CNBoundsOfCircle(&vertex) ;
 		if(CGRectContainsPoint(bounds, point)){
 			*vertexid = i ;
 			return true ;
