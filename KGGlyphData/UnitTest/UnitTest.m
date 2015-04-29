@@ -14,6 +14,15 @@ main(int argc, const char * argv[]) {
 	unsigned int	errorcount = 0 ;
 	@autoreleasepool {
 		printTitle("UTHackProgress") ;	//errorcount += UTHackProgress() ? 0 : 1 ;
+		
+		BOOL result = YES ;
+		result &= UTGlyphStrokeArray() ;
+		
+		if(result){
+			puts("*** Summary : OK") ;
+		} else {
+			puts("*** Summary : NG") ;
+		}
 	}
 	return errorcount == 0 ? 0 : 1 ;
 }

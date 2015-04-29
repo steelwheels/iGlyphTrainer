@@ -1,0 +1,29 @@
+****************************************
+* UTHackProgress
+****************************************
+** init state
+[stroke 0
+]
+** added state
+[stroke 1
+{stroke edgeCount=2
+ {0, 1}
+ {1, 2}
+}
+]
+** added state
+[stroke 2
+{stroke edgeCount=2
+ {0, 1}
+ {1, 2}
+}
+{stroke edgeCount=3
+ {3, 2}
+ {2, 1}
+ {1, 0}
+}
+]
+** after destruct
+[stroke 0
+]
+*** Summary : OK

@@ -6,6 +6,7 @@
  */
 
 #import "KGGlyphEditor.h"
+#import <KGGameData/KGGameData.h>
 
 static bool
 getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint point) ;
@@ -39,6 +40,13 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 		[super setStroke: &(editableStroke.strokeBody)] ;
 		[super drawWithContext: context atLevel: level inBoundsRect: boundsrect] ;
 		if(level == KGGlyphStrokeLayer && hasBeginningVertex && hasEndingVertex){
+			KGPreference * preference = [KGPreference sharedPreference] ;
+			struct CNRGB strokecol = preference.glyphColor ;
+			
+			CGContextSetLineWidth(context, glyphInfo.vertexSize) ;
+			CGContextSetLineCap(context, kCGLineCapRound) ;
+			KCSetStrokeColor(context, strokecol) ;
+			
 			CGPoint		drawpoints[2] ;
 			drawpoints[0] = glyphInfo.vertex[beginningVertexId].center ;
 			drawpoints[1] = endingVertexPoint ;

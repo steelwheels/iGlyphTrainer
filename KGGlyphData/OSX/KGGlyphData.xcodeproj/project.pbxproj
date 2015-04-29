@@ -21,6 +21,10 @@
 		054B44451AC9B22C007E35BE /* KGGlyphName.h in Headers */ = {isa = PBXBuildFile; fileRef = 054B44431AC9B22C007E35BE /* KGGlyphName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B44441AC9B22C007E35BE /* KGGlyphName.m */; };
 		05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AC00D61AB5917A0005E32E /* UnitTest.m */; };
+		05DB0A0E1AF0F9C60033B7DC /* KGGlyphStrokeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DB0A0C1AF0F9C60033B7DC /* KGGlyphStrokeArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DB0A0F1AF0F9C60033B7DC /* KGGlyphStrokeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DB0A0D1AF0F9C60033B7DC /* KGGlyphStrokeArray.m */; };
+		05DB0A111AF0FA4E0033B7DC /* UTGlyphStrokeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DB0A101AF0FA4E0033B7DC /* UTGlyphStrokeArray.m */; };
+		05DB0A131AF0FC7B0033B7DC /* UTPrintStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DB0A121AF0FC7B0033B7DC /* UTPrintStroke.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 05226E431AB46FA60089AA7D;
 			remoteInfo = Install;
+		};
+		05DB0A181AF0FF550033B7DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05226E001AB466C10089AA7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05AC00D31AB5917A0005E32E;
+			remoteInfo = UnitTest;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -71,6 +82,11 @@
 		054B44441AC9B22C007E35BE /* KGGlyphName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphName.m; sourceTree = "<group>"; };
 		05AC00D41AB5917A0005E32E /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05AC00D61AB5917A0005E32E /* UnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
+		05DB0A0C1AF0F9C60033B7DC /* KGGlyphStrokeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStrokeArray.h; sourceTree = "<group>"; };
+		05DB0A0D1AF0F9C60033B7DC /* KGGlyphStrokeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStrokeArray.m; sourceTree = "<group>"; };
+		05DB0A101AF0FA4E0033B7DC /* UTGlyphStrokeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTGlyphStrokeArray.m; sourceTree = "<group>"; };
+		05DB0A121AF0FC7B0033B7DC /* UTPrintStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTPrintStroke.m; sourceTree = "<group>"; };
+		05DB0A1A1AF1003E0033B7DC /* unit_test.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unit_test.mk; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +136,8 @@
 				05226E341AB467670089AA7D /* KGGlyphModel.m */,
 				05226E351AB467670089AA7D /* KGGlyphStroke.h */,
 				05226E361AB467670089AA7D /* KGGlyphStroke.m */,
+				05DB0A0C1AF0F9C60033B7DC /* KGGlyphStrokeArray.h */,
+				05DB0A0D1AF0F9C60033B7DC /* KGGlyphStrokeArray.m */,
 				054B44431AC9B22C007E35BE /* KGGlyphName.h */,
 				054B44441AC9B22C007E35BE /* KGGlyphName.m */,
 				05104CF71AD168B200C614BB /* KGGlyphSentence.h */,
@@ -146,6 +164,9 @@
 				0510F0AE1AB5942A00E33696 /* KGGlyphData.framework */,
 				0510F0AD1AB5924F00E33696 /* UnitTest.h */,
 				05AC00D61AB5917A0005E32E /* UnitTest.m */,
+				05DB0A101AF0FA4E0033B7DC /* UTGlyphStrokeArray.m */,
+				05DB0A121AF0FC7B0033B7DC /* UTPrintStroke.m */,
+				05DB0A1A1AF1003E0033B7DC /* unit_test.mk */,
 			);
 			name = UnitTest;
 			path = ../UnitTest;
@@ -158,6 +179,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DB0A0E1AF0F9C60033B7DC /* KGGlyphStrokeArray.h in Headers */,
 				05104CF91AD168B200C614BB /* KGGlyphSentence.h in Headers */,
 				054B44451AC9B22C007E35BE /* KGGlyphName.h in Headers */,
 				05226E371AB467670089AA7D /* KGGlyphData.h in Headers */,
@@ -184,6 +206,21 @@
 			name = Install;
 			passBuildSettingsInEnvironment = 1;
 			productName = Install;
+		};
+		05DB0A141AF0FF4A0033B7DC /* Check */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f unit_test.mk";
+			buildConfigurationList = 05DB0A151AF0FF4A0033B7DC /* Build configuration list for PBXLegacyTarget "Check" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+				05DB0A191AF0FF550033B7DC /* PBXTargetDependency */,
+			);
+			name = Check;
+			passBuildSettingsInEnvironment = 1;
+			productName = Check;
 		};
 /* End PBXLegacyTarget section */
 
@@ -242,6 +279,9 @@
 					05AC00D31AB5917A0005E32E = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					05DB0A141AF0FF4A0033B7DC = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 05226E031AB466C10089AA7D /* Build configuration list for PBXProject "KGGlyphData" */;
@@ -259,6 +299,7 @@
 				05226E081AB466C10089AA7D /* KGGlyphData */,
 				05226E431AB46FA60089AA7D /* Install */,
 				05AC00D31AB5917A0005E32E /* UnitTest */,
+				05DB0A141AF0FF4A0033B7DC /* Check */,
 			);
 		};
 /* End PBXProject section */
@@ -281,6 +322,7 @@
 			files = (
 				05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */,
 				054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */,
+				05DB0A0F1AF0F9C60033B7DC /* KGGlyphStrokeArray.m in Sources */,
 				05226E3A1AB467670089AA7D /* KGGlyphModel.m in Sources */,
 				05104CFA1AD168B200C614BB /* KGGlyphSentence.m in Sources */,
 			);
@@ -290,7 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DB0A131AF0FC7B0033B7DC /* UTPrintStroke.m in Sources */,
 				05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */,
+				05DB0A111AF0FA4E0033B7DC /* UTGlyphStrokeArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +350,11 @@
 			isa = PBXTargetDependency;
 			target = 05226E431AB46FA60089AA7D /* Install */;
 			targetProxy = 05AC00DB1AB5918B0005E32E /* PBXContainerItemProxy */;
+		};
+		05DB0A191AF0FF550033B7DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05AC00D31AB5917A0005E32E /* UnitTest */;
+			targetProxy = 05DB0A181AF0FF550033B7DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -497,6 +546,34 @@
 			};
 			name = Release;
 		};
+		05DB0A161AF0FF4A0033B7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05DB0A171AF0FF4A0033B7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_NO_COMMON_BLOCKS = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -535,6 +612,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		05DB0A151AF0FF4A0033B7DC /* Build configuration list for PBXLegacyTarget "Check" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DB0A161AF0FF4A0033B7DC /* Debug */,
+				05DB0A171AF0FF4A0033B7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
