@@ -28,6 +28,11 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	return &(editableStroke.strokeBody) ;
 }
 
+- (void) clearGlyphStroke
+{
+	KGClearGlyphEditableStroke(&editableStroke) ;
+}
+
 - (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
 {
 	if(isEditableFlag){

@@ -23,3 +23,10 @@ KGInitGlyphEditableStroke(struct KGGlyphEditableStroke * dst)
 bool
 KGAddGlyphEditableStroke(struct KGGlyphEditableStroke * dst, uint8_t fromvt, uint8_t tovt) ;
 
+static inline void
+KGClearGlyphEditableStroke(struct KGGlyphEditableStroke * dst)
+{
+	(dst->strokeBody).edgeCount = 0 ;
+}
+
+
