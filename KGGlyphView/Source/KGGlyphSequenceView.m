@@ -38,15 +38,15 @@
 {
 	struct KGGlyphStroke stroke = KGStrokeOfGlyph(KGNilGlyph) ;
 	
-	
 	glyphEditor = [[KGGlyphEditor alloc] init] ;
+	glyphDelegate = nil ;
+	
 	[glyphEditor setStroke: &stroke] ;
 	[self setGraphicsDrawer: glyphEditor] ;
 	[self setGraphicsEditor: glyphEditor] ;
+	[self setGraphicsDelegate: self] ;
 	
-	glyphDelegate = nil ;
-	
-	[self allocateTransparentViews: KGGlyphTransparentViewNum] ;
+	[self allocateTransparentViews: KGGlyphTransparentViewNum] ;	
 }
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
@@ -109,6 +109,7 @@
 		if([glyphEditor isEditable]){
 			const struct KGGlyphStroke * stroke = [glyphEditor glyphStroke] ;
 			[glyphDelegate glyphEditingEnded: stroke] ;
+			[glyphEditor clearGlyphStroke] ;
 		}
 	}
 }
@@ -118,6 +119,7 @@
 	if(glyphDelegate){
 		if([glyphEditor isEditable]){
 			[glyphDelegate glyphEditingCancelled] ;
+			[glyphEditor clearGlyphStroke] ;
 		}
 	}
 }
