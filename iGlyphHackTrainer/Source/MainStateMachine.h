@@ -15,7 +15,10 @@
 }
 
 - (instancetype) initWithStatus: (KGGameStatus *) status ;
+
 - (void) start ;
+- (void) stop ;
+- (void) glyphEditingEnded: (const struct KGGlyphStroke *) stroke ;
 
 @end
 

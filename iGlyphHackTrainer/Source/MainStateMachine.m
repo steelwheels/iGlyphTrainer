@@ -97,6 +97,34 @@
 	[self setNextState: KGDisplayQuestionState] ;
 }
 
+- (void) stop
+{
+	[self setNextState: KGIdleState] ;
+}
+
+- (void) glyphEditingEnded: (const struct KGGlyphStroke *) stroke
+{
+	(void) stroke ;
+	switch(gameStatus.state){
+		case KGIdleState:
+		case KGDisplayQuestionState:
+		case KGEvaluateState: {
+			
+		} break ;
+		case KGInputAnswerState: {
+			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
+			unsigned int index = gameStatus.currentGlyphIndex ;
+			printf("*** %s current index : %u\n", __func__, index) ;
+			if(sentence.wordNum <= index + 1){
+				[self setNextState: KGEvaluateState] ;
+			} else {
+				gameStatus.currentGlyphIndex += 1 ;
+				gameStatus.state = KGInputAnswerState ;
+			}
+		} break ;
+	}
+}
+
 - (void) idleState
 {
 	struct KGGlyphSentence sentence = KGGetEmptySentence() ;
@@ -190,19 +218,5 @@
 
 @end
 
-@implementation MainStateMachine (InputAnswerState)
-
-- (void) glyphEditingEnded: (const struct KGGlyphStroke *) stroke
-{
-	(void) stroke ;
-	[self setNextState: KGInputAnswerState] ;
-}
-
-- (void) glyphEditingCancelled
-{
-	[self setNextState: KGIdleState] ;
-}
-
-@end
 
 

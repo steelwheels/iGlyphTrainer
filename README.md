@@ -1,6 +1,6 @@
 # iGlyphTrainer
 The repository contains the application "iGlyphTrainer"
-and some frameworks to support it.
+and some library/frameworks to support it.
 
 # Copyright
 Copyright (C) 2015 [Steel Wheels Project](https://sites.google.com/site/steelwheelsproject/).
@@ -10,14 +10,19 @@ This software is distributed under
 or [GNU LESSER GENERAL PUBLIC LICENSE Version 2.1](https://www.gnu.org/licenses/lgpl-2.1-standalone.html).
 
 # Contents
-1. [KGGlyphData](https://github.com/steelwheels/iGlyphTrainer/tree/master/KGGlyphData)
-... Define the data structure for the glyph.
-2. [KGGlyphGraphics](https://github.com/steelwheels/iGlyphTrainer/tree/master/KGGlyphGraphics)
-... Define the view function for the glyph.
+1. KGGlyphData       : Define the data structure of glyph and sentence of the glyphs
+2. KGGameData        : Define the primary data structure
+3. KGControls        : Define basic user interface controller such as label and button
+4. KGGlyphGraphics   : Define drawer and editor classes to draw/edit glyph graphics
+5. KGGlyphView       : Define view class for glyph graphics, progress bar, ...
+6. iGlyphHackTrainer : Application
 
 # Required software
 To build this application, following software is also required.
-1. [KCGraphicsView framework](https://github.com/steelwheels/KiwiControls/tree/master/KCGraphicsView)
-and [KiwiControl framework](https://github.com/steelwheels/KiwiControls/tree/master/KiwiControl) in [KiwiControl package](https://github.com/steelwheels/KiwiControls)
+When you install these framework, keep the order to keep the dependency.
+1. [Coconut framework](https://github.com/steelwheels/Coconut)
 2. [CoconutGraphics framework](https://github.com/steelwheels/CoconutGraphics)
-3. [Coconut framework](https://github.com/steelwheels/Coconut)
+3. [KiwiControl frameworks](https://github.com/steelwheels/KiwiControls):
+  KiwiContols contains some frameworks for this application.
+  * KiwiControl: Basic data structure for user interface controllers
+  * KCGraphicsView: The 2D graphics view based on CoreGraphics

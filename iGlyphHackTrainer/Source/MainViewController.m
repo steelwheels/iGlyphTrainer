@@ -16,6 +16,9 @@
 - (void) startButtonPressed: (KGStartButton *) button ;
 @end
 
+@interface MainViewController (GlyphSequenceSupport) <KGGlyphSequenceEditiing>
+@end
+
 @implementation MainViewController
 
 - (void)viewDidLoad
@@ -79,3 +82,20 @@
 }
 
 @end
+
+@implementation MainViewController (GlyphSequenceSupport)
+
+- (void) glyphEditingEnded: (const struct KGGlyphStroke *) stroke
+{
+	MainStateMachine * statemachine = [MainModel sharedStateMachine] ;
+	[statemachine glyphEditingEnded: stroke] ;
+}
+
+- (void) glyphEditingCancelled
+{
+	MainStateMachine * statemachine = [MainModel sharedStateMachine] ;
+	[statemachine glyphEditingCancelled] ;
+}
+
+@end
+
