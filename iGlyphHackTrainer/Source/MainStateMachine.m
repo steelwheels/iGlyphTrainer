@@ -148,7 +148,7 @@
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence] ;
 
-	double timelimit = sentence.wordNum * 1.0 ;
+	double timelimit = sentence.wordNum * 3.0 ;
 	double interval  = 0.2 ;
 	
 	gameStatus.currentTime		= 0.0 ;

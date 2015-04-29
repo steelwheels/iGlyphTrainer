@@ -62,21 +62,18 @@
 - (void) moveToSetupViewButtonPressed: (UIBarButtonItem *) item
 {
 	(void) item ;
-	puts("moveToSetupViewButtonPressed:") ;
 	[self performSegueWithIdentifier: @"SegueFromMainToSetup" sender: self] ;
 }
 
 - (void) moveToAboutViewButtonPressed: (UIBarButtonItem *) item
 {
 	(void) item ;
-	puts("moveToAboutViewButtonPressed: ") ;
 	[self performSegueWithIdentifier: @"SegueFromMainToAbout" sender: self] ;
 }
 
 - (void) startButtonPressed: (KGStartButton *) button
 {
 	(void) button ;
-	puts("Start button pressed") ;
 	MainStateMachine * statemachine = [MainModel sharedStateMachine] ;
 	[statemachine start] ;
 }
