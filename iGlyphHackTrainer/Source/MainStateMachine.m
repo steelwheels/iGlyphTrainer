@@ -25,7 +25,7 @@
 {
 	if((self = [super init]) != nil){
 		gameStatus = status ;
-		countDownTimer = nil ;
+		countDownTimer = [[CNCountTimer alloc] init] ;
 		KGInitGlyphStrokeArray(&inputStrokes) ;
 	}
 	return self ;
@@ -117,7 +117,7 @@
 
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 			unsigned int index = gameStatus.currentGlyphIndex ;
-			printf("*** %s current index : %u\n", __func__, index) ;
+			//printf("*** %s current index : %u\n", __func__, index) ;
 			if(sentence.wordNum <= index + 1){
 				[self setNextState: KGEvaluateState] ;
 			} else {
@@ -139,8 +139,7 @@
 	struct KGGlyphSentence sentence = SelectGlyphSentence() ;
 	unsigned int maxnum = sentence.wordNum ;
 	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence] ;
-	
-	countDownTimer = [[CNCountTimer alloc] init] ;
+
 	[countDownTimer repeatWithCount: maxnum - 1
 			   withInterval: 1.0
 			   withDelegate: self] ;
@@ -155,9 +154,8 @@
 	double timelimit = KGCalcTimeForHacking(&sentence) ;
 	double interval  = 0.2 ;
 	
-	gameStatus.currentTime		= 0.0 ;
+	gameStatus.currentTime		= timelimit ;
 	gameStatus.timerInterval	= interval ;
-	countDownTimer = [[CNCountTimer alloc] init] ;
 	[countDownTimer repeatWithCount: timelimit / interval
 			   withInterval: interval
 			   withDelegate: self] ;
@@ -165,6 +163,10 @@
 
 - (void) evaluateState
 {
+	[countDownTimer invalidate] ;
+	gameStatus.currentTime		= KGNoValidTime ;
+	gameStatus.timerInterval	= KGNoValidTime ;
+	
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence] ;
 	
@@ -193,7 +195,7 @@
 			gameStatus.state = KGDisplayQuestionState ;
 		} break ;
 		case KGInputAnswerState: {
-			gameStatus.currentTime += gameStatus.timerInterval ;
+			gameStatus.currentTime -= gameStatus.timerInterval ;
 			gameStatus.state = KGInputAnswerState ;
 		} break ;
 		case KGEvaluateState: {
@@ -213,8 +215,6 @@
 			[self setNextState: KGInputAnswerState] ;
 		} break ;
 		case KGInputAnswerState: {
-			gameStatus.currentTime		= KGNoValidTime ;
-			gameStatus.timerInterval	= KGNoValidTime ;
 			[self setNextState: KGEvaluateState] ;
 		} break ;
 		case KGEvaluateState: {
