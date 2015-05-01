@@ -29,33 +29,33 @@ static struct KGGlyphStroke s_stroke2 = {
 } ;
 
 static void
-printGlyphStrokeArray(struct KGGlyphStrokeArray * array) ;
+printGlyphInputStrokes(const struct KGGlyphInputStrokes * array) ;
 
 BOOL
 UTGlyphStrokeArray(void)
 {
-	struct KGGlyphStrokeArray	strokearray ;
-	KGInitGlyphStrokeArray(&strokearray) ;
+	const struct KGGlyphInputStrokes * strokes ;
+	strokes = KGSharedGlyphInputStrokes() ;
 	puts("** init state") ;
-	printGlyphStrokeArray(&strokearray) ;
+	printGlyphInputStrokes(strokes) ;
 	
-	KGAddStrokeToArray(&strokearray, &s_stroke1) ;
+	KGAddStrokeToSharedInputStrokes(&s_stroke1) ;
 	puts("** added state") ;
-	printGlyphStrokeArray(&strokearray) ;
+	printGlyphInputStrokes(strokes) ;
 	
-	KGAddStrokeToArray(&strokearray, &s_stroke2) ;
+	KGAddStrokeToSharedInputStrokes(&s_stroke2) ;
 	puts("** added state") ;
-	printGlyphStrokeArray(&strokearray) ;
+	printGlyphInputStrokes(strokes) ;
 	
-	KGDestroyGlyphStrokeArray(&strokearray) ;
+	KGClearSharedGlyphInputStrokes() ;
 	puts("** after destruct") ;
-	printGlyphStrokeArray(&strokearray) ;
+	printGlyphInputStrokes(strokes) ;
 	
 	return YES ;
 }
 
 static void
-printGlyphStrokeArray(struct KGGlyphStrokeArray * array)
+printGlyphInputStrokes(const struct KGGlyphInputStrokes * array)
 {
 	unsigned int num = array->strokeNum ;
 	printf("[stroke %u\n", num) ;

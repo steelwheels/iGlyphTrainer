@@ -8,7 +8,7 @@
 #import <KGGlyphData/KGGlyphData.h>
 
 BOOL
-UTGlyphStrokeArray(void) ;
+UTGlyphInputStrokes(void) ;
 
 void
 UTPrintStroke(const struct KGGlyphStroke * src) ;
