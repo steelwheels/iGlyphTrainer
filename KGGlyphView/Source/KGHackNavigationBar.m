@@ -7,6 +7,8 @@
 
 #import "KGHackNavigationBar.h"
 
+#if TARGET_OS_IPHONE
+
 @implementation KGHackNavigationBar
 
 - (void) setupProgressBar
@@ -22,3 +24,5 @@
 }
 
 @end
+
+#endif

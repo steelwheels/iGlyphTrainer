@@ -5,6 +5,7 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
+#import "KGGlyphViewType.h"
 #import <KGGlyphGraphics/KGGlyphGraphics.h>
 
 @protocol KGGlyphSequenceEditiing <NSObject>

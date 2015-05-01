@@ -8,6 +8,8 @@
 #import "KGGlyphViewType.h"
 #import "KGHackProgressView.h"
 
+#if TARGET_OS_IPHONE
+
 @interface KGHackNavigationBar : UINavigationBar
 
 - (void) setupProgressBar ;
@@ -15,3 +17,5 @@
 - (KGHackProgressView *) progressView ;
 
 @end
+
+#endif

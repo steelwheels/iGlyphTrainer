@@ -17,6 +17,8 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphLay
 {
 	if((self = [super init]) != nil){
 		glyphStroke = KGStrokeOfGlyph(KGNilGlyph) ;
+		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+		strokeColor = ctable.goldenrod ;
 	}
 	return self ;
 }
