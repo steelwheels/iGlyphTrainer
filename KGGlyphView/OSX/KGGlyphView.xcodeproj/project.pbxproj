@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0584D0121AF3ABBE0020A935 /* KGGlyphSequenceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D0071AF3ABBE0020A935 /* KGGlyphSequenceView.h */; };
+		0584D0121AF3ABBE0020A935 /* KGGlyphSequenceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D0071AF3ABBE0020A935 /* KGGlyphSequenceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0584D0131AF3ABBE0020A935 /* KGGlyphSequenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0584D0081AF3ABBE0020A935 /* KGGlyphSequenceView.m */; };
-		0584D0141AF3ABBE0020A935 /* KGGlyphView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D0091AF3ABBE0020A935 /* KGGlyphView.h */; };
+		0584D0141AF3ABBE0020A935 /* KGGlyphView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D0091AF3ABBE0020A935 /* KGGlyphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0584D0151AF3ABBE0020A935 /* KGGlyphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0584D00A1AF3ABBE0020A935 /* KGGlyphView.m */; };
-		0584D0161AF3ABBE0020A935 /* KGGlyphViewType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D00B1AF3ABBE0020A935 /* KGGlyphViewType.h */; };
-		0584D0171AF3ABBE0020A935 /* KGHackNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D00C1AF3ABBE0020A935 /* KGHackNavigationBar.h */; };
+		0584D0161AF3ABBE0020A935 /* KGGlyphViewType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D00B1AF3ABBE0020A935 /* KGGlyphViewType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0584D0171AF3ABBE0020A935 /* KGHackNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D00C1AF3ABBE0020A935 /* KGHackNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0584D0181AF3ABBE0020A935 /* KGHackNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0584D00D1AF3ABBE0020A935 /* KGHackNavigationBar.m */; };
-		0584D0191AF3ABBE0020A935 /* KGHackProgressDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D00E1AF3ABBE0020A935 /* KGHackProgressDrawer.h */; };
+		0584D0191AF3ABBE0020A935 /* KGHackProgressDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D00E1AF3ABBE0020A935 /* KGHackProgressDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0584D01A1AF3ABBE0020A935 /* KGHackProgressDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0584D00F1AF3ABBE0020A935 /* KGHackProgressDrawer.m */; };
-		0584D01B1AF3ABBE0020A935 /* KGHackProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D0101AF3ABBE0020A935 /* KGHackProgressView.h */; };
+		0584D01B1AF3ABBE0020A935 /* KGHackProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D0101AF3ABBE0020A935 /* KGHackProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0584D01C1AF3ABBE0020A935 /* KGHackProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0584D0111AF3ABBE0020A935 /* KGHackProgressView.m */; };
 		0584D01E1AF3AC020020A935 /* KGGlyphGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0584D01D1AF3AC020020A935 /* KGGlyphGraphics.framework */; };
 		05F8D8861AF41B520089415E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F8D8851AF41B520089415E /* AppDelegate.m */; };
@@ -25,6 +25,7 @@
 		05F8D88E1AF41B8D0089415E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D88C1AF41B8D0089415E /* Main.storyboard */; };
 		05F8D8901AF41BA30089415E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F8D88F1AF41BA30089415E /* main.m */; };
 		05F8D8921AF41BD50089415E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D8911AF41BD50089415E /* Info.plist */; };
+		05FD11141AF43C1F00E1563C /* KGGlyphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FD11131AF43C1F00E1563C /* KGGlyphView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		05F8D88D1AF41B8D0089415E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Evaluate/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05F8D88F1AF41BA30089415E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Evaluate/main.m; sourceTree = "<group>"; };
 		05F8D8911AF41BD50089415E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../UnitTest/Evaluate/Info.plist; sourceTree = SOURCE_ROOT; };
+		05FD11131AF43C1F00E1563C /* KGGlyphView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphView.framework; path = ../../../../Library/Frameworks/KGGlyphView.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05FD11141AF43C1F00E1563C /* KGGlyphView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +152,7 @@
 		05C653E11AF41A36007CC6EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05FD11131AF43C1F00E1563C /* KGGlyphView.framework */,
 				05F8D8911AF41BD50089415E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -484,10 +488,10 @@
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -505,10 +509,10 @@
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
@@ -518,12 +522,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = ../UnitTest/Evaluate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -534,8 +547,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = ../UnitTest/Evaluate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

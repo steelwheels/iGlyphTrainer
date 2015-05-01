@@ -6,10 +6,11 @@
 //  Copyright (c) 2015年 Steel Wheels Project. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <KGGlyphView/KGGlyphView.h>
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet KGGlyphSequenceView *glyphSequenceView;
 
 @end
 
