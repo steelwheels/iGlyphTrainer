@@ -26,7 +26,6 @@
 	if((self = [super init]) != nil){
 		gameStatus = status ;
 		countDownTimer = [[CNCountTimer alloc] init] ;
-		KGInitGlyphStrokeArray(&inputStrokes) ;
 	}
 	return self ;
 }
@@ -113,7 +112,7 @@
 		} break ;
 		case KGInputAnswerState: {
 			/* Keep the input stroke */
-			KGAddStrokeToArray(&inputStrokes, stroke) ;
+			KGAddStrokeToSharedInputStrokes(stroke) ;
 
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 			unsigned int index = gameStatus.currentGlyphIndex ;
@@ -150,7 +149,9 @@
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence] ;
 
-	KGInitGlyphStrokeArray(&inputStrokes) ;
+	/* Initialize the inputted strokes */
+	KGClearSharedGlyphInputStrokes() ;
+
 	double timelimit = KGCalcTimeForHacking(&sentence) ;
 	double interval  = 0.2 ;
 	
@@ -171,7 +172,6 @@
 	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence] ;
 	
 	/* Transfer to next */
-	KGDestroyGlyphStrokeArray(&inputStrokes) ;
 	[self setNextState: KGIdleState] ;
 }
 

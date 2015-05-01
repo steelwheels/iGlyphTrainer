@@ -12,7 +12,6 @@
 {
 	KGGameStatus *			gameStatus ;
 	CNCountTimer *			countDownTimer ;
-	struct KGGlyphStrokeArray	inputStrokes ;
 }
 
 - (instancetype) initWithStatus: (KGGameStatus *) status ;
