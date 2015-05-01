@@ -1,5 +1,5 @@
 ****************************************
 * UTGameStatus
 ****************************************
-objeserve: keypath=state -> current status = 1, max glyph num = 3, processed glyph no = 1
-objeserve: keypath=state -> current status = 1, max glyph num = 3, processed glyph no = 2
+objeserve: keypath=state state = {state:1, index:0, time:1.000000, interval:1.000000}
+objeserve: keypath=state state = {state:2, index:2, time:2.000000, interval:2.000000}

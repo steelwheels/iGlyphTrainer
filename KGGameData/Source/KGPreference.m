@@ -8,7 +8,6 @@
 #import "KGPreference.h"
 
 @interface KGPreference ()
-@property (assign, nonatomic) struct CNRGB	glyphColor ;
 @property (assign, nonatomic) double		questionInterval ;
 @property (assign, nonatomic) unsigned int	maxQuestionSentenceLength ;
 @property (assign, nonatomic) unsigned int	minQuestionSentenceLength ;
@@ -18,7 +17,7 @@
 
 @implementation KGPreference
 
-@synthesize glyphColor, questionInterval, maxQuestionSentenceLength, minQuestionSentenceLength ;
+@synthesize questionInterval, maxQuestionSentenceLength, minQuestionSentenceLength ;
 @synthesize doDisplayGlyphNameAtQuestionState, doDisplayGlyphNameAtAnswerState ;
 
 + (KGPreference *) sharedPreference
@@ -34,8 +33,6 @@
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
-		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
-		self.glyphColor				= ctable.goldenrod ;
 		self.questionInterval			= 1.0 ;
 		self.maxQuestionSentenceLength		= 5 ;
 		self.minQuestionSentenceLength		= 2 ;

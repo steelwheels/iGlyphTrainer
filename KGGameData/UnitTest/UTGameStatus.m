@@ -7,6 +7,9 @@
 
 #import "UnitTest.h"
 
+static void
+printStatus(KGGameStatus * status) ;
+
 @interface UTObserver : NSObject
 @end
 
@@ -22,10 +25,7 @@
 	printf("objeserve: keypath=%s ", [keyPath UTF8String]) ;
 	
 	KGGameStatus * status = object ;
-	printf("-> current status = %u, max glyph num = %u, processed glyph no = %u",
-	       status.state, status.maxGlyphNum, status.processedGlyphNum) ;
-	
-	fputc('\n', stdout) ;
+	printStatus(status) ;
 }
 
 @end
@@ -37,13 +37,25 @@ UTGameStatus(void)
 	UTObserver *	observer = [[UTObserver alloc] init] ;
 	
 	[status addStateObserver: observer] ;
-	status.maxGlyphNum		= 3 ;
-	status.processedGlyphNum	= 1 ;
+	status.currentTime		= 1.0 ;
+	status.timerInterval		= 1.0 ;
 	status.state			= KGDisplayQuestionState ;
 	
-	status.maxGlyphNum		= 3 ;
-	status.processedGlyphNum	= 2 ;
-	status.state			= KGDisplayQuestionState ;
+	status.currentGlyphIndex	= 2 ;
+	status.currentTime		= 2.0 ;
+	status.timerInterval		= 2.0 ;
+	status.state			= KGInputAnswerState ;
 	
 	return YES ;
 }
+
+static void
+printStatus(KGGameStatus * status)
+{
+	printf("state = {state:%u, index:%u, time:%lf, interval:%lf}\n",
+	       status.state,
+	       status.currentGlyphIndex,
+	       status.currentTime,
+	       status.timerInterval) ;
+}
+
