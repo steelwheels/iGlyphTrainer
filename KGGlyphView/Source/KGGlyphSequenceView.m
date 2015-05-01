@@ -39,7 +39,7 @@
 	vertexDrawer = [[KGGlyphVertexDrawer alloc] init] ;
 	strokeDrawer = [[KGGlyphStrokeDrawer alloc] init] ;
 	strokeEditor = [[KGGlyphStrokeEditor alloc] init] ;
-	
+
 	[self addGraphicsDrawer: vertexDrawer withDelegate: nil] ;
 	[self addGraphicsDrawer: strokeDrawer withDelegate: nil] ;
 	[self addGraphicsDrawer: strokeEditor withDelegate: self] ;
@@ -54,40 +54,32 @@
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
 {
-	printf("**** %s\n", __func__) ;
-	
 	(void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
 			KGGameStatus * status = object ;
-			
 			switch(status.state){
 				case KGDisplayQuestionState: {
 					struct KGGlyphSentence sentence = status.currentSentence ;
 					unsigned int index = status.currentGlyphIndex ;
 					KGGlyphKind gkind = sentence.glyphWords[index] ;
-					printf("**** %s (0) %u\n", __func__, gkind) ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
 					[strokeDrawer setStroke: &gstroke] ;
 					[strokeEditor setEditable: NO] ;
-					[self setAllNeedsDisplay] ;
 				} break ;
 				case KGInputAnswerState: {
-					printf("**** %s (1)\n", __func__) ;
-					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
-					[strokeDrawer setStroke: &gstroke] ;
+					struct KGGlyphStroke nilstroke = KGStrokeOfGlyph(KGNilGlyph) ;
+					[strokeDrawer setStroke: &nilstroke] ;
 					[strokeEditor setEditable: YES] ;
-					[self setAllNeedsDisplay] ;
 				} break ;
 				case KGIdleState:
 				case KGEvaluateState: {
-					printf("**** %s (2)\n", __func__) ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
 					[strokeDrawer setStroke: &gstroke] ;
 					[strokeEditor setEditable: NO] ;
-					[self setAllNeedsDisplay] ;
 				} break ;
 			}
+			[self setAllNeedsDisplay] ;
 		}
 	}
 }
