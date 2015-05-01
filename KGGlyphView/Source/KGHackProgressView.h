@@ -6,7 +6,11 @@
  */
 
 #import "KGGlyphViewType.h"
+#import "KGHackProgressDrawer.h"
 
 @interface KGHackProgressView : KCGraphicsView 
+{
+	KGHackProgressDrawer *		progressDrawer ;
+}
 
 @end

@@ -30,7 +30,7 @@
 	[self.nextButton addTarget: self action:@selector(pressNextButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	[self.prevButton addTarget: self action:@selector(pressPrevButton:) forControlEvents: UIControlEventTouchUpInside] ;
 	
-	struct KGGlyphSentence sentence = KGGet2WordSentence(0) ;
+	struct KGGlyphSentence sentence = KGGet5WordSentence(0) ;
 	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence] ;
 }
 

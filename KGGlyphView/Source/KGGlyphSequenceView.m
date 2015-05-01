@@ -8,7 +8,7 @@
 #import "KGGlyphSequenceView.h"
 #import <KGGameData/KGGameData.h>
 
-@interface KGGlyphSequenceView ()
+@interface KGGlyphSequenceView () <KCGraphicsDelegate>
 - (void) setupGlyphSequenceView ;
 @end
 
@@ -36,21 +36,26 @@
 
 - (void) setupGlyphSequenceView
 {
-	struct KGGlyphStroke stroke = KGStrokeOfGlyph(KGNilGlyph) ;
+	vertexDrawer = [[KGGlyphVertexDrawer alloc] init] ;
+	strokeDrawer = [[KGGlyphStrokeDrawer alloc] init] ;
+	strokeEditor = [[KGGlyphStrokeEditor alloc] init] ;
 	
-	glyphEditor = [[KGGlyphEditor alloc] init] ;
-	glyphDelegate = nil ;
-	
-	[glyphEditor setStroke: &stroke] ;
-	[self setGraphicsDrawer: glyphEditor] ;
-	[self setGraphicsEditor: glyphEditor] ;
-	[self setGraphicsDelegate: self] ;
-	
-	[self allocateTransparentViews: KGGlyphTransparentViewNum] ;	
+	[self addGraphicsDrawer: vertexDrawer withDelegate: nil] ;
+	[self addGraphicsDrawer: strokeDrawer withDelegate: nil] ;
+	[self addGraphicsDrawer: strokeEditor withDelegate: self] ;
+}
+
+- (void) setEditable: (BOOL) flag
+{
+	if(strokeEditor){
+		[strokeEditor setEditable: flag] ;
+	}
 }
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
 {
+	printf("**** %s\n", __func__) ;
+	
 	(void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
@@ -61,22 +66,25 @@
 					struct KGGlyphSentence sentence = status.currentSentence ;
 					unsigned int index = status.currentGlyphIndex ;
 					KGGlyphKind gkind = sentence.glyphWords[index] ;
+					printf("**** %s (0) %u\n", __func__, gkind) ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
-					[glyphEditor setStroke: &gstroke] ;
-					[glyphEditor setEditable: NO] ;
+					[strokeDrawer setStroke: &gstroke] ;
+					[strokeEditor setEditable: NO] ;
 					[self setAllNeedsDisplay] ;
 				} break ;
 				case KGInputAnswerState: {
+					printf("**** %s (1)\n", __func__) ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
-					[glyphEditor setStroke: &gstroke] ;
-					[glyphEditor setEditable: YES] ;
+					[strokeDrawer setStroke: &gstroke] ;
+					[strokeEditor setEditable: YES] ;
 					[self setAllNeedsDisplay] ;
 				} break ;
 				case KGIdleState:
 				case KGEvaluateState: {
+					printf("**** %s (2)\n", __func__) ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
-					[glyphEditor setStroke: &gstroke] ;
-					[glyphEditor setEditable: NO] ;
+					[strokeDrawer setStroke: &gstroke] ;
+					[strokeEditor setEditable: NO] ;
 					[self setAllNeedsDisplay] ;
 				} break ;
 			}
@@ -84,9 +92,9 @@
 	}
 }
 
-- (void) setEditable: (BOOL) flag
+- (void) setDelegate: (id <KGGlyphSequenceEditiing>) delegate
 {
-	[glyphEditor setEditable: flag] ;
+	glyphDelegate = delegate ;
 }
 
 - (void) setAllNeedsDisplay
@@ -98,18 +106,13 @@
 	[self setNeedsDisplay] ;
 }
 
-- (void) setDelegate: (id <KGGlyphSequenceEditiing>) delegate
-{
-	glyphDelegate = delegate ;
-}
-
 - (void) editingGraphicsEnded
 {
 	if(glyphDelegate){
-		if([glyphEditor isEditable]){
-			const struct KGGlyphStroke * stroke = [glyphEditor glyphStroke] ;
+		if([strokeEditor isEditable]){
+			const struct KGGlyphStroke * stroke = [strokeEditor glyphStroke] ;
 			[glyphDelegate glyphEditingEnded: stroke] ;
-			[glyphEditor clearGlyphStroke] ;
+			[strokeEditor clearGlyphStroke] ;
 		}
 	}
 }
@@ -117,9 +120,9 @@
 - (void) editingGraphicsCancelled
 {
 	if(glyphDelegate){
-		if([glyphEditor isEditable]){
+		if([strokeEditor isEditable]){
 			[glyphDelegate glyphEditingCancelled] ;
-			[glyphEditor clearGlyphStroke] ;
+			[strokeEditor clearGlyphStroke] ;
 		}
 	}
 }

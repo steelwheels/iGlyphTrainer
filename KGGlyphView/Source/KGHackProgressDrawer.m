@@ -28,10 +28,8 @@ drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curno, struc
 	return self ;
 }
 
-- (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) bounds
-{
-	(void) level ;
-	
+- (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) bounds
+{	
 	if(maxGlyphNum == 0){
 		return ;
 	}
@@ -43,6 +41,34 @@ drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curno, struc
 	}
 
 	drawHexagon(context, maxGlyphNum, processedGlyphNum, hackHexagon) ;
+}
+
+- (BOOL) isEditable
+{
+	return NO ;
+}
+
+- (void) setEditable: (BOOL) flag
+{
+	(void) flag ;
+}
+
+- (void) touchesBegan: (CGPoint) point inBoundsRect: (CGRect) boundsrect
+{
+	(void) point ; (void) boundsrect ;
+}
+
+- (void) touchesMoved: (CGPoint) newpoint inBoundsRect: (CGRect) boundsrect
+{
+	(void) newpoint ; (void) boundsrect ;
+}
+
+- (void) touchesEnded
+{
+}
+
+- (void) touchesCancelled
+{
 }
 
 @end

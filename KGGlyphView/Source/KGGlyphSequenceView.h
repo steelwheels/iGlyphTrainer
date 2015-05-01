@@ -14,7 +14,10 @@
 
 @interface KGGlyphSequenceView : KCGraphicsView <KCGraphicsDelegate>
 {
-	KGGlyphEditor *			glyphEditor ;
+	KGGlyphVertexDrawer *		vertexDrawer ;
+	KGGlyphStrokeDrawer *		strokeDrawer ;
+	KGGlyphStrokeEditor *		strokeEditor ;
+	
 	id <KGGlyphSequenceEditiing>	glyphDelegate ;
 }
 

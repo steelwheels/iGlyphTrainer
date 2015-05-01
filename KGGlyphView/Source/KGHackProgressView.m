@@ -6,15 +6,14 @@
  */
 
 #import "KGHackProgressView.h"
-#import "KGHackProgressDrawer.h"
 
 @implementation KGHackProgressView
 
 - (instancetype) initWithCoder:(NSCoder *) decoder
 {
 	if((self = [super initWithCoder: decoder]) != nil){
-		KGHackProgressDrawer * drawer = [[KGHackProgressDrawer alloc] init] ;
-		[super setGraphicsDrawer: drawer] ;
+		progressDrawer = [[KGHackProgressDrawer alloc] init] ;
+		[super addGraphicsDrawer: progressDrawer withDelegate: nil] ;
 	}
 	return self ;
 }
@@ -26,8 +25,8 @@
 #endif
 {
 	if((self = [super initWithFrame: frame]) != nil){
-		KGHackProgressDrawer * drawer = [[KGHackProgressDrawer alloc] init] ;
-		[super setGraphicsDrawer: drawer] ;
+		progressDrawer = [[KGHackProgressDrawer alloc] init] ;
+		[super addGraphicsDrawer: progressDrawer withDelegate: nil] ;
 	}
 	return self ;
 }
@@ -52,10 +51,9 @@
 				currentnum = status.currentGlyphIndex + 1 ;
 			} break ;
 		}
-				
-		KGHackProgressDrawer *	drawer = [self graphicsDrawer] ;
-		drawer.maxGlyphNum       = maxnum ;
-		drawer.processedGlyphNum = currentnum ;
+		
+		progressDrawer.maxGlyphNum       = maxnum ;
+		progressDrawer.processedGlyphNum = currentnum ;
 #		if TARGET_OS_IPHONE
 		[self setNeedsDisplay] ;
 #		else
