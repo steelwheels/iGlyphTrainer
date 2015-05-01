@@ -93,10 +93,11 @@ updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect boun
 static void
 drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curnum, struct CNHexagon hexagon[])
 {
-	KGPreference * preference = [KGPreference sharedPreference] ;
-	struct CNRGB glyphcolor = preference.glyphColor ;
-	KCSetFillColor(context, glyphcolor) ;
-	KCSetStrokeColor(context, glyphcolor) ;
+	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+	struct CNRGB goldencolor = ctable.goldenrod ;
+	
+	KCSetFillColor(context, goldencolor) ;
+	KCSetStrokeColor(context, goldencolor) ;
 	
 	unsigned int	i ;
 	for(i=0 ; i<curnum ; i++){

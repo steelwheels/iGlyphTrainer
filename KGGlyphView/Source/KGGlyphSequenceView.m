@@ -57,6 +57,9 @@
 	(void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
+			CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+			struct CNRGB goldencolor = ctable.goldenrod ;
+			
 			KGGameStatus * status = object ;
 			switch(status.state){
 				case KGDisplayQuestionState: {
@@ -65,18 +68,24 @@
 					KGGlyphKind gkind = sentence.glyphWords[index] ;
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(gkind) ;
 					[strokeDrawer setStroke: &gstroke] ;
+					[strokeDrawer setColor: &goldencolor] ;
 					[strokeEditor setEditable: NO] ;
+					[strokeEditor setColor: &goldencolor] ;
 				} break ;
 				case KGInputAnswerState: {
 					struct KGGlyphStroke nilstroke = KGStrokeOfGlyph(KGNilGlyph) ;
 					[strokeDrawer setStroke: &nilstroke] ;
+					[strokeDrawer setColor: &goldencolor] ;
 					[strokeEditor setEditable: YES] ;
+					[strokeEditor setColor: &goldencolor] ;
 				} break ;
 				case KGIdleState:
 				case KGEvaluateState: {
 					struct KGGlyphStroke gstroke = KGStrokeOfGlyph(KGNilGlyph) ;
 					[strokeDrawer setStroke: &gstroke] ;
+					[strokeDrawer setColor: &goldencolor] ;
 					[strokeEditor setEditable: NO] ;
+					[strokeEditor setColor: &goldencolor] ;
 				} break ;
 			}
 			[self setAllNeedsDisplay] ;
