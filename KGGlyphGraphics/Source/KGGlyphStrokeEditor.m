@@ -37,15 +37,11 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphLayout * ginfo, CGPoint
 {
 	[super setStroke: &(editableStroke.strokeBody)] ;
 	[super drawWithContext: context inBoundsRect: boundsrect] ;
-	printf("*** %s\n", __func__) ;
 	
 	if(hasBeginningVertex && hasEndingVertex){
-		KGPreference * preference = [KGPreference sharedPreference] ;
-		struct CNRGB strokecol = preference.glyphColor ;
-		
 		CGContextSetLineWidth(context, glyphLayout.vertexSize) ;
 		CGContextSetLineCap(context, kCGLineCapRound) ;
-		KCSetStrokeColor(context, strokecol) ;
+		KCSetStrokeColor(context, strokeColor) ;
 		
 		CGPoint		drawpoints[2] ;
 		drawpoints[0] = glyphLayout.vertex[beginningVertexId].center ;

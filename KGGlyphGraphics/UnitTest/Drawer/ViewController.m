@@ -56,6 +56,10 @@
 	}
 	
 	[sdrawer setStroke: &stroke] ;
+	
+	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+	struct CNRGB color = ctable.goldenrod ;
+	[sdrawer setColor: &color] ;
 }
 
 - (void)didReceiveMemoryWarning {

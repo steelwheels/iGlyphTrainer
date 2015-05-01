@@ -9,7 +9,7 @@
 #import <KGGameData/KGGameData.h>
 
 static void
-drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphLayout * ginfo, const struct KGGlyphStroke * stroke) ;
+drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphLayout * ginfo, const struct KGGlyphStroke * stroke, const struct CNRGB * color) ;
 
 @implementation KGGlyphStrokeDrawer
 
@@ -26,13 +26,18 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphLay
 	glyphStroke = *stroke ;
 }
 
+- (void) setColor: (const struct CNRGB *) color
+{
+	strokeColor = *color ;
+}
+
 - (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) boundsrect
 {
 	[super drawWithContext: context inBoundsRect: boundsrect] ;
 	
 	/* Draw vertexes */
 	if(glyphStroke.edgeCount > 0){
-		drawStroke(context, &(boundsrect.origin), &glyphLayout, &glyphStroke) ;
+		drawStroke(context, &(boundsrect.origin), &glyphLayout, &glyphStroke, &strokeColor) ;
 	}
 }
 
@@ -67,14 +72,11 @@ drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphLay
 @end
 
 static void
-drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphLayout * ginfo, const struct KGGlyphStroke * stroke)
+drawStroke(CGContextRef context, const CGPoint * origin, const struct KGGlyphLayout * ginfo, const struct KGGlyphStroke * stroke, const struct CNRGB * color)
 {
-	KGPreference * preference = [KGPreference sharedPreference] ;
-	struct CNRGB strokecol = preference.glyphColor ;
-	
 	CGContextSetLineWidth(context, ginfo->vertexSize) ;
 	CGContextSetLineCap(context, kCGLineCapRound) ;
-	KCSetStrokeColor(context, strokecol) ;
+	KCSetStrokeColor(context, *color) ;
 	
 	unsigned int count = stroke->edgeCount ;
 	unsigned int i ;

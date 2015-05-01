@@ -11,9 +11,11 @@
 @interface KGGlyphStrokeDrawer : KGGlyphObject <KCGraphicsDrawing>
 {
 	struct KGGlyphStroke	glyphStroke ;
+	struct CNRGB		strokeColor ;
 }
 
 - (instancetype) init ;
 - (void) setStroke: (const struct KGGlyphStroke *) stroke ;
+- (void) setColor: (const struct CNRGB *) color ;
 
 @end

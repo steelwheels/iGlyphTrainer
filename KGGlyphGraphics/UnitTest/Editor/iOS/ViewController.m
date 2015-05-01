@@ -24,6 +24,10 @@
 	[self.graphicsView addGraphicsDrawer: vdrawer withDelegate: nil] ;
 	[self.graphicsView addGraphicsDrawer: editor withDelegate: self] ;
 	[editor setEditable: YES] ;
+	
+	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+	struct CNRGB color = ctable.goldenrod ;
+	[editor setColor: &color] ;
 }
 
 - (void)didReceiveMemoryWarning {
