@@ -19,6 +19,12 @@
 		0584D01B1AF3ABBE0020A935 /* KGHackProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0584D0101AF3ABBE0020A935 /* KGHackProgressView.h */; };
 		0584D01C1AF3ABBE0020A935 /* KGHackProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0584D0111AF3ABBE0020A935 /* KGHackProgressView.m */; };
 		0584D01E1AF3AC020020A935 /* KGGlyphGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0584D01D1AF3AC020020A935 /* KGGlyphGraphics.framework */; };
+		05F8D8861AF41B520089415E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F8D8851AF41B520089415E /* AppDelegate.m */; };
+		05F8D8891AF41B5E0089415E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F8D8881AF41B5E0089415E /* ViewController.m */; };
+		05F8D88B1AF41B7E0089415E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D88A1AF41B7E0089415E /* Images.xcassets */; };
+		05F8D88E1AF41B8D0089415E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D88C1AF41B8D0089415E /* Main.storyboard */; };
+		05F8D8901AF41BA30089415E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F8D88F1AF41BA30089415E /* main.m */; };
+		05F8D8921AF41BD50089415E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D8911AF41BD50089415E /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +34,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0546CF0C1AF3AB45000C8032;
 			remoteInfo = KGGlyphView;
+		};
+		05F8D8931AF41C1F0089415E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0546CF041AF3AB45000C8032 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0513A5031AF4186A008F45BD;
+			remoteInfo = Install;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,6 +60,15 @@
 		0584D0101AF3ABBE0020A935 /* KGHackProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGHackProgressView.h; sourceTree = "<group>"; };
 		0584D0111AF3ABBE0020A935 /* KGHackProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGHackProgressView.m; sourceTree = "<group>"; };
 		0584D01D1AF3AC020020A935 /* KGGlyphGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphGraphics.framework; path = ../../../../Library/Frameworks/KGGlyphGraphics.framework; sourceTree = "<group>"; };
+		05C653DF1AF41A36007CC6EB /* UTEvaluate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTEvaluate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F8D8841AF41B520089415E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Evaluate/AppDelegate.h; sourceTree = "<group>"; };
+		05F8D8851AF41B520089415E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Evaluate/AppDelegate.m; sourceTree = "<group>"; };
+		05F8D8871AF41B5E0089415E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Evaluate/ViewController.h; sourceTree = "<group>"; };
+		05F8D8881AF41B5E0089415E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Evaluate/ViewController.m; sourceTree = "<group>"; };
+		05F8D88A1AF41B7E0089415E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Evaluate/Images.xcassets; sourceTree = "<group>"; };
+		05F8D88D1AF41B8D0089415E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Evaluate/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05F8D88F1AF41BA30089415E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Evaluate/main.m; sourceTree = "<group>"; };
+		05F8D8911AF41BD50089415E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../UnitTest/Evaluate/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05C653DC1AF41A36007CC6EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				0546CF0F1AF3AB45000C8032 /* Source */,
+				05F8D8821AF41A700089415E /* UnitTestt */,
+				05C653E01AF41A36007CC6EB /* UTEvaluate */,
 				0546CF0E1AF3AB45000C8032 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				0546CF0D1AF3AB45000C8032 /* KGGlyphView.framework */,
+				05C653DF1AF41A36007CC6EB /* UTEvaluate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +137,46 @@
 				0546CF111AF3AB45000C8032 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05C653E01AF41A36007CC6EB /* UTEvaluate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UTEvaluate;
+			sourceTree = "<group>";
+		};
+		05C653E11AF41A36007CC6EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05F8D8911AF41BD50089415E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ../OSX/UTEvaluate;
+			sourceTree = "<group>";
+		};
+		05F8D8821AF41A700089415E /* UnitTestt */ = {
+			isa = PBXGroup;
+			children = (
+				05F8D8831AF41AA30089415E /* Evaluate */,
+			);
+			name = UnitTestt;
+			path = ../UnitTest;
+			sourceTree = SOURCE_ROOT;
+		};
+		05F8D8831AF41AA30089415E /* Evaluate */ = {
+			isa = PBXGroup;
+			children = (
+				05F8D88F1AF41BA30089415E /* main.m */,
+				05F8D88C1AF41B8D0089415E /* Main.storyboard */,
+				05F8D88A1AF41B7E0089415E /* Images.xcassets */,
+				05F8D8871AF41B5E0089415E /* ViewController.h */,
+				05F8D8881AF41B5E0089415E /* ViewController.m */,
+				05F8D8841AF41B520089415E /* AppDelegate.h */,
+				05F8D8851AF41B520089415E /* AppDelegate.m */,
+				05C653E11AF41A36007CC6EB /* Supporting Files */,
+			);
+			name = Evaluate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +234,24 @@
 			productReference = 0546CF0D1AF3AB45000C8032 /* KGGlyphView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		05C653DE1AF41A36007CC6EB /* UTEvaluate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05C654001AF41A36007CC6EB /* Build configuration list for PBXNativeTarget "UTEvaluate" */;
+			buildPhases = (
+				05C653DB1AF41A36007CC6EB /* Sources */,
+				05C653DC1AF41A36007CC6EB /* Frameworks */,
+				05C653DD1AF41A36007CC6EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05F8D8941AF41C1F0089415E /* PBXTargetDependency */,
+			);
+			name = UTEvaluate;
+			productName = UTEvaluate;
+			productReference = 05C653DF1AF41A36007CC6EB /* UTEvaluate.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,6 +267,9 @@
 					0546CF0C1AF3AB45000C8032 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
+					05C653DE1AF41A36007CC6EB = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 0546CF071AF3AB45000C8032 /* Build configuration list for PBXProject "KGGlyphView" */;
@@ -185,6 +278,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0546CF031AF3AB45000C8032;
 			productRefGroup = 0546CF0E1AF3AB45000C8032 /* Products */;
@@ -193,6 +287,7 @@
 			targets = (
 				0546CF0C1AF3AB45000C8032 /* KGGlyphView */,
 				0513A5031AF4186A008F45BD /* Install */,
+				05C653DE1AF41A36007CC6EB /* UTEvaluate */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +297,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C653DD1AF41A36007CC6EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F8D88B1AF41B7E0089415E /* Images.xcassets in Resources */,
+				05F8D88E1AF41B8D0089415E /* Main.storyboard in Resources */,
+				05F8D8921AF41BD50089415E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +325,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05C653DB1AF41A36007CC6EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F8D8891AF41B5E0089415E /* ViewController.m in Sources */,
+				05F8D8901AF41BA30089415E /* main.m in Sources */,
+				05F8D8861AF41B520089415E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,7 +343,23 @@
 			target = 0546CF0C1AF3AB45000C8032 /* KGGlyphView */;
 			targetProxy = 0513A5071AF41875008F45BD /* PBXContainerItemProxy */;
 		};
+		05F8D8941AF41C1F0089415E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0513A5031AF4186A008F45BD /* Install */;
+			targetProxy = 05F8D8931AF41C1F0089415E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05F8D88C1AF41B8D0089415E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05F8D88D1AF41B8D0089415E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0513A5041AF4186A008F45BD /* Debug */ = {
@@ -381,6 +512,34 @@
 			};
 			name = Release;
 		};
+		05C653FC1AF41A36007CC6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ../UnitTest/Evaluate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05C653FD1AF41A36007CC6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ../UnitTest/Evaluate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,6 +550,7 @@
 				0513A5051AF4186A008F45BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0546CF071AF3AB45000C8032 /* Build configuration list for PBXProject "KGGlyphView" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +566,15 @@
 			buildConfigurations = (
 				0546CF241AF3AB45000C8032 /* Debug */,
 				0546CF251AF3AB45000C8032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05C654001AF41A36007CC6EB /* Build configuration list for PBXNativeTarget "UTEvaluate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C653FC1AF41A36007CC6EB /* Debug */,
+				05C653FD1AF41A36007CC6EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
