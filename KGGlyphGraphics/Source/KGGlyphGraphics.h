@@ -14,8 +14,9 @@ FOUNDATION_EXPORT double KGGlyphGraphicsVersionNumber;
 FOUNDATION_EXPORT const unsigned char KGGlyphGraphicsVersionString[];
 
 #import "KGGlyphForwarders.h"
-#import "KGGlyphDrawer.h"
-#import "KGGlyphEditor.h"
+#import "KGGlyphVertexDrawer.h"
+#import "KGGlyphStrokeDrawer.h"
+#import "KGGlyphStrokeEditor.h"
 #import "KGGlyphEditableStroke.h"
 
 

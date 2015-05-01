@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "KGGlyphGraphics.h"
 
-@interface ViewController ()
+@interface ViewController () <KCGraphicsDelegate>
 
 @end
 
@@ -21,9 +21,11 @@
 	
 	self.graphicsView.backgroundColor = [UIColor blackColor] ;
 	
-	KGGlyphDrawer * drawer = [[KGGlyphDrawer alloc] init] ;
-	[self.graphicsView setGraphicsDrawer: drawer] ;
-	[self.graphicsView allocateTransparentViews: KGGlyphTransparentViewNum] ;
+	KGGlyphVertexDrawer * vdrawer = [[KGGlyphVertexDrawer alloc] init] ;
+	KGGlyphStrokeDrawer * sdrawer = [[KGGlyphStrokeDrawer alloc] init] ;
+	
+	[self.graphicsView addGraphicsDrawer: vdrawer withDelegate: nil] ;
+	[self.graphicsView addGraphicsDrawer: sdrawer withDelegate: self] ;
 	
 	struct KGGlyphStroke stroke ;
 	switch(1){
@@ -53,12 +55,22 @@
 		} break ;
 	}
 	
-	[drawer setStroke: &stroke] ;
+	[sdrawer setStroke: &stroke] ;
 }
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+- (void) editingGraphicsEnded
+{
+	printf("%s\n", __func__) ;
+}
+
+- (void) editingGraphicsCancelled
+{
+	printf("%s\n", __func__) ;
 }
 
 @end

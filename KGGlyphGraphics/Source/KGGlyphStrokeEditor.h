@@ -1,14 +1,15 @@
 /**
- * @file	KGGlyphEditor.h
- * @brief	Define KGGlyphEditor class
+ * @file	KGGlyphStrokeEditor.h
+ * @brief	Define KGGlyphStrokeEditor class
  * @par Copyright
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import "KGGlyphDrawer.h"
+#import "KGGlyphStrokeDrawer.h"
 #import "KGGlyphEditableStroke.h"
+#import <KCGraphicsView/KCGraphicsView.h>
 
-@interface KGGlyphEditor : KGGlyphDrawer <KCGraphicsEditing>
+@interface KGGlyphStrokeEditor : KGGlyphStrokeDrawer <KCGraphicsDrawing>
 {
 	BOOL				isEditableFlag ;
 	bool				hasBeginningVertex ;

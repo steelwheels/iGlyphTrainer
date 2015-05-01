@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0522E2381A99F00900080BE3 /* KGGlyphGraphics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */; };
-		0534BDA11AAB636300D4519F /* KGGlyphEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0534BDA01AAB636300D4519F /* KGGlyphEditor.m */; };
-		0534BDA21AAB63CA00D4519F /* KGGlyphEditor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0534BD9F1AAB636300D4519F /* KGGlyphEditor.h */; };
 		055255D01A99F81A0021E915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 055255CF1A99F81A0021E915 /* main.m */; };
 		055255D31A99F81A0021E915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 055255D21A99F81A0021E915 /* AppDelegate.m */; };
 		055255D61A99F81A0021E915 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055255D51A99F81A0021E915 /* ViewController.m */; };
@@ -25,8 +23,14 @@
 		0594DA851AAC3F0E0066D4D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA841AAC3F0E0066D4D5 /* Images.xcassets */; };
 		0594DA881AAC3F0E0066D4D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0594DA861AAC3F0E0066D4D5 /* LaunchScreen.xib */; };
 		05B5DEE01AD571A900BFE3E6 /* KGGlyphForwarders.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */; };
-		05F5ABE81A99F97D0053EC4B /* KGGlyphDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */; };
-		05F5ABE91A99FACD0053EC4B /* KGGlyphDrawer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */; };
+		05D265381AF259B700A6EC69 /* KGGlyphObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E60F141AF232FF00ADC802 /* KGGlyphObject.h */; };
+		05E60F131AF22A9D00ADC802 /* KGGlyphVertexDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E60F121AF22A9D00ADC802 /* KGGlyphVertexDrawer.m */; };
+		05E60F161AF232FF00ADC802 /* KGGlyphObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E60F151AF232FF00ADC802 /* KGGlyphObject.m */; };
+		05E60F191AF2372200ADC802 /* KGGlyphStrokeDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E60F181AF2372200ADC802 /* KGGlyphStrokeDrawer.m */; };
+		05E60F1C1AF2443200ADC802 /* KGGlyphStrokeEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E60F1B1AF2443200ADC802 /* KGGlyphStrokeEditor.m */; };
+		05E60F1D1AF247D300ADC802 /* KGGlyphVertexDrawer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E60F111AF22A9D00ADC802 /* KGGlyphVertexDrawer.h */; };
+		05E60F1E1AF247D700ADC802 /* KGGlyphStrokeDrawer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E60F171AF2372200ADC802 /* KGGlyphStrokeDrawer.h */; };
+		05E60F1F1AF247DC00ADC802 /* KGGlyphStrokeEditor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E60F1A1AF2443200ADC802 /* KGGlyphStrokeEditor.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +64,12 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05D265381AF259B700A6EC69 /* KGGlyphObject.h in CopyFiles */,
+				05E60F1F1AF247DC00ADC802 /* KGGlyphStrokeEditor.h in CopyFiles */,
+				05E60F1E1AF247D700ADC802 /* KGGlyphStrokeDrawer.h in CopyFiles */,
+				05E60F1D1AF247D300ADC802 /* KGGlyphVertexDrawer.h in CopyFiles */,
 				05B5DEE01AD571A900BFE3E6 /* KGGlyphForwarders.h in CopyFiles */,
 				0591311D1AABC8B1006BEB9C /* KGGlyphEditableStroke.h in CopyFiles */,
-				0534BDA21AAB63CA00D4519F /* KGGlyphEditor.h in CopyFiles */,
-				05F5ABE91A99FACD0053EC4B /* KGGlyphDrawer.h in CopyFiles */,
 				0522E2381A99F00900080BE3 /* KGGlyphGraphics.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,8 +79,7 @@
 /* Begin PBXFileReference section */
 		0522E2341A99F00900080BE3 /* libKGGlyphGraphics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGlyphGraphics.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphGraphics.h; sourceTree = "<group>"; };
-		0534BD9F1AAB636300D4519F /* KGGlyphEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphEditor.h; sourceTree = "<group>"; };
-		0534BDA01AAB636300D4519F /* KGGlyphEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphEditor.m; sourceTree = "<group>"; };
+		053AE5EA1AF3575C00C78064 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppDefaults.plist; path = ../../../iGlyphHackTrainer/iOS/AppDefaults.plist; sourceTree = "<group>"; };
 		055255C51A99F14C0021E915 /* install.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = install.mk; path = ../../Script/install.mk; sourceTree = "<group>"; };
 		055255CB1A99F81A0021E915 /* UnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		055255CE1A99F81A0021E915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../UnitTest/Drawer/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -99,8 +104,14 @@
 		0594DA841AAC3F0E0066D4D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0594DA871AAC3F0E0066D4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphForwarders.h; sourceTree = "<group>"; };
-		05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphDrawer.h; sourceTree = "<group>"; };
-		05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphDrawer.m; sourceTree = "<group>"; };
+		05E60F111AF22A9D00ADC802 /* KGGlyphVertexDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphVertexDrawer.h; sourceTree = "<group>"; };
+		05E60F121AF22A9D00ADC802 /* KGGlyphVertexDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphVertexDrawer.m; sourceTree = "<group>"; };
+		05E60F141AF232FF00ADC802 /* KGGlyphObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphObject.h; sourceTree = "<group>"; };
+		05E60F151AF232FF00ADC802 /* KGGlyphObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphObject.m; sourceTree = "<group>"; };
+		05E60F171AF2372200ADC802 /* KGGlyphStrokeDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStrokeDrawer.h; sourceTree = "<group>"; };
+		05E60F181AF2372200ADC802 /* KGGlyphStrokeDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStrokeDrawer.m; sourceTree = "<group>"; };
+		05E60F1A1AF2443200ADC802 /* KGGlyphStrokeEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStrokeEditor.h; sourceTree = "<group>"; };
+		05E60F1B1AF2443200ADC802 /* KGGlyphStrokeEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStrokeEditor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,10 +164,14 @@
 			children = (
 				0522E2371A99F00900080BE3 /* KGGlyphGraphics.h */,
 				05B5DEDF1AD5715400BFE3E6 /* KGGlyphForwarders.h */,
-				05F5ABE61A99F97D0053EC4B /* KGGlyphDrawer.h */,
-				05F5ABE71A99F97D0053EC4B /* KGGlyphDrawer.m */,
-				0534BD9F1AAB636300D4519F /* KGGlyphEditor.h */,
-				0534BDA01AAB636300D4519F /* KGGlyphEditor.m */,
+				05E60F141AF232FF00ADC802 /* KGGlyphObject.h */,
+				05E60F151AF232FF00ADC802 /* KGGlyphObject.m */,
+				05E60F111AF22A9D00ADC802 /* KGGlyphVertexDrawer.h */,
+				05E60F121AF22A9D00ADC802 /* KGGlyphVertexDrawer.m */,
+				05E60F171AF2372200ADC802 /* KGGlyphStrokeDrawer.h */,
+				05E60F181AF2372200ADC802 /* KGGlyphStrokeDrawer.m */,
+				05E60F1A1AF2443200ADC802 /* KGGlyphStrokeEditor.h */,
+				05E60F1B1AF2443200ADC802 /* KGGlyphStrokeEditor.m */,
 				0591311A1AABC701006BEB9C /* KGGlyphEditableStroke.h */,
 				0591311B1AABC701006BEB9C /* KGGlyphEditableStroke.m */,
 			);
@@ -167,6 +182,7 @@
 		0534BD9E1AAB628700D4519F /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				053AE5EA1AF3575C00C78064 /* AppDefaults.plist */,
 				055255D11A99F81A0021E915 /* AppDelegate.h */,
 				055255D21A99F81A0021E915 /* AppDelegate.m */,
 				055255D41A99F81A0021E915 /* ViewController.h */,
@@ -388,8 +404,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0591311C1AABC701006BEB9C /* KGGlyphEditableStroke.m in Sources */,
-				05F5ABE81A99F97D0053EC4B /* KGGlyphDrawer.m in Sources */,
-				0534BDA11AAB636300D4519F /* KGGlyphEditor.m in Sources */,
+				05E60F1C1AF2443200ADC802 /* KGGlyphStrokeEditor.m in Sources */,
+				05E60F191AF2372200ADC802 /* KGGlyphStrokeDrawer.m in Sources */,
+				05E60F131AF22A9D00ADC802 /* KGGlyphVertexDrawer.m in Sources */,
+				05E60F161AF232FF00ADC802 /* KGGlyphObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

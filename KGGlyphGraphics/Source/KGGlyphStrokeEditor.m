@@ -1,17 +1,17 @@
 /**
- * @file	KGGlyphEditor.m
- * @brief	Define KGGlyphEditor class
+ * @file	KGGlyphStrokeEditor.m
+ * @brief	Define KGGlyphStrokeEditor class
  * @par Copyright
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import "KGGlyphEditor.h"
+#import "KGGlyphStrokeEditor.h"
 #import <KGGameData/KGGameData.h>
 
 static bool
-getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint point) ;
+getVertexId(unsigned int * vertexid, const struct KGGlyphLayout * ginfo, CGPoint point) ;
 
-@implementation KGGlyphEditor
+@implementation KGGlyphStrokeEditor
 
 - (instancetype) init
 {
@@ -19,7 +19,6 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 		isEditableFlag = NO ;
 		hasBeginningVertex = hasEndingVertex = false ;
 		KGInitGlyphEditableStroke(&editableStroke) ;
-		[super setStroke: &(editableStroke.strokeBody)] ;
 	}
 	return self ;
 }
@@ -34,27 +33,25 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	KGClearGlyphEditableStroke(&editableStroke) ;
 }
 
-- (void) drawWithContext: (CGContextRef) context atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
+- (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) boundsrect
 {
-	if(isEditableFlag){
-		[super setStroke: &(editableStroke.strokeBody)] ;
-		[super drawWithContext: context atLevel: level inBoundsRect: boundsrect] ;
-		if(level == KGGlyphStrokeLayer && hasBeginningVertex && hasEndingVertex){
-			KGPreference * preference = [KGPreference sharedPreference] ;
-			struct CNRGB strokecol = preference.glyphColor ;
-			
-			CGContextSetLineWidth(context, glyphInfo.vertexSize) ;
-			CGContextSetLineCap(context, kCGLineCapRound) ;
-			KCSetStrokeColor(context, strokecol) ;
-			
-			CGPoint		drawpoints[2] ;
-			drawpoints[0] = glyphInfo.vertex[beginningVertexId].center ;
-			drawpoints[1] = endingVertexPoint ;
-			CGContextAddLines(context, drawpoints, 2) ;
-			CGContextStrokePath(context) ;
-		}
-	} else {
-		[super drawWithContext: context atLevel: level inBoundsRect: boundsrect] ;
+	[super setStroke: &(editableStroke.strokeBody)] ;
+	[super drawWithContext: context inBoundsRect: boundsrect] ;
+	printf("*** %s\n", __func__) ;
+	
+	if(hasBeginningVertex && hasEndingVertex){
+		KGPreference * preference = [KGPreference sharedPreference] ;
+		struct CNRGB strokecol = preference.glyphColor ;
+		
+		CGContextSetLineWidth(context, glyphLayout.vertexSize) ;
+		CGContextSetLineCap(context, kCGLineCapRound) ;
+		KCSetStrokeColor(context, strokecol) ;
+		
+		CGPoint		drawpoints[2] ;
+		drawpoints[0] = glyphLayout.vertex[beginningVertexId].center ;
+		drawpoints[1] = endingVertexPoint ;
+		CGContextAddLines(context, drawpoints, 2) ;
+		CGContextStrokePath(context) ;
 	}
 }
 
@@ -68,14 +65,12 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	isEditableFlag = flag ;
 }
 
-- (void) touchesBegan: (CGPoint) point atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
+- (void) touchesBegan: (CGPoint) point inBoundsRect: (CGRect) boundsrect
 {
 	(void) boundsrect ;
-	if(level != KGGlyphStrokeLayer){
-		return ;
-	}
+	
 	unsigned int vid ;
-	if(getVertexId(&vid, &glyphInfo, point)){
+	if(getVertexId(&vid, &glyphLayout, point)){
 		//printf("touchesBegin (0) : %u\n", vid) ;
 		hasBeginningVertex	= true ;
 		beginningVertexId	= vid ;
@@ -87,15 +82,11 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	}
 }
 
-- (bool) touchesMoved: (CGPoint) newpoint atLevel: (NSUInteger) level inBoundsRect: (CGRect) boundsrect
+- (void) touchesMoved: (CGPoint) newpoint inBoundsRect: (CGRect) boundsrect
 {
 	(void) boundsrect ;
-	if(level != KGGlyphStrokeLayer){
-		return false ;
-	}
-	BOOL		result = false ;
 	unsigned int	vid ;
-	if(getVertexId(&vid, &glyphInfo, newpoint)){
+	if(getVertexId(&vid, &glyphLayout, newpoint)){
 		if(!hasBeginningVertex){
 			//printf("touchesMoved (0) : %u\n", vid) ;
 			hasBeginningVertex	= true ;
@@ -112,39 +103,34 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 				hasEndingVertex		= true ;
 				endingVertexPoint	= newpoint ;
 			}
-			result = true ;
 		}
 	} else {
 		if(hasBeginningVertex){
 			//printf("touchesMoved (3)\n") ;
 			hasEndingVertex		= true ;
 			endingVertexPoint	= newpoint ;
-			result			= true ;
 		} else {
 			//printf("touchesMoved (4)\n") ;
 		}
 	}
-	return result ;
 }
 
-- (bool) touchesEnded
+- (void) touchesEnded
 {
 	hasBeginningVertex	= false ;
 	hasEndingVertex		= false ;
-	return true ;
 }
 
-- (bool) touchesCancelled
+- (void) touchesCancelled
 {
 	hasBeginningVertex	= false ;
 	hasEndingVertex		= false ;
-	return true ;
 }
 
 @end
 
 static bool
-getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint point)
+getVertexId(unsigned int * vertexid, const struct KGGlyphLayout * ginfo, CGPoint point)
 {
 	unsigned int i ;
 	for(i=0 ; i<KGGLYPH_VERTEX_NUM ; i++){
@@ -158,3 +144,4 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphInfo * ginfo, CGPoint p
 	}
 	return false ;
 }
+

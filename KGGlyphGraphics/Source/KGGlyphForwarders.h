@@ -5,5 +5,6 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-@class KGGlyphDrawer ;
-@class KGGlyphEditor ;
+@class KGGlyphVertexDrawer ;
+@class KGGlyphStrokeDrawer ;
+@class KGGlyphStrokeEditor ;

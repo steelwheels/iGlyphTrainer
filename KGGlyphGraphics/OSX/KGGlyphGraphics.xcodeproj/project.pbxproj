@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0520F1AC1ADD65B3007FF98D /* KGGlyphDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1A41ADD65B3007FF98D /* KGGlyphDrawer.h */; };
-		0520F1AD1ADD65B3007FF98D /* KGGlyphDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520F1A51ADD65B3007FF98D /* KGGlyphDrawer.m */; };
-		0520F1AE1ADD65B3007FF98D /* KGGlyphEditableStroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1A61ADD65B3007FF98D /* KGGlyphEditableStroke.h */; };
+		0520F1AE1ADD65B3007FF98D /* KGGlyphEditableStroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1A61ADD65B3007FF98D /* KGGlyphEditableStroke.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0520F1AF1ADD65B3007FF98D /* KGGlyphEditableStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520F1A71ADD65B3007FF98D /* KGGlyphEditableStroke.m */; };
-		0520F1B01ADD65B3007FF98D /* KGGlyphEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1A81ADD65B3007FF98D /* KGGlyphEditor.h */; };
-		0520F1B11ADD65B3007FF98D /* KGGlyphEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520F1A91ADD65B3007FF98D /* KGGlyphEditor.m */; };
-		0520F1B21ADD65B3007FF98D /* KGGlyphForwarders.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1AA1ADD65B3007FF98D /* KGGlyphForwarders.h */; };
-		0520F1B31ADD65B3007FF98D /* KGGlyphGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1AB1ADD65B3007FF98D /* KGGlyphGraphics.h */; };
+		0520F1B21ADD65B3007FF98D /* KGGlyphForwarders.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1AA1ADD65B3007FF98D /* KGGlyphForwarders.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0520F1B31ADD65B3007FF98D /* KGGlyphGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0520F1AB1ADD65B3007FF98D /* KGGlyphGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0520F1B51ADD65F3007FF98D /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0520F1B41ADD65F3007FF98D /* KGGlyphData.framework */; };
 		0520F1B71ADD6607007FF98D /* KCGraphicsView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0520F1B61ADD6607007FF98D /* KCGraphicsView.framework */; };
+		054AD3AE1AF251560030A5F6 /* KGGlyphObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 054AD3A61AF251560030A5F6 /* KGGlyphObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		054AD3AF1AF251560030A5F6 /* KGGlyphObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 054AD3A71AF251560030A5F6 /* KGGlyphObject.m */; };
+		054AD3B01AF251560030A5F6 /* KGGlyphStrokeDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 054AD3A81AF251560030A5F6 /* KGGlyphStrokeDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		054AD3B11AF251560030A5F6 /* KGGlyphStrokeDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 054AD3A91AF251560030A5F6 /* KGGlyphStrokeDrawer.m */; };
+		054AD3B21AF251560030A5F6 /* KGGlyphStrokeEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 054AD3AA1AF251560030A5F6 /* KGGlyphStrokeEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		054AD3B31AF251560030A5F6 /* KGGlyphStrokeEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 054AD3AB1AF251560030A5F6 /* KGGlyphStrokeEditor.m */; };
+		054AD3B41AF251560030A5F6 /* KGGlyphVertexDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 054AD3AC1AF251560030A5F6 /* KGGlyphVertexDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		054AD3B51AF251560030A5F6 /* KGGlyphVertexDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 054AD3AD1AF251560030A5F6 /* KGGlyphVertexDrawer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,17 +34,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0520F1A41ADD65B3007FF98D /* KGGlyphDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphDrawer.h; sourceTree = "<group>"; };
-		0520F1A51ADD65B3007FF98D /* KGGlyphDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphDrawer.m; sourceTree = "<group>"; };
 		0520F1A61ADD65B3007FF98D /* KGGlyphEditableStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphEditableStroke.h; sourceTree = "<group>"; };
 		0520F1A71ADD65B3007FF98D /* KGGlyphEditableStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphEditableStroke.m; sourceTree = "<group>"; };
-		0520F1A81ADD65B3007FF98D /* KGGlyphEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphEditor.h; sourceTree = "<group>"; };
-		0520F1A91ADD65B3007FF98D /* KGGlyphEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphEditor.m; sourceTree = "<group>"; };
 		0520F1AA1ADD65B3007FF98D /* KGGlyphForwarders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphForwarders.h; sourceTree = "<group>"; };
 		0520F1AB1ADD65B3007FF98D /* KGGlyphGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphGraphics.h; sourceTree = "<group>"; };
 		0520F1B41ADD65F3007FF98D /* KGGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGGlyphData.framework; path = ../../../../Library/Frameworks/KGGlyphData.framework; sourceTree = "<group>"; };
 		0520F1B61ADD6607007FF98D /* KCGraphicsView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KCGraphicsView.framework; path = ../../../../Library/Frameworks/KCGraphicsView.framework; sourceTree = "<group>"; };
 		0520F1BE1ADD6669007FF98D /* install.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = install.mk; sourceTree = SOURCE_ROOT; };
+		054AD3A61AF251560030A5F6 /* KGGlyphObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphObject.h; sourceTree = "<group>"; };
+		054AD3A71AF251560030A5F6 /* KGGlyphObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphObject.m; sourceTree = "<group>"; };
+		054AD3A81AF251560030A5F6 /* KGGlyphStrokeDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStrokeDrawer.h; sourceTree = "<group>"; };
+		054AD3A91AF251560030A5F6 /* KGGlyphStrokeDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStrokeDrawer.m; sourceTree = "<group>"; };
+		054AD3AA1AF251560030A5F6 /* KGGlyphStrokeEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStrokeEditor.h; sourceTree = "<group>"; };
+		054AD3AB1AF251560030A5F6 /* KGGlyphStrokeEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStrokeEditor.m; sourceTree = "<group>"; };
+		054AD3AC1AF251560030A5F6 /* KGGlyphVertexDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphVertexDrawer.h; sourceTree = "<group>"; };
+		054AD3AD1AF251560030A5F6 /* KGGlyphVertexDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphVertexDrawer.m; sourceTree = "<group>"; };
 		05DD61AA1ADD64A900079360 /* KGGlyphGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGGlyphGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DD61AE1ADD64A900079360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -77,13 +85,17 @@
 		05DD61AC1ADD64A900079360 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				054AD3A61AF251560030A5F6 /* KGGlyphObject.h */,
+				054AD3A71AF251560030A5F6 /* KGGlyphObject.m */,
+				054AD3A81AF251560030A5F6 /* KGGlyphStrokeDrawer.h */,
+				054AD3A91AF251560030A5F6 /* KGGlyphStrokeDrawer.m */,
+				054AD3AA1AF251560030A5F6 /* KGGlyphStrokeEditor.h */,
+				054AD3AB1AF251560030A5F6 /* KGGlyphStrokeEditor.m */,
+				054AD3AC1AF251560030A5F6 /* KGGlyphVertexDrawer.h */,
+				054AD3AD1AF251560030A5F6 /* KGGlyphVertexDrawer.m */,
 				0520F1AB1ADD65B3007FF98D /* KGGlyphGraphics.h */,
-				0520F1A41ADD65B3007FF98D /* KGGlyphDrawer.h */,
-				0520F1A51ADD65B3007FF98D /* KGGlyphDrawer.m */,
 				0520F1A61ADD65B3007FF98D /* KGGlyphEditableStroke.h */,
 				0520F1A71ADD65B3007FF98D /* KGGlyphEditableStroke.m */,
-				0520F1A81ADD65B3007FF98D /* KGGlyphEditor.h */,
-				0520F1A91ADD65B3007FF98D /* KGGlyphEditor.m */,
 				0520F1AA1ADD65B3007FF98D /* KGGlyphForwarders.h */,
 				05DD61AD1ADD64A900079360 /* Supporting Files */,
 			);
@@ -109,10 +121,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0520F1B01ADD65B3007FF98D /* KGGlyphEditor.h in Headers */,
-				0520F1AC1ADD65B3007FF98D /* KGGlyphDrawer.h in Headers */,
 				0520F1B31ADD65B3007FF98D /* KGGlyphGraphics.h in Headers */,
+				054AD3B01AF251560030A5F6 /* KGGlyphStrokeDrawer.h in Headers */,
 				0520F1B21ADD65B3007FF98D /* KGGlyphForwarders.h in Headers */,
+				054AD3AE1AF251560030A5F6 /* KGGlyphObject.h in Headers */,
+				054AD3B21AF251560030A5F6 /* KGGlyphStrokeEditor.h in Headers */,
+				054AD3B41AF251560030A5F6 /* KGGlyphVertexDrawer.h in Headers */,
 				0520F1AE1ADD65B3007FF98D /* KGGlyphEditableStroke.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,9 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0520F1B11ADD65B3007FF98D /* KGGlyphEditor.m in Sources */,
 				0520F1AF1ADD65B3007FF98D /* KGGlyphEditableStroke.m in Sources */,
-				0520F1AD1ADD65B3007FF98D /* KGGlyphDrawer.m in Sources */,
+				054AD3B31AF251560030A5F6 /* KGGlyphStrokeEditor.m in Sources */,
+				054AD3B11AF251560030A5F6 /* KGGlyphStrokeDrawer.m in Sources */,
+				054AD3B51AF251560030A5F6 /* KGGlyphVertexDrawer.m in Sources */,
+				054AD3AF1AF251560030A5F6 /* KGGlyphObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +411,7 @@
 				0520F1BB1ADD6636007FF98D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05DD61A41ADD64A900079360 /* Build configuration list for PBXProject "KGGlyphGraphics" */ = {
 			isa = XCConfigurationList;
