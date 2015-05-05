@@ -13,7 +13,17 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	// Do any additional setup after loading the view.
+	struct KGGlyphStroke istroke = KGStrokeOfGlyph(KGBalanceGlyph) ;
+	KGAddStrokeToSharedInputStrokes(&istroke) ;
+
+	struct KGGlyphStroke instroke = KGStrokeOfGlyph(KGResistanceGlyph) ;
+	KGAddStrokeToSharedInputStrokes(&instroke) ;
+	
+	KGGameStatus * status = [[KGGameStatus alloc] init] ;
+	
+	[status addStateObserver: self.glyphSequenceView] ;
+	struct KGGlyphSentence sentence = KGGet2WordSentence(0) ;
+	[status setNextState: KGEvaluateState withGlyphSentence: sentence] ;
 }
 
 - (void)setRepresentedObject:(id)representedObject {

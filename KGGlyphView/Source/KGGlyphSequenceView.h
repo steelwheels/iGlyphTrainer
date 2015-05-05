@@ -16,7 +16,8 @@
 @interface KGGlyphSequenceView : KCGraphicsView <KCGraphicsDelegate>
 {
 	KGGlyphVertexDrawer *		vertexDrawer ;
-	KGGlyphStrokeDrawer *		strokeDrawer ;
+	KGGlyphStrokeDrawer *		stroke0Drawer ;
+	KGGlyphStrokeDrawer *		stroke1Drawer ;
 	KGGlyphStrokeEditor *		strokeEditor ;
 	
 	id <KGGlyphSequenceEditiing>	glyphDelegate ;
