@@ -7,8 +7,9 @@
 
 #import "KGGlyphInputStrokes.h"
 
-static struct KGGlyphInputStrokes s_input_strokes ;
 
+static struct KGGlyphInputStrokes *
+sharedGlyphInputStrokes(void) ;
 static void
 KGInitInpurGlyphStrokes(struct KGGlyphInputStrokes * dst) ;
 static void
@@ -19,23 +20,31 @@ KGAddStrokeToInputStrokes(struct KGGlyphInputStrokes * dst, const struct KGGlyph
 const struct KGGlyphInputStrokes *
 KGSharedGlyphInputStrokes(void)
 {
-	static BOOL isinitialized = NO ;
-	if(!isinitialized){
-		KGInitInpurGlyphStrokes(&s_input_strokes) ;
-	}
-	return &s_input_strokes ;
+	return sharedGlyphInputStrokes() ;
 }
 
 void
 KGClearSharedGlyphInputStrokes(void)
 {
-	KGClearGlyphInputStrokes(&s_input_strokes) ;
+	KGClearGlyphInputStrokes(sharedGlyphInputStrokes()) ;
 }
 
 BOOL
 KGAddStrokeToSharedInputStrokes(const struct KGGlyphStroke * src)
 {
-	return KGAddStrokeToInputStrokes(&s_input_strokes, src) ;
+	return KGAddStrokeToInputStrokes(sharedGlyphInputStrokes(), src) ;
+}
+
+static struct KGGlyphInputStrokes *
+sharedGlyphInputStrokes(void)
+{
+	static struct KGGlyphInputStrokes s_input_strokes ;
+	static BOOL isinitialized = NO ;
+	if(!isinitialized){
+		KGInitInpurGlyphStrokes(&s_input_strokes) ;
+		isinitialized = YES ;
+	}
+	return &s_input_strokes ;
 }
 
 static void
