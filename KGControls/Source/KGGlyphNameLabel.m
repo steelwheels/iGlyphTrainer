@@ -22,14 +22,7 @@ static NSString * currentGlyphName(KGGameStatus * status) ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
 			NSString * glyphname = [self glyphName: (KGGameStatus *) object] ;
-			dispatch_queue_t mainqueue = dispatch_get_main_queue();
-			dispatch_async(mainqueue, ^{
-#				if TARGET_OS_IPHONE
-				self.text = glyphname ;
-#				else
-				[self setStringValue: glyphname] ;
-#				endif
-			});
+			[self setTitle: glyphname] ;
 		}
 	}
 }

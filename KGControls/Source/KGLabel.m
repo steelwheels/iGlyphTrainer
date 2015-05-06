@@ -8,9 +8,8 @@
 #import "KGLabel.h"
 #import <KiwiControl/KiwiControl.h>
 
-@interface KGLabel (KGPrivate)
+@interface KGLabel ()
 - (void) setupLabel ;
-- (void) setTitleOnMainThread: (NSString *) title ;
 @end
 
 @implementation KGLabel
@@ -23,6 +22,7 @@
 	return self ;
 }
 
+
 #if TARGET_OS_IPHONE
 - (instancetype) initWithFrame:(CGRect)frame
 #else
@@ -33,6 +33,17 @@
 		[self setupLabel] ;
 	}
 	return self ;
+}
+
+- (void) setupLabel
+{
+#if TARGET_OS_IPHONE
+	KCPreference * preference = [KCPreference sharedPreference] ;
+	UIColor * fontcol = [preference fontColor] ;
+	self.textColor = fontcol ;
+#else
+	[self setEditable: NO] ;
+#endif
 }
 
 - (void) setTitle: (NSString *) title
@@ -50,28 +61,3 @@
 
 @end
 
-@implementation KGLabel (KGPrivate)
-
-- (void) setupLabel
-{
-#if TARGET_OS_IPHONE
-	KCPreference * preference = [KCPreference sharedPreference] ;
-	UIColor * fontcol = [preference fontColor] ;
-	self.textColor = fontcol ;
-#else
-	[self setEditable: NO] ;
-#endif
-}
-
-- (void) setTitleOnMainThread: (NSString *) title
-{
-#	if TARGET_OS_IPHONE
-	[self setText: title] ;
-	[self setNeedsDisplay] ;
-#	else
-	[self setStringValue: title] ;
-	[self setNeedsDisplay: YES] ;
-#	endif
-}
-
-@end

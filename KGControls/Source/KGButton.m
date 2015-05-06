@@ -8,7 +8,7 @@
 #import "KGButton.h"
 #import <KiwiControl/KiwiControl.h>
 
-@interface KGButton (KGPrivate)
+@interface KGButton ()
 - (void) setupButton ;
 @end
 
@@ -34,10 +34,6 @@
 	return self ;
 }
 
-@end
-
-@implementation KGButton (KGPrivate)
-
 - (void) setupButton
 {
 #if TARGET_OS_IPHONE
@@ -51,4 +47,5 @@
 }
 
 @end
+
 
