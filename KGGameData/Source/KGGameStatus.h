@@ -32,6 +32,7 @@ static const double	KGNoValidTime		= -1.0 ;
 @property (assign, nonatomic) double			timerInterval ;
 
 + (NSString *) stateKeyPath ;
++ (const char *) stateToString: (KGGameState) state ;
 
 - (instancetype) init ;
 - (void) addStateObserver: (NSObject *) observer ;

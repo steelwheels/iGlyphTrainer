@@ -17,6 +17,26 @@
 	return @"state" ;
 }
 
++ (const char *) stateToString: (KGGameState) state
+{
+	const char * result = "?" ;
+	switch(state){
+		case KGIdleState: {
+			result = "idle" ;
+		} break ;
+		case KGDisplayQuestionState: {
+			result = "question" ;
+		} break ;
+		case KGInputAnswerState: {
+			result = "answer" ;
+		} break ;
+		case KGEvaluateState: {
+			result = "evaluate" ;
+		} break ;
+	}
+	return result ;
+}
+
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
