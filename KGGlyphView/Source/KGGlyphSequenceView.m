@@ -88,6 +88,14 @@ inputedStroke(KGGameStatus * status)
 			
 			KGGameStatus * status = object ;
 			switch(status.state){
+				case KGIdleState: {
+					[stroke0Drawer setStroke: &nilstroke] ;
+					[stroke0Drawer setColor: &goldencolor] ;
+					[stroke1Drawer setStroke: &nilstroke] ;
+					[stroke1Drawer setColor: &goldencolor] ;
+					[strokeEditor setEditable: NO] ;
+					[strokeEditor setColor: &goldencolor] ;
+				} break ;
 				case KGDisplayQuestionState: {
 					struct KGGlyphStroke gstroke = currentStroke(status) ;
 					[stroke0Drawer setStroke: &gstroke] ;
@@ -105,7 +113,6 @@ inputedStroke(KGGameStatus * status)
 					[strokeEditor setEditable: YES] ;
 					[strokeEditor setColor: &goldencolor] ;
 				} break ;
-				case KGIdleState:
 				case KGEvaluateState: {
 					struct KGGlyphStroke gstroke = currentStroke(status) ;
 					struct KGGlyphStroke istroke = inputedStroke(status) ;
