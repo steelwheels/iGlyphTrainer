@@ -8,6 +8,8 @@
 #import "MainStateMachine.h"
 #import "GlyphSentenceSelector.h"
 
+static const BOOL doDebug	= NO ;
+
 @interface MainStateMachine ()
 - (void) setNextState: (KGGameState) newstate ;
 - (void) idleState ;
@@ -16,7 +18,7 @@
 - (void) evaluateState ;
 @end
 
-@interface MainStateMachine (DisplayQuestionState) <CNCountTimerDelegate>
+@interface MainStateMachine (TimerDelegates) <CNCountTimerDelegate>
 @end
 
 @implementation MainStateMachine
@@ -35,28 +37,41 @@
 	switch(gameStatus.state){
 		case KGIdleState: {
 			if(newstate == KGDisplayQuestionState){
+				if(doDebug){
+					printf("[%s] idle -> question\n", __func__) ;
+				}
 				[self questionState] ;
 			}
 		} break ;
 		case KGDisplayQuestionState: {
 			switch(newstate){
 				case KGIdleState: {
+					if(doDebug){
+						printf("[%s] question -> idle\n", __func__) ;
+					}
 					[self idleState] ;
 				} break ;
 				case KGInputAnswerState: {
+					if(doDebug){
+						printf("[%s] question -> answer\n", __func__) ;
+					}
 					[self answerState] ;
 				} break ;
 				case KGDisplayQuestionState: {
 					/* No change */
 				} break ;
 				case KGEvaluateState: {
-					[self idleState] ;
+					/* Can not happen */
+					puts("Invalid trans") ;
 				} break ;
 			}
 		} break ;
 		case KGInputAnswerState: {
 			switch(newstate){
 				case KGIdleState: {
+					if(doDebug){
+						printf("[%s] answer -> idle\n", __func__) ;
+					}
 					[self idleState] ;
 				} break ;
 				case KGInputAnswerState: {
@@ -67,6 +82,9 @@
 					puts("Invalid trans") ;
 				} break ;
 				case KGEvaluateState: {
+					if(doDebug){
+						printf("[%s] answer -> evalueate\n", __func__) ;
+					}
 					[self evaluateState] ;
 				} break ;
 			}
@@ -74,6 +92,9 @@
 		case KGEvaluateState: {
 			switch(newstate){
 				case KGIdleState: {
+					if(doDebug){
+						printf("[%s] evaluate -> idle\n", __func__) ;
+					}
 					[self idleState] ;
 				} break ;
 				case KGInputAnswerState: {
@@ -118,7 +139,11 @@
 			unsigned int index = gameStatus.currentGlyphIndex ;
 			//printf("*** %s current index : %u\n", __func__, index) ;
 			if(sentence.wordNum <= index + 1){
-				[self setNextState: KGEvaluateState] ;
+				if(doDebug){
+					printf("* %s : Invalidate timer\n", __func__) ;
+				}
+				[countDownTimer invalidate] ;
+				//[self setNextState: KGEvaluateState] ;
 			} else {
 				gameStatus.currentGlyphIndex += 1 ;
 				gameStatus.state = KGInputAnswerState ;
@@ -164,24 +189,26 @@
 
 - (void) evaluateState
 {
-	[countDownTimer invalidate] ;
 	gameStatus.currentTime		= KGNoValidTime ;
 	gameStatus.timerInterval	= KGNoValidTime ;
 	
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence] ;
 	
-	/* Transfer to next */
-	[self setNextState: KGIdleState] ;
+	[countDownTimer repeatWithCount: sentence.wordNum - 1
+			   withInterval: 1.0
+			   withDelegate: self] ;
 }
 
 @end
 
-@implementation MainStateMachine (DisplayQuestionState)
+@implementation MainStateMachine (TimerDelegates)
 
 - (void) repeatForCount: (unsigned int) count
 {
-	(void) count ;
+	if(doDebug){
+		printf("* %s : repeat for count %u\n", __func__, count) ;
+	}
 	switch(gameStatus.state){
 		case KGIdleState: {
 			/* Do nothing */
@@ -199,13 +226,21 @@
 			gameStatus.state = KGInputAnswerState ;
 		} break ;
 		case KGEvaluateState: {
-			/* Do nothing */
+			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
+			unsigned int index = gameStatus.currentGlyphIndex ;
+			if(index < sentence.wordNum-1){
+				gameStatus.currentGlyphIndex = ++index ;
+			}
+			gameStatus.state = KGEvaluateState ;
 		} break ;
 	}
 }
 
 - (void) repeatDone
 {
+	if(doDebug){
+		printf("* %s : repeat done\n", __func__) ;
+	}
 	switch(gameStatus.state){
 		case KGIdleState: {
 			/* Do nothing */
@@ -218,7 +253,7 @@
 			[self setNextState: KGEvaluateState] ;
 		} break ;
 		case KGEvaluateState: {
-			/* Do nothing */
+			[self setNextState: KGIdleState] ;
 		} break ;
 	}
 }
