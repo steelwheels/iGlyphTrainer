@@ -32,6 +32,5 @@
 
 - (void) setDelegate: (id <KGGlyphSequenceEditiing>) delegate ;
 - (void) setEditable: (BOOL) flag ;
-- (void) setAllNeedsDisplay ;
 
 @end

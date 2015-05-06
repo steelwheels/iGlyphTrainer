@@ -6,6 +6,7 @@
  */
 
 #import "KGHackNavigationBar.h"
+#import "KGGlyphViewType.h"
 
 #if TARGET_OS_IPHONE
 

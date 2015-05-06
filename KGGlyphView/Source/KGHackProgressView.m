@@ -7,6 +7,8 @@
 
 #import "KGHackProgressView.h"
 
+static const BOOL		doDebug = NO ;
+
 @implementation KGHackProgressView
 
 - (instancetype) initWithCoder:(NSCoder *) decoder
@@ -33,10 +35,14 @@
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
 {
+	if(doDebug){
+		printf("%s (0)\n", __func__) ;
+	}
+
 	(void) keyPath ; (void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
-		KGGameStatus *		status = object ;
-		
+		KGGameStatus *	status = object ;
+
 		unsigned int maxnum, currentnum ;
 		switch(status.state){
 			case KGIdleState:
@@ -51,14 +57,15 @@
 				currentnum = status.currentGlyphIndex + 1 ;
 			} break ;
 		}
-		
+		if(doDebug){
+			printf("%s (1) state=%s maxnum=%u currentnum=%u\n",
+			       __func__,
+			       [KGGameStatus stateToString: status.state],
+			       maxnum, currentnum) ;
+		}
 		progressDrawer.maxGlyphNum       = maxnum ;
 		progressDrawer.processedGlyphNum = currentnum ;
-#		if TARGET_OS_IPHONE
-		[self setNeedsDisplay] ;
-#		else
-		[self setNeedsDisplay: YES] ;
-#		endif
+		[self setAllNeedsDisplay] ;
 	} else {
 		NSLog(@"Unknown object") ;
 	}

@@ -137,22 +137,6 @@ inputedStroke(KGGameStatus * status)
 	glyphDelegate = delegate ;
 }
 
-- (void) setAllNeedsDisplay
-{
-	NSArray * subviews = self.subviews ;
-#if TARGET_OS_IPHONE
-	for(UIView * subview in subviews){
-		[subview setNeedsDisplay] ;
-	}
-	[self setNeedsDisplay] ;
-#else
-	for(NSView * subview in subviews){
-		[subview setNeedsDisplay: YES] ;
-	}
-	[self setNeedsDisplay: YES] ;
-#endif
-}
-
 - (void) editingGraphicsEnded
 {
 	if(glyphDelegate){
