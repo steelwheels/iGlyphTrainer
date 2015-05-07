@@ -40,8 +40,7 @@
 			KGGameStatus * status = object ;
 			switch(status.state){
 				case KGIdleState:
-				case KGDisplayQuestionState:
-				case KGEvaluateState: {
+				case KGDisplayQuestionState: {
 					[self clearTimerLabel] ;
 				} break ;
 				case KGInputAnswerState: {
@@ -51,6 +50,12 @@
 					} else {
 						[self clearTimerLabel] ;
 					}
+				} break ;
+				case KGEvaluateState: {
+					unsigned int cornum   = status.correctAnswerNum ;
+					unsigned int totalnum = status.currentSentence.wordNum ;
+					NSString * label = [[NSString alloc] initWithFormat: @"%u / %u", cornum, totalnum] ;
+					[self setTitle: label] ;
 				} break ;
 			}
 		}
