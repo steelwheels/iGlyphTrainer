@@ -14,6 +14,8 @@
 		0579142C1A9CD6E40087D704 /* KGGlyphData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0579142B1A9CD6E40087D704 /* KGGlyphData.h */; };
 		059CA5FB1AF149EF00D43F31 /* KGGlyphHackTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 059CA5FA1AF149EF00D43F31 /* KGGlyphHackTime.m */; };
 		059CA5FC1AF149FC00D43F31 /* KGGlyphHackTime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 059CA5F91AF149EF00D43F31 /* KGGlyphHackTime.h */; };
+		05A2DA641AFBBEE700920E02 /* KGGlyphComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A2DA631AFBBEE700920E02 /* KGGlyphComparator.m */; };
+		05A2DA651AFBBEFA00920E02 /* KGGlyphComparator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05A2DA621AFBBEE700920E02 /* KGGlyphComparator.h */; };
 		05A3E6F31AA09CBD007C7113 /* KGGlyphModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E6F21AA09CBD007C7113 /* KGGlyphModel.m */; };
 		05A3E6FA1AA0A27D007C7113 /* KGGlyphModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05A3E6F11AA09CBD007C7113 /* KGGlyphModel.h */; };
 		05BD04F81A9CD8230046DDF0 /* KGGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD04F71A9CD8230046DDF0 /* KGGlyphStroke.m */; };
@@ -40,6 +42,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05A2DA651AFBBEFA00920E02 /* KGGlyphComparator.h in CopyFiles */,
 				059CA5FC1AF149FC00D43F31 /* KGGlyphHackTime.h in CopyFiles */,
 				05CB0FA31AF0F1440056AA40 /* KGGlyphInputStrokes.h in CopyFiles */,
 				05725CC71AD2CC78007A5F4E /* KGGlyphSentence.h in CopyFiles */,
@@ -62,6 +65,8 @@
 		0579142B1A9CD6E40087D704 /* KGGlyphData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphData.h; sourceTree = "<group>"; };
 		059CA5F91AF149EF00D43F31 /* KGGlyphHackTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphHackTime.h; sourceTree = "<group>"; };
 		059CA5FA1AF149EF00D43F31 /* KGGlyphHackTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphHackTime.m; sourceTree = "<group>"; };
+		05A2DA621AFBBEE700920E02 /* KGGlyphComparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphComparator.h; sourceTree = "<group>"; };
+		05A2DA631AFBBEE700920E02 /* KGGlyphComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphComparator.m; sourceTree = "<group>"; };
 		05A3E6F11AA09CBD007C7113 /* KGGlyphModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphModel.h; sourceTree = "<group>"; };
 		05A3E6F21AA09CBD007C7113 /* KGGlyphModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphModel.m; sourceTree = "<group>"; };
 		05BD04F61A9CD8230046DDF0 /* KGGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStroke.h; sourceTree = "<group>"; };
@@ -109,6 +114,8 @@
 				05BD04F71A9CD8230046DDF0 /* KGGlyphStroke.m */,
 				05CB0FA21AF0F0F60056AA40 /* KGGlyphInputStrokes.h */,
 				05CB0FA01AF0F0E30056AA40 /* KGGlyphInputStrokes.m */,
+				05A2DA621AFBBEE700920E02 /* KGGlyphComparator.h */,
+				05A2DA631AFBBEE700920E02 /* KGGlyphComparator.m */,
 				052BBCB11AC9AEEA00E47CC6 /* KGGlyphName.h */,
 				052BBCB21AC9AEEA00E47CC6 /* KGGlyphName.m */,
 				05725CC41AD2CC6C007A5F4E /* KGGlyphSentence.h */,
@@ -202,6 +209,7 @@
 				05A3E6F31AA09CBD007C7113 /* KGGlyphModel.m in Sources */,
 				052BBCB31AC9AEEA00E47CC6 /* KGGlyphName.m in Sources */,
 				05CB0FA11AF0F0E30056AA40 /* KGGlyphInputStrokes.m in Sources */,
+				05A2DA641AFBBEE700920E02 /* KGGlyphComparator.m in Sources */,
 				05BD04F81A9CD8230046DDF0 /* KGGlyphStroke.m in Sources */,
 				05725CC61AD2CC6C007A5F4E /* KGGlyphSentence.m in Sources */,
 			);

@@ -26,4 +26,7 @@
 ** after destruct
 [stroke 0
 ]
+compare "Nil" and "Nil" ->  same -> OK
+compare "Abandon" and "Abandon" ->  same -> OK
+compare "Accept" and "Adapt" ->  different -> OK
 *** Summary : OK

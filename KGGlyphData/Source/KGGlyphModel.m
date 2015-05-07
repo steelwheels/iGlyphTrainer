@@ -6,4 +6,3 @@
  */
 
 #import "KGGlyphModel.h"
-

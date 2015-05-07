@@ -11,12 +11,15 @@ static void
 printTitle(const char * title) ;
 int
 main(int argc, const char * argv[]) {
+	(void) argc ;
+	(void) argv ;
 	unsigned int	errorcount = 0 ;
 	@autoreleasepool {
 		printTitle("UTHackProgress") ;	//errorcount += UTHackProgress() ? 0 : 1 ;
 		
 		BOOL result = YES ;
 		result &= UTGlyphStrokeArray() ;
+		result &= UTGlyphComparator() ;
 		
 		if(result){
 			puts("*** Summary : OK") ;

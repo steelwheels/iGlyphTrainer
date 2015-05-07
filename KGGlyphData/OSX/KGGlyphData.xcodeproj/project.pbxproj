@@ -18,6 +18,9 @@
 		05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 05226E361AB467670089AA7D /* KGGlyphStroke.m */; };
 		05226E3E1AB468240089AA7D /* CoconutGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05226E3D1AB468240089AA7D /* CoconutGraphics.framework */; };
 		05226E4A1AB46FC40089AA7D /* install.mk in Resources */ = {isa = PBXBuildFile; fileRef = 05226E491AB46FC40089AA7D /* install.mk */; };
+		052A34341AFBB02800014064 /* KGGlyphComparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 052A34321AFBB02800014064 /* KGGlyphComparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		052A34351AFBB02800014064 /* KGGlyphComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 052A34331AFBB02800014064 /* KGGlyphComparator.m */; };
+		052A34371AFBBB4C00014064 /* UTGlyphComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 052A34361AFBBB4C00014064 /* UTGlyphComparator.m */; };
 		054B44451AC9B22C007E35BE /* KGGlyphName.h in Headers */ = {isa = PBXBuildFile; fileRef = 054B44431AC9B22C007E35BE /* KGGlyphName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B44441AC9B22C007E35BE /* KGGlyphName.m */; };
 		05A338DD1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A338DB1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,6 +83,9 @@
 		05226E361AB467670089AA7D /* KGGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStroke.m; sourceTree = "<group>"; };
 		05226E3D1AB468240089AA7D /* CoconutGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoconutGraphics.framework; path = ../../../../Library/Frameworks/CoconutGraphics.framework; sourceTree = "<group>"; };
 		05226E491AB46FC40089AA7D /* install.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = install.mk; sourceTree = SOURCE_ROOT; };
+		052A34321AFBB02800014064 /* KGGlyphComparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphComparator.h; sourceTree = "<group>"; };
+		052A34331AFBB02800014064 /* KGGlyphComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphComparator.m; sourceTree = "<group>"; };
+		052A34361AFBBB4C00014064 /* UTGlyphComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTGlyphComparator.m; sourceTree = "<group>"; };
 		054B44431AC9B22C007E35BE /* KGGlyphName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphName.h; sourceTree = "<group>"; };
 		054B44441AC9B22C007E35BE /* KGGlyphName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphName.m; sourceTree = "<group>"; };
 		05A338DB1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphInputStrokes.h; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 				05226E361AB467670089AA7D /* KGGlyphStroke.m */,
 				05A338DB1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h */,
 				05A338DC1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.m */,
+				052A34321AFBB02800014064 /* KGGlyphComparator.h */,
+				052A34331AFBB02800014064 /* KGGlyphComparator.m */,
 				054B44431AC9B22C007E35BE /* KGGlyphName.h */,
 				054B44441AC9B22C007E35BE /* KGGlyphName.m */,
 				05104CF71AD168B200C614BB /* KGGlyphSentence.h */,
@@ -171,6 +179,7 @@
 				0510F0AD1AB5924F00E33696 /* UnitTest.h */,
 				05AC00D61AB5917A0005E32E /* UnitTest.m */,
 				05DB0A101AF0FA4E0033B7DC /* UTGlyphInputStrokes.m */,
+				052A34361AFBBB4C00014064 /* UTGlyphComparator.m */,
 				05DB0A121AF0FC7B0033B7DC /* UTPrintStroke.m */,
 				05DB0A1A1AF1003E0033B7DC /* unit_test.mk */,
 			);
@@ -185,6 +194,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052A34341AFBB02800014064 /* KGGlyphComparator.h in Headers */,
 				05A338DD1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h in Headers */,
 				05C2A5881AF147AB00C96902 /* KGGlyphHackTime.h in Headers */,
 				05104CF91AD168B200C614BB /* KGGlyphSentence.h in Headers */,
@@ -331,6 +341,7 @@
 				05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */,
 				054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */,
 				05226E3A1AB467670089AA7D /* KGGlyphModel.m in Sources */,
+				052A34351AFBB02800014064 /* KGGlyphComparator.m in Sources */,
 				05104CFA1AD168B200C614BB /* KGGlyphSentence.m in Sources */,
 				05A338DE1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.m in Sources */,
 			);
@@ -343,6 +354,7 @@
 				05DB0A131AF0FC7B0033B7DC /* UTPrintStroke.m in Sources */,
 				05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */,
 				05DB0A111AF0FA4E0033B7DC /* UTGlyphInputStrokes.m in Sources */,
+				052A34371AFBBB4C00014064 /* UTGlyphComparator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +551,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -549,6 +566,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_CFLAGS = (
+					"-W",
+					"-Wall",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
