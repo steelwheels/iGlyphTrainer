@@ -30,6 +30,7 @@ static const double	KGNoValidTime		= -1.0 ;
 @property (assign, nonatomic) unsigned int		currentGlyphIndex ;
 @property (assign, nonatomic) double			currentTime ;
 @property (assign, nonatomic) double			timerInterval ;
+@property (assign, nonatomic) unsigned int		correctAnswerNum ;
 
 + (NSString *) stateKeyPath ;
 + (const char *) stateToString: (KGGameState) state ;

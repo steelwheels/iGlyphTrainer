@@ -47,6 +47,8 @@
 		
 		self.currentTime	= KGNoValidTime ;
 		self.timerInterval	= KGNoValidTime ;
+		
+		self.correctAnswerNum	= 0 ;
 	}
 	return self ;
 }
@@ -63,6 +65,9 @@
 {
 	self.currentSentence	= sentence ;
 	self.currentGlyphIndex	= 0 ;
+	self.currentTime	= KGNoValidTime ;
+	self.timerInterval	= KGNoValidTime ;
+	self.correctAnswerNum	= 0 ;
 	self.state		= nextstate ;
 }
 

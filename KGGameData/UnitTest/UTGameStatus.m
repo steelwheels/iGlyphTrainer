@@ -39,11 +39,13 @@ UTGameStatus(void)
 	[status addStateObserver: observer] ;
 	status.currentTime		= 1.0 ;
 	status.timerInterval		= 1.0 ;
+	status.correctAnswerNum		= 0 ;
 	status.state			= KGDisplayQuestionState ;
 	
 	status.currentGlyphIndex	= 2 ;
 	status.currentTime		= 2.0 ;
 	status.timerInterval		= 2.0 ;
+	status.correctAnswerNum		= 0 ;
 	status.state			= KGInputAnswerState ;
 	
 	return YES ;
@@ -52,10 +54,11 @@ UTGameStatus(void)
 static void
 printStatus(KGGameStatus * status)
 {
-	printf("state = {state:%u, index:%u, time:%lf, interval:%lf}\n",
+	printf("state = {state:%u, index:%u, time:%lf, interval:%lf, correct:%u}\n",
 	       status.state,
 	       status.currentGlyphIndex,
 	       status.currentTime,
-	       status.timerInterval) ;
+	       status.timerInterval,
+	       status.correctAnswerNum) ;
 }
 

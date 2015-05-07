@@ -1,5 +1,5 @@
 ****************************************
 * UTGameStatus
 ****************************************
-objeserve: keypath=state state = {state:1, index:0, time:1.000000, interval:1.000000}
-objeserve: keypath=state state = {state:2, index:2, time:2.000000, interval:2.000000}
+objeserve: keypath=state state = {state:1, index:0, time:1.000000, interval:1.000000, correct:0}
+objeserve: keypath=state state = {state:2, index:2, time:2.000000, interval:2.000000, correct:0}
