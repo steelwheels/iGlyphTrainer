@@ -21,6 +21,10 @@ static const BOOL doDebug	= NO ;
 @interface MainStateMachine (TimerDelegates) <CNCountTimerDelegate>
 @end
 
+@interface MainStateMachine (Evaluating)
+- (void) evaluateCurrentGlyph ;
+@end
+
 @implementation MainStateMachine
 
 - (instancetype) initWithStatus: (KGGameStatus *) status
@@ -189,8 +193,14 @@ static const BOOL doDebug	= NO ;
 
 - (void) evaluateState
 {
+	gameStatus.currentGlyphIndex	= 0 ;
+	
 	gameStatus.currentTime		= KGNoValidTime ;
 	gameStatus.timerInterval	= KGNoValidTime ;
+	
+	gameStatus.hasCorrectAnswer = NO ;
+	gameStatus.correctAnswerNum = 0 ;
+	[self evaluateCurrentGlyph] ;
 	
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 	[gameStatus setNextState: KGEvaluateState withGlyphSentence: sentence] ;
@@ -228,8 +238,10 @@ static const BOOL doDebug	= NO ;
 		case KGEvaluateState: {
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 			unsigned int index = gameStatus.currentGlyphIndex ;
+			
 			if(index < sentence.wordNum-1){
 				gameStatus.currentGlyphIndex = ++index ;
+				[self evaluateCurrentGlyph] ;
 			}
 			gameStatus.state = KGEvaluateState ;
 		} break ;
@@ -255,6 +267,35 @@ static const BOOL doDebug	= NO ;
 		case KGEvaluateState: {
 			[self setNextState: KGIdleState] ;
 		} break ;
+	}
+}
+
+@end
+
+@implementation MainStateMachine (Evaluating)
+
+- (void) evaluateCurrentGlyph
+{
+	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
+	unsigned int index = gameStatus.currentGlyphIndex ;
+	
+	/* Check the input stroke is correct or not */
+	KGGlyphKind expkind = sentence.glyphWords[index] ;
+	struct KGGlyphStroke expstroke = KGStrokeOfGlyph(expkind) ;
+	struct KGGlyphStroke instroke  = KGSharedGlyphInputStrokeAtIndex(index) ;
+	if(KGCompareGlyphStrokes(&expstroke, &instroke) == 0){
+		/* Correct */
+		if(doDebug){
+			printf("%s at index %u -> correct\n", __func__, index) ;
+		}
+		gameStatus.hasCorrectAnswer = YES ;
+		gameStatus.correctAnswerNum += 1 ;
+	} else {
+		/* Not correct */
+		if(doDebug){
+			printf("%s at index %u -> not correct\n", __func__, index) ;
+		}
+		gameStatus.hasCorrectAnswer = NO ;
 	}
 }
 
