@@ -7,16 +7,32 @@
 
 #import "KGGlyphViewType.h"
 
+typedef enum {
+	KGNotHackedAtDisplayState,
+	KGHackedAtDisplayState,
+	
+	KGNotHackedAtEvaluationState,
+	KGCorrectHackedAtEvaluationState,
+	KGWrongHackedAtEvaluationState
+} KGHackState ;
+
 @interface KGHackProgressDrawer : NSObject <KCGraphicsDrawing>
 {
-	CGRect			previousBounds ;
+	
 	struct CNHexagon	hackHexagon[KGLimitProgressCount] ;
+	KGHackState		hackStates[KGLimitProgressCount] ;
+	
+	unsigned int		maxGlyphNum ;
+	unsigned int		nextIndex ;
+	
+	CGRect			previousBounds ;
 	unsigned int		prevMaxGlyphNum ;
 }
 
-@property (assign, nonatomic) unsigned int	maxGlyphNum ;
-@property (assign, nonatomic) unsigned int	processedGlyphNum ;
-
 - (instancetype) init ;
+
+- (void) setMaxGlyphNum: (unsigned int) maxnum ;
+- (void) clearStates ;
+- (void) addNextHackState: (KGHackState) state ;
 
 @end

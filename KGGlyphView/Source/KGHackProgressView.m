@@ -8,14 +8,18 @@
 #import "KGHackProgressView.h"
 
 static const BOOL		doDebug = NO ;
+static const unsigned int	invalidIndex = (unsigned int) -1 ;
+
+@interface KGHackProgressView ()
+- (void) setupHackProgressView ;
+@end
 
 @implementation KGHackProgressView
 
 - (instancetype) initWithCoder:(NSCoder *) decoder
 {
 	if((self = [super initWithCoder: decoder]) != nil){
-		progressDrawer = [[KGHackProgressDrawer alloc] init] ;
-		[super addGraphicsDrawer: progressDrawer withDelegate: nil] ;
+		[self setupHackProgressView] ;
 	}
 	return self ;
 }
@@ -27,10 +31,17 @@ static const BOOL		doDebug = NO ;
 #endif
 {
 	if((self = [super initWithFrame: frame]) != nil){
-		progressDrawer = [[KGHackProgressDrawer alloc] init] ;
-		[super addGraphicsDrawer: progressDrawer withDelegate: nil] ;
+		[self setupHackProgressView] ;
 	}
 	return self ;
+}
+
+- (void) setupHackProgressView
+{
+	progressDrawer = [[KGHackProgressDrawer alloc] init] ;
+	[super addGraphicsDrawer: progressDrawer withDelegate: nil] ;
+	prevState = KGIdleState ;
+	prevIndex = invalidIndex ;
 }
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context
@@ -42,29 +53,44 @@ static const BOOL		doDebug = NO ;
 	(void) keyPath ; (void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		KGGameStatus *	status = object ;
-
-		unsigned int maxnum, currentnum ;
-		switch(status.state){
-			case KGIdleState:
-			case KGEvaluateState: {
-				maxnum     = 0 ;
-				currentnum = 0 ;
+		KGGameState	newstate = status.state ;
+		unsigned int	newindex = status.currentGlyphIndex ;
+		
+		if(newstate == KGIdleState || newstate != prevState){
+			[progressDrawer setMaxGlyphNum: 0] ;
+			[progressDrawer clearStates] ;
+			prevState = newstate ;
+			prevIndex = invalidIndex ;
+		}
+		
+		switch(newstate){
+			case KGIdleState: {
+				//[progressDrawer setMaxGlyphNum: 0] ;
+				//[progressDrawer clearStates] ;
 			} break ;
 			case KGDisplayQuestionState:
 			case KGInputAnswerState: {
-				struct KGGlyphSentence sentence = status.currentSentence ;
-				maxnum	   = sentence.wordNum ;
-				currentnum = status.currentGlyphIndex + 1 ;
+				if(prevIndex != newindex){
+					struct KGGlyphSentence sentence = status.currentSentence ;
+					[progressDrawer setMaxGlyphNum: sentence.wordNum] ;
+					[progressDrawer addNextHackState: KGHackedAtDisplayState] ;
+					prevIndex = newindex ;
+				}
+			} break ;
+			case KGEvaluateState: {
+				if(prevIndex != newindex){
+					struct KGGlyphSentence sentence = status.currentSentence ;
+					[progressDrawer setMaxGlyphNum: sentence.wordNum] ;
+					[progressDrawer addNextHackState: KGCorrectHackedAtEvaluationState] ;
+					prevIndex = newindex ;
+				}
 			} break ;
 		}
 		if(doDebug){
-			printf("%s (1) state=%s maxnum=%u currentnum=%u\n",
-			       __func__,
-			       [KGGameStatus stateToString: status.state],
-			       maxnum, currentnum) ;
+			printf("%s (1) state=%s\n",
+			       __func__, [KGGameStatus stateToString: status.state]) ;
 		}
-		progressDrawer.maxGlyphNum       = maxnum ;
-		progressDrawer.processedGlyphNum = currentnum ;
+		
 		[self setAllNeedsDisplay] ;
 	} else {
 		NSLog(@"Unknown object") ;

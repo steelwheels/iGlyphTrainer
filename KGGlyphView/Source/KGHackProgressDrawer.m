@@ -9,20 +9,21 @@
 #import <KGGameData/KGGameData.h>
 
 static void
+clearStates(KGHackState states[]) ;
+static void
 updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect bounds) ;
 static void
-drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curno, struct CNHexagon hexagon[]) ;
+drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[]) ;
 
 @implementation KGHackProgressDrawer
-
-@synthesize maxGlyphNum, processedGlyphNum ;
 
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
-		previousBounds		= CGRectMake(0.0, 0.0, 0.0, 0.0) ;
+		clearStates(hackStates) ;
 		maxGlyphNum		= 0 ;
-		processedGlyphNum	= 0 ;
+		nextIndex		= 0 ;
+		previousBounds		= CGRectMake(0.0, 0.0, 0.0, 0.0) ;
 		prevMaxGlyphNum		= 0 ;
 	}
 	return self ;
@@ -40,7 +41,28 @@ drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curno, struc
 		prevMaxGlyphNum = maxGlyphNum ;
 	}
 
-	drawHexagon(context, maxGlyphNum, processedGlyphNum, hackHexagon) ;
+	drawHexagon(context, maxGlyphNum, hackStates, hackHexagon) ;
+}
+
+- (void) setMaxGlyphNum: (unsigned int) maxnum
+{
+	maxGlyphNum	= maxnum ;
+}
+
+- (void) clearStates
+{
+	clearStates(hackStates) ;
+	nextIndex = 0 ;
+}
+
+- (void) addNextHackState: (KGHackState) state
+{
+	if(nextIndex < maxGlyphNum){
+		hackStates[nextIndex] = state ;
+		nextIndex++ ;
+	} else {
+		NSLog(@"Invalid next index") ;
+	}
 }
 
 - (BOOL) isEditable
@@ -74,6 +96,15 @@ drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curno, struc
 @end
 
 static void
+clearStates(KGHackState states[])
+{
+	unsigned int i ;
+	for(i=0 ; i<KGLimitProgressCount ; i++){
+		states[i] = KGNotHackedAtDisplayState ;
+	}
+}
+
+static void
 updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect bounds)
 {
 	CGFloat hexwidth  = bounds.size.width / KGLimitProgressCount ;
@@ -91,20 +122,41 @@ updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect boun
 }
 
 static void
-drawHexagon(CGContextRef context, unsigned int maxnum, unsigned int curnum, struct CNHexagon hexagon[])
+drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[])
 {
-	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
-	struct CNRGB goldencolor = ctable.goldenrod ;
-	
-	KCSetFillColor(context, goldencolor) ;
-	KCSetStrokeColor(context, goldencolor) ;
-	
+	KGPreference * preference = [KGPreference sharedPreference] ;	
 	unsigned int	i ;
-	for(i=0 ; i<curnum ; i++){
-		KCFillHexagon(context, &(hexagon[i])) ;
-	}
-	for(i=curnum ; i<maxnum ; i++){
-		KCDrawHexagon(context, &(hexagon[i])) ;
+	for(i=0 ; i<maxnum ; i++){
+		switch(states[i]){
+			case KGNotHackedAtDisplayState: {
+				struct CNRGB gcolor = preference.normalGlyphColor ;
+				KCSetStrokeColor(context, gcolor) ;
+				KCDrawHexagon(context, &(hexagon[i])) ;
+			} break ;
+			case KGHackedAtDisplayState: {
+				struct CNRGB gcolor = preference.normalGlyphColor ;
+				KCSetStrokeColor(context, gcolor) ;
+				KCSetFillColor(context, gcolor) ;
+				KCFillHexagon(context, &(hexagon[i])) ;
+			} break ;
+			case KGNotHackedAtEvaluationState: {
+				struct CNRGB gcolor = preference.correctGlyphColor ;
+				KCSetStrokeColor(context, gcolor) ;
+				KCDrawHexagon(context, &(hexagon[i])) ;
+			} break ;
+			case KGCorrectHackedAtEvaluationState: {
+				struct CNRGB gcolor = preference.correctGlyphColor ;
+				KCSetStrokeColor(context, gcolor) ;
+				KCSetFillColor(context, gcolor) ;
+				KCFillHexagon(context, &(hexagon[i])) ;
+			} break ;
+			case KGWrongHackedAtEvaluationState: {
+				struct CNRGB gcolor = preference.wrongGlyphColor ;
+				KCSetStrokeColor(context, gcolor) ;
+				KCSetFillColor(context, gcolor) ;
+				KCFillHexagon(context, &(hexagon[i])) ;
+			} break ;
+		}
 	}
 }
 

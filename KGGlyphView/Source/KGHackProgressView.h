@@ -11,6 +11,8 @@
 @interface KGHackProgressView : KCGraphicsView 
 {
 	KGHackProgressDrawer *		progressDrawer ;
+	KGGameState			prevState ;
+	unsigned int			prevIndex ;
 }
 
 @end
