@@ -81,7 +81,8 @@ static const unsigned int	invalidIndex = (unsigned int) -1 ;
 				if(prevIndex != newindex){
 					struct KGGlyphSentence sentence = status.currentSentence ;
 					[progressDrawer setMaxGlyphNum: sentence.wordNum] ;
-					[progressDrawer addNextHackState: KGCorrectHackedAtEvaluationState] ;
+					KGHackState hstate = status.hasCorrectAnswer ? KGCorrectHackedAtEvaluationState : KGWrongHackedAtEvaluationState ;
+					[progressDrawer addNextHackState: hstate] ;
 					prevIndex = newindex ;
 				}
 			} break ;
