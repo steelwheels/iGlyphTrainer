@@ -9,7 +9,7 @@
 
 @implementation KGGameStatus
 
-@synthesize state, currentSentence, currentGlyphIndex ;
+@synthesize state, currentSentence, currentGlyphIndex, hasCorrectAnswer, correctAnswerNum ;
 @synthesize currentTime, timerInterval ;
 
 + (NSString *) stateKeyPath
@@ -44,11 +44,11 @@
 		
 		self.currentSentence	= KGGetEmptySentence() ;
 		self.currentGlyphIndex	= 0 ;
+		self.hasCorrectAnswer	= NO ;
+		self.correctAnswerNum	= 0 ;
 		
 		self.currentTime	= KGNoValidTime ;
 		self.timerInterval	= KGNoValidTime ;
-		
-		self.correctAnswerNum	= 0 ;
 	}
 	return self ;
 }
@@ -65,9 +65,10 @@
 {
 	self.currentSentence	= sentence ;
 	self.currentGlyphIndex	= 0 ;
+	//self.hasCorrectAnswer	= NO ;	// set by FSM
+	//self.correctAnswerNum	= 0 ;	// set by FSM
 	self.currentTime	= KGNoValidTime ;
 	self.timerInterval	= KGNoValidTime ;
-	self.correctAnswerNum	= 0 ;
 	self.state		= nextstate ;
 }
 

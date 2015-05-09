@@ -16,6 +16,10 @@
 @property (readonly, nonatomic) BOOL		doDisplayGlyphNameAtQuestionState ;
 @property (readonly, nonatomic) BOOL		doDisplayGlyphNameAtAnswerState ;
 
+@property (readonly, nonatomic) struct CNRGB	normalGlyphColor ;
+@property (readonly, nonatomic) struct CNRGB	correctGlyphColor ;
+@property (readonly, nonatomic) struct CNRGB	wrongGlyphColor ;
+
 + (KGPreference *) sharedPreference ;
 
 - (instancetype) init ;

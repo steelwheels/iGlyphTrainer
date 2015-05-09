@@ -13,12 +13,16 @@
 @property (assign, nonatomic) unsigned int	minQuestionSentenceLength ;
 @property (assign, nonatomic) BOOL		doDisplayGlyphNameAtQuestionState ;
 @property (assign, nonatomic) BOOL		doDisplayGlyphNameAtAnswerState ;
+@property (assign, nonatomic) struct CNRGB	normalGlyphColor ;
+@property (assign, nonatomic) struct CNRGB	correctGlyphColor ;
+@property (assign, nonatomic) struct CNRGB	wrongGlyphColor ;
 @end
 
 @implementation KGPreference
 
 @synthesize questionInterval, maxQuestionSentenceLength, minQuestionSentenceLength ;
 @synthesize doDisplayGlyphNameAtQuestionState, doDisplayGlyphNameAtAnswerState ;
+@synthesize normalGlyphColor, correctGlyphColor, wrongGlyphColor ;
 
 + (KGPreference *) sharedPreference
 {
@@ -38,6 +42,11 @@
 		self.minQuestionSentenceLength		= 2 ;
 		self.doDisplayGlyphNameAtQuestionState	= YES ;
 		self.doDisplayGlyphNameAtAnswerState	= YES ;
+		
+		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+		self.normalGlyphColor	= ctable.goldenrod ;
+		self.correctGlyphColor	= ctable.turquoise ;
+		self.wrongGlyphColor	= ctable.red1 ;
 	}
 	return self ;
 }
