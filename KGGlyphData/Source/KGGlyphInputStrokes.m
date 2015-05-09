@@ -6,7 +6,7 @@
  */
 
 #import "KGGlyphInputStrokes.h"
-
+#import "KGGlyphStroke.h"
 
 static struct KGGlyphInputStrokes *
 sharedGlyphInputStrokes(void) ;
@@ -27,6 +27,17 @@ void
 KGClearSharedGlyphInputStrokes(void)
 {
 	KGClearGlyphInputStrokes(sharedGlyphInputStrokes()) ;
+}
+
+struct KGGlyphStroke
+KGSharedGlyphInputStrokeAtIndex(unsigned int index)
+{
+	const struct KGGlyphInputStrokes * src = sharedGlyphInputStrokes() ;
+	if(index < src->strokeNum){
+		return src->strokeArray[index] ;
+	} else {
+		return KGStrokeOfGlyph(KGNilGlyph) ;
+	}
 }
 
 BOOL

@@ -19,6 +19,9 @@ KGSharedGlyphInputStrokes(void) ;
 void
 KGClearSharedGlyphInputStrokes(void) ;
 
+struct KGGlyphStroke
+KGSharedGlyphInputStrokeAtIndex(unsigned int index) ;
+
 BOOL
 KGAddStrokeToSharedInputStrokes(const struct KGGlyphStroke * src) ;
 
