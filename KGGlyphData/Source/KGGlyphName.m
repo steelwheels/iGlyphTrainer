@@ -106,6 +106,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Liberate) ;
 			CASE(Lie) ;
 			CASE(LifeForce) ;
+			CASE(Live) ;
 			CASE(LiveAgain) ;
 			CASE(Lose) ;
 			CASE(Loss) ;
@@ -134,6 +135,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Past) ;
 			CASE(Path) ;
 			CASE(Peace) ;
+			CASE(Perfect) ;
 			CASE(Perfection) ;
 			CASE(Perspective) ;
 			CASE(Portal) ;

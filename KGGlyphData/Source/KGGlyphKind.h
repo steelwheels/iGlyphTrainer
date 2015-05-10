@@ -101,6 +101,7 @@ typedef enum {
 	KGLiberateGlyph,
 	KGLieGlyph,
 	KGLifeForceGlyph,
+	KGLiveGlyph,
 	KGLiveAgainGlyph,
 	KGLoseGlyph,
 	KGLossGlyph,
@@ -126,6 +127,7 @@ typedef enum {
 	KGOutsideGlyph,		/* KGDistanceGlyph	*/
 	KGPastGlyph,
 	KGPathGlyph,
+	KGPerfectGlyph,
 	KGPerfectionGlyph,
 	KGPeaceGlyph,
 	KGPerspectiveGlyph,

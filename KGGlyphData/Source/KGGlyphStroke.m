@@ -169,7 +169,8 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
-		case KGBreathGlyph: {
+		case KGBreathGlyph:
+		case KGLiveGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 5,   6},
 				{ 6,   7},
@@ -871,6 +872,7 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
+		case KGPerfectGlyph:
 		case KGPerfectionGlyph:
 		case KGBalanceGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
