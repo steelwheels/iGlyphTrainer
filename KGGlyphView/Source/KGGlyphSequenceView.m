@@ -82,49 +82,54 @@ inputedStroke(KGGameStatus * status)
 	(void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
-			CNColorTable * ctable = [CNColorTable defaultColorTable] ;
-			struct CNRGB goldencolor = ctable.goldenrod ;
 			struct KGGlyphStroke nilstroke = KGStrokeOfGlyph(KGNilGlyph) ;
+			
+			KGPreference * preference = [KGPreference sharedPreference] ;
+			struct CNRGB normalcolor  = preference.normalGlyphColor ;
+			struct CNRGB correctcolor = preference.correctGlyphColor ;
+			struct CNRGB wrongcolor   = preference.wrongGlyphColor ;
 			
 			KGGameStatus * status = object ;
 			switch(status.state){
 				case KGIdleState: {
 					[stroke0Drawer setStroke: &nilstroke] ;
-					[stroke0Drawer setColor: &goldencolor] ;
+					[stroke0Drawer setColor: &normalcolor] ;
 					[stroke1Drawer setStroke: &nilstroke] ;
-					[stroke1Drawer setColor: &goldencolor] ;
+					[stroke1Drawer setColor: &normalcolor] ;
 					[strokeEditor setEditable: NO] ;
-					[strokeEditor setColor: &goldencolor] ;
+					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 				case KGDisplayQuestionState: {
 					struct KGGlyphStroke gstroke = currentStroke(status) ;
 					[stroke0Drawer setStroke: &gstroke] ;
-					[stroke0Drawer setColor: &goldencolor] ;
+					[stroke0Drawer setColor: &normalcolor] ;
 					[stroke1Drawer setStroke: &nilstroke] ;
-					[stroke1Drawer setColor: &goldencolor] ;
+					[stroke1Drawer setColor: &normalcolor] ;
 					[strokeEditor setEditable: NO] ;
-					[strokeEditor setColor: &goldencolor] ;
+					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 				case KGInputAnswerState: {
 					[stroke0Drawer setStroke: &nilstroke] ;
-					[stroke0Drawer setColor: &goldencolor] ;
+					[stroke0Drawer setColor: &normalcolor] ;
 					[stroke1Drawer setStroke: &nilstroke] ;
-					[stroke1Drawer setColor: &goldencolor] ;
+					[stroke1Drawer setColor: &normalcolor] ;
 					[strokeEditor setEditable: YES] ;
-					[strokeEditor setColor: &goldencolor] ;
+					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 				case KGEvaluateState: {
-					struct KGGlyphStroke gstroke = currentStroke(status) ;
+					/* Inputed stroken */
 					struct KGGlyphStroke istroke = inputedStroke(status) ;
-					struct CNRGB redcolor = ctable.red ;
+					[stroke0Drawer setStroke: &istroke] ;
+					[stroke0Drawer setColor: &wrongcolor] ;
 					
-					[stroke0Drawer setStroke: &gstroke] ;
-					[stroke0Drawer setColor: &goldencolor] ;
-					[stroke1Drawer setStroke: &istroke] ;
-					[stroke1Drawer setColor: &redcolor] ;
+					/* Expected stroke */
+					struct KGGlyphStroke gstroke = currentStroke(status) ;
+					[stroke1Drawer setStroke: &gstroke] ;
+					[stroke1Drawer setColor: &correctcolor] ;
+					
 					[strokeEditor setEditable: NO] ;
 					[strokeEditor setStroke: &nilstroke] ;
-					[strokeEditor setColor: &goldencolor] ;
+					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 			}
 			[self setAllNeedsDisplay] ;
