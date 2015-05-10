@@ -13,7 +13,8 @@ clearStates(KGHackState states[]) ;
 static void
 updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect bounds) ;
 static void
-drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[]) ;
+drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[],
+	    struct CNLineGradient * normalgradient, struct CNLineGradient * correctgradient, struct CNLineGradient * wronggradient) ;
 
 @implementation KGHackProgressDrawer
 
@@ -25,8 +26,27 @@ drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[
 		nextIndex		= 0 ;
 		previousBounds		= CGRectMake(0.0, 0.0, 0.0, 0.0) ;
 		prevMaxGlyphNum		= 0 ;
+		
+		KGPreference * preference = [KGPreference sharedPreference] ;
+		struct CNRGB normalcol  = [preference normalGlyphColor] ;
+		struct CNRGB correctcol = [preference correctGlyphColor] ;
+		struct CNRGB wrongcol   = [preference wrongGlyphColor] ;
+		
+		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+		struct CNRGB blackcol = [ctable black] ;
+		
+		normalGlyphGradient	= CNAllocateLineGradient(normalcol, blackcol) ;
+		correctGlyphGradient	= CNAllocateLineGradient(correctcol, blackcol) ;
+		wrongGlyphGradient	= CNAllocateLineGradient(wrongcol, blackcol) ;
 	}
 	return self ;
+}
+
+- (void) dealloc
+{
+	CNReleaseLineGradient(&normalGlyphGradient) ;
+	CNReleaseLineGradient(&correctGlyphGradient) ;
+	CNReleaseLineGradient(&wrongGlyphGradient) ;
 }
 
 - (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) bounds
@@ -41,7 +61,8 @@ drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[
 		prevMaxGlyphNum = maxGlyphNum ;
 	}
 
-	drawHexagon(context, maxGlyphNum, hackStates, hackHexagon) ;
+	drawHexagon(context, maxGlyphNum, hackStates, hackHexagon,
+		    &normalGlyphGradient, &correctGlyphGradient, &wrongGlyphGradient) ;
 }
 
 - (void) setMaxGlyphNum: (unsigned int) maxnum
@@ -122,8 +143,12 @@ updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect boun
 }
 
 static void
-drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[])
+drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[],
+	    struct CNLineGradient * normalgradient, struct CNLineGradient * correctgradient, struct CNLineGradient * wronggradient)
 {
+	static const unsigned int GradientStartIndex	= -1 ;
+	static const unsigned int GradientEndIndex	= GradientStartIndex + (6 / 2) ;
+	
 	KGPreference * preference = [KGPreference sharedPreference] ;	
 	unsigned int	i ;
 	for(i=0 ; i<maxnum ; i++){
@@ -137,7 +162,7 @@ drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[
 				struct CNRGB gcolor = preference.normalGlyphColor ;
 				KCSetStrokeColor(context, gcolor) ;
 				KCSetFillColor(context, gcolor) ;
-				KCFillHexagon(context, &(hexagon[i])) ;
+				KCFillHexagonWithLineGradiation(context, normalgradient, &(hexagon[i]), GradientStartIndex, GradientEndIndex) ;
 			} break ;
 			case KGNotHackedAtEvaluationState: {
 				struct CNRGB gcolor = preference.correctGlyphColor ;
@@ -148,16 +173,17 @@ drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[
 				struct CNRGB gcolor = preference.correctGlyphColor ;
 				KCSetStrokeColor(context, gcolor) ;
 				KCSetFillColor(context, gcolor) ;
-				KCFillHexagon(context, &(hexagon[i])) ;
+				KCFillHexagonWithLineGradiation(context, correctgradient, &(hexagon[i]), GradientStartIndex, GradientEndIndex) ;
 			} break ;
 			case KGWrongHackedAtEvaluationState: {
 				struct CNRGB gcolor = preference.wrongGlyphColor ;
 				KCSetStrokeColor(context, gcolor) ;
 				KCSetFillColor(context, gcolor) ;
-				KCFillHexagon(context, &(hexagon[i])) ;
+				KCFillHexagonWithLineGradiation(context, wronggradient, &(hexagon[i]), GradientStartIndex, GradientEndIndex) ;
 			} break ;
 		}
 	}
 }
+
 
 

@@ -22,6 +22,10 @@ typedef enum {
 	struct CNHexagon	hackHexagon[KGLimitProgressCount] ;
 	KGHackState		hackStates[KGLimitProgressCount] ;
 	
+	struct CNLineGradient	normalGlyphGradient ;
+	struct CNLineGradient	correctGlyphGradient ;
+	struct CNLineGradient	wrongGlyphGradient ;
+	
 	unsigned int		maxGlyphNum ;
 	unsigned int		nextIndex ;
 	
