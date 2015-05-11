@@ -6,14 +6,28 @@
  */
 
 #import "SetupViewController.h"
+#import <KGGameData/KGGameData.h>
+
+static const BOOL doDebug = NO ;
+
+@interface SetupViewController ()
+- (void) switchDoDisplayGlypyNameAtQuestionState: (KCSwitch *) switchbutton ;
+- (void) switchDoDisplayGlypyNameAtAnswerState: (KCSwitch *) switchbutton ;
+@end
 
 @implementation SetupViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
 	
 	self.backToMainViewButton.target = self ;
 	self.backToMainViewButton.action = @selector(backToMainViewButtonPressed:) ;
+	
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	
+	self.doDisplayInputGlypuNameSwitch.on = preference.doDisplayGlyphNameAtQuestionState ;
+	[self.doDisplayInputGlypuNameSwitch addTarget: self action: @selector(switchDoDisplayGlypyNameAtQuestionState:) forControlEvents: UIControlEventValueChanged] ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,8 +38,22 @@
 - (void) backToMainViewButtonPressed: (UIBarButtonItem *) item
 {
 	(void) item ;
-	puts("back to main view from setup") ;
+	if(doDebug){
+		puts("back to main view from setup") ;
+	}
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) switchDoDisplayGlypyNameAtQuestionState: (KCSwitch *) switchbutton
+{
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	preference.doDisplayGlyphNameAtQuestionState = switchbutton.on ;
+}
+
+- (void) switchDoDisplayGlypyNameAtAnswerState: (KCSwitch *) switchbutton
+{
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	preference.doDisplayGlyphNameAtAnswerState = switchbutton.on ;
 }
 
 @end

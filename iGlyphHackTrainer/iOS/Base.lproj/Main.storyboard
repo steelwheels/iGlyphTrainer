@@ -132,10 +132,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-PU-Sbc" customClass="KCSwitch">
+                                <rect key="frame" x="255" y="76" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="EkI-sr-NLo"/>
+                                    <constraint firstAttribute="width" constant="49" id="PEQ-gB-dyZ"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display gplyph name at input sequence" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n9-7A-Je6">
+                                <rect key="frame" x="16" y="64" width="231" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="iMb-b7-lSL"/>
+                                    <constraint firstAttribute="height" constant="55" id="xXS-6i-kdA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3uf-PU-Sbc" firstAttribute="trailing" secondItem="wBX-Pf-vpf" secondAttribute="trailingMargin" id="CSK-I9-Um7"/>
+                            <constraint firstItem="5n9-7A-Je6" firstAttribute="top" secondItem="iBC-C0-yBf" secondAttribute="bottom" id="QeG-5U-gtn"/>
+                            <constraint firstItem="5n9-7A-Je6" firstAttribute="leading" secondItem="wBX-Pf-vpf" secondAttribute="leadingMargin" id="Z0F-7V-VEm"/>
                             <constraint firstItem="iBC-C0-yBf" firstAttribute="leading" secondItem="wBX-Pf-vpf" secondAttribute="leadingMargin" constant="-16" id="eUU-vp-NBH"/>
+                            <constraint firstItem="3uf-PU-Sbc" firstAttribute="top" secondItem="iBC-C0-yBf" secondAttribute="bottom" constant="12" id="f1u-Jw-9YR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iBC-C0-yBf" secondAttribute="trailing" constant="-16" id="i3i-NZ-7jm"/>
                             <constraint firstItem="iBC-C0-yBf" firstAttribute="top" secondItem="WWk-mC-wYc" secondAttribute="bottom" id="xjX-UZ-hDZ"/>
                         </constraints>
@@ -143,6 +164,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backToMainViewButton" destination="N8k-hI-4lh" id="KeC-hE-hSd"/>
+                        <outlet property="doDisplayInputGlypuNameSwitch" destination="3uf-PU-Sbc" id="Jka-6I-v1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfe-uV-SPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
