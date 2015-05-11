@@ -11,8 +11,6 @@
 @property (assign, nonatomic) double		questionInterval ;
 @property (assign, nonatomic) unsigned int	maxQuestionSentenceLength ;
 @property (assign, nonatomic) unsigned int	minQuestionSentenceLength ;
-@property (assign, nonatomic) BOOL		doDisplayGlyphNameAtQuestionState ;
-@property (assign, nonatomic) BOOL		doDisplayGlyphNameAtAnswerState ;
 @property (assign, nonatomic) struct CNRGB	normalGlyphColor ;
 @property (assign, nonatomic) struct CNRGB	correctGlyphColor ;
 @property (assign, nonatomic) struct CNRGB	wrongGlyphColor ;

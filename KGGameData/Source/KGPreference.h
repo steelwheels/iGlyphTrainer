@@ -13,8 +13,8 @@
 
 @property (readonly, nonatomic)	unsigned int	maxQuestionSentenceLength ;
 @property (readonly, nonatomic) unsigned int	minQuestionSentenceLength ;
-@property (readonly, nonatomic) BOOL		doDisplayGlyphNameAtQuestionState ;
-@property (readonly, nonatomic) BOOL		doDisplayGlyphNameAtAnswerState ;
+@property (assign, nonatomic)   BOOL		doDisplayGlyphNameAtQuestionState ;
+@property (assign, nonatomic)   BOOL		doDisplayGlyphNameAtAnswerState ;
 
 @property (readonly, nonatomic) struct CNRGB	normalGlyphColor ;
 @property (readonly, nonatomic) struct CNRGB	correctGlyphColor ;
