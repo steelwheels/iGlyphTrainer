@@ -20,6 +20,7 @@ main(int argc, const char * argv[]) {
 		BOOL result = YES ;
 		result &= UTGlyphStrokeArray() ;
 		result &= UTGlyphComparator() ;
+		result &= UTDumpSentence() ;
 		
 		if(result){
 			puts("*** Summary : OK") ;

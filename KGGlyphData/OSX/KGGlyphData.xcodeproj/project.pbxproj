@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050FA1001B010FDC001137F7 /* UTSentenceDumper.m in Sources */ = {isa = PBXBuildFile; fileRef = 050FA0FF1B010FDC001137F7 /* UTSentenceDumper.m */; };
 		05104CF91AD168B200C614BB /* KGGlyphSentence.h in Headers */ = {isa = PBXBuildFile; fileRef = 05104CF71AD168B200C614BB /* KGGlyphSentence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05104CFA1AD168B200C614BB /* KGGlyphSentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 05104CF81AD168B200C614BB /* KGGlyphSentence.m */; };
 		0510F0AF1AB5942A00E33696 /* KGGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510F0AE1AB5942A00E33696 /* KGGlyphData.framework */; };
@@ -69,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		050FA0FF1B010FDC001137F7 /* UTSentenceDumper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTSentenceDumper.m; sourceTree = "<group>"; };
 		05104CF71AD168B200C614BB /* KGGlyphSentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphSentence.h; sourceTree = "<group>"; };
 		05104CF81AD168B200C614BB /* KGGlyphSentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphSentence.m; sourceTree = "<group>"; };
 		0510F0AD1AB5924F00E33696 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				05AC00D61AB5917A0005E32E /* UnitTest.m */,
 				05DB0A101AF0FA4E0033B7DC /* UTGlyphInputStrokes.m */,
 				052A34361AFBBB4C00014064 /* UTGlyphComparator.m */,
+				050FA0FF1B010FDC001137F7 /* UTSentenceDumper.m */,
 				05DB0A121AF0FC7B0033B7DC /* UTPrintStroke.m */,
 				05DB0A1A1AF1003E0033B7DC /* unit_test.mk */,
 			);
@@ -354,6 +357,7 @@
 				05DB0A131AF0FC7B0033B7DC /* UTPrintStroke.m in Sources */,
 				05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */,
 				05DB0A111AF0FA4E0033B7DC /* UTGlyphInputStrokes.m in Sources */,
+				050FA1001B010FDC001137F7 /* UTSentenceDumper.m in Sources */,
 				052A34371AFBBB4C00014064 /* UTGlyphComparator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

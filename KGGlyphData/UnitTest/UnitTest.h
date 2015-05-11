@@ -13,6 +13,9 @@ UTGlyphStrokeArray(void) ;
 BOOL
 UTGlyphComparator(void) ;
 
+BOOL
+UTDumpSentence(void) ;
+
 void
 UTPrintStroke(const struct KGGlyphStroke * src) ;
 

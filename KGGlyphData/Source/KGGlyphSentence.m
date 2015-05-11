@@ -73,6 +73,7 @@ static const struct KG3WordSentence s_3words[] = {
 	{KGPathGlyph,		KGPeaceGlyph,		KGDifficultGlyph	},
 	{KGAgainGlyph,		KGJourneyGlyph,		KGOutsideGlyph		},
 	{KGDiscoverGlyph,	KGShaperGlyph,		KGLieGlyph		},
+	{KGDiscoverGlyph,	KGPureGlyph,		KGTruthGlyph		},
 	{KGNatureGlyph,		KGPureGlyph,		KGDefendGlyph		},
 	{KGWarGlyph,		KGCreateGlyph,		KGDangerGlyph		},
 	{KGWarGlyph,		KGDestroyGlyph,		KGFutureGlyph		},
@@ -112,6 +113,13 @@ static const struct KG4WordSentence s_4words[] = {
 	{KGDestroyGlyph,	KGDestinyGlyph,		KGHumanGlyph,		KGLieGlyph			},
 	{KGDestinyGlyph,	KGComplexGlyph,		KGShaperGlyph,		KGLieGlyph			},
 	{KGRestraintGlyph,	KGPathGlyph,		KGGainGlyph,		KGHarmonyGlyph			},
+	{KGGainGlyph,		KGPortalGlyph,		KGAttackGlyph,		KGWeakGlyph			},
+	{KGPastGlyph,		KGAgainGlyph,		KGPresentGlyph,		KGAgainGlyph			},
+	{KGDestroyGlyph,	KGDestinyGlyph,		KGHumanGlyph,		KGLieGlyph			},
+	{KGDestinyGlyph,	KGComplexGlyph,		KGHumanGlyph,		KGLieGlyph			},
+	{KGRestraintGlyph,	KGPathGlyph,		KGGainGlyph,		KGHarmonyGlyph			},
+	{KGRestraintGlyph,	KGFearGlyph,		KGAvoidGlyph,		KGDangerGlyph			},
+	{KGBreathGlyph,		KGAgainGlyph,		KGJourneyGlyph,		KGAgainGlyph			},
 } ;
 
 static const struct KG5WordSentence s_5words[] = {
