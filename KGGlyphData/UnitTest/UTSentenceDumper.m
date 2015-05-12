@@ -31,6 +31,12 @@ UTDumpSentence(void)
 		printSentence(&sentence) ;
 	}
 	
+	num = KGGet4WordSentenceNum() ;
+	for(i=0 ; i<num ; i++){
+		struct KGGlyphSentence sentence = KGGet4WordSentence(i) ;
+		printSentence(&sentence) ;
+	}
+	
 	return YES ;
 }
 
