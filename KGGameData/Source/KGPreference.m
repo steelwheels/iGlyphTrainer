@@ -44,7 +44,7 @@
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		self.normalGlyphColor	= ctable.goldenrod ;
 		self.correctGlyphColor	= ctable.turquoise ;
-		self.wrongGlyphColor	= ctable.red1 ;
+		self.wrongGlyphColor	= ctable.tomato ;
 	}
 	return self ;
 }
