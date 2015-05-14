@@ -41,6 +41,9 @@
 	UIColor * bordercol = [preference borderColor] ;
 	self.layer.borderWidth = [preference borderWidth] ;
 	self.layer.borderColor = [bordercol CGColor] ;
+	
+	UIColor * fontcol = [preference fontColor] ;
+	[self setTitleColor: fontcol forState: UIControlStateNormal] ;
 #else
 	// do nothing
 #endif
