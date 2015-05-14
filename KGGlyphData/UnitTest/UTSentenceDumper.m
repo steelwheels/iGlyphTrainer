@@ -18,19 +18,20 @@ UTDumpSentence(void)
 	unsigned int num ;
 	
 	printTitle("2 words sentence") ;
-	
 	num = KGGet2WordSentenceNum() ;
 	for(i=0 ; i<num ; i++){
 		struct KGGlyphSentence sentence = KGGet2WordSentence(i) ;
 		printSentence(&sentence) ;
 	}
 	
+	printTitle("3 words sentence") ;
 	num = KGGet3WordSentenceNum() ;
 	for(i=0 ; i<num ; i++){
 		struct KGGlyphSentence sentence = KGGet3WordSentence(i) ;
 		printSentence(&sentence) ;
 	}
 	
+	printTitle("4 words sentence") ;
 	num = KGGet4WordSentenceNum() ;
 	for(i=0 ; i<num ; i++){
 		struct KGGlyphSentence sentence = KGGet4WordSentence(i) ;

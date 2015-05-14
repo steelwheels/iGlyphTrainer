@@ -217,7 +217,8 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
-		case KGClearAllGlyph: {
+		case KGClearAllGlyph:
+		case KGCloseAllGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 0,   1},
 				{ 1,   2},

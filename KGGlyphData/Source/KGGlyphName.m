@@ -43,6 +43,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Clear) ;
 			CASE(ClearAll) ;
 			CASE(Close) ;
+			CASE(CloseAll) ;
 			CASE(Collective) ;
 			CASE(Complex) ;
 			CASE(Conflict) ;

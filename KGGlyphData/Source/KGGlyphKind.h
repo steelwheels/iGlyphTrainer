@@ -37,6 +37,7 @@ typedef enum {
 	KGClearGlyph,
 	KGClearAllGlyph,
 	KGCloseGlyph,		/* KGEndGlyph		*/
+	KGCloseAllGlyph,
 	KGCollectiveGlyph,
 	KGComplexGlyph,
 	KGConflictGlyph,
