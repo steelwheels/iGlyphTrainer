@@ -15,12 +15,12 @@
 	<key>ManualURL</key>
 	<string>https://sites.google.com/site/steelwheelsproject/home/products/iGlyphTrainer</string>
 	<key>ForgroundColor</key>
-	<string>cyan</string>
+	<string>turquoise</string>
 	<key>BackgroundColor</key>
 	<string>black</string>
 	<key>BorderColor</key>
-	<string>cyan</string>
+	<string>turquoise</string>
 	<key>FontColor</key>
-	<string>gold2</string>
+	<string>turquoise</string>
 </dict>
 </plist>
