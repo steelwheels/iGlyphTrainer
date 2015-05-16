@@ -14,7 +14,9 @@ static void
 updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect bounds) ;
 static void
 drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[],
-	    struct CNLineGradient * normalgradient, struct CNLineGradient * correctgradient, struct CNLineGradient * wronggradient) ;
+	    struct CN3PointsLineGradient * normalgradient,
+	    struct CN3PointsLineGradient * correctgradient,
+	    struct CN3PointsLineGradient * wronggradient) ;
 
 @implementation KGHackProgressDrawer
 
@@ -35,18 +37,18 @@ drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		struct CNRGB blackcol = [ctable black] ;
 		
-		normalGlyphGradient	= CNAllocateLineGradient(normalcol, blackcol) ;
-		correctGlyphGradient	= CNAllocateLineGradient(correctcol, blackcol) ;
-		wrongGlyphGradient	= CNAllocateLineGradient(wrongcol, blackcol) ;
+		normalGlyphGradient	= CNAllocate3PointsLineGradient(normalcol, blackcol, normalcol) ;
+		correctGlyphGradient	= CNAllocate3PointsLineGradient(correctcol, blackcol, correctcol) ;
+		wrongGlyphGradient	= CNAllocate3PointsLineGradient(wrongcol, blackcol, wrongcol) ;
 	}
 	return self ;
 }
 
 - (void) dealloc
 {
-	CNReleaseLineGradient(&normalGlyphGradient) ;
-	CNReleaseLineGradient(&correctGlyphGradient) ;
-	CNReleaseLineGradient(&wrongGlyphGradient) ;
+	CNRelease3PointsLineGradient(&normalGlyphGradient) ;
+	CNRelease3PointsLineGradient(&correctGlyphGradient) ;
+	CNRelease3PointsLineGradient(&wrongGlyphGradient) ;
 }
 
 - (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) bounds
@@ -144,7 +146,7 @@ updateHexagonLayout(struct CNHexagon hexagon[], unsigned int maxnum, CGRect boun
 
 static void
 drawHexagon(CGContextRef context, unsigned int maxnum, const KGHackState states[], struct CNHexagon hexagon[],
-	    struct CNLineGradient * normalgradient, struct CNLineGradient * correctgradient, struct CNLineGradient * wronggradient)
+	    struct CN3PointsLineGradient * normalgradient, struct CN3PointsLineGradient * correctgradient, struct CN3PointsLineGradient * wronggradient)
 {
 	static const unsigned int GradientStartIndex	= -1 ;
 	static const unsigned int GradientEndIndex	= GradientStartIndex + (6 / 2) ;
