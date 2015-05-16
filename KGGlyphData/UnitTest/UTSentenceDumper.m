@@ -38,6 +38,13 @@ UTDumpSentence(void)
 		printSentence(&sentence) ;
 	}
 	
+	printTitle("5 words sentence") ;
+	num = KGGet5WordSentenceNum() ;
+	for(i=0 ; i<num ; i++){
+		struct KGGlyphSentence sentence = KGGet5WordSentence(i) ;
+		printSentence(&sentence) ;
+	}
+	
 	return YES ;
 }
 

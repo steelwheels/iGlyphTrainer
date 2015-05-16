@@ -231,6 +231,11 @@ static const struct KG5WordSentence s_5words[] = {
 	{KGDistanceGlyph,	KGSelfGlyph,		KGAvoidGlyph,		KGHumanGlyph,		KGLieGlyph		},
 	{KGCourageGlyph,	KGAttackGlyph,		KGShaperGlyph,		KGPortalGlyph,		KGTogetherGlyph		},
 	{KGWantGlyph,		KGTruthGlyph,		KGPursueGlyph,		KGDifficultGlyph,	KGPathGlyph		},
+	{KGStayGlyph,		KGStrongGlyph,		KGTogetherGlyph,	KGDefendGlyph,		KGResistanceGlyph	},
+	{KGShaperGlyph,		KGPortalGlyph,		KGDataGlyph,		KGCreateGlyph,		KGChaosGlyph		},
+	{KGShaperGlyph,		KGPortalGlyph,		KGMessageGlyph,		KGDestroyGlyph,		KGCivillizationGlyph	},
+	{KGShaperGlyph,		KGWantGlyph,		KGHumanGlyph,		KGMindGlyph,		KGFutureGlyph		},
+	{KGShaperGlyph,		KGLeadGlyph,		KGHumanGlyph,		KGComplexGlyph,		KGJourneyGlyph		},
 } ;
 
 struct KGGlyphSentence
