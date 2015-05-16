@@ -32,11 +32,11 @@ typedef enum {
 	KGChangeGlyph,
 	KGChaosGlyph,
 	KGChaseGlyph,
-	KGCityGlyph,		/* KGGovernmentGlyph	*/
-	KGCivillizationGlyph,	/* KGGovernmentGlyph	*/
+	KGCityGlyph,
+	KGCivillizationGlyph,
 	KGClearGlyph,
 	KGClearAllGlyph,
-	KGCloseGlyph,		/* KGEndGlyph		*/
+	KGCloseGlyph,
 	KGCloseAllGlyph,
 	KGCollectiveGlyph,
 	KGComplexGlyph,
@@ -148,6 +148,7 @@ typedef enum {
 	KGResistanceGlyph,
 	KGReincarnateGlyph,
 	KGReduceGlyph,		/* KGContactGlyph	*/
+	KGRepairGlyph,
 	KGRepeatGlyph,		/* KGAgainGlyph		*/
 	KGRescueGlyph,
 	KGRestraintGlyph,

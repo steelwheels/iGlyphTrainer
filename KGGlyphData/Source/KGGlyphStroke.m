@@ -984,7 +984,8 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
-		case KGRechargeGlyph: {
+		case KGRechargeGlyph:
+		case KGRepairGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 0,   7},
 				{ 7,   6},

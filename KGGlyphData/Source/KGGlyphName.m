@@ -154,6 +154,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Resist) ;
 			CASE(Resistance) ;
 			CASE(Reduce) ;
+			CASE(Repair) ;
 			CASE(Repeat) ;
 			CASE(Rescue) ;
 			CASE(Restraint) ;
