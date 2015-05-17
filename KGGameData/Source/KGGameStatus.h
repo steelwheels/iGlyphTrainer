@@ -32,6 +32,8 @@ static const double	KGNoValidTime		= -1.0 ;
 @property (assign, nonatomic) unsigned int		correctAnswerNum ;
 @property (assign, nonatomic) double			currentTime ;
 @property (assign, nonatomic) double			timerInterval ;
+@property (assign, nonatomic) unsigned int		totalSuccessNum ;
+@property (assign, nonatomic) unsigned int		totalQuestionNum ;
 
 + (NSString *) stateKeyPath ;
 + (const char *) stateToString: (KGGameState) state ;

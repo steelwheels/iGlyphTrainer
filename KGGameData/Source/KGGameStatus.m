@@ -49,6 +49,9 @@
 		
 		self.currentTime	= KGNoValidTime ;
 		self.timerInterval	= KGNoValidTime ;
+		
+		self.totalSuccessNum	= 0 ;
+		self.totalQuestionNum	= 0 ;
 	}
 	return self ;
 }
