@@ -71,10 +71,8 @@ currentScore(KGGameStatus * status)
 	if(status.totalQuestionNum > 0){
 		result = [[NSString alloc] initWithFormat: @"Score %u/%u", status.totalSuccessNum, status.totalQuestionNum] ;
 	} else {
-		NSString * appname = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"] ;
-		if(appname){
-			result = [[NSString alloc] initWithFormat: @"Welcome to %s", [appname UTF8String]] ;
-		} else {
+		result = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"] ;
+		if(result == nil){
 			result = @"Welcome !!" ;
 		}
 	}

@@ -48,7 +48,7 @@
 	puts("start button pressed") ;
 	if(gameStatus.state == KGIdleState){
 		[self.timerLabel setTimerLabel: 10.0] ;
-		gameStatus.currentGlyphKind = KGAbandonGlyph ;
+		gameStatus.currentSentence = KGGet2WordSentence(0) ;
 		gameStatus.state = KGDisplayQuestionState ;
 	} else {
 		[self.timerLabel clearTimerLabel] ;
