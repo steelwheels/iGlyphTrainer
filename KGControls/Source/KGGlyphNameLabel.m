@@ -9,9 +9,10 @@
 #import <KGGameData/KGGameData.h>
 
 static NSString * currentGlyphName(KGGameStatus * status) ;
+static NSString * currentScore(KGGameStatus * status) ;
 
 @interface KGGlyphNameLabel ()
-- (NSString *) glyphName: (KGGameStatus *) status ;
+- (NSString *) labelTitle: (KGGameStatus *) status ;
 @end
 
 @implementation KGGlyphNameLabel
@@ -21,36 +22,36 @@ static NSString * currentGlyphName(KGGameStatus * status) ;
 	(void) change ; (void) context ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		if([keyPath isEqualToString: [KGGameStatus stateKeyPath]]){
-			NSString * glyphname = [self glyphName: (KGGameStatus *) object] ;
-			[self setTitle: glyphname] ;
+			NSString * title = [self labelTitle: (KGGameStatus *) object] ;
+			[self setTitle: title] ;
 		}
 	}
 }
 
-- (NSString *) glyphName: (KGGameStatus *) status
+- (NSString *) labelTitle: (KGGameStatus *) status
 {
 	KGPreference * preference = [KGPreference sharedPreference] ;
 	
-	NSString * glyphname = @"" ;
+	NSString * title = @"" ;
 	switch(status.state){
 		case KGIdleState: {
-			/* Display no glyph */
+			title = currentScore(status) ;
 		} break ;
 		case KGDisplayQuestionState: {
 			if(preference.doDisplayGlyphNameAtQuestionState){
-				glyphname = currentGlyphName(status) ;
+				title = currentGlyphName(status) ;
 			}
 		} break ;
 		case KGInputAnswerState: {
 			if(preference.doDisplayGlyphNameAtAnswerState){
-				glyphname = currentGlyphName(status) ;
+				title = currentGlyphName(status) ;
 			}
 		} break ;
 		case KGEvaluateState: {
-			glyphname = currentGlyphName(status) ;
+			title = currentGlyphName(status) ;
 		} break ;
 	}
-	return glyphname ;
+	return title ;
 }
 
 @end
@@ -61,4 +62,21 @@ currentGlyphName(KGGameStatus * status)
 	struct KGGlyphSentence sentence = status.currentSentence ;
 	KGGlyphKind kind = sentence.glyphWords[status.currentGlyphIndex] ;
 	return KGNameOfGlyph(kind) ;
+}
+
+static NSString *
+currentScore(KGGameStatus * status)
+{
+	NSString * result ;
+	if(status.totalQuestionNum > 0){
+		result = [[NSString alloc] initWithFormat: @"Score %u/%u", status.totalSuccessNum, status.totalQuestionNum] ;
+	} else {
+		NSString * appname = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"] ;
+		if(appname){
+			result = [[NSString alloc] initWithFormat: @"Welcome to %s", [appname UTF8String]] ;
+		} else {
+			result = @"Welcome !!" ;
+		}
+	}
+	return result ;
 }
