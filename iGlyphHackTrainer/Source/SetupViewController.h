@@ -9,8 +9,9 @@
 
 @interface SetupViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *backToMainViewButton;
-@property (weak, nonatomic) IBOutlet KCSwitch *doDisplayInputGlypuNameSwitch;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *backToMainViewButton ;
+@property (weak, nonatomic) IBOutlet KCSwitch *displaySwithForQuestionState;
+@property (weak, nonatomic) IBOutlet KCSwitch *displaySwitchForAnswerState;
 
 - (void) backToMainViewButtonPressed: (UIBarButtonItem *) item ;
 

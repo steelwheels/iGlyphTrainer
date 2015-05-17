@@ -26,8 +26,11 @@ static const BOOL doDebug = NO ;
 	
 	KGPreference * preference = [KGPreference sharedPreference] ;
 	
-	self.doDisplayInputGlypuNameSwitch.on = preference.doDisplayGlyphNameAtQuestionState ;
-	[self.doDisplayInputGlypuNameSwitch addTarget: self action: @selector(switchDoDisplayGlypyNameAtQuestionState:) forControlEvents: UIControlEventValueChanged] ;
+	self.displaySwithForQuestionState.on = preference.doDisplayGlyphNameAtQuestionState ;
+	[self.displaySwithForQuestionState addTarget: self action: @selector(switchDoDisplayGlypyNameAtQuestionState:) forControlEvents: UIControlEventValueChanged] ;
+	
+	self.displaySwitchForAnswerState.on = preference.doDisplayGlyphNameAtAnswerState ;
+	[self.displaySwitchForAnswerState addTarget: self action: @selector(switchDoDisplayGlypyNameAtAnswerState:) forControlEvents: UIControlEventValueChanged] ;
 }
 
 - (void)didReceiveMemoryWarning {
