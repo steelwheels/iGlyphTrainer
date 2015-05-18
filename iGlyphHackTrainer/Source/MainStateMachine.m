@@ -265,6 +265,10 @@ static const BOOL doDebug	= NO ;
 			[self setNextState: KGEvaluateState] ;
 		} break ;
 		case KGEvaluateState: {
+			if(gameStatus.correctAnswerNum == gameStatus.currentSentence.wordNum){
+				gameStatus.totalSuccessNum += 1 ;
+			}
+			gameStatus.totalQuestionNum += 1 ;
 			[self setNextState: KGIdleState] ;
 		} break ;
 	}
