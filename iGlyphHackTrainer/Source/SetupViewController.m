@@ -10,9 +10,17 @@
 
 static const BOOL doDebug = NO ;
 
+typedef enum {
+	MaxNumberStepperId	= 1,
+	MinNumberStepperId	= 2
+} stepper_id ;
+
 @interface SetupViewController ()
 - (void) switchDoDisplayGlypyNameAtQuestionState: (KCSwitch *) switchbutton ;
 - (void) switchDoDisplayGlypyNameAtAnswerState: (KCSwitch *) switchbutton ;
+@end
+
+@interface SetupViewController (Stepper) <KCNumberStepperOperating>
 @end
 
 @implementation SetupViewController
@@ -31,6 +39,16 @@ static const BOOL doDebug = NO ;
 	
 	self.displaySwitchForAnswerState.on = preference.doDisplayGlyphNameAtAnswerState ;
 	[self.displaySwitchForAnswerState addTarget: self action: @selector(switchDoDisplayGlypyNameAtAnswerState:) forControlEvents: UIControlEventValueChanged] ;
+
+	self.maxNumberStepper.tag = MaxNumberStepperId ;
+	self.maxNumberStepper.delegate = self ;
+	[self.maxNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1] ;
+	[self.maxNumberStepper setValue: 5] ;
+	
+	self.minNumberStepper.tag = MinNumberStepperId ;
+	self.minNumberStepper.delegate = self ;
+	[self.minNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1] ;
+	[self.minNumberStepper setValue: 2] ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,3 +78,28 @@ static const BOOL doDebug = NO ;
 }
 
 @end
+
+@implementation SetupViewController (Stepper)
+
+- (void) updateNumberStepper: (KCNumberStepperView *) view
+{
+	switch(view.tag){
+		case MaxNumberStepperId: {
+			NSInteger curminnum = [self.minNumberStepper value] ;
+			NSInteger newmaxnum = [self.maxNumberStepper value] ;
+			if(newmaxnum < curminnum){
+				[self.minNumberStepper setValue: newmaxnum ];
+			}
+		} break ;
+		case MinNumberStepperId: {
+			NSInteger newminnum = [self.minNumberStepper value] ;
+			NSInteger curmaxnum = [self.maxNumberStepper value] ;
+			if(curmaxnum < newminnum){
+				[self.maxNumberStepper setValue: newminnum] ;
+			}
+		} break ;
+	}
+}
+
+@end
+
