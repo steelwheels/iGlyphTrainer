@@ -12,6 +12,7 @@
 		05273E721AC1C30C00B7DD20 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05273E711AC1C30C00B7DD20 /* AppDefaults.plist */; };
 		05273E731AC1C3F700B7DD20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D56A621ABA4BDE00AC57D9 /* Main.storyboard */; };
 		05273E741AC1C3FC00B7DD20 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D56A601ABA4BDE00AC57D9 /* LaunchScreen.xib */; };
+		05809C1A1B103D610049FB6E /* KCNumberStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05809C191B103D610049FB6E /* KCNumberStepperView.xib */; };
 		05A277231ABA4ABE0010E45B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277221ABA4ABE0010E45B /* main.m */; };
 		05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277251ABA4ABE0010E45B /* AppDelegate.m */; };
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
@@ -27,6 +28,7 @@
 		05062E621ABAC95C00741B2D /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		05062E631ABAC95C00741B2D /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		05273E711AC1C30C00B7DD20 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppDefaults.plist; sourceTree = SOURCE_ROOT; };
+		05809C191B103D610049FB6E /* KCNumberStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KCNumberStepperView.xib; path = ../../../../local/resource/KCNumberStepperView.xib; sourceTree = "<group>"; };
 		05A2771D1ABA4ABE0010E45B /* iGlyphHackTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlyphHackTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A277211ABA4ABE0010E45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05A277221ABA4ABE0010E45B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		05A277201ABA4ABE0010E45B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05809C191B103D610049FB6E /* KCNumberStepperView.xib */,
 				05273E711AC1C30C00B7DD20 /* AppDefaults.plist */,
 				05A277211ABA4ABE0010E45B /* Info.plist */,
 				05A277221ABA4ABE0010E45B /* main.m */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05273E741AC1C3FC00B7DD20 /* LaunchScreen.xib in Resources */,
+				05809C1A1B103D610049FB6E /* KCNumberStepperView.xib in Resources */,
 				05273E731AC1C3F700B7DD20 /* Main.storyboard in Resources */,
 				05273E721AC1C30C00B7DD20 /* AppDefaults.plist in Resources */,
 				05A2772E1ABA4ABE0010E45B /* Images.xcassets in Resources */,
@@ -315,6 +319,7 @@
 					"-lKCGraphicsView",
 					"-lKGGameData",
 					"-lKGGlyphData",
+					"-lKCNumberStepper",
 					"-lKCSwitch",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
@@ -351,6 +356,7 @@
 					"-lKCGraphicsView",
 					"-lKGGameData",
 					"-lKGGlyphData",
+					"-lKCNumberStepper",
 					"-lKCSwitch",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
