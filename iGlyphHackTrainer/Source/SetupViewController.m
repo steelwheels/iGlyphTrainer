@@ -28,7 +28,6 @@ typedef enum {
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
 	self.backToMainViewButton.target = self ;
 	self.backToMainViewButton.action = @selector(backToMainViewButtonPressed:) ;
 	
@@ -42,13 +41,11 @@ typedef enum {
 
 	self.maxNumberStepper.tag = MaxNumberStepperId ;
 	self.maxNumberStepper.delegate = self ;
-	[self.maxNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1] ;
-	[self.maxNumberStepper setValue: 5] ;
-	
+	[self.maxNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1 withInitialValue: 5];
+
 	self.minNumberStepper.tag = MinNumberStepperId ;
 	self.minNumberStepper.delegate = self ;
-	[self.minNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1] ;
-	[self.minNumberStepper setValue: 2] ;
+	[self.minNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1 withInitialValue: 2] ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,6 +86,10 @@ typedef enum {
 			NSInteger newmaxnum = [self.maxNumberStepper value] ;
 			if(newmaxnum < curminnum){
 				[self.minNumberStepper setValue: newmaxnum ];
+				curminnum = newmaxnum ;
+			}
+			if(doDebug){
+				printf(" [MAX]  min %d, *max %d\n", (int) curminnum, (int) newmaxnum) ;
 			}
 		} break ;
 		case MinNumberStepperId: {
@@ -96,6 +97,10 @@ typedef enum {
 			NSInteger curmaxnum = [self.maxNumberStepper value] ;
 			if(curmaxnum < newminnum){
 				[self.maxNumberStepper setValue: newminnum] ;
+				curmaxnum = newminnum ;
+			}
+			if(doDebug){
+				printf(" [MIN] *min %d,  max %d\n", (int) newminnum, (int) curmaxnum) ;
 			}
 		} break ;
 	}
