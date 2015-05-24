@@ -11,8 +11,8 @@
 
 @property (readonly, nonatomic) double		questionInterval ;
 
-@property (readonly, nonatomic)	unsigned int	maxQuestionSentenceLength ;
-@property (readonly, nonatomic) unsigned int	minQuestionSentenceLength ;
+@property (assign, nonatomic)	NSInteger	maxQuestionSentenceLength ;
+@property (assign, nonatomic)	NSInteger	minQuestionSentenceLength ;
 @property (assign, nonatomic)   BOOL		doDisplayGlyphNameAtQuestionState ;
 @property (assign, nonatomic)   BOOL		doDisplayGlyphNameAtAnswerState ;
 

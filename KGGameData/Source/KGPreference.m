@@ -9,8 +9,6 @@
 
 @interface KGPreference ()
 @property (assign, nonatomic) double		questionInterval ;
-@property (assign, nonatomic) unsigned int	maxQuestionSentenceLength ;
-@property (assign, nonatomic) unsigned int	minQuestionSentenceLength ;
 @property (assign, nonatomic) struct CNRGB	normalGlyphColor ;
 @property (assign, nonatomic) struct CNRGB	correctGlyphColor ;
 @property (assign, nonatomic) struct CNRGB	wrongGlyphColor ;
