@@ -80,6 +80,7 @@ typedef enum {
 
 - (void) updateNumberStepper: (KCNumberStepperView *) view
 {
+	KGPreference * preference = [KGPreference sharedPreference] ;
 	switch(view.tag){
 		case MaxNumberStepperId: {
 			NSInteger curminnum = [self.minNumberStepper value] ;
@@ -88,6 +89,7 @@ typedef enum {
 				[self.minNumberStepper setValue: newmaxnum ];
 				curminnum = newmaxnum ;
 			}
+			preference.maxQuestionSentenceLength = newmaxnum ;
 			if(doDebug){
 				printf(" [MAX]  min %d, *max %d\n", (int) curminnum, (int) newmaxnum) ;
 			}
@@ -99,6 +101,7 @@ typedef enum {
 				[self.maxNumberStepper setValue: newminnum] ;
 				curmaxnum = newminnum ;
 			}
+			preference.minQuestionSentenceLength = newminnum ;
 			if(doDebug){
 				printf(" [MIN] *min %d,  max %d\n", (int) newminnum, (int) curmaxnum) ;
 			}
