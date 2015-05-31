@@ -39,8 +39,10 @@
 {
 #if TARGET_OS_IPHONE
 	KCPreference * preference = [KCPreference sharedPreference] ;
-	UIColor * fontcol = [preference fontColor] ;
-	self.textColor = fontcol ;
+	UIColor * fontcol = [preference color: @"FontColor"] ;
+	if(fontcol){
+		self.textColor = fontcol ;
+	}
 #else
 	[self setEditable: NO] ;
 #endif

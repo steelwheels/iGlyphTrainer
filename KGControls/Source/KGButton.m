@@ -38,12 +38,15 @@
 {
 #if TARGET_OS_IPHONE
 	KCPreference * preference = [KCPreference sharedPreference] ;
-	UIColor * bordercol = [preference borderColor] ;
-	self.layer.borderWidth = [preference borderWidth] ;
-	self.layer.borderColor = [bordercol CGColor] ;
-	
-	UIColor * fontcol = [preference fontColor] ;
-	[self setTitleColor: fontcol forState: UIControlStateNormal] ;
+	UIColor * bordercol = [preference color: @"BorderColor"] ;
+	if(bordercol != nil){
+		self.layer.borderWidth = 2.0; //[preference borderWidth] ;
+		self.layer.borderColor = [bordercol CGColor] ;
+	}
+	UIColor * fontcol = [preference color: @"FontColor"] ;
+	if(fontcol){
+		[self setTitleColor: fontcol forState: UIControlStateNormal] ;
+	}
 #else
 	// do nothing
 #endif

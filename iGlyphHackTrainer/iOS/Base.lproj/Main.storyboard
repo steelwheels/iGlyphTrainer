@@ -251,8 +251,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1u7-bD-S61">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u7-bD-S61">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="E6r-KI-o6D"/>
+                                </constraints>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -263,8 +266,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLa-Ps-jNi" customClass="KCPreferenceTable">
+                                <rect key="frame" x="16" y="64" width="288" height="396"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="top" secondItem="1u7-bD-S61" secondAttribute="bottom" id="5A1-xe-f3L"/>
+                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="trailing" secondItem="qSp-ql-nb8" secondAttribute="trailingMargin" id="ASZ-kT-T3n"/>
+                            <constraint firstItem="1u7-bD-S61" firstAttribute="top" secondItem="4Hk-Ah-AzC" secondAttribute="bottom" id="AgS-YG-fs2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1u7-bD-S61" secondAttribute="trailing" constant="-16" id="PZQ-9l-j8G"/>
+                            <constraint firstItem="1u7-bD-S61" firstAttribute="leading" secondItem="qSp-ql-nb8" secondAttribute="leadingMargin" constant="-16" id="XE8-lq-Q3I"/>
+                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="leading" secondItem="qSp-ql-nb8" secondAttribute="leadingMargin" id="cFC-4d-mL2"/>
+                            <constraint firstItem="5d6-CG-oZo" firstAttribute="top" secondItem="zLa-Ps-jNi" secondAttribute="bottom" constant="20" id="e9g-6f-lbm"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>

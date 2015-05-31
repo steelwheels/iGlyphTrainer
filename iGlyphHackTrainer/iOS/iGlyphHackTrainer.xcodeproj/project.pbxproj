@@ -17,6 +17,8 @@
 		05A277261ABA4ABE0010E45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277251ABA4ABE0010E45B /* AppDelegate.m */; };
 		05A277291ABA4ABE0010E45B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277281ABA4ABE0010E45B /* MainViewController.m */; };
 		05A2772E1ABA4ABE0010E45B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2772D1ABA4ABE0010E45B /* Images.xcassets */; };
+		05ABDFB41B12370F00894628 /* KCPreferenceTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05ABDFB21B12370F00894628 /* KCPreferenceTable.xib */; };
+		05ABDFB51B12370F00894628 /* KCPreferenceTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05ABDFB31B12370F00894628 /* KCPreferenceTableCell.xib */; };
 		05BBEB5E1AE25E6500901422 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBEB5D1AE25E6500901422 /* MainModel.m */; };
 		05D70AEF1AEBBF6B00EDDA03 /* GlyphSentenceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D70AEE1AEBBF6B00EDDA03 /* GlyphSentenceSelector.m */; };
 		05FBDF461AD2C79400BC048E /* MainStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBDF451AD2C79400BC048E /* MainStateMachine.m */; };
@@ -37,6 +39,8 @@
 		05A277271ABA4ABE0010E45B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		05A277281ABA4ABE0010E45B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		05A2772D1ABA4ABE0010E45B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		05ABDFB21B12370F00894628 /* KCPreferenceTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KCPreferenceTable.xib; path = ../../../../local/resource/KCPreferenceTable.xib; sourceTree = "<group>"; };
+		05ABDFB31B12370F00894628 /* KCPreferenceTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KCPreferenceTableCell.xib; path = ../../../../local/resource/KCPreferenceTableCell.xib; sourceTree = "<group>"; };
 		05BBEB5C1AE25E6500901422 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		05BBEB5D1AE25E6500901422 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		05D56A611ABA4BDE00AC57D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
@@ -103,6 +107,8 @@
 		05A277201ABA4ABE0010E45B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05ABDFB21B12370F00894628 /* KCPreferenceTable.xib */,
+				05ABDFB31B12370F00894628 /* KCPreferenceTableCell.xib */,
 				05809C191B103D610049FB6E /* KCNumberStepperView.xib */,
 				05273E711AC1C30C00B7DD20 /* AppDefaults.plist */,
 				05A277211ABA4ABE0010E45B /* Info.plist */,
@@ -169,9 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				05273E741AC1C3FC00B7DD20 /* LaunchScreen.xib in Resources */,
+				05ABDFB41B12370F00894628 /* KCPreferenceTable.xib in Resources */,
 				05809C1A1B103D610049FB6E /* KCNumberStepperView.xib in Resources */,
 				05273E731AC1C3F700B7DD20 /* Main.storyboard in Resources */,
 				05273E721AC1C30C00B7DD20 /* AppDefaults.plist in Resources */,
+				05ABDFB51B12370F00894628 /* KCPreferenceTableCell.xib in Resources */,
 				05A2772E1ABA4ABE0010E45B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,7 +246,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -280,6 +288,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -321,6 +330,7 @@
 					"-lKGGlyphData",
 					"-lKCNumberStepper",
 					"-lKCSwitch",
+					"-lKCPreferenceTable",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
 					"-lCoconut",
@@ -358,6 +368,7 @@
 					"-lKGGlyphData",
 					"-lKCNumberStepper",
 					"-lKCSwitch",
+					"-lKCPreferenceTable",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
 					"-lCoconut",
