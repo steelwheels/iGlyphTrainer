@@ -140,7 +140,7 @@ static const BOOL doDebug	= NO ;
 			KGAddStrokeToSharedInputStrokes(stroke) ;
 
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-			unsigned int index = gameStatus.currentGlyphIndex ;
+			NSUInteger index = gameStatus.currentGlyphIndex ;
 			//printf("*** %s current index : %u\n", __func__, index) ;
 			if(sentence.wordNum <= index + 1){
 				if(doDebug){
@@ -225,7 +225,7 @@ static const BOOL doDebug	= NO ;
 		} break ;
 		case KGDisplayQuestionState: {
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-			unsigned int index = gameStatus.currentGlyphIndex ;
+			NSUInteger index = gameStatus.currentGlyphIndex ;
 			if(index < sentence.wordNum-1){
 				gameStatus.currentGlyphIndex = ++index ;
 			}
@@ -237,7 +237,7 @@ static const BOOL doDebug	= NO ;
 		} break ;
 		case KGEvaluateState: {
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-			unsigned int index = gameStatus.currentGlyphIndex ;
+			NSUInteger index = gameStatus.currentGlyphIndex ;
 			
 			if(index < sentence.wordNum-1){
 				gameStatus.currentGlyphIndex = ++index ;
@@ -281,7 +281,7 @@ static const BOOL doDebug	= NO ;
 - (void) evaluateCurrentGlyph
 {
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-	unsigned int index = gameStatus.currentGlyphIndex ;
+	NSUInteger index = gameStatus.currentGlyphIndex ;
 	
 	/* Check the input stroke is correct or not */
 	KGGlyphKind expkind = sentence.glyphWords[index] ;
@@ -290,14 +290,14 @@ static const BOOL doDebug	= NO ;
 	if(KGCompareGlyphStrokes(&expstroke, &instroke) == 0){
 		/* Correct */
 		if(doDebug){
-			printf("%s at index %u -> correct\n", __func__, index) ;
+			printf("%s at index %lu -> correct\n", __func__, (unsigned long) index) ;
 		}
 		gameStatus.hasCorrectAnswer = YES ;
 		gameStatus.correctAnswerNum += 1 ;
 	} else {
 		/* Not correct */
 		if(doDebug){
-			printf("%s at index %u -> not correct\n", __func__, index) ;
+			printf("%s at index %lu -> not correct\n", __func__, (unsigned long) index) ;
 		}
 		gameStatus.hasCorrectAnswer = NO ;
 	}

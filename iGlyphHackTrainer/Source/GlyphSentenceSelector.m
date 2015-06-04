@@ -12,8 +12,8 @@ struct KGGlyphSentence
 SelectGlyphSentence(void)
 {
 	KGPreference *	preference = [KGPreference sharedPreference] ;
-	unsigned int maxlen = preference.maxQuestionSentenceLength ;
-	unsigned int minlen = preference.minQuestionSentenceLength ;
+	NSUInteger maxlen = preference.maxQuestionSentenceLength ;
+	NSUInteger minlen = preference.minQuestionSentenceLength ;
 	unsigned int sentlen = (unsigned int) [CNRandom randomIntegerBetween: minlen and: maxlen] ;
 	
 	unsigned int sentnum = KGGetSentenceNum(sentlen) ;

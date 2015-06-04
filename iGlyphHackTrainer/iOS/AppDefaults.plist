@@ -18,6 +18,8 @@
 	<string>turquoise</string>
 	<key>BackgroundColor</key>
 	<string>black</string>
+	<key>HeaderColor</key>
+	<string>turquoise</string>
 	<key>BorderColor</key>
 	<string>turquoise</string>
 	<key>FontColor</key>
