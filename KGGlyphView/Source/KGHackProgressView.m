@@ -54,7 +54,7 @@ static const unsigned int	invalidIndex = (unsigned int) -1 ;
 	if([object isKindOfClass: [KGGameStatus class]]){
 		KGGameStatus *	status = object ;
 		KGGameState	newstate = status.state ;
-		unsigned int	newindex = status.currentGlyphIndex ;
+		NSUInteger	newindex = status.currentGlyphIndex ;
 		
 		if(newstate == KGIdleState || newstate != prevState){
 			[progressDrawer setMaxGlyphNum: 0] ;

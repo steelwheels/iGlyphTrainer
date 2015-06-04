@@ -12,7 +12,7 @@
 {
 	KGHackProgressDrawer *		progressDrawer ;
 	KGGameState			prevState ;
-	unsigned int			prevIndex ;
+	NSUInteger			prevIndex ;
 }
 
 @end

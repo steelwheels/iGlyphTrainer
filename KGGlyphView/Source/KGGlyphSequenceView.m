@@ -12,7 +12,7 @@ static inline struct KGGlyphStroke
 currentStroke(KGGameStatus * status)
 {
 	struct KGGlyphSentence sentence = status.currentSentence ;
-	unsigned int index = status.currentGlyphIndex ;
+	NSUInteger index = status.currentGlyphIndex ;
 	KGGlyphKind gkind = sentence.glyphWords[index] ;
 	return KGStrokeOfGlyph(gkind) ;
 }
@@ -21,7 +21,7 @@ static inline struct KGGlyphStroke
 inputedStroke(KGGameStatus * status)
 {
 	const struct KGGlyphInputStrokes * inputs = KGSharedGlyphInputStrokes() ;
-	unsigned int index = status.currentGlyphIndex ;
+	NSUInteger index = status.currentGlyphIndex ;
 	struct KGGlyphStroke stroke ;
 	if(index < inputs->strokeNum){
 		stroke = inputs->strokeArray[index] ;

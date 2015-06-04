@@ -44,7 +44,7 @@
 {
 	(void) button ;
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-	unsigned int index = gameStatus.currentGlyphIndex ;
+	NSUInteger index = gameStatus.currentGlyphIndex ;
 	if(index < sentence.wordNum-1){
 		index++ ;
 	} else {
@@ -58,7 +58,7 @@
 {
 	(void) button ;
 	struct KGGlyphSentence sentence = gameStatus.currentSentence ;
-	unsigned int index = gameStatus.currentGlyphIndex ;
+	NSUInteger index = gameStatus.currentGlyphIndex ;
 	if(index > 0){
 		index-- ;
 	} else {
