@@ -69,7 +69,7 @@ currentScore(KGGameStatus * status)
 {
 	NSString * result ;
 	if(status.totalQuestionNum > 0){
-		result = [[NSString alloc] initWithFormat: @"Score %u/%u", status.totalSuccessNum, status.totalQuestionNum] ;
+		result = [[NSString alloc] initWithFormat: @"Score %lu/%lu", (unsigned long) status.totalSuccessNum, (unsigned long) status.totalQuestionNum] ;
 	} else {
 		result = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"] ;
 		if(result == nil){

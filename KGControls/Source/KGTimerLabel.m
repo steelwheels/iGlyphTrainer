@@ -52,9 +52,9 @@
 					}
 				} break ;
 				case KGEvaluateState: {
-					unsigned int cornum   = status.correctAnswerNum ;
+					NSUInteger cornum   = status.correctAnswerNum ;
 					unsigned int totalnum = status.currentSentence.wordNum ;
-					NSString * label = [[NSString alloc] initWithFormat: @"%u / %u", cornum, totalnum] ;
+					NSString * label = [[NSString alloc] initWithFormat: @"%lu / %u", (unsigned long) cornum, totalnum] ;
 					[self setTitle: label] ;
 				} break ;
 			}
