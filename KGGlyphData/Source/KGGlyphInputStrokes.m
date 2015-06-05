@@ -30,7 +30,7 @@ KGClearSharedGlyphInputStrokes(void)
 }
 
 struct KGGlyphStroke
-KGSharedGlyphInputStrokeAtIndex(unsigned int index)
+KGSharedGlyphInputStrokeAtIndex(NSUInteger index)
 {
 	const struct KGGlyphInputStrokes * src = sharedGlyphInputStrokes() ;
 	if(index < src->strokeNum){
