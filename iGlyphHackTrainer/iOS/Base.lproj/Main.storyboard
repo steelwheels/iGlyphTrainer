@@ -268,23 +268,23 @@
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLa-Ps-jNi" customClass="KCPreferenceTable">
                                 <rect key="frame" x="16" y="64" width="288" height="396"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="top" secondItem="1u7-bD-S61" secondAttribute="bottom" id="5A1-xe-f3L"/>
-                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="trailing" secondItem="qSp-ql-nb8" secondAttribute="trailingMargin" id="ASZ-kT-T3n"/>
+                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="top" secondItem="1u7-bD-S61" secondAttribute="bottom" id="8Lp-OZ-ke4"/>
+                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="trailing" secondItem="qSp-ql-nb8" secondAttribute="trailingMargin" id="Ac3-BB-Ddd"/>
                             <constraint firstItem="1u7-bD-S61" firstAttribute="top" secondItem="4Hk-Ah-AzC" secondAttribute="bottom" id="AgS-YG-fs2"/>
+                            <constraint firstItem="5d6-CG-oZo" firstAttribute="top" secondItem="zLa-Ps-jNi" secondAttribute="bottom" constant="20" id="E4X-Qu-drS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1u7-bD-S61" secondAttribute="trailing" constant="-16" id="PZQ-9l-j8G"/>
                             <constraint firstItem="1u7-bD-S61" firstAttribute="leading" secondItem="qSp-ql-nb8" secondAttribute="leadingMargin" constant="-16" id="XE8-lq-Q3I"/>
-                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="leading" secondItem="qSp-ql-nb8" secondAttribute="leadingMargin" id="cFC-4d-mL2"/>
-                            <constraint firstItem="5d6-CG-oZo" firstAttribute="top" secondItem="zLa-Ps-jNi" secondAttribute="bottom" constant="20" id="e9g-6f-lbm"/>
+                            <constraint firstItem="zLa-Ps-jNi" firstAttribute="leading" secondItem="qSp-ql-nb8" secondAttribute="leadingMargin" id="lLs-ff-PdP"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backToMainViewButton" destination="Yya-0D-gUW" id="T0c-DI-dFC"/>
+                        <outlet property="preferenceTable" destination="zLa-Ps-jNi" id="NOS-Zz-mZX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzT-u8-gaa" userLabel="First Responder" sceneMemberID="firstResponder"/>

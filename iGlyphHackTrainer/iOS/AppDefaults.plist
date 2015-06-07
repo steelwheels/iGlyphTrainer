@@ -14,7 +14,7 @@
 	<string>https://github.com/steelwheels/iGlyphTrainer</string>
 	<key>ManualURL</key>
 	<string>https://sites.google.com/site/steelwheelsproject/home/products/iglyphtrainer</string>
-	<key>ForgroundColor</key>
+	<key>ForegroundColor</key>
 	<string>turquoise</string>
 	<key>BackgroundColor</key>
 	<string>black</string>

@@ -9,11 +9,14 @@
 
 @implementation AboutViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
 	
 	self.backToMainViewButton.target = self ;
 	self.backToMainViewButton.action = @selector(backToMainViewButtonPressed:) ;
+	
+	[self.preferenceTable applyPreferenceColors] ;
 }
 
 - (void)didReceiveMemoryWarning {
