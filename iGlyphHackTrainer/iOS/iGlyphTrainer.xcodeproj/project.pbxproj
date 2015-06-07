@@ -30,7 +30,7 @@
 		05062E631ABAC95C00741B2D /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		05273E711AC1C30C00B7DD20 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppDefaults.plist; sourceTree = SOURCE_ROOT; };
 		05809C191B103D610049FB6E /* KCNumberStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KCNumberStepperView.xib; path = ../../../../local/resource/KCNumberStepperView.xib; sourceTree = "<group>"; };
-		05A2771D1ABA4ABE0010E45B /* iGlyphHackTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlyphHackTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A2771D1ABA4ABE0010E45B /* iGlyphTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlyphTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A277211ABA4ABE0010E45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		05A277221ABA4ABE0010E45B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05A277241ABA4ABE0010E45B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		05A2771E1ABA4ABE0010E45B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05A2771D1ABA4ABE0010E45B /* iGlyphHackTrainer.app */,
+				05A2771D1ABA4ABE0010E45B /* iGlyphTrainer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05A2771C1ABA4ABE0010E45B /* iGlyphHackTrainer */ = {
+		05A2771C1ABA4ABE0010E45B /* iGlyphTrainer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05A277401ABA4ABE0010E45B /* Build configuration list for PBXNativeTarget "iGlyphHackTrainer" */;
+			buildConfigurationList = 05A277401ABA4ABE0010E45B /* Build configuration list for PBXNativeTarget "iGlyphTrainer" */;
 			buildPhases = (
 				05A277191ABA4ABE0010E45B /* Sources */,
 				05A2771A1ABA4ABE0010E45B /* Frameworks */,
@@ -129,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = iGlyphHackTrainer;
+			name = iGlyphTrainer;
 			productName = iGlyphHackTrainer;
-			productReference = 05A2771D1ABA4ABE0010E45B /* iGlyphHackTrainer.app */;
+			productReference = 05A2771D1ABA4ABE0010E45B /* iGlyphTrainer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 05A277181ABA4ABE0010E45B /* Build configuration list for PBXProject "iGlyphHackTrainer" */;
+			buildConfigurationList = 05A277181ABA4ABE0010E45B /* Build configuration list for PBXProject "iGlyphTrainer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -161,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05A2771C1ABA4ABE0010E45B /* iGlyphHackTrainer */,
+				05A2771C1ABA4ABE0010E45B /* iGlyphTrainer */,
 			);
 		};
 /* End PBXProject section */
@@ -334,7 +334,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iGlyphTrainer;
 			};
 			name = Debug;
 		};
@@ -373,14 +373,14 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iGlyphTrainer;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05A277181ABA4ABE0010E45B /* Build configuration list for PBXProject "iGlyphHackTrainer" */ = {
+		05A277181ABA4ABE0010E45B /* Build configuration list for PBXProject "iGlyphTrainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05A2773E1ABA4ABE0010E45B /* Debug */,
@@ -389,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05A277401ABA4ABE0010E45B /* Build configuration list for PBXNativeTarget "iGlyphHackTrainer" */ = {
+		05A277401ABA4ABE0010E45B /* Build configuration list for PBXNativeTarget "iGlyphTrainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05A277411ABA4ABE0010E45B /* Debug */,
