@@ -26,14 +26,15 @@ static const double	KGNoValidTime		= -1.0 ;
 /**
  * questionGlyph has valid value when the state is KGDisplayQuestionState
  */
-@property (assign, nonatomic) struct KGGlyphSentence	currentSentence ;
-@property (assign, nonatomic) NSUInteger		currentGlyphIndex ;
-@property (assign, nonatomic) BOOL			hasCorrectAnswer ;
-@property (assign, nonatomic) NSUInteger		correctAnswerNum ;
-@property (assign, nonatomic) double			currentTime ;
-@property (assign, nonatomic) double			timerInterval ;
-@property (assign, nonatomic) NSUInteger		totalSuccessNum ;
-@property (assign, nonatomic) NSUInteger		totalQuestionNum ;
+@property (assign, nonatomic) struct KGGlyphSentence		currentSentence ;
+@property (assign, nonatomic) struct KGGlyphInputStrokes	inputStrokes ;
+@property (assign, nonatomic) NSUInteger			currentGlyphIndex ;
+@property (assign, nonatomic) BOOL				hasCorrectAnswer ;
+@property (assign, nonatomic) NSUInteger			correctAnswerNum ;
+@property (assign, nonatomic) double				currentTime ;
+@property (assign, nonatomic) double				timerInterval ;
+@property (assign, nonatomic) NSUInteger			totalSuccessNum ;
+@property (assign, nonatomic) NSUInteger			totalQuestionNum ;
 
 + (NSString *) stateKeyPath ;
 + (const char *) stateToString: (KGGameState) state ;

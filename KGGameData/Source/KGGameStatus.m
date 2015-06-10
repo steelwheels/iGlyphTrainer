@@ -43,6 +43,7 @@
 		self.state		= KGIdleState ;
 		
 		self.currentSentence	= KGGetEmptySentence() ;
+		self.inputStrokes	= KGMakeEmptyInputStrokes() ;
 		self.currentGlyphIndex	= 0 ;
 		self.hasCorrectAnswer	= NO ;
 		self.correctAnswerNum	= 0 ;
