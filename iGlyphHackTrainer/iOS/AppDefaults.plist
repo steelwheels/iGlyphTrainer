@@ -24,5 +24,7 @@
 	<string>turquoise</string>
 	<key>FontColor</key>
 	<string>turquoise</string>
+	<key>GlyphColor</key>
+	<string>goldenrod</string>
 </dict>
 </plist>

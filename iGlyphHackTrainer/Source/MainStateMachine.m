@@ -8,7 +8,7 @@
 #import "MainStateMachine.h"
 #import "GlyphSentenceSelector.h"
 
-static const BOOL doDebug	= NO ;
+static const BOOL doDebug	= YES ;
 
 @interface MainStateMachine ()
 - (void) setNextState: (KGGameState) newstate ;
@@ -137,7 +137,9 @@ static const BOOL doDebug	= NO ;
 		} break ;
 		case KGInputAnswerState: {
 			/* Keep the input stroke */
-			KGAddStrokeToSharedInputStrokes(stroke) ;
+			struct KGGlyphInputStrokes strokes = gameStatus.inputStrokes ;
+			KGAddGlyphStrokeToInputStrokes(&strokes, stroke) ;
+			gameStatus.inputStrokes = strokes ;
 
 			struct KGGlyphSentence sentence = gameStatus.currentSentence ;
 			NSUInteger index = gameStatus.currentGlyphIndex ;
@@ -179,7 +181,9 @@ static const BOOL doDebug	= NO ;
 	[gameStatus setNextState: KGInputAnswerState withGlyphSentence: sentence] ;
 
 	/* Initialize the inputted strokes */
-	KGClearSharedGlyphInputStrokes() ;
+	struct KGGlyphInputStrokes strokes = gameStatus.inputStrokes ;
+	KGClearGlyphInputStrokes(&strokes) ;
+	gameStatus.inputStrokes = KGMakeEmptyInputStrokes() ;
 
 	double timelimit = KGCalcTimeForHacking(&sentence) ;
 	double interval  = 0.2 ;
@@ -286,7 +290,13 @@ static const BOOL doDebug	= NO ;
 	/* Check the input stroke is correct or not */
 	KGGlyphKind expkind = sentence.glyphWords[index] ;
 	struct KGGlyphStroke expstroke = KGStrokeOfGlyph(expkind) ;
-	struct KGGlyphStroke instroke  = KGSharedGlyphInputStrokeAtIndex(index) ;
+	struct KGGlyphInputStrokes instrokes = gameStatus.inputStrokes ;
+	struct KGGlyphStroke instroke  = KGGlyphInputStrokeAtIndex(&instrokes, index) ;
+	
+	if(doDebug){
+		printf("edge num: exp %lu <-> real %lu\n", (unsigned long) expstroke.edgeCount, (unsigned long) instroke.edgeCount) ;
+	}
+	
 	if(KGCompareGlyphStrokes(&expstroke, &instroke) == 0){
 		/* Correct */
 		if(doDebug){
