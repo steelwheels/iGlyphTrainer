@@ -23,6 +23,3 @@ When you install these framework, keep the order to keep the dependency.
 1. [Coconut framework](https://github.com/steelwheels/Coconut)
 2. [CoconutGraphics framework](https://github.com/steelwheels/CoconutGraphics)
 3. [KiwiControl frameworks](https://github.com/steelwheels/KiwiControls):
-  KiwiContols contains some frameworks for this application.
-  * KiwiControl: Basic data structure for user interface controllers
-  * KCGraphicsView: The 2D graphics view based on CoreGraphics
