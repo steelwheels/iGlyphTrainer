@@ -212,6 +212,7 @@ static const struct KG5WordSentence s_5words[] = {
 	{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGXMGlyph,		KGMessageGlyph		},
 	{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGShaperGlyph,		KGLieGlyph		},
 	{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGPortalGlyph,		KGDataGlyph		},
+	{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGShaperGlyph,		KGPortalGlyph		},
 	{KGHelpGlyph,		KGEnlightenmentGlyph,	KGCaptureGlyph,		KGAllGlyph,		KGPortalGlyph		},
 	{KGHelpGlyph,		KGResistanceGlyph,	KGCaptureGlyph,		KGAllGlyph,		KGPortalGlyph		},
 	{KGHelpGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGPursueGlyph,		KGDestinyGlyph		},
@@ -219,13 +220,15 @@ static const struct KG5WordSentence s_5words[] = {
 	{KGPursueGlyph,		KGConflictGlyph,	KGWarGlyph,		KGAdvanceGlyph,		KGPortalGlyph		},
 	{KGWeakGlyph,		KGHumanGlyph,		KGDestinyGlyph,		KGDestroyGlyph,		KGCivillizationGlyph	},
 	{KGAvoidGlyph,		KGChaosGlyph,		KGRepairGlyph,		KGPotencialGlyph,	KGWarGlyph		},
+	{KGAvoidGlyph,		KGPerfectGlyph,		KGStabilityGlyph,	KGHumanGlyph,		KGSelfGlyph		},
+	{KGAvoidGlyph,		KGChaosGlyph,		KGAvoidGlyph,		KGShaperGlyph,		KGLieGlyph		},
 	{KGRebelGlyph,		KGThoughtGlyph,		KGEvolutionGlyph,	KGDestinyGlyph,		KGNowGlyph		},
 	{KGSeparateGlyph,	KGMindGlyph,		KGBodyGlyph,		KGDiscoverGlyph,	KGEnlightenedGlyph	},
 	{KGSeparateGlyph,	KGTruthGlyph,		KGLieGlyph,		KGShaperGlyph,		KGFutureGlyph		},
 	{KGForgetGlyph,		KGPastGlyph,		KGSeeGlyph,		KGPresentGlyph,		KGFutureGlyph		},
 	{KGForgetGlyph,		KGWarGlyph,		KGSeeGlyph,		KGDistanceGlyph,	KGHarmonyGlyph		},
 	{KGCreateGlyph,		KGPureGlyph,		KGFutureGlyph,		KGNotGlyph,		KGWarGlyph		},
-	{KGCreateGlyph,		KGPureGlyph,		KGPureGlyph,		KGHumanGlyph,		KGCivillizationGlyph	},
+	{KGCreateGlyph,		KGPureGlyph,		KGFutureGlyph,		KGHumanGlyph,		KGCivillizationGlyph	},
 	{KGCreateGlyph,		KGSeparateGlyph,	KGPathGlyph,		KGEndGlyph,		KGJourneyGlyph		},
 	{KGAdvanceGlyph,	KGCivillizationGlyph,	KGPursueGlyph,		KGShaperGlyph,		KGPathGlyph		},
 	{KGDistanceGlyph,	KGSelfGlyph,		KGAvoidGlyph,		KGHumanGlyph,		KGLieGlyph		},
@@ -236,6 +239,17 @@ static const struct KG5WordSentence s_5words[] = {
 	{KGShaperGlyph,		KGPortalGlyph,		KGMessageGlyph,		KGDestroyGlyph,		KGCivillizationGlyph	},
 	{KGShaperGlyph,		KGWantGlyph,		KGHumanGlyph,		KGMindGlyph,		KGFutureGlyph		},
 	{KGShaperGlyph,		KGLeadGlyph,		KGHumanGlyph,		KGComplexGlyph,		KGJourneyGlyph		},
+	
+	{KGChaosGlyph,		KGWarGlyph,		KGConflictGlyph,	KGDiscoverGlyph,	KGPeaceGlyph		},
+	{KGLiberateGlyph,	KGPortalGlyph,		KGLiberateGlyph,	KGHumanGlyph,		KGMindGlyph		},
+	{KGPresenceGlyph,	KGChaosGlyph,		KGCreateGlyph,		KGFutureGlyph,		KGCivillizationGlyph	},
+	{KGInsideGlyph,		KGMindGlyph,		KGInsideGlyph,		KGSoulGlyph,		KGHarmonyGlyph		},
+	{KGAnswerGlyph,		KGQuestionGlyph,	KGDiscoverGlyph,	KGDifficultGlyph,	KGTruthGlyph		},
+	{KGHideGlyph,		KGStructureGlyph,	KGAdvanceGlyph,		KGStrongGlyph,		KGTogetherGlyph		},
+	{KGSimpleGlyph,		KGTruthGlyph,		KGShaperGlyph,		KGDestroyGlyph,		KGCivillizationGlyph	},
+	{KGSimpleGlyph,		KGOldGlyph,		KGTruthGlyph,		KGJourneyGlyph,		KGInsideGlyph		},
+	{KGMoreGlyph,		KGDataGlyph,		KGGainGlyph,		KGPortalGlyph,		KGAdvanceGlyph		},
+	{KGSaveGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGDestroyGlyph,		KGPortalGlyph		}
 } ;
 
 struct KGGlyphSentence

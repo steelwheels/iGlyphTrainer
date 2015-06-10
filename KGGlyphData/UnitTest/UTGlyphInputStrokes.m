@@ -34,22 +34,22 @@ printGlyphInputStrokes(const struct KGGlyphInputStrokes * array) ;
 BOOL
 UTGlyphStrokeArray(void)
 {
-	const struct KGGlyphInputStrokes * strokes ;
-	strokes = KGSharedGlyphInputStrokes() ;
+	struct KGGlyphInputStrokes strokes ;
+	KGInitGlyphInputStrokes(&strokes) ;
 	puts("** init state") ;
-	printGlyphInputStrokes(strokes) ;
+	printGlyphInputStrokes(&strokes) ;
 	
-	KGAddStrokeToSharedInputStrokes(&s_stroke1) ;
+	KGAddStrokeToInputStrokes(&strokes, &s_stroke1) ;
 	puts("** added state") ;
-	printGlyphInputStrokes(strokes) ;
+	printGlyphInputStrokes(&strokes) ;
 	
-	KGAddStrokeToSharedInputStrokes(&s_stroke2) ;
+	KGAddStrokeToInputStrokes(&strokes, &s_stroke2) ;
 	puts("** added state") ;
-	printGlyphInputStrokes(strokes) ;
+	printGlyphInputStrokes(&strokes) ;
 	
-	KGClearSharedGlyphInputStrokes() ;
+	KGClearGlyphInputStrokes(&strokes) ;
 	puts("** after destruct") ;
-	printGlyphInputStrokes(strokes) ;
+	printGlyphInputStrokes(&strokes) ;
 	
 	return YES ;
 }

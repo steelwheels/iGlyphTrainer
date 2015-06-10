@@ -13,17 +13,20 @@ struct KGGlyphInputStrokes {
 	struct KGGlyphStroke	strokeArray[KGMaxGlyphWordNum] ;
 } ;
 
-const struct KGGlyphInputStrokes *
-KGSharedGlyphInputStrokes(void) ;
+static inline void
+KGInitGlyphInputStrokes(struct KGGlyphInputStrokes * dst)
+{
+	dst->strokeNum = 0 ;
+}
 
 void
-KGClearSharedGlyphInputStrokes(void) ;
+KGClearGlyphInputStrokes(struct KGGlyphInputStrokes * dst) ;
 
 struct KGGlyphStroke
-KGSharedGlyphInputStrokeAtIndex(NSUInteger index) ;
+KGGlyphInputStrokeAtIndex(struct KGGlyphInputStrokes * src, NSUInteger index) ;
 
 BOOL
-KGAddStrokeToSharedInputStrokes(const struct KGGlyphStroke * src) ;
+KGAddStrokeToInputStrokes(struct KGGlyphInputStrokes * dst, const struct KGGlyphStroke * src) ;
 
 
 
