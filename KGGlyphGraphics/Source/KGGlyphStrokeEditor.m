@@ -8,6 +8,8 @@
 #import "KGGlyphStrokeEditor.h"
 #import <KGGameData/KGGameData.h>
 
+static const BOOL		doDebug = NO ;
+
 #if TARGET_OS_IPHONE
 #	define	KCColor			UIColor
 #	define	KCBezierPath		UIBezierPath
@@ -60,6 +62,9 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 {
 	(void) boundsrect ;
 	
+	if(doDebug){
+		NSLog(@"KGInitGlyphEditableStroke") ;
+	}
 	KGInitGlyphEditableStroke(&editableStroke) ;
 	
 	unsigned int vid ;
@@ -88,14 +93,10 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 	unsigned int	vid ;
 	if(getVertexId(&vid, &glyphLayout, newpoint)){
 		if(prevVertex.isValid){
-			BOOL doadd = NO ;
-			uint8_t lastvid ;
-			if(KGLastVertexInGlyphEditableStroke(&lastvid, &editableStroke)){
-				doadd = (lastvid != vid) ? YES : NO ;
-			} else {
-				doadd = YES ;
-			}
-			if(doadd){
+			if(prevVertex.vetexId != vid){
+				if(doDebug){
+					NSLog(@"KGAddGlyphEditableStroke") ;
+				}
 				KGAddGlyphEditableStroke(&editableStroke, prevVertex.vetexId, vid) ;
 			}
 		}
@@ -112,7 +113,6 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 - (void *) touchesEnded
 {
 	bezierPath = nil ;
-	KGInitGlyphEditableStroke(&editableStroke) ;
 	setStrokeVetex(&prevVertex, NO, 0) ;
 	return &(editableStroke.strokeBody) ;
 }
@@ -120,7 +120,6 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 - (void) touchesCancelled
 {
 	bezierPath = nil ;
-	KGInitGlyphEditableStroke(&editableStroke) ;
 	setStrokeVetex(&prevVertex, NO, 0) ;
 }
 

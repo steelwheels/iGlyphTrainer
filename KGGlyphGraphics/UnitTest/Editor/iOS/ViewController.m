@@ -37,7 +37,9 @@
 
 - (void) editingGraphicsEndedWithData: (void *) data
 {
+	struct KGGlyphStroke * stroke = data ;
 	printf("%s %p\n", __func__, data) ;
+	KGDumpGlyphStroke(stdout, 1, stroke) ;
 }
 
 - (void) editingGraphicsCancelled

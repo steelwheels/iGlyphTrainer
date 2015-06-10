@@ -23,18 +23,6 @@ KGInitGlyphEditableStroke(struct KGGlyphEditableStroke * dst)
 bool
 KGAddGlyphEditableStroke(struct KGGlyphEditableStroke * dst, uint8_t fromvt, uint8_t tovt) ;
 
-static inline BOOL
-KGLastVertexInGlyphEditableStroke(uint8_t * dstvetex, struct KGGlyphEditableStroke * src)
-{
-	unsigned int count ;
-	if((count = (src->strokeBody).edgeCount) > 0){
-		*dstvetex = (src->storage[count-1]).toVertex ;
-		return YES ;
-	} else {
-		return NO ;
-	}
-}
-
 static inline void
 KGClearGlyphEditableStroke(struct KGGlyphEditableStroke * dst)
 {
