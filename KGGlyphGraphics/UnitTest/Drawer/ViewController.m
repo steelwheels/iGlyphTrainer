@@ -67,9 +67,9 @@
 	// Dispose of any resources that can be recreated.
 }
 
-- (void) editingGraphicsEnded
+- (void) editingGraphicsEndedWithData:(void *)data
 {
-	printf("%s\n", __func__) ;
+	printf("%s %p\n", __func__, data) ;
 }
 
 - (void) editingGraphicsCancelled

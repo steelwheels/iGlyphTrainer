@@ -5,22 +5,31 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import "KGGlyphStrokeDrawer.h"
+#import "KGGlyphObject.h"
 #import "KGGlyphEditableStroke.h"
 #import <KCGraphicsView/KCGraphicsView.h>
 
-@interface KGGlyphStrokeEditor : KGGlyphStrokeDrawer <KCGraphicsDrawing>
+struct KGGlyphStrokeVertex {
+	BOOL		isValid ;
+	unsigned int	vetexId ;
+} ;
+
+@interface KGGlyphStrokeEditor : KGGlyphObject <KCGraphicsDrawing>
 {
-	BOOL				isEditableFlag ;
-	bool				hasBeginningVertex ;
-	unsigned int			beginningVertexId ;
-	bool				hasEndingVertex ;
-	CGPoint				endingVertexPoint ;
+#	if TARGET_OS_IPHONE
+	UIImageView *			imageCanvas ;
+	UIBezierPath *			bezierPath ;
+	UIColor *			drawColor ;
+#	else
+	NSImageView *			imageCanvas ;
+	NSBezierPath *			bezierPath ;
+	NSColor *			drawColor ;
+#	endif
 	struct KGGlyphEditableStroke	editableStroke ;
+	struct KGGlyphStrokeVertex	prevVertex ;
+
 }
 
 - (instancetype) init ;
-- (const struct KGGlyphStroke *) glyphStroke ;
-- (void) clearGlyphStroke ;
 
 @end

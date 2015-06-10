@@ -8,119 +8,130 @@
 #import "KGGlyphStrokeEditor.h"
 #import <KGGameData/KGGameData.h>
 
+#if TARGET_OS_IPHONE
+#	define	KCColor			UIColor
+#	define	KCBezierPath		UIBezierPath
+#else
+#	define	KCColor			NSColor
+#	define	KCBezierPath		NSBezierPath
+#endif
+
 static bool
 getVertexId(unsigned int * vertexid, const struct KGGlyphLayout * ginfo, CGPoint point) ;
+static void
+drawVertexes(CGContextRef context, const CGPoint * origin, const struct KGGlyphLayout * ginfo, const struct KGGlyphEditableStroke * strokes) ;
+
+static inline void
+setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vertexid)
+{
+	dst->isValid	= isvalid ;
+	dst->vetexId	= vertexid ;
+}
 
 @implementation KGGlyphStrokeEditor
 
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
-		isEditableFlag = NO ;
-		hasBeginningVertex = hasEndingVertex = false ;
+		imageCanvas = nil ;
+		bezierPath = nil ;
 		KGInitGlyphEditableStroke(&editableStroke) ;
+		setStrokeVetex(&prevVertex, NO, 0) ;
+#		if TARGET_OS_IPHONE
+		drawColor = [UIColor whiteColor] ;
+#		else
+		drawColor = [NSColor whiteColor] ;
+#		endif
 	}
 	return self ;
 }
 
-- (const struct KGGlyphStroke *) glyphStroke
-{
-	return &(editableStroke.strokeBody) ;
-}
-
-- (void) clearGlyphStroke
-{
-	KGClearGlyphEditableStroke(&editableStroke) ;
-}
-
-- (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) boundsrect
-{
-	[super setStroke: &(editableStroke.strokeBody)] ;
-	[super drawWithContext: context inBoundsRect: boundsrect] ;
-	
-	if(hasBeginningVertex && hasEndingVertex){
-		CGContextSetLineWidth(context, glyphLayout.vertexSize) ;
-		CGContextSetLineCap(context, kCGLineCapRound) ;
-		KCSetStrokeColor(context, strokeColor) ;
-		
-		CGPoint		drawpoints[2] ;
-		drawpoints[0] = glyphLayout.vertex[beginningVertexId].center ;
-		drawpoints[1] = endingVertexPoint ;
-		CGContextAddLines(context, drawpoints, 2) ;
-		CGContextStrokePath(context) ;
-	}
-}
-
 - (BOOL) isEditable
 {
-	return isEditableFlag ;
+	return YES ;
 }
 
 - (void) setEditable: (BOOL) flag
 {
-	isEditableFlag = flag ;
+	(void) flag ;
 }
 
 - (void) touchesBegan: (CGPoint) point inBoundsRect: (CGRect) boundsrect
 {
 	(void) boundsrect ;
 	
+	KGInitGlyphEditableStroke(&editableStroke) ;
+	
 	unsigned int vid ;
 	if(getVertexId(&vid, &glyphLayout, point)){
-		//printf("touchesBegin (0) : %u\n", vid) ;
-		hasBeginningVertex	= true ;
-		beginningVertexId	= vid ;
-		hasEndingVertex		= false ;
+		setStrokeVetex(&prevVertex, YES, vid) ;
 	} else {
-		//puts("touchesBegin (1)") ;
-		hasBeginningVertex	= false ;
-		hasEndingVertex		= false ;
+		setStrokeVetex(&prevVertex, NO, 0) ;
+	}
+	
+	bezierPath = [KCBezierPath bezierPath];
+	bezierPath.lineCapStyle = kCGLineCapRound;
+	bezierPath.lineWidth = 8.0;
+	[bezierPath moveToPoint: point];
+
+	KCPreference * pref = [KCPreference sharedPreference] ;
+	KCColor * col = [pref color: @"GlyphColor"] ;
+	if(col){
+		drawColor = col ;
 	}
 }
 
 - (void) touchesMoved: (CGPoint) newpoint inBoundsRect: (CGRect) boundsrect
 {
 	(void) boundsrect ;
+	
 	unsigned int	vid ;
 	if(getVertexId(&vid, &glyphLayout, newpoint)){
-		if(!hasBeginningVertex){
-			//printf("touchesMoved (0) : %u\n", vid) ;
-			hasBeginningVertex	= true ;
-			beginningVertexId	= vid ;
-		} else {
-			if(beginningVertexId != vid){
-				//printf("touchesMoved (1) : %u\n", vid) ;
-				KGAddGlyphEditableStroke(&editableStroke, beginningVertexId, vid) ;
-				hasBeginningVertex	= true ;
-				beginningVertexId	= vid ;
-				hasEndingVertex		= false ;
+		if(prevVertex.isValid){
+			BOOL doadd = NO ;
+			uint8_t lastvid ;
+			if(KGLastVertexInGlyphEditableStroke(&lastvid, &editableStroke)){
+				doadd = (lastvid != vid) ? YES : NO ;
 			} else {
-				//printf("touchesMoved (2) : %u\n", vid) ;
-				hasEndingVertex		= true ;
-				endingVertexPoint	= newpoint ;
+				doadd = YES ;
+			}
+			if(doadd){
+				KGAddGlyphEditableStroke(&editableStroke, prevVertex.vetexId, vid) ;
 			}
 		}
-	} else {
-		if(hasBeginningVertex){
-			//printf("touchesMoved (3)\n") ;
-			hasEndingVertex		= true ;
-			endingVertexPoint	= newpoint ;
-		} else {
-			//printf("touchesMoved (4)\n") ;
-		}
+		setStrokeVetex(&prevVertex, YES, vid) ;
 	}
+#	if TARGET_OS_IPHONE
+	[bezierPath addLineToPoint: newpoint];
+#	else
+	[bezierPath lineToPoint: newpoint];
+#	endif
+	
 }
 
-- (void) touchesEnded
+- (void *) touchesEnded
 {
-	hasBeginningVertex	= false ;
-	hasEndingVertex		= false ;
+	bezierPath = nil ;
+	KGInitGlyphEditableStroke(&editableStroke) ;
+	setStrokeVetex(&prevVertex, NO, 0) ;
+	return &(editableStroke.strokeBody) ;
 }
 
 - (void) touchesCancelled
 {
-	hasBeginningVertex	= false ;
-	hasEndingVertex		= false ;
+	bezierPath = nil ;
+	KGInitGlyphEditableStroke(&editableStroke) ;
+	setStrokeVetex(&prevVertex, NO, 0) ;
+}
+
+- (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) boundsrect
+{
+	[super drawWithContext: context inBoundsRect: boundsrect] ;
+	if(bezierPath != nil){
+		[drawColor setStroke] ;
+		[bezierPath stroke] ;
+		drawVertexes(context, &(boundsrect.origin), &glyphLayout, &editableStroke) ;
+	}
 }
 
 @end
@@ -139,5 +150,38 @@ getVertexId(unsigned int * vertexid, const struct KGGlyphLayout * ginfo, CGPoint
 		}
 	}
 	return false ;
+}
+
+static void
+drawVertex(CGContextRef context, const CGPoint * origin, const struct KGGlyphLayout * ginfo, uint8_t vertex)
+{
+	struct CNCircle circle = ginfo->vertex[vertex] ;
+	
+	CGFloat radius  = circle.radius ;
+	struct CGRect bounds = {
+		.origin = {
+			.x = origin->x + (circle.center).x - radius,
+			.y = origin->y + (circle.center).y - radius
+		},
+		.size = {
+			.width	= radius * 2.0,
+			.height = radius * 2.0
+		}
+	} ;
+	CGContextFillEllipseInRect(context, bounds) ;
+}
+
+static void
+drawVertexes(CGContextRef context, const CGPoint * origin, const struct KGGlyphLayout * ginfo, const struct KGGlyphEditableStroke * strokes)
+{
+	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+	KCSetFillColor(context, ctable.goldenrod) ;
+	
+	unsigned int i, count = (strokes->strokeBody).edgeCount ;
+	for(i=0 ; i<count ; i++){
+		struct KGGlyphEdge edge = strokes->storage[i] ;
+		drawVertex(context, origin, ginfo, edge.fromVertex) ;
+		drawVertex(context, origin, ginfo, edge.toVertex) ;
+	}
 }
 

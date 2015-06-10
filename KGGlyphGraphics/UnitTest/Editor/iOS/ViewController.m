@@ -25,9 +25,9 @@
 	[self.graphicsView addGraphicsDrawer: editor withDelegate: self] ;
 	[editor setEditable: YES] ;
 	
-	CNColorTable * ctable = [CNColorTable defaultColorTable] ;
-	struct CNRGB color = ctable.goldenrod ;
-	[editor setColor: &color] ;
+	//CNColorTable * ctable = [CNColorTable defaultColorTable] ;
+	//struct CNRGB color = ctable.goldenrod ;
+	//[editor setColor: &color] ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,9 +35,9 @@
 	// Dispose of any resources that can be recreated.
 }
 
-- (void) editingGraphicsEnded
+- (void) editingGraphicsEndedWithData: (void *) data
 {
-	printf("%s\n", __func__) ;
+	printf("%s %p\n", __func__, data) ;
 }
 
 - (void) editingGraphicsCancelled
