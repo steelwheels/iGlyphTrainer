@@ -56,7 +56,7 @@ KGGlyphInputStrokeAtIndex(struct KGGlyphInputStrokes * src, NSUInteger index)
 }
 
 BOOL
-KGAddStrokeToInputStrokes(struct KGGlyphInputStrokes * dst, const struct KGGlyphStroke * src)
+KGAddGlyphStrokeToInputStrokes(struct KGGlyphInputStrokes * dst, const struct KGGlyphStroke * src)
 {
 	if(dst->strokeNum < KGMaxGlyphWordNum){
 		struct KGGlyphStroke clonestroke ;
@@ -69,3 +69,4 @@ KGAddStrokeToInputStrokes(struct KGGlyphInputStrokes * dst, const struct KGGlyph
 		return NO ;
 	}
 }
+

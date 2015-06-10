@@ -28,3 +28,4 @@ KGMakeGlyphStroke(unsigned int count, const struct KGGlyphEdge * array)
 	} ;
 	return result ;
 }
+

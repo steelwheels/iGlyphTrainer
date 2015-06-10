@@ -35,17 +35,18 @@ BOOL
 UTGlyphStrokeArray(void)
 {
 	struct KGGlyphInputStrokes strokes ;
-	KGInitGlyphInputStrokes(&strokes) ;
+	strokes = KGMakeEmptyInputStrokes() ;
 	puts("** init state") ;
 	printGlyphInputStrokes(&strokes) ;
 	
-	KGAddStrokeToInputStrokes(&strokes, &s_stroke1) ;
+	KGAddGlyphStrokeToInputStrokes(&strokes, &s_stroke1) ;
 	puts("** added state") ;
 	printGlyphInputStrokes(&strokes) ;
 	
-	KGAddStrokeToInputStrokes(&strokes, &s_stroke2) ;
+	KGAddGlyphStrokeToInputStrokes(&strokes, &s_stroke2) ;
 	puts("** added state") ;
 	printGlyphInputStrokes(&strokes) ;
+	KGDumpGlyphInputStroke(stdout, 0, &strokes) ;
 	
 	KGClearGlyphInputStrokes(&strokes) ;
 	puts("** after destruct") ;

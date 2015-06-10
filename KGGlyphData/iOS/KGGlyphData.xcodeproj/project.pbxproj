@@ -23,6 +23,8 @@
 		05BD04FB1A9CD95B0046DDF0 /* KGGlyphKind.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05BD04FA1A9CD94D0046DDF0 /* KGGlyphKind.h */; };
 		05CB0FA11AF0F0E30056AA40 /* KGGlyphInputStrokes.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CB0FA01AF0F0E30056AA40 /* KGGlyphInputStrokes.m */; };
 		05CB0FA31AF0F1440056AA40 /* KGGlyphInputStrokes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05CB0FA21AF0F0F60056AA40 /* KGGlyphInputStrokes.h */; };
+		05D6A49D1B285AEB00F291DA /* KGGlyphDumper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D6A49C1B285AEB00F291DA /* KGGlyphDumper.m */; };
+		05D6A49E1B285B0B00F291DA /* KGGlyphDumper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05D6A49B1B285AEB00F291DA /* KGGlyphDumper.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				05D6A49E1B285B0B00F291DA /* KGGlyphDumper.h in CopyFiles */,
 				05A2DA651AFBBEFA00920E02 /* KGGlyphComparator.h in CopyFiles */,
 				059CA5FC1AF149FC00D43F31 /* KGGlyphHackTime.h in CopyFiles */,
 				05CB0FA31AF0F1440056AA40 /* KGGlyphInputStrokes.h in CopyFiles */,
@@ -74,6 +77,8 @@
 		05BD04FA1A9CD94D0046DDF0 /* KGGlyphKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphKind.h; sourceTree = "<group>"; };
 		05CB0FA01AF0F0E30056AA40 /* KGGlyphInputStrokes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphInputStrokes.m; sourceTree = "<group>"; };
 		05CB0FA21AF0F0F60056AA40 /* KGGlyphInputStrokes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphInputStrokes.h; sourceTree = "<group>"; };
+		05D6A49B1B285AEB00F291DA /* KGGlyphDumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphDumper.h; sourceTree = "<group>"; };
+		05D6A49C1B285AEB00F291DA /* KGGlyphDumper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphDumper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,8 @@
 				05725CC51AD2CC6C007A5F4E /* KGGlyphSentence.m */,
 				059CA5F91AF149EF00D43F31 /* KGGlyphHackTime.h */,
 				059CA5FA1AF149EF00D43F31 /* KGGlyphHackTime.m */,
+				05D6A49B1B285AEB00F291DA /* KGGlyphDumper.h */,
+				05D6A49C1B285AEB00F291DA /* KGGlyphDumper.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -210,6 +217,7 @@
 				052BBCB31AC9AEEA00E47CC6 /* KGGlyphName.m in Sources */,
 				05CB0FA11AF0F0E30056AA40 /* KGGlyphInputStrokes.m in Sources */,
 				05A2DA641AFBBEE700920E02 /* KGGlyphComparator.m in Sources */,
+				05D6A49D1B285AEB00F291DA /* KGGlyphDumper.m in Sources */,
 				05BD04F81A9CD8230046DDF0 /* KGGlyphStroke.m in Sources */,
 				05725CC61AD2CC6C007A5F4E /* KGGlyphSentence.m in Sources */,
 			);
@@ -312,32 +320,38 @@
 		0579143D1A9CD6E40087D704 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(HOME)/local/include",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "../Source/KGGlyphData-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		0579143E1A9CD6E40087D704 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(HOME)/local/include",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "../Source/KGGlyphData-Bridging-Header.h";
 			};
 			name = Release;
 		};
