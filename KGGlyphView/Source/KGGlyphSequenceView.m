@@ -18,9 +18,8 @@ currentStroke(KGGameStatus * status)
 }
 
 static inline struct KGGlyphStroke
-inputedStroke(KGGameStatus * status)
+inputedStroke(const struct KGGlyphInputStrokes * inputs, KGGameStatus * status)
 {
-	const struct KGGlyphInputStrokes * inputs = KGSharedGlyphInputStrokes() ;
 	NSUInteger index = status.currentGlyphIndex ;
 	struct KGGlyphStroke stroke ;
 	if(index < inputs->strokeNum){
@@ -97,7 +96,6 @@ inputedStroke(KGGameStatus * status)
 					[stroke1Drawer setStroke: &nilstroke] ;
 					[stroke1Drawer setColor: &normalcolor] ;
 					[strokeEditor setEditable: NO] ;
-					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 				case KGDisplayQuestionState: {
 					struct KGGlyphStroke gstroke = currentStroke(status) ;
@@ -106,7 +104,6 @@ inputedStroke(KGGameStatus * status)
 					[stroke1Drawer setStroke: &nilstroke] ;
 					[stroke1Drawer setColor: &normalcolor] ;
 					[strokeEditor setEditable: NO] ;
-					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 				case KGInputAnswerState: {
 					[stroke0Drawer setStroke: &nilstroke] ;
@@ -114,12 +111,12 @@ inputedStroke(KGGameStatus * status)
 					[stroke1Drawer setStroke: &nilstroke] ;
 					[stroke1Drawer setColor: &normalcolor] ;
 					[strokeEditor setEditable: YES] ;
-					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 				case KGEvaluateState: {
 					/* Inputed stroken */
-					struct KGGlyphStroke istroke = inputedStroke(status) ;
-					[stroke0Drawer setStroke: &istroke] ;
+					struct KGGlyphInputStrokes instrokes = status.inputStrokes ;
+					struct KGGlyphStroke instroke = inputedStroke(&instrokes, status) ;
+					[stroke0Drawer setStroke: &instroke] ;
 					[stroke0Drawer setColor: &wrongcolor] ;
 					
 					/* Expected stroke */
@@ -128,8 +125,6 @@ inputedStroke(KGGameStatus * status)
 					[stroke1Drawer setColor: &correctcolor] ;
 					
 					[strokeEditor setEditable: NO] ;
-					[strokeEditor setStroke: &nilstroke] ;
-					[strokeEditor setColor: &normalcolor] ;
 				} break ;
 			}
 			[self setAllNeedsDisplay] ;
@@ -142,13 +137,13 @@ inputedStroke(KGGameStatus * status)
 	glyphDelegate = delegate ;
 }
 
-- (void) editingGraphicsEnded
+- (void) editingGraphicsEndedWithData: (void *) data
 {
 	if(glyphDelegate){
 		if([strokeEditor isEditable]){
-			const struct KGGlyphStroke * stroke = [strokeEditor glyphStroke] ;
+			assert(data != NULL) ;
+			const struct KGGlyphStroke * stroke = data ;
 			[glyphDelegate glyphEditingEnded: stroke] ;
-			[strokeEditor clearGlyphStroke] ;
 		}
 	}
 }
@@ -158,7 +153,6 @@ inputedStroke(KGGameStatus * status)
 	if(glyphDelegate){
 		if([strokeEditor isEditable]){
 			[glyphDelegate glyphEditingCancelled] ;
-			[strokeEditor clearGlyphStroke] ;
 		}
 	}
 }

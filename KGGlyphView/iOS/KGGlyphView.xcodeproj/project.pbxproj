@@ -31,6 +31,7 @@
 		0567FFE61ADB985200508A6E /* KGGlyphView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0567FFE51ADB985200508A6E /* KGGlyphView.h */; };
 		0567FFE81ADB985200508A6E /* KGGlyphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0567FFE71ADB985200508A6E /* KGGlyphView.m */; };
 		058DF68F1AE012850033F47E /* KGGlyphViewType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05351B981ADD6A370098CF59 /* KGGlyphViewType.h */; };
+		05A985B31B273485005BC8DB /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05DC28211ADBA9E600683224 /* AppDefaults.plist */; };
 		05DC28221ADBA9E600683224 /* AppDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05DC28211ADBA9E600683224 /* AppDefaults.plist */; };
 /* End PBXBuildFile section */
 
@@ -363,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A985B31B273485005BC8DB /* AppDefaults.plist in Resources */,
 				054E44E81AED3E16006628A7 /* Main.storyboard in Resources */,
 				054E44ED1AED3E16006628A7 /* LaunchScreen.xib in Resources */,
 				054E44EA1AED3E16006628A7 /* Images.xcassets in Resources */,
