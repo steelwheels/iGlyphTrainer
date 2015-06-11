@@ -62,7 +62,6 @@ KGGlyphInputStrokeAtIndex(struct KGGlyphInputStrokes * src, NSUInteger index)
 	if(index < src->strokeNum){
 		return src->strokeArray[index] ;
 	} else {
-		assert(false) ;
 		struct KGGlyphStroke empty = KGMakeGlyphStroke(0, NULL) ;
 		return empty ;
 	}

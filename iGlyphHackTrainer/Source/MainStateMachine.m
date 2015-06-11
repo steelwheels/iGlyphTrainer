@@ -8,7 +8,7 @@
 #import "MainStateMachine.h"
 #import "GlyphSentenceSelector.h"
 
-static const BOOL doDebug	= YES ;
+static const BOOL doDebug	= NO ;
 
 @interface MainStateMachine ()
 - (void) setNextState: (KGGameState) newstate ;
