@@ -33,6 +33,19 @@ freeGlypStroke(struct KGGlyphStroke * dst)
 	dst->edgeCount = 0 ;
 }
 
+struct KGGlyphInputStrokes
+KGMakeEmptyInputStrokes(void)
+{
+	struct KGGlyphInputStrokes result ;
+	result.strokeNum = 0 ;
+	unsigned int i ;
+	for(i=0 ; i<KGMaxGlyphWordNum ; i++){
+		result.strokeArray[i].edgeCount = 0 ;
+		result.strokeArray[i].edgeArray = NULL ;
+	}
+	return result ;
+}
+
 void
 KGClearGlyphInputStrokes(struct KGGlyphInputStrokes * dst)
 {

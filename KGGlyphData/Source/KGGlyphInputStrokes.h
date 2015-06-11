@@ -13,13 +13,8 @@ struct KGGlyphInputStrokes {
 	struct KGGlyphStroke	strokeArray[KGMaxGlyphWordNum] ;
 } ;
 
-static inline struct KGGlyphInputStrokes
-KGMakeEmptyInputStrokes(void)
-{
-	struct KGGlyphInputStrokes result ;
-	result.strokeNum = 0 ;
-	return result ;
-}
+struct KGGlyphInputStrokes
+KGMakeEmptyInputStrokes(void) ;
 
 void
 KGClearGlyphInputStrokes(struct KGGlyphInputStrokes * dst) ;
