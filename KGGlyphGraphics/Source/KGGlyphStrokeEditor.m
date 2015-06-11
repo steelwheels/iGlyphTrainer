@@ -74,9 +74,11 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 		setStrokeVetex(&prevVertex, NO, 0) ;
 	}
 	
+	CGFloat radius = glyphLayout.vertexSize ;
+	
 	bezierPath = [KCBezierPath bezierPath];
 	bezierPath.lineCapStyle = kCGLineCapRound;
-	bezierPath.lineWidth = 8.0;
+	bezierPath.lineWidth = radius * 1.5 ;
 	[bezierPath moveToPoint: point];
 
 	KCPreference * pref = [KCPreference sharedPreference] ;
