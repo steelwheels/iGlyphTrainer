@@ -35,6 +35,7 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 - (instancetype) init
 {
 	if((self = [super init]) != nil){
+		isEditable = NO ;
 		imageCanvas = nil ;
 		bezierPath = nil ;
 		KGInitGlyphEditableStroke(&editableStroke) ;
@@ -50,18 +51,21 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 
 - (BOOL) isEditable
 {
-	return YES ;
+	return isEditable ;
 }
 
 - (void) setEditable: (BOOL) flag
 {
-	(void) flag ;
+	isEditable = flag ;
 }
 
 - (void) touchesBegan: (CGPoint) point inBoundsRect: (CGRect) boundsrect
 {
 	(void) boundsrect ;
 	
+	if(!isEditable){
+		return  ;
+	}
 	if(doDebug){
 		NSLog(@"KGInitGlyphEditableStroke") ;
 	}
@@ -92,6 +96,9 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 {
 	(void) boundsrect ;
 	
+	if(!isEditable){
+		return  ;
+	}
 	unsigned int	vid ;
 	if(getVertexId(&vid, &glyphLayout, newpoint)){
 		if(prevVertex.isValid){

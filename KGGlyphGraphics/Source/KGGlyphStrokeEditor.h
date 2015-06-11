@@ -25,6 +25,7 @@ struct KGGlyphStrokeVertex {
 	NSBezierPath *			bezierPath ;
 	NSColor *			drawColor ;
 #	endif
+	BOOL				isEditable ;
 	struct KGGlyphEditableStroke	editableStroke ;
 	struct KGGlyphStrokeVertex	prevVertex ;
 
