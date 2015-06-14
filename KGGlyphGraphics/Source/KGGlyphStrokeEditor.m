@@ -57,6 +57,9 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 - (void) setEditable: (BOOL) flag
 {
 	isEditable = flag ;
+	if(!flag){
+		bezierPath = nil ;
+	}
 }
 
 - (void) touchesBegan: (CGPoint) point inBoundsRect: (CGRect) boundsrect
@@ -135,7 +138,7 @@ setStrokeVetex(struct KGGlyphStrokeVertex * dst, BOOL isvalid, unsigned int vert
 - (void) drawWithContext: (CGContextRef) context inBoundsRect: (CGRect) boundsrect
 {
 	[super drawWithContext: context inBoundsRect: boundsrect] ;
-	if(bezierPath != nil){
+	if(isEditable && bezierPath != nil){
 		[drawColor setStroke] ;
 		[bezierPath stroke] ;
 		drawVertexes(context, &(boundsrect.origin), &glyphLayout, &editableStroke) ;
