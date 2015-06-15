@@ -23,6 +23,14 @@
  {1, 0}
 }
 ]
+KGGlyphInputStrokes [2] = {
+ KGGlyphStroke [2] = {
+  {0, 1} {1, 2} 
+ }
+ KGGlyphStroke [3] = {
+  {3, 2} {2, 1} {1, 0} 
+ }
+}
 ** after destruct
 [stroke 0
 ]
@@ -194,4 +202,84 @@ Portal Change Civillization End
 Portal Die Civillization Die 
 Portal Change Civillization End 
 Peace Path Nourish Present 
+----------------------------------------
+* 5 words sentence
+----------------------------------------
+Gain Truth Open Human Soul 
+Old Nature Less Strong Now 
+Past Chaos Create Future Harmony 
+Past Path Create Future Journey 
+Destroy Lie Inside Gain Soul 
+Destroy Civillization End Conflict War 
+Breath Inside XM Lose Self 
+Defend Destiny Defend Human Civillization 
+Defend Human Civillization XM Message 
+Defend Human Civillization Shaper Lie 
+Defend Human Civillization Portal Data 
+Defend Human Civillization Shaper Portal 
+Help Enlightenment Capture All Portal 
+Help Resistance Capture All Portal 
+Help Human Civillization Pursue Destiny 
+Pursue Path Outside Shaper Lie 
+Pursue Conflict War Advance Chaos 
+Weak Human Destiny Destroy Civillization 
+Avoid Chaos Repair Potencial War 
+Avoid Perfect Stability Human Self 
+Avoid Chaos Avoid Shaper Lie 
+Rebel Thought Evolution Destiny Now 
+Separate Mind Body Discover Enlightened 
+Separate Truth Lie Shaper Future 
+Forget Past See Present Danger 
+Forget War See Distance Harmony 
+Create Pure Future Not War 
+Create Pure Future Human Civillization 
+Create Separate Path End Journey 
+Advance Civillization Pursue Shaper Path 
+Distance Self Avoid Human Lie 
+Courage Attack Shaper Portal Together 
+Want Truth Pursue Difficult Path 
+Stay Strong Together Defend Resistance 
+Shaper Portal Data Create Chaos 
+Shaper Portal Message Destroy Civillization 
+Shaper Want Human Mind Future 
+Shaper Lead Human Complex Journey 
+Chaos War Conflict Discover Peace 
+Liberate Portal Liberate Human Mind 
+Presence Chaos Create Future Civillization 
+Inside Mind Inside Soul Harmony 
+Answer Question Discover Difficult Truth 
+Hide Struggle Advance Strong Together 
+Simple Truth Shaper Destroy Civillization 
+Simple Old Truth Journey Inside 
+More Data Gain Portal Advance 
+Save Human Civillization Destroy Portal 
+Question Less Forget All Lie 
+Escape Body Journey Outside Present 
+Escape Body Mind Self Want 
+Clear Mind Liberate Barrier Body 
+Contemplate Future Not Shaper Path 
+Contemplate Restraint Discover More Courage 
+Use Restraint Follow Easy Path 
+Use Mind Use Courage Change 
+Search Destiny Create Pure Future 
+Easy Path Future Follow Shaper 
+React Rebel Question Shaper Lie 
+Capture Portal Defend Portal Courage 
+Lose Shaper Message Gain Chaos 
+Pure Human Failure Now Chaos 
+Imperfect XM Message Human Chaos 
+Imperfect Truth Accept Complex Answer 
+Human Shaper Together Create Destiny 
+Human Not Together Civillization Deteriorate 
+Recharge Present Recharge Human Soul 
+Repair Soul Less Human Harm 
+CloseAll Thought Past Present Future 
+Strong Together War Together Destiny 
+Strong Together War Together Chaos 
+XM Path Future Destiny Harmony 
+XM Create Complex Human Destiny 
+Portal Create Danger Pursue Safety 
+Portal Potencial Help Human Future 
+Portal Barrier Defend Human Shaper 
+Portal Improve Human Future Civillization 
 *** Summary : OK
