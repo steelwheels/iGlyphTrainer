@@ -110,8 +110,7 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			} ;
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
-		case KGAvoidGlyph:
-		case KGStruggleGlyph: {
+		case KGAvoidGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{ 5,  0},
 				{ 0, 10},
@@ -995,7 +994,8 @@ KGStrokeOfGlyph(KGGlyphKind kind)
 			result = makeStroke(COUNT_OF_ARRAY(s_stroke), s_stroke) ;
 		} break ;
 		case KGResistGlyph:
-		case KGResistanceGlyph: {
+		case KGResistanceGlyph:
+		case KGStruggleGlyph: {
 			static struct KGGlyphEdge s_stroke[] = {
 				{10,   6},
 				{ 6,   0},
