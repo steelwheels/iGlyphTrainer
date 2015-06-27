@@ -9,6 +9,10 @@ This software is distributed under
 [GNU GENERAL PUBLIC LICENSE Version 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 or [GNU LESSER GENERAL PUBLIC LICENSE Version 2.1](https://www.gnu.org/licenses/lgpl-2.1-standalone.html).
 
+# Related document
+* [User's manual](https://sites.google.com/site/steelwheelsproject/home/products/iglyphhacktrainer)
+* [AppStore page](https://itunes.apple.com/jp/app/iglyphtrainer-training-program/id1007405158?mt=8)
+
 # Contents
 1. KGGlyphData       : Define the data structure of glyph and sentence of the glyphs
 2. KGGameData        : Define the primary data structure
@@ -20,6 +24,7 @@ or [GNU LESSER GENERAL PUBLIC LICENSE Version 2.1](https://www.gnu.org/licenses/
 # Required software
 To build this application, following software is also required.
 When you install these framework, keep the order to keep the dependency.
+
 1. [Coconut framework](https://github.com/steelwheels/Coconut)
 2. [CoconutGraphics framework](https://github.com/steelwheels/CoconutGraphics)
 3. [KiwiControl frameworks](https://github.com/steelwheels/KiwiControls):

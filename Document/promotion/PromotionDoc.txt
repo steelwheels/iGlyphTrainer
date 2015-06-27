@@ -1,0 +1,43 @@
+
+[アプリ名]
+  iGlyphTrainer
+
+[iTunes リンク]
+  https://itunes.apple.com/jp/app/iglyphtrainer-training-program/id1007405158?mt=8
+
+[価格]
+  本体価格無料。課金, 広告もありません。
+
+[概要]
+iGlyphTrainerは、IngressのGlyph Hackの練習が目的のiOS用ゲームアプリです。
+Glyph Hackを成功させる事で、Ingressのゲームを有利に進める事ができます。
+
+出題するセンテンスのグリフ数を調整可能です(2から5)ので、
+徐々にGlyph Hackに慣れていく事ができます。
+また、出題中と回答中にグリフの名前を表示する事が出来るので、
+グリフの名前を無理なく覚えられます。
+
+ゲーム実施に際して、ネットワークアクセスは発生しませんので、
+ネット接続が難しい場所でも遊べます。広告が表示される事もありません。
+
+本ソフトウェアは、オープンソースソフトウェアで、GNU Public License Version 2.1
+の下配布されています。ソースコードは、github (https://github.com/steelwheels/iGlyphTrainer)
+から入手できます。
+
+使い方の詳細については、ユーザーズマニュアル
+  https://sites.google.com/site/steelwheelsproject/home/products/iglyphhacktrainer
+を参照してください。
+
+ご注意:　Ingressは、Niantic Lab.の製品です。本ソフトウェアは、Niantic Lab.やgoogleとは無関係です。
+
+[比較]
+競合するアプリは、"GHTranslator"のみです。
+こちらもよく出来たソフトですし、コンセプトには共通点があるのですが、
+* UIの反応速度
+* ドキュメント(およびドキュメントへのリンク)
+点について、本アプリの方が勝っていると思われます。
+
+[セールス]
+Ingressのプレーヤは世界中に多数おられます(1000万ダウンロードを超えています)。
+Glyph Hackは、Ingressの有利なアイテムを入手する際に必要なミニゲームですので、
+その練習には相当数のプレーヤが興味があると思われます。
