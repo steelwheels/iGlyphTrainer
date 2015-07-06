@@ -20,7 +20,7 @@ Glyph Hackを成功させる事で、Ingressのゲームを有利に進める事
 ゲーム実施に際して、ネットワークアクセスは発生しませんので、
 ネット接続が難しい場所でも遊べます。広告が表示される事もありません。
 
-本ソフトウェアは、オープンソースソフトウェアで、GNU Public License Version 2.1
+本ソフトウェアは、無料のオープンソースソフトウェアで、GNU Public License Version 2.1
 の下配布されています。ソースコードは、github (https://github.com/steelwheels/iGlyphTrainer)
 から入手できます。
 
@@ -41,3 +41,33 @@ Glyph Hackを成功させる事で、Ingressのゲームを有利に進める事
 Ingressのプレーヤは世界中に多数おられます(1000万ダウンロードを超えています)。
 Glyph Hackは、Ingressの有利なアイテムを入手する際に必要なミニゲームですので、
 その練習には相当数のプレーヤが興味があると思われます。
+
+-----------------
+[app name]
+  iGlyphTrainer : Ingress Glyph Hack Trainer
+
+[URL]
+  https://itunes.apple.com/jp/app/iglyphtrainer-training-program/id1007405158?mt=8
+
+[Price]
+  Free. This is also open source software
+
+[Desription]
+iGlyphTrainer is an iOS application to train Ingress Glyph Hacking.
+If you get high score at the glyph hacking in Ingress,
+you can use the acquired item to advantageously develop a game.
+
+The number of glyphs in a sentence can be controlled (from 2 to 5).
+So you can get used to hack the glyph.
+And you can control whether the glyph name is displayed at the question/answer
+sequence or not. It helps you that you memorize the glyph name.
+
+This is open source software distributed under GNU Public License version 2.1.
+You can get the source from github (https://github.com/steelwheels/iGlyphTrainer).
+
+For more details of usage of this application, see the user's manual on
+https://sites.google.com/site/steelwheelsproject/home/products/iglyphhacktrainer
+web page.
+
+Note: Ingress is copyright 2014 Niantic Labs.
+This software is NOT affiliated with Niantic Labs nor Google.

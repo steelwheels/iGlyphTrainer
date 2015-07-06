@@ -28,3 +28,8 @@ When you install these framework, keep the order to keep the dependency.
 1. [Coconut framework](https://github.com/steelwheels/Coconut)
 2. [CoconutGraphics framework](https://github.com/steelwheels/CoconutGraphics)
 3. [KiwiControl frameworks](https://github.com/steelwheels/KiwiControls):
+
+# ChangeLog
+## Version 1.0.1
+* Bug fix. Fix the bug which display wrong max/min number of glyphs in "Setup View".
+* Update the "Setup" window title from "Setting" to "Setup".

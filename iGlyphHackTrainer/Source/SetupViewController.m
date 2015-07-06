@@ -41,11 +41,11 @@ typedef enum {
 
 	self.maxNumberStepper.tag = MaxNumberStepperId ;
 	self.maxNumberStepper.delegate = self ;
-	[self.maxNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1 withInitialValue: 5];
+	[self.maxNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1 withInitialValue: preference.maxQuestionSentenceLength];
 
 	self.minNumberStepper.tag = MinNumberStepperId ;
 	self.minNumberStepper.delegate = self ;
-	[self.minNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1 withInitialValue: 2] ;
+	[self.minNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1 withInitialValue: preference.minQuestionSentenceLength] ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,6 +87,7 @@ typedef enum {
 			NSInteger newmaxnum = [self.maxNumberStepper value] ;
 			if(newmaxnum < curminnum){
 				[self.minNumberStepper setValue: newmaxnum ];
+				preference.minQuestionSentenceLength = newmaxnum ;
 				curminnum = newmaxnum ;
 			}
 			preference.maxQuestionSentenceLength = newmaxnum ;
@@ -99,6 +100,7 @@ typedef enum {
 			NSInteger curmaxnum = [self.maxNumberStepper value] ;
 			if(curmaxnum < newminnum){
 				[self.maxNumberStepper setValue: newminnum] ;
+				preference.maxQuestionSentenceLength = newminnum ;
 				curmaxnum = newminnum ;
 			}
 			preference.minQuestionSentenceLength = newminnum ;
