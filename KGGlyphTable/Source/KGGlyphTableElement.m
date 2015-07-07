@@ -31,10 +31,15 @@
 
 - (void) setupGlyphTableElement
 {
+	glyphGraphicsView	= nil ;
+	glyphVetexDrawer	= nil ;
+	glyphStrokeDrawer	= nil ;
+	glyphLabelView		= nil ;
+	
 	if([[self subviews] count] > 0){
 		return ; /* Already added */
 	}
-	
+
 	UIView * xibview = KCLoadXib(self, NSStringFromClass(self.class)) ;
 	if(xibview != nil){
 		[self addSubview: xibview] ;
@@ -42,8 +47,10 @@
 		return ;
 	}
 	
-	glyphGraphicsView	= nil ;
-	glyphLabelView		= nil ;
+	//xibview.translatesAutoresizingMaskIntoConstraints = YES;
+	//xibview.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+
+	
 	for(UIView * subview in [xibview subviews]){
 		if([subview isKindOfClass: [UILabel class]]){
 			glyphLabelView = (UILabel *) subview ;
@@ -56,6 +63,34 @@
 	if(glyphGraphicsView == nil || glyphLabelView == nil){
 		NSLog(@"Nil sub view") ;
 	}
+	
+	self.backgroundColor = [UIColor blackColor] ;
+	glyphLabelView.backgroundColor = [UIColor blackColor] ;
+	glyphGraphicsView.backgroundColor = [UIColor blackColor] ;
+	glyphLabelView.textColor = [UIColor whiteColor] ;
+	
+	/* Setup Graphics View */
+	glyphVetexDrawer  = [[KGGlyphVertexDrawer alloc] init] ;
+	glyphStrokeDrawer = [[KGGlyphStrokeDrawer alloc] init] ;
+	
+	[glyphGraphicsView addGraphicsDrawer: glyphVetexDrawer withDelegate: nil] ;
+	[glyphGraphicsView addGraphicsDrawer: glyphStrokeDrawer withDelegate: nil] ;
+}
+
+- (void) setGlyphKind: (KGGlyphKind) kind
+{
+	self.glyphKind = kind ;
+	
+	struct KGGlyphStroke stroke = KGStrokeOfGlyph(kind) ;
+	[glyphStrokeDrawer setStroke: &stroke] ;
+	
+	NSString * name = KGNameOfGlyph(kind) ;
+	glyphLabelView.text = name ;
+}
+
+- (KGGlyphKind) glyphKind
+{
+	return self.glyphKind ;
 }
 
 /*

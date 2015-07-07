@@ -5,13 +5,19 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import <UIKit/UIKit.h>
 #import <KCGraphicsView/KCGraphicsView.h>
+#import <KGGlyphGraphics/KGGlyphGraphics.h>
+#import <KGGlyphData/KGGlyphData.h>
+#import <UIKit/UIKit.h>
 
 @interface KGGlyphTableElement : UIView
 {
 	KCGraphicsView *		glyphGraphicsView ;
+	KGGlyphVertexDrawer *		glyphVetexDrawer ;
+	KGGlyphStrokeDrawer *		glyphStrokeDrawer ;
 	UILabel *			glyphLabelView ;
 }
+
+@property (assign, nonatomic, setter=setGlyphKind:, getter=glyphKind)	KGGlyphKind glyphKind ;
 
 @end

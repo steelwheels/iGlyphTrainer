@@ -5,5 +5,7 @@
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "KGGlyphTableElement.h"
+
 

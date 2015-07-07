@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 Steel Wheels Project. All rights reserved.
 //
 
+#import <KGGlyphTable/KGGlyphTable.h>
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
