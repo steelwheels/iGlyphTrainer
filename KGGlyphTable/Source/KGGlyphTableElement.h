@@ -16,6 +16,7 @@
 	KGGlyphVertexDrawer *		glyphVetexDrawer ;
 	KGGlyphStrokeDrawer *		glyphStrokeDrawer ;
 	UILabel *			glyphLabelView ;
+	KGGlyphKind			internalGlyphKind ;
 }
 
 @property (assign, nonatomic, setter=setGlyphKind:, getter=glyphKind)	KGGlyphKind glyphKind ;

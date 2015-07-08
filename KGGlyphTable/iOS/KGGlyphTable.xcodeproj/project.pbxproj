@@ -52,7 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		056D6C911B4C359200E68B37 /* KGGlyphTableElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KGGlyphTableElement.xib; path = ../../../../../local/resource/KGGlyphTableElement.xib; sourceTree = "<group>"; };
+		056D6C911B4C359200E68B37 /* KGGlyphTableElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KGGlyphTableElement.xib; path = ../../../../local/resource/KGGlyphTableElement.xib; sourceTree = SOURCE_ROOT; };
 		0574359D1B4AD78C006182ED /* libKGGlyphTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGlyphTable.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		057435A01B4AD78C006182ED /* KGGlyphTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphTable.h; sourceTree = "<group>"; };
 		057435A21B4AD78C006182ED /* KGGlyphTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGGlyphTable.m; sourceTree = "<group>"; };

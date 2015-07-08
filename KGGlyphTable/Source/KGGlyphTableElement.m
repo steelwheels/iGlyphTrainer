@@ -47,6 +47,8 @@
 		return ;
 	}
 	
+	xibview.frame = self.bounds ;
+	
 	//xibview.translatesAutoresizingMaskIntoConstraints = YES;
 	//xibview.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 
@@ -79,7 +81,7 @@
 
 - (void) setGlyphKind: (KGGlyphKind) kind
 {
-	self.glyphKind = kind ;
+	internalGlyphKind = kind ;
 	
 	struct KGGlyphStroke stroke = KGStrokeOfGlyph(kind) ;
 	[glyphStrokeDrawer setStroke: &stroke] ;
@@ -90,7 +92,7 @@
 
 - (KGGlyphKind) glyphKind
 {
-	return self.glyphKind ;
+	return internalGlyphKind ;
 }
 
 /*
