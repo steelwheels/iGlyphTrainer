@@ -7,5 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KGGlyphTableElement.h"
+#import "KGGlyphTableView.h"
+
 
 

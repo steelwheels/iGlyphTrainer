@@ -13,7 +13,7 @@
 @interface KGGlyphTableElement : UIView
 {
 	KCGraphicsView *		glyphGraphicsView ;
-	KGGlyphVertexDrawer *		glyphVetexDrawer ;
+	//KGGlyphVertexDrawer *		glyphVetexDrawer ;
 	KGGlyphStrokeDrawer *		glyphStrokeDrawer ;
 	UILabel *			glyphLabelView ;
 	KGGlyphKind			internalGlyphKind ;

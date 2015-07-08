@@ -32,7 +32,7 @@
 - (void) setupGlyphTableElement
 {
 	glyphGraphicsView	= nil ;
-	glyphVetexDrawer	= nil ;
+	//glyphVetexDrawer	= nil ;
 	glyphStrokeDrawer	= nil ;
 	glyphLabelView		= nil ;
 	
@@ -72,10 +72,10 @@
 	glyphLabelView.textColor = [UIColor whiteColor] ;
 	
 	/* Setup Graphics View */
-	glyphVetexDrawer  = [[KGGlyphVertexDrawer alloc] init] ;
+	//glyphVetexDrawer  = [[KGGlyphVertexDrawer alloc] init] ;
 	glyphStrokeDrawer = [[KGGlyphStrokeDrawer alloc] init] ;
 	
-	[glyphGraphicsView addGraphicsDrawer: glyphVetexDrawer withDelegate: nil] ;
+	//[glyphGraphicsView addGraphicsDrawer: glyphVetexDrawer withDelegate: nil] ;
 	[glyphGraphicsView addGraphicsDrawer: glyphStrokeDrawer withDelegate: nil] ;
 }
 
