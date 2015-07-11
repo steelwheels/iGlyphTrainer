@@ -9,9 +9,20 @@
 #import "KGGlyphTableCell.h"
 #import <KGGlyphData/KGGlyphData.h>
 
-static NSString *cellIdentifier = @"KGGlyphTableCell";
+static NSString *	cellIdentifier = @"KGGlyphTableCell";
+
+static KGGlyphKind
+indexPathToKind(NSIndexPath * path) ;
 
 @implementation KGGlyphTableSource
+
+- (instancetype) init
+{
+	if((self = [super init]) != nil){
+		
+	}
+	return self ;
+}
 
 - (NSInteger) numberOfSectionsInCollectionView: (UICollectionView *) collectionView
 {
@@ -28,14 +39,23 @@ static NSString *cellIdentifier = @"KGGlyphTableCell";
 
 - (UICollectionViewCell *) collectionView: (UICollectionView *) collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-	
-	
-	UICollectionViewCell * newcell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath] ;
+	KGGlyphTableCell * newcell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath] ;
 	if(newcell == nil){
 		[collectionView registerClass: [KGGlyphTableCell class] forCellWithReuseIdentifier: cellIdentifier] ;
+		newcell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath] ;
+		assert(newcell != nil) ;
 	}
+	//printf("KGGlyphKind = %u\n", (KGGlyphKind) indexPath.row) ;
+	[newcell setGlyphKind: indexPathToKind(indexPath)] ;
 	return newcell ;
 }
 
-
 @end
+
+static KGGlyphKind
+indexPathToKind(NSIndexPath * path)
+{
+	return (KGGlyphKind) (path.row + KGFirstGlyph) ;
+}
+
+

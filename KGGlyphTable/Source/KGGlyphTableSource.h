@@ -9,4 +9,6 @@
 
 @interface KGGlyphTableSource : NSObject <UICollectionViewDataSource>
 
+- (instancetype) init ;
+
 @end

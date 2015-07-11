@@ -12,6 +12,9 @@
 - (void) setupGlyphTableCell ;
 @end
 
+static UIView *
+loadXib(UIView * parentview, NSString * nibname) ;
+
 @implementation KGGlyphTableCell
 
 - (instancetype) initWithCoder: (NSCoder *) decoder
@@ -33,26 +36,28 @@
 - (void) setupGlyphTableCell
 {
 	glyphGraphicsView	= nil ;
-	//glyphVetexDrawer	= nil ;
 	glyphStrokeDrawer	= nil ;
 	glyphLabelView		= nil ;
 	
-	if([[self subviews] count] > 0){
+	printf("*2 setupGlyphTableCell : %u\n", (unsigned int) [[self subviews] count]) ;
+	if([[self subviews] count] > 1){
 		return ; /* Already added */
 	}
 	
-	UIView * xibview = KCLoadXib(self, NSStringFromClass(self.class)) ;
+	puts("*3 setupGlyphTableCell") ;
+	UIView * xibview = loadXib(self, NSStringFromClass(self.class)) ;
 	if(xibview != nil){
-		[self addSubview: xibview] ;
+		puts("*3.1 setupGlyphTableCell") ;
 	} else {
+		puts("*3.2 setupGlyphTableCell") ;
 		return ;
 	}
 	
-	xibview.frame = self.bounds ;
+	puts("*4 setupGlyphTableCell") ;
+	//xibview.frame.size = xibview.bounds.size = self.bounds ;
 	
-	//xibview.translatesAutoresizingMaskIntoConstraints = YES;
-	//xibview.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-	
+	//self.bounds = xibview.bounds ;
+	KCPrintView(xibview) ;
 	
 	for(UIView * subview in [xibview subviews]){
 		if([subview isKindOfClass: [UILabel class]]){
@@ -67,6 +72,7 @@
 		NSLog(@"Nil sub view") ;
 	}
 	
+	puts("*5 setupGlyphTableCell") ;
 	self.backgroundColor = [UIColor blackColor] ;
 	glyphLabelView.backgroundColor = [UIColor blackColor] ;
 	glyphGraphicsView.backgroundColor = [UIColor blackColor] ;
@@ -79,7 +85,7 @@
 
 - (void) setGlyphKind: (KGGlyphKind) kind
 {
-	internalGlyphKind = kind ;
+	glyphKind = kind ;
 	
 	struct KGGlyphStroke stroke = KGStrokeOfGlyph(kind) ;
 	[glyphStrokeDrawer setStroke: &stroke] ;
@@ -90,15 +96,43 @@
 
 - (KGGlyphKind) glyphKind
 {
-	return internalGlyphKind ;
+	return glyphKind ;
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
+- (void)drawRect:(CGRect)rect
+{
+	 [super drawRect: rect] ;
+}
 
 @end
+
+static inline NSLayoutConstraint *
+allocateLayout(UIView * parentview, UIView * subview, NSLayoutAttribute attribute)
+{
+	return [NSLayoutConstraint constraintWithItem: parentview
+					    attribute: attribute
+					    relatedBy: NSLayoutRelationEqual
+					       toItem: subview
+					    attribute: attribute
+					   multiplier: 1.0
+					     constant: 0.0];
+}
+
+static UIView *
+loadXib(UIView * parentview, NSString * nibname)
+{
+	UINib *nib = [UINib nibWithNibName: nibname bundle:nil];
+	UIView * loadedSubview = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
+		
+	[parentview addSubview:loadedSubview];
+		
+	loadedSubview.translatesAutoresizingMaskIntoConstraints = NO;
+		
+	[parentview addConstraint: allocateLayout(parentview, loadedSubview, NSLayoutAttributeTop)] ;
+	[parentview addConstraint: allocateLayout(parentview, loadedSubview, NSLayoutAttributeLeft)] ;
+	[parentview addConstraint: allocateLayout(parentview, loadedSubview, NSLayoutAttributeBottom)] ;
+	[parentview addConstraint: allocateLayout(parentview, loadedSubview, NSLayoutAttributeRight)] ;
+		
+	return loadedSubview ;
+}
+

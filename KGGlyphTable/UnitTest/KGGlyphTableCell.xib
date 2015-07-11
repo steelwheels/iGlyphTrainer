@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cp1-5t-4Hr" customClass="KCGraphicsView">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cp1-5t-4Hr">
                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

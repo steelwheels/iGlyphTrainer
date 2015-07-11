@@ -13,9 +13,10 @@
 	KCGraphicsView *		glyphGraphicsView ;
 	KGGlyphStrokeDrawer *		glyphStrokeDrawer ;
 	UILabel *			glyphLabelView ;
-	KGGlyphKind			internalGlyphKind ;
+	KGGlyphKind			glyphKind ;
 }
 
-@property (assign, nonatomic, setter=setGlyphKind:, getter=glyphKind)	KGGlyphKind glyphKind ;
+- (void) setGlyphKind: (KGGlyphKind) kind ;
+- (KGGlyphKind) glyphKind ;
 
 @end

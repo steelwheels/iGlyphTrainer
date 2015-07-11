@@ -7,5 +7,6 @@
 
 #import "KGGlyphTableView.h"
 #import "KGGlyphTableSource.h"
+#import "KGGlyphTableDelegate.h"
 #import "KGGlyphTableCell.h"
 

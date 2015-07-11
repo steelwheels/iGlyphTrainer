@@ -7,6 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class KGGlyphTableSource ;
+@class KGGlyphTableDelegate ;
+
 @interface KGGlyphTableView : UICollectionView
+{
+	KGGlyphTableSource *	dataSource ;
+	KGGlyphTableDelegate *	tableDelegate ;
+}
 
 @end
