@@ -7,114 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		056AC8361B4D81F700FF6916 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 056AC8351B4D81F700FF6916 /* main.m */; };
-		056AC8391B4D81F700FF6916 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 056AC8381B4D81F700FF6916 /* AppDelegate.m */; };
-		056AC83C1B4D81F700FF6916 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056AC83B1B4D81F700FF6916 /* ViewController.m */; };
-		056AC83F1B4D81F700FF6916 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056AC83D1B4D81F700FF6916 /* Main.storyboard */; };
-		056AC8411B4D81F700FF6916 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056AC8401B4D81F700FF6916 /* Images.xcassets */; };
-		056AC8441B4D81F700FF6916 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056AC8421B4D81F700FF6916 /* LaunchScreen.xib */; };
-		056D6C921B4C359200E68B37 /* KGGlyphTableElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056D6C911B4C359200E68B37 /* KGGlyphTableElement.xib */; };
-		057435A11B4AD78C006182ED /* KGGlyphTable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 057435A01B4AD78C006182ED /* KGGlyphTable.h */; };
-		057435A31B4AD78C006182ED /* KGGlyphTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 057435A21B4AD78C006182ED /* KGGlyphTable.m */; };
-		0590387A1B4C20A900CEFAA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 059038791B4C20A900CEFAA4 /* main.m */; };
-		0590387D1B4C20A900CEFAA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0590387C1B4C20A900CEFAA4 /* AppDelegate.m */; };
-		059038801B4C20A900CEFAA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0590387F1B4C20A900CEFAA4 /* ViewController.m */; };
-		059038831B4C20A900CEFAA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059038811B4C20A900CEFAA4 /* Main.storyboard */; };
-		059038851B4C20A900CEFAA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059038841B4C20A900CEFAA4 /* Images.xcassets */; };
-		059038881B4C20A900CEFAA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059038861B4C20A900CEFAA4 /* LaunchScreen.xib */; };
-		05C648591B4D8580004735F7 /* KGGlyphTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C648581B4D8580004735F7 /* KGGlyphTableView.m */; };
-		05C6485A1B4D85A6004735F7 /* KGGlyphTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05C648571B4D8580004735F7 /* KGGlyphTableView.h */; };
-		05CE6D2A1B4C2E4600FB447E /* KGGlyphTableElement.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05EA15AC1B4ADAE7001DFE72 /* KGGlyphTableElement.h */; };
-		05EA15AE1B4ADAE7001DFE72 /* KGGlyphTableElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EA15AD1B4ADAE7001DFE72 /* KGGlyphTableElement.m */; };
+		0513944D1B501ACC007FAA80 /* KGGlyphTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0513944C1B501ACC007FAA80 /* KGGlyphTableSource.m */; };
+		053683D11B4ED73300B8058D /* KGGlyphTable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 053683D01B4ED73300B8058D /* KGGlyphTable.h */; };
+		054BD9C51B50217B00A8DB00 /* KGGlyphTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 054BD9C41B50217B00A8DB00 /* KGGlyphTableView.m */; };
+		05C1052E1B4ED8A900BDEA0A /* KGGlyphTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C1052D1B4ED8A900BDEA0A /* KGGlyphTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		056535971B4C232A00C2B0B7 /* PBXContainerItemProxy */ = {
+		051394521B501B7F007FAA80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 057435951B4AD78C006182ED /* Project object */;
+			containerPortal = 053683C51B4ED73300B8058D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0590386B1B4C1FDA00CEFAA4;
-			remoteInfo = Install;
-		};
-		056AC8571B4D821500FF6916 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 057435951B4AD78C006182ED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0590386B1B4C1FDA00CEFAA4;
-			remoteInfo = Install;
-		};
-		0590386F1B4C1FE200CEFAA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 057435951B4AD78C006182ED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0574359C1B4AD78C006182ED;
+			remoteGlobalIDString = 053683CC1B4ED73300B8058D;
 			remoteInfo = KGGlyphTable;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0574359B1B4AD78C006182ED /* CopyFiles */ = {
+		053683CB1B4ED73300B8058D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				05C6485A1B4D85A6004735F7 /* KGGlyphTableView.h in CopyFiles */,
-				05CE6D2A1B4C2E4600FB447E /* KGGlyphTableElement.h in CopyFiles */,
-				057435A11B4AD78C006182ED /* KGGlyphTable.h in CopyFiles */,
+				053683D11B4ED73300B8058D /* KGGlyphTable.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		056AC8311B4D81F700FF6916 /* TableViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		056AC8341B4D81F700FF6916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		056AC8351B4D81F700FF6916 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		056AC8371B4D81F700FF6916 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		056AC8381B4D81F700FF6916 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		056AC83A1B4D81F700FF6916 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		056AC83B1B4D81F700FF6916 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		056AC83E1B4D81F700FF6916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		056AC8401B4D81F700FF6916 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		056AC8431B4D81F700FF6916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		056D6C911B4C359200E68B37 /* KGGlyphTableElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KGGlyphTableElement.xib; path = ../../../../local/resource/KGGlyphTableElement.xib; sourceTree = SOURCE_ROOT; };
-		0574359D1B4AD78C006182ED /* libKGGlyphTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGlyphTable.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		057435A01B4AD78C006182ED /* KGGlyphTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphTable.h; sourceTree = "<group>"; };
-		057435A21B4AD78C006182ED /* KGGlyphTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGGlyphTable.m; sourceTree = "<group>"; };
-		059038751B4C20A900CEFAA4 /* ElementViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElementViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		059038781B4C20A900CEFAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		059038791B4C20A900CEFAA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0590387B1B4C20A900CEFAA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0590387C1B4C20A900CEFAA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0590387E1B4C20A900CEFAA4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0590387F1B4C20A900CEFAA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		059038821B4C20A900CEFAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		059038841B4C20A900CEFAA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		059038871B4C20A900CEFAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		05C648571B4D8580004735F7 /* KGGlyphTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphTableView.h; sourceTree = "<group>"; };
-		05C648581B4D8580004735F7 /* KGGlyphTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphTableView.m; sourceTree = "<group>"; };
-		05EA15AB1B4AD84B001DFE72 /* KGGlyphTableElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KGGlyphTableElement.xib; sourceTree = SOURCE_ROOT; };
-		05EA15AC1B4ADAE7001DFE72 /* KGGlyphTableElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphTableElement.h; sourceTree = "<group>"; };
-		05EA15AD1B4ADAE7001DFE72 /* KGGlyphTableElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphTableElement.m; sourceTree = "<group>"; };
+		0513944B1B501ACC007FAA80 /* KGGlyphTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphTableSource.h; sourceTree = "<group>"; };
+		0513944C1B501ACC007FAA80 /* KGGlyphTableSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphTableSource.m; sourceTree = "<group>"; };
+		053683CD1B4ED73300B8058D /* libKGGlyphTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKGGlyphTable.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		053683D01B4ED73300B8058D /* KGGlyphTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGGlyphTable.h; sourceTree = "<group>"; };
+		054BD9C31B50217B00A8DB00 /* KGGlyphTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphTableView.h; sourceTree = "<group>"; };
+		054BD9C41B50217B00A8DB00 /* KGGlyphTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphTableView.m; sourceTree = "<group>"; };
+		05C1052C1B4ED8A900BDEA0A /* KGGlyphTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphTableCell.h; sourceTree = "<group>"; };
+		05C1052D1B4ED8A900BDEA0A /* KGGlyphTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphTableCell.m; sourceTree = "<group>"; };
+		05C105301B4ED96D00BDEA0A /* KGGlyphTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KGGlyphTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		056AC82E1B4D81F700FF6916 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0574359A1B4AD78C006182ED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		059038721B4C20A900CEFAA4 /* Frameworks */ = {
+		053683CA1B4ED73300B8058D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,114 +59,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		056AC8321B4D81F700FF6916 /* TableViewTest */ = {
+		053683C41B4ED73300B8058D = {
 			isa = PBXGroup;
 			children = (
-				056AC8371B4D81F700FF6916 /* AppDelegate.h */,
-				056AC8381B4D81F700FF6916 /* AppDelegate.m */,
-				056AC83A1B4D81F700FF6916 /* ViewController.h */,
-				056AC83B1B4D81F700FF6916 /* ViewController.m */,
-				056AC83D1B4D81F700FF6916 /* Main.storyboard */,
-				056AC8401B4D81F700FF6916 /* Images.xcassets */,
-				056AC8421B4D81F700FF6916 /* LaunchScreen.xib */,
-				056AC8331B4D81F700FF6916 /* Supporting Files */,
-			);
-			name = TableViewTest;
-			path = ../Test/TableViewTest;
-			sourceTree = SOURCE_ROOT;
-		};
-		056AC8331B4D81F700FF6916 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				056AC8341B4D81F700FF6916 /* Info.plist */,
-				056AC8351B4D81F700FF6916 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		057435941B4AD78C006182ED = {
-			isa = PBXGroup;
-			children = (
-				0574359F1B4AD78C006182ED /* Source */,
-				0590389B1B4C228500CEFAA4 /* Test */,
-				0574359E1B4AD78C006182ED /* Products */,
+				053683CF1B4ED73300B8058D /* Source */,
+				05C1052F1B4ED93600BDEA0A /* Resource */,
+				053683CE1B4ED73300B8058D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0574359E1B4AD78C006182ED /* Products */ = {
+		053683CE1B4ED73300B8058D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0574359D1B4AD78C006182ED /* libKGGlyphTable.a */,
-				059038751B4C20A900CEFAA4 /* ElementViewTest.app */,
-				056AC8311B4D81F700FF6916 /* TableViewTest.app */,
+				053683CD1B4ED73300B8058D /* libKGGlyphTable.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0574359F1B4AD78C006182ED /* Source */ = {
+		053683CF1B4ED73300B8058D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				057435A01B4AD78C006182ED /* KGGlyphTable.h */,
-				057435A21B4AD78C006182ED /* KGGlyphTable.m */,
-				05EA15AB1B4AD84B001DFE72 /* KGGlyphTableElement.xib */,
-				05EA15AC1B4ADAE7001DFE72 /* KGGlyphTableElement.h */,
-				05EA15AD1B4ADAE7001DFE72 /* KGGlyphTableElement.m */,
-				05C648571B4D8580004735F7 /* KGGlyphTableView.h */,
-				05C648581B4D8580004735F7 /* KGGlyphTableView.m */,
+				053683D01B4ED73300B8058D /* KGGlyphTable.h */,
+				054BD9C31B50217B00A8DB00 /* KGGlyphTableView.h */,
+				054BD9C41B50217B00A8DB00 /* KGGlyphTableView.m */,
+				0513944B1B501ACC007FAA80 /* KGGlyphTableSource.h */,
+				0513944C1B501ACC007FAA80 /* KGGlyphTableSource.m */,
+				05C1052C1B4ED8A900BDEA0A /* KGGlyphTableCell.h */,
+				05C1052D1B4ED8A900BDEA0A /* KGGlyphTableCell.m */,
 			);
 			name = Source;
 			path = ../Source;
 			sourceTree = SOURCE_ROOT;
 		};
-		059038761B4C20A900CEFAA4 /* ElementViewTest */ = {
+		05C1052F1B4ED93600BDEA0A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				0590387B1B4C20A900CEFAA4 /* AppDelegate.h */,
-				0590387C1B4C20A900CEFAA4 /* AppDelegate.m */,
-				0590387E1B4C20A900CEFAA4 /* ViewController.h */,
-				0590387F1B4C20A900CEFAA4 /* ViewController.m */,
-				059038811B4C20A900CEFAA4 /* Main.storyboard */,
-				059038841B4C20A900CEFAA4 /* Images.xcassets */,
-				059038861B4C20A900CEFAA4 /* LaunchScreen.xib */,
-				059038771B4C20A900CEFAA4 /* Supporting Files */,
+				05C105301B4ED96D00BDEA0A /* KGGlyphTableCell.xib */,
 			);
-			name = ElementViewTest;
-			path = ../Test/ElementViewTest;
-			sourceTree = SOURCE_ROOT;
-		};
-		059038771B4C20A900CEFAA4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				056D6C911B4C359200E68B37 /* KGGlyphTableElement.xib */,
-				059038781B4C20A900CEFAA4 /* Info.plist */,
-				059038791B4C20A900CEFAA4 /* main.m */,
-			);
-			name = "Supporting Files";
+			name = Resource;
 			sourceTree = "<group>";
-		};
-		0590389B1B4C228500CEFAA4 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				056AC8321B4D81F700FF6916 /* TableViewTest */,
-				059038761B4C20A900CEFAA4 /* ElementViewTest */,
-			);
-			name = Test;
-			path = ../Test;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		0590386B1B4C1FDA00CEFAA4 /* Install */ = {
+		0513944E1B501B76007FAA80 /* Install */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-f ../../Script/Install.mk";
-			buildConfigurationList = 0590386E1B4C1FDA00CEFAA4 /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildArgumentsString = "-f ../../Script/install.mk";
+			buildConfigurationList = 0513944F1B501B76007FAA80 /* Build configuration list for PBXLegacyTarget "Install" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "";
 			dependencies = (
-				059038701B4C1FE200CEFAA4 /* PBXTargetDependency */,
+				051394531B501B7F007FAA80 /* PBXTargetDependency */,
 			);
 			name = Install;
 			passBuildSettingsInEnvironment = 1;
@@ -240,31 +120,13 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		056AC8301B4D81F700FF6916 /* TableViewTest */ = {
+		053683CC1B4ED73300B8058D /* KGGlyphTable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 056AC8551B4D81F700FF6916 /* Build configuration list for PBXNativeTarget "TableViewTest" */;
+			buildConfigurationList = 053683E11B4ED73300B8058D /* Build configuration list for PBXNativeTarget "KGGlyphTable" */;
 			buildPhases = (
-				056AC82D1B4D81F700FF6916 /* Sources */,
-				056AC82E1B4D81F700FF6916 /* Frameworks */,
-				056AC82F1B4D81F700FF6916 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				056AC8581B4D821500FF6916 /* PBXTargetDependency */,
-			);
-			name = TableViewTest;
-			productName = TableViewTest;
-			productReference = 056AC8311B4D81F700FF6916 /* TableViewTest.app */;
-			productType = "com.apple.product-type.application";
-		};
-		0574359C1B4AD78C006182ED /* KGGlyphTable */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 057435B11B4AD78C006182ED /* Build configuration list for PBXNativeTarget "KGGlyphTable" */;
-			buildPhases = (
-				057435991B4AD78C006182ED /* Sources */,
-				0574359A1B4AD78C006182ED /* Frameworks */,
-				0574359B1B4AD78C006182ED /* CopyFiles */,
+				053683C91B4ED73300B8058D /* Sources */,
+				053683CA1B4ED73300B8058D /* Frameworks */,
+				053683CB1B4ED73300B8058D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -272,256 +134,97 @@
 			);
 			name = KGGlyphTable;
 			productName = KGGlyphTable;
-			productReference = 0574359D1B4AD78C006182ED /* libKGGlyphTable.a */;
+			productReference = 053683CD1B4ED73300B8058D /* libKGGlyphTable.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		059038741B4C20A900CEFAA4 /* ElementViewTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 059038951B4C20A900CEFAA4 /* Build configuration list for PBXNativeTarget "ElementViewTest" */;
-			buildPhases = (
-				059038711B4C20A900CEFAA4 /* Sources */,
-				059038721B4C20A900CEFAA4 /* Frameworks */,
-				059038731B4C20A900CEFAA4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				056535981B4C232A00C2B0B7 /* PBXTargetDependency */,
-			);
-			name = ElementViewTest;
-			productName = ElementViewTest;
-			productReference = 059038751B4C20A900CEFAA4 /* ElementViewTest.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		057435951B4AD78C006182ED /* Project object */ = {
+		053683C51B4ED73300B8058D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
-					056AC8301B4D81F700FF6916 = {
+					0513944E1B501B76007FAA80 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					0574359C1B4AD78C006182ED = {
+					053683CC1B4ED73300B8058D = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					0590386B1B4C1FDA00CEFAA4 = {
-						CreatedOnToolsVersion = 6.4;
-					};
-					059038741B4C20A900CEFAA4 = {
-						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = TR2DNF3P93;
 					};
 				};
 			};
-			buildConfigurationList = 057435981B4AD78C006182ED /* Build configuration list for PBXProject "KGGlyphTable" */;
+			buildConfigurationList = 053683C81B4ED73300B8058D /* Build configuration list for PBXProject "KGGlyphTable" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 057435941B4AD78C006182ED;
-			productRefGroup = 0574359E1B4AD78C006182ED /* Products */;
+			mainGroup = 053683C41B4ED73300B8058D;
+			productRefGroup = 053683CE1B4ED73300B8058D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0574359C1B4AD78C006182ED /* KGGlyphTable */,
-				0590386B1B4C1FDA00CEFAA4 /* Install */,
-				059038741B4C20A900CEFAA4 /* ElementViewTest */,
-				056AC8301B4D81F700FF6916 /* TableViewTest */,
+				053683CC1B4ED73300B8058D /* KGGlyphTable */,
+				0513944E1B501B76007FAA80 /* Install */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		056AC82F1B4D81F700FF6916 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				056AC83F1B4D81F700FF6916 /* Main.storyboard in Resources */,
-				056AC8441B4D81F700FF6916 /* LaunchScreen.xib in Resources */,
-				056AC8411B4D81F700FF6916 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		059038731B4C20A900CEFAA4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				056D6C921B4C359200E68B37 /* KGGlyphTableElement.xib in Resources */,
-				059038831B4C20A900CEFAA4 /* Main.storyboard in Resources */,
-				059038881B4C20A900CEFAA4 /* LaunchScreen.xib in Resources */,
-				059038851B4C20A900CEFAA4 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		056AC82D1B4D81F700FF6916 /* Sources */ = {
+		053683C91B4ED73300B8058D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056AC83C1B4D81F700FF6916 /* ViewController.m in Sources */,
-				056AC8391B4D81F700FF6916 /* AppDelegate.m in Sources */,
-				056AC8361B4D81F700FF6916 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		057435991B4AD78C006182ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05EA15AE1B4ADAE7001DFE72 /* KGGlyphTableElement.m in Sources */,
-				057435A31B4AD78C006182ED /* KGGlyphTable.m in Sources */,
-				05C648591B4D8580004735F7 /* KGGlyphTableView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		059038711B4C20A900CEFAA4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				059038801B4C20A900CEFAA4 /* ViewController.m in Sources */,
-				0590387D1B4C20A900CEFAA4 /* AppDelegate.m in Sources */,
-				0590387A1B4C20A900CEFAA4 /* main.m in Sources */,
+				0513944D1B501ACC007FAA80 /* KGGlyphTableSource.m in Sources */,
+				05C1052E1B4ED8A900BDEA0A /* KGGlyphTableCell.m in Sources */,
+				054BD9C51B50217B00A8DB00 /* KGGlyphTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		056535981B4C232A00C2B0B7 /* PBXTargetDependency */ = {
+		051394531B501B7F007FAA80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0590386B1B4C1FDA00CEFAA4 /* Install */;
-			targetProxy = 056535971B4C232A00C2B0B7 /* PBXContainerItemProxy */;
-		};
-		056AC8581B4D821500FF6916 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0590386B1B4C1FDA00CEFAA4 /* Install */;
-			targetProxy = 056AC8571B4D821500FF6916 /* PBXContainerItemProxy */;
-		};
-		059038701B4C1FE200CEFAA4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0574359C1B4AD78C006182ED /* KGGlyphTable */;
-			targetProxy = 0590386F1B4C1FE200CEFAA4 /* PBXContainerItemProxy */;
+			target = 053683CC1B4ED73300B8058D /* KGGlyphTable */;
+			targetProxy = 051394521B501B7F007FAA80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		056AC83D1B4D81F700FF6916 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				056AC83E1B4D81F700FF6916 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		056AC8421B4D81F700FF6916 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				056AC8431B4D81F700FF6916 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		059038811B4C20A900CEFAA4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				059038821B4C20A900CEFAA4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		059038861B4C20A900CEFAA4 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				059038871B4C20A900CEFAA4 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		056AC8511B4D81F700FF6916 /* Debug */ = {
+		051394501B501B76007FAA80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_OPTIMIZATION_LEVEL = 2;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(HOME)/local/include",
-				);
-				INFOPLIST_FILE = ../Test/TableViewTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
-				OTHER_CFLAGS = (
-					"-W",
-					"-Wall",
-				);
-				OTHER_LDFLAGS = (
-					"-lKGGlyphTable",
-					"-lKGGlyphGraphics",
-					"-lKGGlyphData",
-					"-lKCGraphicsView",
-					"-lKiwiControl",
-					"-lCoconutGraphics",
-					"-lCoconut",
-					"-all_load",
-				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		056AC8521B4D81F700FF6916 /* Release */ = {
+		051394511B501B76007FAA80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(HOME)/local/include",
-				);
-				INFOPLIST_FILE = ../Test/TableViewTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
-				OTHER_CFLAGS = (
-					"-W",
-					"-Wall",
-				);
-				OTHER_LDFLAGS = (
-					"-lKGGlyphTable",
-					"-lKGGlyphGraphics",
-					"-lKGGlyphData",
-					"-lKCGraphicsView",
-					"-lKiwiControl",
-					"-lCoconutGraphics",
-					"-lCoconut",
-					"-all_load",
-				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		057435AF1B4AD78C006182ED /* Debug */ = {
+		053683DF1B4ED73300B8058D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -563,7 +266,7 @@
 			};
 			name = Debug;
 		};
-		057435B01B4AD78C006182ED /* Release */ = {
+		053683E01B4ED73300B8058D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -599,7 +302,7 @@
 			};
 			name = Release;
 		};
-		057435B21B4AD78C006182ED /* Debug */ = {
+		053683E21B4ED73300B8058D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_OPTIMIZATION_LEVEL = 2;
@@ -609,18 +312,17 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(HOME)/local/include",
 				);
-				INSTALL_PATH = "$(HOME)/local/lib";
 				OTHER_CFLAGS = (
 					"-W",
 					"-Wall",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		057435B31B4AD78C006182ED /* Release */ = {
+		053683E31B4ED73300B8058D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_OPTIMIZATION_LEVEL = 2;
@@ -630,172 +332,47 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(HOME)/local/include",
 				);
-				INSTALL_PATH = "$(HOME)/local/lib";
 				OTHER_CFLAGS = (
 					"-W",
 					"-Wall",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = NO;
-			};
-			name = Release;
-		};
-		0590386C1B4C1FDA00CEFAA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUGGING_SYMBOLS = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		0590386D1B4C1FDA00CEFAA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		059038961B4C20A900CEFAA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(HOME)/local/include",
-				);
-				INFOPLIST_FILE = ../Test/ElementViewTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
-				OTHER_CFLAGS = (
-					"-W",
-					"-Wall",
-				);
-				OTHER_LDFLAGS = (
-					"-lKGGlyphTable",
-					"-lKGGlyphGraphics",
-					"-lKGGlyphData",
-					"-lKCGraphicsView",
-					"-lKiwiControl",
-					"-lCoconutGraphics",
-					"-lCoconut",
-					"-all_load",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		059038971B4C20A900CEFAA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(HOME)/local/include",
-				);
-				INFOPLIST_FILE = ../Test/ElementViewTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(HOME)/local/lib";
-				OTHER_CFLAGS = (
-					"-W",
-					"-Wall",
-				);
-				OTHER_LDFLAGS = (
-					"-lKGGlyphTable",
-					"-lKGGlyphGraphics",
-					"-lKGGlyphData",
-					"-lKCGraphicsView",
-					"-lKiwiControl",
-					"-lCoconutGraphics",
-					"-lCoconut",
-					"-all_load",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		056AC8551B4D81F700FF6916 /* Build configuration list for PBXNativeTarget "TableViewTest" */ = {
+		0513944F1B501B76007FAA80 /* Build configuration list for PBXLegacyTarget "Install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				056AC8511B4D81F700FF6916 /* Debug */,
-				056AC8521B4D81F700FF6916 /* Release */,
+				051394501B501B76007FAA80 /* Debug */,
+				051394511B501B76007FAA80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		057435981B4AD78C006182ED /* Build configuration list for PBXProject "KGGlyphTable" */ = {
+		053683C81B4ED73300B8058D /* Build configuration list for PBXProject "KGGlyphTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				057435AF1B4AD78C006182ED /* Debug */,
-				057435B01B4AD78C006182ED /* Release */,
+				053683DF1B4ED73300B8058D /* Debug */,
+				053683E01B4ED73300B8058D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		057435B11B4AD78C006182ED /* Build configuration list for PBXNativeTarget "KGGlyphTable" */ = {
+		053683E11B4ED73300B8058D /* Build configuration list for PBXNativeTarget "KGGlyphTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				057435B21B4AD78C006182ED /* Debug */,
-				057435B31B4AD78C006182ED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0590386E1B4C1FDA00CEFAA4 /* Build configuration list for PBXLegacyTarget "Install" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0590386C1B4C1FDA00CEFAA4 /* Debug */,
-				0590386D1B4C1FDA00CEFAA4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		059038951B4C20A900CEFAA4 /* Build configuration list for PBXNativeTarget "ElementViewTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				059038961B4C20A900CEFAA4 /* Debug */,
-				059038971B4C20A900CEFAA4 /* Release */,
+				053683E21B4ED73300B8058D /* Debug */,
+				053683E31B4ED73300B8058D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 057435951B4AD78C006182ED /* Project object */;
+	rootObject = 053683C51B4ED73300B8058D /* Project object */;
 }

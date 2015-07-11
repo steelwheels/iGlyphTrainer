@@ -1,22 +1,23 @@
 /**
- * @file	KGGlyphTableElement.m
- * @brief	Define KGGlyphTableElement class
+ * @file	KGGlyphTableCell.m
+ * @brief	Header file for KGGlyphTableCell framework
  * @par Copyright
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
-#import "KGGlyphTableElement.h"
+#import "KGGlyphTableCell.h"
+#import <KiwiControl/KiwiControl.h>
 
-@interface KGGlyphTableElement ()
-- (void) setupGlyphTableElement ;
+@interface KGGlyphTableCell ()
+- (void) setupGlyphTableCell ;
 @end
 
-@implementation KGGlyphTableElement
+@implementation KGGlyphTableCell
 
 - (instancetype) initWithCoder: (NSCoder *) decoder
 {
 	if ((self = [super initWithCoder:decoder]) != nil){
-		[self setupGlyphTableElement] ;
+		[self setupGlyphTableCell] ;
 	}
 	return self;
 }
@@ -24,12 +25,12 @@
 - (instancetype) initWithFrame: (CGRect)frame
 {
 	if ((self = [super initWithFrame:frame]) != nil){
-		[self setupGlyphTableElement] ;
+		[self setupGlyphTableCell] ;
 	}
 	return self;
 }
 
-- (void) setupGlyphTableElement
+- (void) setupGlyphTableCell
 {
 	glyphGraphicsView	= nil ;
 	//glyphVetexDrawer	= nil ;
@@ -39,7 +40,7 @@
 	if([[self subviews] count] > 0){
 		return ; /* Already added */
 	}
-
+	
 	UIView * xibview = KCLoadXib(self, NSStringFromClass(self.class)) ;
 	if(xibview != nil){
 		[self addSubview: xibview] ;
@@ -51,7 +52,7 @@
 	
 	//xibview.translatesAutoresizingMaskIntoConstraints = YES;
 	//xibview.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-
+	
 	
 	for(UIView * subview in [xibview subviews]){
 		if([subview isKindOfClass: [UILabel class]]){
@@ -72,10 +73,7 @@
 	glyphLabelView.textColor = [UIColor whiteColor] ;
 	
 	/* Setup Graphics View */
-	//glyphVetexDrawer  = [[KGGlyphVertexDrawer alloc] init] ;
 	glyphStrokeDrawer = [[KGGlyphStrokeDrawer alloc] init] ;
-	
-	//[glyphGraphicsView addGraphicsDrawer: glyphVetexDrawer withDelegate: nil] ;
 	[glyphGraphicsView addGraphicsDrawer: glyphStrokeDrawer withDelegate: nil] ;
 }
 
@@ -96,11 +94,11 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

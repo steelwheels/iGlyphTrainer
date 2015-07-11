@@ -1,19 +1,16 @@
 /**
- * @file	KGGlyphTableElement.h
- * @brief	Define KGGlyphTableElement class
+ * @file	KGGlyphTableCell.h
+ * @brief	Header file for KGGlyphTableCell framework
  * @par Copyright
  *   Copyright (C) 2015 Steel Wheels Project
  */
 
 #import <KCGraphicsView/KCGraphicsView.h>
 #import <KGGlyphGraphics/KGGlyphGraphics.h>
-#import <KGGlyphData/KGGlyphData.h>
-#import <UIKit/UIKit.h>
 
-@interface KGGlyphTableElement : UIView
+@interface KGGlyphTableCell : UICollectionViewCell 
 {
 	KCGraphicsView *		glyphGraphicsView ;
-	//KGGlyphVertexDrawer *		glyphVetexDrawer ;
 	KGGlyphStrokeDrawer *		glyphStrokeDrawer ;
 	UILabel *			glyphLabelView ;
 	KGGlyphKind			internalGlyphKind ;

@@ -1,21 +1,13 @@
-//
-//  KGGlyphTableView.m
-//  KGGlyphTable
-//
-//  Created by Tomoo Hamada on 2015/07/09.
-//  Copyright (c) 2015年 Steel Wheels Project. All rights reserved.
-//
+/**
+ * @file	KGGlyphTableView.m
+ * @brief	Define KGGlyphTableSource class
+ * @par Copyright
+ *   Copyright (C) 2015 Steel Wheels Project
+ */
+
 
 #import "KGGlyphTableView.h"
 
 @implementation KGGlyphTableView
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
