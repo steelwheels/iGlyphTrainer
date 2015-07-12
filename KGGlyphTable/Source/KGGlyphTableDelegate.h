@@ -9,4 +9,6 @@
 
 @interface KGGlyphTableDelegate : NSObject <UICollectionViewDelegateFlowLayout>
 
+- (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath ;
+
 @end
