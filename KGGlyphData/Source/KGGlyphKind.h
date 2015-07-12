@@ -189,6 +189,7 @@ typedef enum {
 	KGYouGlyph,
 } KGGlyphKind ;
 
-static const KGGlyphKind	KGFirstClyph		= KGAbandonGlyph ;
-static const KGGlyphKind	KGLastClyph		= KGWarGlyph ;
+static const KGGlyphKind	KGFirstGlyph		= KGAbandonGlyph ;
+static const KGGlyphKind	KGLastGlyph		= KGYouGlyph ;
+static const NSUInteger		KGNumberOfGlyphs	= (KGLastGlyph - KGFirstGlyph + 1) ;
 
