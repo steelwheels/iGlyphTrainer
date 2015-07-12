@@ -6,7 +6,7 @@ IOS_TMP	= tmpi
 OSX_TMP	= tmpx
 
 all: KGGlyphData KGGameData KGGlyphGraphics KGControls \
-     KGGlyphGraphics KGGlyphView
+     KGGlyphGraphics KGGlyphView KGGlyphTable
 
 iGlyphHackTrainer: dummy
 	(cd iGlyphHackTrainer/iOS && \
@@ -62,6 +62,15 @@ KGGlyphView: dummy
 	      PROJECT_DIR=. \
 	      BUILD_DIR=~/build/KGGlyphView.$(IOS_TMP) \
 	      BUILD_ROOT=~/build/KGGlyphView.$(IOS_TMP) \
+	      -f ../../Script/install.mk \
+	)
+
+KGGlyphTable: dummy
+	(cd KGGlyphTable/iOS && \
+	 make PROJECT_NAME=KGGlyphTable \
+	      PROJECT_DIR=. \
+	      BUILD_DIR=~/build/KGGlyphTable.$(IOS_TMP) \
+	      BUILD_ROOT=~/build/KGGlyphTable.$(IOS_TMP) \
 	      -f ../../Script/install.mk \
 	)
 
