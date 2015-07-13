@@ -40,13 +40,11 @@ indexPathToKind(NSIndexPath * path) ;
 - (UICollectionViewCell *) collectionView: (UICollectionView *) collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	KGGlyphTableCell * newcell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath] ;
-	if(newcell == nil){
-		[collectionView registerClass: [KGGlyphTableCell class] forCellWithReuseIdentifier: cellIdentifier] ;
-		newcell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath] ;
-		assert(newcell != nil) ;
-	}
-	//printf("KGGlyphKind = %u\n", (KGGlyphKind) indexPath.row) ;
-	[newcell setGlyphKind: indexPathToKind(indexPath)] ;
+	assert(newcell != nil) ;
+	
+	KGGlyphKind kind = indexPathToKind(indexPath) ;
+	//printf("path %u, KGGlyphKind = %u\n", (unsigned int) indexPath.item, (KGGlyphKind) indexPath.row) ;
+	[newcell setGlyphKind: kind] ;
 	return newcell ;
 }
 
@@ -55,7 +53,7 @@ indexPathToKind(NSIndexPath * path) ;
 static KGGlyphKind
 indexPathToKind(NSIndexPath * path)
 {
-	return (KGGlyphKind) (path.row + KGFirstGlyph) ;
+	return (KGGlyphKind) (path.item + KGFirstGlyph) ;
 }
 
 

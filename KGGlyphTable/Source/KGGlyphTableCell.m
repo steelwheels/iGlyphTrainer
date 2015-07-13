@@ -39,26 +39,19 @@ loadXib(UIView * parentview, NSString * nibname) ;
 	glyphStrokeDrawer	= nil ;
 	glyphLabelView		= nil ;
 	
-	printf("*2 setupGlyphTableCell : %u\n", (unsigned int) [[self subviews] count]) ;
-	if([[self subviews] count] > 1){
+	if([[self.contentView subviews] count] > 0){
 		return ; /* Already added */
 	}
 	
-	puts("*3 setupGlyphTableCell") ;
 	UIView * xibview = loadXib(self, NSStringFromClass(self.class)) ;
 	if(xibview != nil){
-		puts("*3.1 setupGlyphTableCell") ;
+		[self.contentView addSubview: xibview] ;
 	} else {
-		puts("*3.2 setupGlyphTableCell") ;
+		NSLog(@"Could not load XIB") ;
 		return ;
 	}
 	
-	puts("*4 setupGlyphTableCell") ;
-	//xibview.frame.size = xibview.bounds.size = self.bounds ;
-	
-	//self.bounds = xibview.bounds ;
-	KCPrintView(xibview) ;
-	
+	//KCPrintView(xibview) ;
 	for(UIView * subview in [xibview subviews]){
 		if([subview isKindOfClass: [UILabel class]]){
 			glyphLabelView = (UILabel *) subview ;
@@ -72,7 +65,6 @@ loadXib(UIView * parentview, NSString * nibname) ;
 		NSLog(@"Nil sub view") ;
 	}
 	
-	puts("*5 setupGlyphTableCell") ;
 	self.backgroundColor = [UIColor blackColor] ;
 	glyphLabelView.backgroundColor = [UIColor blackColor] ;
 	glyphGraphicsView.backgroundColor = [UIColor blackColor] ;
@@ -89,7 +81,8 @@ loadXib(UIView * parentview, NSString * nibname) ;
 	
 	struct KGGlyphStroke stroke = KGStrokeOfGlyph(kind) ;
 	[glyphStrokeDrawer setStroke: &stroke] ;
-	
+	[glyphGraphicsView setNeedsLayout] ;
+	 
 	NSString * name = KGNameOfGlyph(kind) ;
 	glyphLabelView.text = name ;
 }
@@ -101,7 +94,13 @@ loadXib(UIView * parentview, NSString * nibname) ;
 
 - (void)drawRect:(CGRect)rect
 {
-	 [super drawRect: rect] ;
+	[super drawRect: rect] ;
+}
+
+- (void) prepareForReuse
+{
+	[super prepareForReuse] ;
+	//[glyphGraphicsView setNeedsDisplay] ;
 }
 
 @end
