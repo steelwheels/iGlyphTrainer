@@ -81,7 +81,7 @@ loadXib(UIView * parentview, NSString * nibname) ;
 	
 	struct KGGlyphStroke stroke = KGStrokeOfGlyph(kind) ;
 	[glyphStrokeDrawer setStroke: &stroke] ;
-	[glyphGraphicsView setNeedsLayout] ;
+	[glyphGraphicsView setAllNeedsDisplay] ;
 	 
 	NSString * name = KGNameOfGlyph(kind) ;
 	glyphLabelView.text = name ;
