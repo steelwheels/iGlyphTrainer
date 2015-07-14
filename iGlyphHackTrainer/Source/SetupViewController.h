@@ -11,11 +11,14 @@
 @interface SetupViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backToMainViewButton ;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *moveToGlyphViewButton;
 @property (weak, nonatomic) IBOutlet KCSwitch *displaySwithForQuestionState;
 @property (weak, nonatomic) IBOutlet KCSwitch *displaySwitchForAnswerState;
 @property (weak, nonatomic) IBOutlet KCNumberStepperView *maxNumberStepper;
 @property (weak, nonatomic) IBOutlet KCNumberStepperView *minNumberStepper;
 
 - (void) backToMainViewButtonPressed: (UIBarButtonItem *) item ;
+- (void) moveToGlyphViewButtonPressed: (UIBarButtonItem *) item ;
 
 @end

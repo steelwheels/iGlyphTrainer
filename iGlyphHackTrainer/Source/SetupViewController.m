@@ -28,8 +28,12 @@ typedef enum {
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	
 	self.backToMainViewButton.target = self ;
 	self.backToMainViewButton.action = @selector(backToMainViewButtonPressed:) ;
+	
+	self.moveToGlyphViewButton.target = self ;
+	self.moveToGlyphViewButton.action = @selector(moveToGlyphViewButtonPressed:) ;
 	
 	KGPreference * preference = [KGPreference sharedPreference] ;
 	
@@ -60,6 +64,15 @@ typedef enum {
 		puts("back to main view from setup") ;
 	}
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) moveToGlyphViewButtonPressed: (UIBarButtonItem *) item
+{
+	(void) item ;
+	if(doDebug){
+		puts("move to glyph view from setup") ;
+	}
+	[self performSegueWithIdentifier: @"SegueFromSetupToGlyph" sender: self] ;
 }
 
 - (void) switchDoDisplayGlypyNameAtQuestionState: (KCSwitch *) switchbutton

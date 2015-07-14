@@ -129,6 +129,13 @@
                                 <items>
                                     <navigationItem title="Setup" id="rWe-n7-B1D">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="N8k-hI-4lh"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Glyphs" id="Uwz-bC-hn3">
+                                            <connections>
+                                                <segue destination="adH-wb-Wdd" kind="popoverPresentation" identifier="SegueFromSetupToGlyph" popoverAnchorBarButtonItem="Uwz-bC-hn3" id="2wF-Nf-GCv">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -233,11 +240,56 @@
                         <outlet property="displaySwithForQuestionState" destination="3uf-PU-Sbc" id="Mzk-W5-cWP"/>
                         <outlet property="maxNumberStepper" destination="ThI-2F-a5v" id="xhu-Mv-thB"/>
                         <outlet property="minNumberStepper" destination="tgY-fC-Iub" id="oXz-wz-lBr"/>
+                        <outlet property="moveToGlyphViewButton" destination="Uwz-bC-hn3" id="HBa-n5-fCI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfe-uV-SPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="768" y="-9"/>
+        </scene>
+        <!--Glyph View Controller-->
+        <scene sceneID="odD-sV-dKz">
+            <objects>
+                <viewController id="adH-wb-Wdd" customClass="GlyphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sp7-wW-Cd1"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Zl-9t-J7U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n99-hJ-LHp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOI-8L-k9r">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rpK-ar-Ghd"/>
+                                </constraints>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Glyphs" id="Fbi-Bg-hPP">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="tdo-EC-iKD"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LOI-8L-k9r" secondAttribute="trailing" constant="-16" id="0E9-dk-kYR"/>
+                            <constraint firstItem="LOI-8L-k9r" firstAttribute="top" secondItem="Sp7-wW-Cd1" secondAttribute="bottom" id="Jva-hz-JTO"/>
+                            <constraint firstItem="LOI-8L-k9r" firstAttribute="leading" secondItem="n99-hJ-LHp" secondAttribute="leadingMargin" constant="-16" id="jz3-49-9S4"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="backToSetupViewButton" destination="tdo-EC-iKD" id="Y0Z-st-Iuu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oy5-aX-HlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="-9"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="m8D-3L-fuR">
