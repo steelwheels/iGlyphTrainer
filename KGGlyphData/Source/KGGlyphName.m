@@ -49,7 +49,7 @@ KGNameOfGlyph(KGGlyphKind kind)
 			CASE(Conflict) ;
 			CASE(Consequence) ;
 			CASE(Contemplate) ;
-			CASE(Contact) ;
+			CASE(Contract) ;
 			CASE(Courage) ;
 			CASE(Create) ;
 			CASE(Creation) ;

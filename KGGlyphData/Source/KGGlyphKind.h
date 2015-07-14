@@ -43,7 +43,7 @@ typedef enum {
 	KGConflictGlyph,
 	KGConsequenceGlyph,
 	KGContemplateGlyph,
-	KGContactGlyph,
+	KGContractGlyph,
 	KGCourageGlyph,
 	KGCreateGlyph,
 	KGCreationGlyph,	/* KGCreateGlyph	*/
