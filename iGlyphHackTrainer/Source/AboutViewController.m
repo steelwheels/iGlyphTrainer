@@ -7,6 +7,8 @@
 
 #import "AboutViewController.h"
 
+static const BOOL doDebug = NO ;
+
 @implementation AboutViewController
 
 - (void)viewDidLoad
@@ -27,7 +29,9 @@
 - (void) backToMainViewButtonPressed: (UIBarButtonItem *) item
 {
 	(void) item ;
-	puts("back to main view from about") ;
+	if(doDebug){
+		puts("back to main view from about") ;
+	}
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
