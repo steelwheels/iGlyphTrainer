@@ -31,5 +31,10 @@ When you install these framework, keep the order to keep the dependency.
 
 # ChangeLog
 ## Version 1.0.1
+* Suppress "landscape mode". Use "portrait mode" only
 * Bug fix. Fix the bug which display wrong max/min number of glyphs in "Setup View".
 * Update the "Setup" window title from "Setting" to "Setup".
+* Fix the relation ship of the shape of the glyph and it's name
+  * "Aspiration" : Fix the shape of glyph
+  * "Begin" : Fix the shape of glyph
+  * "Contact" : Fix the name to "Contract"
