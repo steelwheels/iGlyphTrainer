@@ -131,9 +131,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="N8k-hI-4lh"/>
                                         <barButtonItem key="rightBarButtonItem" title="Glyphs" id="Uwz-bC-hn3">
                                             <connections>
-                                                <segue destination="adH-wb-Wdd" kind="popoverPresentation" identifier="SegueFromSetupToGlyph" popoverAnchorBarButtonItem="Uwz-bC-hn3" id="2wF-Nf-GCv">
-                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                </segue>
+                                                <segue destination="adH-wb-Wdd" kind="presentation" identifier="SegueFromSetupToGlyph" id="2wF-Nf-GCv"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -274,12 +272,37 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jyd-bv-i5s" customClass="KGGlyphTableView">
+                                <rect key="frame" x="16" y="64" width="288" height="396"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XRF-KQ-LWA">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KGGlyphTableCell" id="2WR-th-zIG" customClass="KGGlyphTableCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="100" height="140"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LOI-8L-k9r" secondAttribute="trailing" constant="-16" id="0E9-dk-kYR"/>
+                            <constraint firstItem="jyd-bv-i5s" firstAttribute="top" secondItem="LOI-8L-k9r" secondAttribute="bottom" id="FRF-Nk-eX0"/>
+                            <constraint firstItem="jyd-bv-i5s" firstAttribute="leading" secondItem="n99-hJ-LHp" secondAttribute="leadingMargin" id="IF2-0e-Z76"/>
                             <constraint firstItem="LOI-8L-k9r" firstAttribute="top" secondItem="Sp7-wW-Cd1" secondAttribute="bottom" id="Jva-hz-JTO"/>
                             <constraint firstItem="LOI-8L-k9r" firstAttribute="leading" secondItem="n99-hJ-LHp" secondAttribute="leadingMargin" constant="-16" id="jz3-49-9S4"/>
+                            <constraint firstItem="1Zl-9t-J7U" firstAttribute="top" secondItem="jyd-bv-i5s" secondAttribute="bottom" constant="20" id="lgY-RG-JiJ"/>
+                            <constraint firstItem="jyd-bv-i5s" firstAttribute="trailing" secondItem="n99-hJ-LHp" secondAttribute="trailingMargin" id="uNc-4O-3iX"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
