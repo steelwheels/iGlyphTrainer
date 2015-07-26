@@ -54,7 +54,7 @@ UTGameStatus(void)
 static void
 printStatus(KGGameStatus * status)
 {
-	printf("state = {state:%u, index:%u, time:%lf, interval:%lf, correct:%u}\n",
+	printf("state = {state:%u, index:%zu, time:%lf, interval:%lf, correct:%zu}\n",
 	       status.state,
 	       status.currentGlyphIndex,
 	       status.currentTime,

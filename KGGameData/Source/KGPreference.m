@@ -38,6 +38,7 @@
 		self.minQuestionSentenceLength		= 2 ;
 		self.doDisplayGlyphNameAtQuestionState	= YES ;
 		self.doDisplayGlyphNameAtAnswerState	= YES ;
+		self.displaySpeed			= KGNormalSpeed ;
 		
 		CNColorTable * ctable = [CNColorTable defaultColorTable] ;
 		self.normalGlyphColor	= ctable.goldenrod ;
