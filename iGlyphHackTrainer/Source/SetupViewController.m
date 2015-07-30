@@ -23,6 +23,10 @@ typedef enum {
 @interface SetupViewController (Stepper) <KCNumberStepperOperating>
 @end
 
+@interface SetupViewController (SpeedSelector)
+- (void) selectSequenceSpeed: (UISegmentedControl *) control ;
+@end
+
 @implementation SetupViewController
 
 - (void)viewDidLoad
@@ -50,6 +54,12 @@ typedef enum {
 	self.minNumberStepper.tag = MinNumberStepperId ;
 	self.minNumberStepper.delegate = self ;
 	[self.minNumberStepper setMaxIntValue: 5 withMinIntValue: 2 withStepIntValue: 1 withInitialValue: preference.minQuestionSentenceLength] ;
+	
+	[self.sequenceSpeedController setTitle: @"Normal"	forSegmentAtIndex: KGNormalSpeed] ;
+	[self.sequenceSpeedController setTitle: @"Slow"		forSegmentAtIndex: KGSlowSpeed] ;
+	[self.sequenceSpeedController setTitle: @"Very Slow"	forSegmentAtIndex: KGVerySlowSpeed] ;
+	self.sequenceSpeedController.selectedSegmentIndex = preference.displaySpeed ;
+	[self.sequenceSpeedController addTarget: self action: @selector(selectSequenceSpeed:) forControlEvents: UIControlEventValueChanged] ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,6 +132,16 @@ typedef enum {
 			}
 		} break ;
 	}
+}
+
+@end
+
+@implementation SetupViewController (SpeedSelector)
+
+- (void) selectSequenceSpeed: (UISegmentedControl *) control
+{
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	preference.displaySpeed = control.selectedSegmentIndex ;
 }
 
 @end

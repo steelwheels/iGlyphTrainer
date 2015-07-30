@@ -1,3 +1,4 @@
+
 /**
  * @file	main.m
  * @brief	Main program for iGlyphHackTrainer

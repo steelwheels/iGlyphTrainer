@@ -13,6 +13,7 @@
 		05273E731AC1C3F700B7DD20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D56A621ABA4BDE00AC57D9 /* Main.storyboard */; };
 		05273E741AC1C3FC00B7DD20 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D56A601ABA4BDE00AC57D9 /* LaunchScreen.xib */; };
 		054708D21B56D3B00038F461 /* KGGlyphTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 054708D11B56D3B00038F461 /* KGGlyphTableCell.xib */; };
+		05746D651B6933AA00705465 /* KCSegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05746D641B6933AA00705465 /* KCSegmentedControlView.xib */; };
 		0577ED661B556EB100321291 /* GlyphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0577ED651B556EB100321291 /* GlyphViewController.m */; };
 		05809C1A1B103D610049FB6E /* KCNumberStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05809C191B103D610049FB6E /* KCNumberStepperView.xib */; };
 		05A277231ABA4ABE0010E45B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A277221ABA4ABE0010E45B /* main.m */; };
@@ -32,6 +33,7 @@
 		05062E631ABAC95C00741B2D /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		05273E711AC1C30C00B7DD20 /* AppDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppDefaults.plist; sourceTree = SOURCE_ROOT; };
 		054708D11B56D3B00038F461 /* KGGlyphTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KGGlyphTableCell.xib; sourceTree = "<group>"; };
+		05746D641B6933AA00705465 /* KCSegmentedControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KCSegmentedControlView.xib; path = ../../../../local/resource/KCSegmentedControlView.xib; sourceTree = "<group>"; };
 		0577ED641B556EB100321291 /* GlyphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlyphViewController.h; sourceTree = "<group>"; };
 		0577ED651B556EB100321291 /* GlyphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlyphViewController.m; sourceTree = "<group>"; };
 		05809C191B103D610049FB6E /* KCNumberStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KCNumberStepperView.xib; path = ../../../../local/resource/KCNumberStepperView.xib; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		05A277201ABA4ABE0010E45B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05746D641B6933AA00705465 /* KCSegmentedControlView.xib */,
 				054708D11B56D3B00038F461 /* KGGlyphTableCell.xib */,
 				05ABDFB31B12370F00894628 /* KCPreferenceTableCell.xib */,
 				05809C191B103D610049FB6E /* KCNumberStepperView.xib */,
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05273E741AC1C3FC00B7DD20 /* LaunchScreen.xib in Resources */,
+				05746D651B6933AA00705465 /* KCSegmentedControlView.xib in Resources */,
 				05809C1A1B103D610049FB6E /* KCNumberStepperView.xib in Resources */,
 				05273E731AC1C3F700B7DD20 /* Main.storyboard in Resources */,
 				05273E721AC1C30C00B7DD20 /* AppDefaults.plist in Resources */,
@@ -341,6 +345,7 @@
 					"-lKCNumberStepper",
 					"-lKCSwitch",
 					"-lKCPreferenceTable",
+					"-lKCSegmentedController",
 					"-lKCTableView",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
@@ -385,6 +390,7 @@
 					"-lKCNumberStepper",
 					"-lKCSwitch",
 					"-lKCPreferenceTable",
+					"-lKCSegmentedController",
 					"-lKCTableView",
 					"-lKiwiControl",
 					"-lCoconutGraphics",
