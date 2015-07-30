@@ -8,9 +8,9 @@
 #import <CoconutGraphics/CoconutGraphics.h>
 
 typedef enum {
-	KGNormalSpeed,
-	KGSlowSpeed,
-	KGVerySlowSpeed
+	KGNormalSpeed		= 0,
+	KGSlowSpeed		= 1,
+	KGVerySlowSpeed		= 2
 } KGSpeedSelection ;
 
 @interface KGPreference : NSObject
