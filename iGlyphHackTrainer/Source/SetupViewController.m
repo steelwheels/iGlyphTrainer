@@ -141,7 +141,7 @@ typedef enum {
 - (void) selectSequenceSpeed: (UISegmentedControl *) control
 {
 	KGPreference * preference = [KGPreference sharedPreference] ;
-	preference.displaySpeed = control.selectedSegmentIndex ;
+	preference.displaySpeed = (KGSpeedSelection) control.selectedSegmentIndex ;
 }
 
 @end
