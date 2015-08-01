@@ -21,6 +21,10 @@ static const BOOL doDebug	= NO ;
 @interface MainStateMachine (TimerDelegates) <CNCountTimerDelegate>
 @end
 
+@interface MainStateMachine (SpeedControl)
+- (double) calcTimeForSpeedControl ;
+@end
+
 @interface MainStateMachine (Evaluating)
 - (void) evaluateCurrentGlyph ;
 @end
@@ -185,7 +189,7 @@ static const BOOL doDebug	= NO ;
 	KGClearGlyphInputStrokes(&strokes) ;
 	gameStatus.inputStrokes = KGMakeEmptyInputStrokes() ;
 
-	double timelimit = KGCalcTimeForHacking(&sentence) ;
+	double timelimit = ((double) KGCalcTimeForHacking(&sentence)) * [self calcTimeForSpeedControl] ;
 	double interval  = 0.2 ;
 	
 	gameStatus.currentTime		= timelimit ;
@@ -276,6 +280,22 @@ static const BOOL doDebug	= NO ;
 			[self setNextState: KGIdleState] ;
 		} break ;
 	}
+}
+
+@end
+
+@implementation MainStateMachine (SpeedControl)
+
+- (double) calcTimeForSpeedControl
+{
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	double result = 1.0 ;
+	switch(preference.displaySpeed){
+		case KGNormalSpeed:	result = 1.0 ;	break ;
+		case KGSlowSpeed:	result = 1.5 ;	break ;
+		case KGVerySlowSpeed:	result = 2.0 ;	break ;
+	}
+	return result ;
 }
 
 @end

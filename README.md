@@ -38,3 +38,7 @@ When you install these framework, keep the order to keep the dependency.
   * "Aspiration" : Fix the shape of glyph
   * "Begin" : Fix the shape of glyph
   * "Contact" : Fix the name to "Contract"
+
+## Version 1.0.2
+* Add control to slowdown/speedup the glyph display and input sequence.
+* Change the threshold to judge whether the finger trace the vertex of the glyph or not.
