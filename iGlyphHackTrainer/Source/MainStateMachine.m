@@ -174,8 +174,16 @@ static const BOOL doDebug	= NO ;
 	unsigned int maxnum = sentence.wordNum ;
 	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence] ;
 
+	KGPreference * preference = [KGPreference sharedPreference] ;
+	double interval = 1.0 ;
+	switch(preference.displaySpeed){
+		case KGNormalSpeed:	interval = 1.0 ;	break ;
+		case KGSlowSpeed:	interval = 1.5 ;	break ;
+		case KGVerySlowSpeed:	interval = 2.0 ;	break ;
+	}
+	
 	[countDownTimer repeatWithCount: maxnum - 1
-			   withInterval: 1.0
+			   withInterval: interval
 			   withDelegate: self] ;
 }
 
