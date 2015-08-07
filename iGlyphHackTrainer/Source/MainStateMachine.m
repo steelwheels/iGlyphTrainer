@@ -175,11 +175,11 @@ static const BOOL doDebug	= NO ;
 	[gameStatus setNextState: KGDisplayQuestionState withGlyphSentence: sentence] ;
 
 	KGPreference * preference = [KGPreference sharedPreference] ;
-	double interval = 1.0 ;
+	double interval = 1.5 ;
 	switch(preference.displaySpeed){
-		case KGNormalSpeed:	interval = 1.0 ;	break ;
-		case KGSlowSpeed:	interval = 1.5 ;	break ;
-		case KGVerySlowSpeed:	interval = 2.0 ;	break ;
+		case KGNormalSpeed:	interval = 1.5 ;	break ;
+		case KGSlowSpeed:	interval = 2.0 ;	break ;
+		case KGVerySlowSpeed:	interval = 2.5 ;	break ;
 	}
 	
 	[countDownTimer repeatWithCount: maxnum - 1
