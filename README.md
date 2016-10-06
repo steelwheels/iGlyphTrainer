@@ -40,5 +40,6 @@ When you install these framework, keep the order to keep the dependency.
   * "Contact" : Fix the name to "Contract"
 
 ## Version 1.0.2
+* The interval to display a glyph in the display sequence is extended.
 * Add control to slowdown/speedup the glyph display and input sequence.
 * Change the threshold to judge whether the finger trace the vertex of the glyph or not.

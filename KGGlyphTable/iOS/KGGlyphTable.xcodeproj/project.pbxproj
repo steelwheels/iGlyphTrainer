@@ -232,7 +232,7 @@
 		053683C51B4ED73300B8058D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
 					0513944E1B501B76007FAA80 = {
@@ -388,6 +388,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -514,6 +515,7 @@
 					"-lCoconut",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -544,6 +546,7 @@
 					"-lCoconut",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

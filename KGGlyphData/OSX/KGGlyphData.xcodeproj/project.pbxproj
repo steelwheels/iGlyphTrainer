@@ -17,13 +17,13 @@
 		05226E3A1AB467670089AA7D /* KGGlyphModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05226E341AB467670089AA7D /* KGGlyphModel.m */; };
 		05226E3B1AB467670089AA7D /* KGGlyphStroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 05226E351AB467670089AA7D /* KGGlyphStroke.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05226E3C1AB467670089AA7D /* KGGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 05226E361AB467670089AA7D /* KGGlyphStroke.m */; };
-		05226E3E1AB468240089AA7D /* CoconutGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05226E3D1AB468240089AA7D /* CoconutGraphics.framework */; };
 		05226E4A1AB46FC40089AA7D /* install.mk in Resources */ = {isa = PBXBuildFile; fileRef = 05226E491AB46FC40089AA7D /* install.mk */; };
 		052A34341AFBB02800014064 /* KGGlyphComparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 052A34321AFBB02800014064 /* KGGlyphComparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052A34351AFBB02800014064 /* KGGlyphComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 052A34331AFBB02800014064 /* KGGlyphComparator.m */; };
 		052A34371AFBBB4C00014064 /* UTGlyphComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 052A34361AFBBB4C00014064 /* UTGlyphComparator.m */; };
 		054B44451AC9B22C007E35BE /* KGGlyphName.h in Headers */ = {isa = PBXBuildFile; fileRef = 054B44431AC9B22C007E35BE /* KGGlyphName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		054B44461AC9B22C007E35BE /* KGGlyphName.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B44441AC9B22C007E35BE /* KGGlyphName.m */; };
+		055F3D9B1C2F86C200A583B7 /* CoconutGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F3D9A1C2F86C200A583B7 /* CoconutGraphics.framework */; };
 		05A338DD1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A338DB1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A338DE1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A338DC1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.m */; };
 		05AC00D71AB5917A0005E32E /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AC00D61AB5917A0005E32E /* UnitTest.m */; };
@@ -85,13 +85,13 @@
 		05226E341AB467670089AA7D /* KGGlyphModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphModel.m; sourceTree = "<group>"; };
 		05226E351AB467670089AA7D /* KGGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphStroke.h; sourceTree = "<group>"; };
 		05226E361AB467670089AA7D /* KGGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphStroke.m; sourceTree = "<group>"; };
-		05226E3D1AB468240089AA7D /* CoconutGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoconutGraphics.framework; path = ../../../../Library/Frameworks/CoconutGraphics.framework; sourceTree = "<group>"; };
 		05226E491AB46FC40089AA7D /* install.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = install.mk; sourceTree = SOURCE_ROOT; };
 		052A34321AFBB02800014064 /* KGGlyphComparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphComparator.h; sourceTree = "<group>"; };
 		052A34331AFBB02800014064 /* KGGlyphComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphComparator.m; sourceTree = "<group>"; };
 		052A34361AFBBB4C00014064 /* UTGlyphComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTGlyphComparator.m; sourceTree = "<group>"; };
 		054B44431AC9B22C007E35BE /* KGGlyphName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphName.h; sourceTree = "<group>"; };
 		054B44441AC9B22C007E35BE /* KGGlyphName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphName.m; sourceTree = "<group>"; };
+		055F3D9A1C2F86C200A583B7 /* CoconutGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoconutGraphics.framework; path = ../../../../Library/Frameworks/CoconutGraphics.framework; sourceTree = "<group>"; };
 		05A338DB1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGlyphInputStrokes.h; sourceTree = "<group>"; };
 		05A338DC1AF36A9F00AA9CB2 /* KGGlyphInputStrokes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGlyphInputStrokes.m; sourceTree = "<group>"; };
 		05AC00D41AB5917A0005E32E /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05226E3E1AB468240089AA7D /* CoconutGraphics.framework in Frameworks */,
+				055F3D9B1C2F86C200A583B7 /* CoconutGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +173,8 @@
 		05226E0C1AB466C10089AA7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				055F3D9A1C2F86C200A583B7 /* CoconutGraphics.framework */,
 				05226E491AB46FC40089AA7D /* install.mk */,
-				05226E3D1AB468240089AA7D /* CoconutGraphics.framework */,
 				05226E0D1AB466C10089AA7D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -294,7 +294,7 @@
 		05226E001AB466C10089AA7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
 					05226E081AB466C10089AA7D = {
@@ -411,6 +411,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
@@ -494,6 +495,7 @@
 					"-W",
 					"-Wall",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 			};
@@ -521,6 +523,7 @@
 					"-W",
 					"-Wall",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 			};

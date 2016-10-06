@@ -12,7 +12,6 @@
 		05132AD81ADBA495002AC8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05132AD61ADBA47F002AC8E0 /* main.m */; };
 		05132AD91ADBA49E002AC8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F20241ADBA4290059EC35 /* ViewController.m */; };
 		05132ADA1ADBA4A1002AC8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F20211ADBA4080059EC35 /* AppDelegate.m */; };
-		05132ADC1ADBA4B7002AC8E0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05132ADB1ADBA4B7002AC8E0 /* Info.plist */; };
 		05132ADF1ADBA4D8002AC8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05132ADD1ADBA4D8002AC8E0 /* Main.storyboard */; };
 		05132AE11ADBA4FB002AC8E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05132AE01ADBA4FB002AC8E0 /* Images.xcassets */; };
 		05132AE71ADBA528002AC8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05132AE51ADBA528002AC8E0 /* LaunchScreen.xib */; };
@@ -309,7 +308,7 @@
 		0567FFDA1ADB985200508A6E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
 					050F1FBB1ADB9DFE0059EC35 = {
@@ -354,7 +353,6 @@
 			files = (
 				05132AE71ADBA528002AC8E0 /* LaunchScreen.xib in Resources */,
 				05DC28221ADBA9E600683224 /* AppDefaults.plist in Resources */,
-				05132ADC1ADBA4B7002AC8E0 /* Info.plist in Resources */,
 				05132AE11ADBA4FB002AC8E0 /* Images.xcassets in Resources */,
 				05132ADF1ADBA4D8002AC8E0 /* Main.storyboard in Resources */,
 			);
@@ -519,6 +517,7 @@
 					"-all_load",
 				);
 				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,6 +545,7 @@
 					"-all_load",
 				);
 				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -576,6 +576,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -601,6 +602,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -626,6 +628,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

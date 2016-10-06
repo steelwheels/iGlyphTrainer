@@ -24,7 +24,6 @@
 		05F8D88B1AF41B7E0089415E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D88A1AF41B7E0089415E /* Images.xcassets */; };
 		05F8D88E1AF41B8D0089415E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D88C1AF41B8D0089415E /* Main.storyboard */; };
 		05F8D8901AF41BA30089415E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F8D88F1AF41BA30089415E /* main.m */; };
-		05F8D8921AF41BD50089415E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05F8D8911AF41BD50089415E /* Info.plist */; };
 		05FD11141AF43C1F00E1563C /* KGGlyphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FD11131AF43C1F00E1563C /* KGGlyphView.framework */; };
 /* End PBXBuildFile section */
 
@@ -262,7 +261,7 @@
 		0546CF041AF3AB45000C8032 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
 					0513A5031AF4186A008F45BD = {
@@ -310,7 +309,6 @@
 			files = (
 				05F8D88B1AF41B7E0089415E /* Images.xcassets in Resources */,
 				05F8D88E1AF41B8D0089415E /* Main.storyboard in Resources */,
-				05F8D8921AF41BD50089415E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +410,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -490,6 +489,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 			};
@@ -511,6 +511,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 			};
@@ -537,6 +538,7 @@
 					"-W",
 					"-Wall",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -558,6 +560,7 @@
 					"-W",
 					"-Wall",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

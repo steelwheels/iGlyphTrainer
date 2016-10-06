@@ -13,11 +13,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	struct KGGlyphStroke istroke = KGStrokeOfGlyph(KGBalanceGlyph) ;
-	KGAddStrokeToSharedInputStrokes(&istroke) ;
+	//struct KGGlyphStroke istroke = KGStrokeOfGlyph(KGBalanceGlyph) ;
+	//KGAddStrokeToSharedInputStrokes(&istroke) ;
 
-	struct KGGlyphStroke instroke = KGStrokeOfGlyph(KGResistanceGlyph) ;
-	KGAddStrokeToSharedInputStrokes(&instroke) ;
+	//struct KGGlyphStroke instroke = KGStrokeOfGlyph(KGResistanceGlyph) ;
+	//KGAddStrokeToSharedInputStrokes(&instroke) ;
 	
 	KGGameStatus * status = [[KGGameStatus alloc] init] ;
 	
