@@ -23,7 +23,7 @@ public enum GTGlyphCharacter
 	case Begin
 	case Being	; case Human
 	case Body	; case Shell
-	case Breathe
+	case Breathe ;	case Live
 	case Capture
 	case Change	; case Modify
 	case Chaos	; case Disorder
@@ -163,6 +163,7 @@ public enum GTGlyphCharacter
 		case .Body:		result = "Body"
 		case .Shell:		result = "Shell"
 		case .Breathe:		result = "Breathe"
+		case .Live:		result = "Live"
 		case .Capture:		result = "Capture"
 		case .Change:		result = "Change"
 		case .Modify:		result = "Modify"
@@ -350,7 +351,8 @@ public enum GTGlyphCharacter
 		     .Human:		result = [( 6,10), (10, 8), ( 8, 3), ( 3, 9), ( 9, 6)]
 		case .Body,
 		     .Shell:		result = [( 7, 6), ( 6,10), (10, 7)]
-		case .Breathe:		result = [( 5, 6), ( 6, 7), ( 7,10), (10, 1)]
+		case .Breathe,
+		     .Live:		result = [( 5, 6), ( 6, 7), ( 7,10), (10, 1)]
 		case .Capture:		result = [( 1, 8), ( 8, 7), ( 7, 9), ( 9, 4), ( 4, 3)]
 		case .Change,
 		     .Modify:		result = [( 9, 7), ( 7, 3), ( 3, 8)]

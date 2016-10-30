@@ -11,13 +11,13 @@ import Foundation
 
 public class GTGlyphSentence
 {
-	public static let oneGlyphSequence: Array<Array<GTGlyphCharacter>> = [
+	public static let glyphSequence1: Array<Array<GTGlyphCharacter>> = [
 		[.Gain		],
 		[.Old		],
 		[.Past		],
 		[.Destroy	],
 		[.Breathe	],
-		//[.Live		],
+		[.Live		],
 		[.Civilization	],
 		[.Defend	],
 		[.Help		],
@@ -126,392 +126,247 @@ public class GTGlyphSentence
 		[.Harmony	],
 		[.Peace		]
 	]
+
+	public static let glyphSequence2: Array<Array<GTGlyphCharacter>> = [
+		[.Civilization, 	.Chaos		],
+		[.Pursue,		.XM		],
+		[.Pursue, 		.Truth		],
+		[.Separate, 		.War		],
+		[.Create, 		.Danger		],
+		[.Path, 		.Perfection	],
+		[.Discover, 		.Safety		],
+		[.Discover, 		.Lie		],
+		[.Discover, 		.Portal		],
+		[.Attack, 		.Chaos		],
+		[.Attack, 		.Difficult	],
+		[.Liberate, 		.XM		],
+		[.Question,		.War		],
+		[.Lead,			.Enlightenment	],
+		[.Search,		.Potential	],
+		[.Search,		.Past		],
+		[.Capture,		.Portal		],
+		[.Pure,			.Truth		],
+		[.Pure,			.Body		],
+		[.Pure,			.Human		],
+		[.Nourish,		.Journey	],
+		[.All,			.Chaos		],
+		[.OpenAll,		.Truth		]
+	]
+
+	public static let glyphSequence3: Array<Array<GTGlyphCharacter>> = [
+		[.Destroy,	.Difficult,	.Barrier	],
+		[.Gain,		.Civilization,	.Peace		],
+		[.Destroy,	.Weak,		.Civilization	],
+		[.Destroy,	.Destiny,	.Barrier	],
+		[.Civilization,	.War,		.Chaos		],
+		[.Avoid,	.Destiny,	.Lie		],
+		[.Avoid,	.Complex,	.Conflict	],
+		[.Separate,	.Future,	.Evolution	],
+		[.Path,		.Peace,		.Difficult	],
+		[.Again,	.Journey,	.Outside	],
+		[.Discover,	.Shaper,	.Lie		],
+		[.Discover,	.Pure,		.Truth		],
+		[.Nature,	.Pure,		.Defend		],
+		[.War,		.Create,	.Danger		],
+		[.War,		.Destroy,	.Future		],
+		[.Attack,	.Difficult,	.Future		],
+		[.Attack,	.Shaper,	.Evolution	],
+		[.Liberate,	.Portal,	.Potential	],
+		[.Inside,	.Mind,		.Future		],
+		[.Fear,		.Chaos,		.XM		],
+		[.Change,	.Human,		.Future		],
+		[.Question,	.Shaper,	.Chaos		],
+		[.Question,	.Hide,		.Truth		],
+		[.Question,	.Conflict,	.Data		],
+		[.Escape,	.Impure,	.Evolution	],
+		[.Complex,	.Journey,	.Future		],
+		[.Follow,	.Pure,		.Journey	],
+		[.Lead,		.Resistance,	.Question	],
+		[.React,	.Impure,	.Civilization	],
+		[.Capture,	.Shaper,	.Portal		],
+		[.Journey,	.Inside,	.Soul		],
+		[.Lose,		.Attack,	.Retreat	],
+		[.Improve,	.Advance,	.Present	],
+		[.Improve,	.Human,		.Shaper		],
+		[.Future,	.Equal,		.Past		],
+		[.Together,	.Pursue,	.Safety		],
+		[.Harm,		.Danger,	.Avoid		],
+		[.Perfection,	.Path,		.Peace		],
+		[.Mind,		.Open,		.Live		],
+		[.All,		.XM,		.Liberate	],
+		[.OpenAll,	.Portal,	.Success	],
+		[.XM,		.Nourish,	.Civilization	],
+		[.Truth,	.Nourish,	.Soul		]
+	]
+
+	public static let glyphSequence4: Array<Array<GTGlyphCharacter>> = [
+	[.Gain,		.Portal,	.Attack,	.Weak		],
+	[.Past,		.Again,		.Present, 	.Again		],
+	[.Destroy,	.Destiny,	.Human,		.Lie		],
+	[.Destroy,	.Complex,	.Shaper,	.Lie		],
+	[.Restraint,	.Path,		.Gain,		.Harmony	],
+	[.Restraint,	.Fear,		.Avoid,		.Danger		],
+	[.Breathe,	.Again,		.Journey,	.Again		],
+	[.Breathe,	.Nature,	.Perfection,	.Harmony	],
+	[.Defend,	.Message,	.Answer,	.Idea		],
+	[.Help,		.Gain,		.Create,	.Pursue 	],
+	[.Help,		.Shaper,	.Create,	.Future		],
+	[.Avoid,	.XM,		.Message,	.Lie		],
+	[.Separate,	.Weak,		.Ignore,	.Truth		],
+	[.Forget,	.Conflict,	.Accept,	.War		],
+	[.Create,	.Distance,	.Impure,	.Path		],
+	[.Create,	.Future,	.Not,		.War		],
+	[.Create,	.Future,	.Change,	.Destiny	],
+	[.Advance,	.Civilization,	.Repeat,	.Failure	],
+	[.Path,		.Restraint,	.Strong,	.Safety		],
+	[.Deteriorate,	.Human,		.Weak,		.Rebel		],
+	[.Courage,	.War,		.Shaper,	.Future		],
+	[.Stay,		.Together,	.Defend,	.Truth		],
+	[.Shaper,	.See,		.Potential,	.Evolution	],
+	[.Shaper,	.Portal,	.Mind,		.Restraint	],
+	[.Shaper,	.Past,		.Present,	.Future		],
+	[.Shaper,	.Mind,		.Complex,	.Harmony	],
+	[.Shaper,	.Have,		.Strong,	.Path		],
+	[.Shaper, 	.Chaos,		.Pure,		.Harm		],
+	[.Shaper,	.Message,	.End,		.Civilization	],
+	[.Attack, 	.Weak,		.Shaper,	.Lie		],
+	[.Attack,	.Resistance,	.Pursue,	.Enlightenment	],
+	[.Attack,	.Enlightenment,	.Pursue,	.Resistance	],
+	[.Chaos,	.Barrier,	.Shaper,	.Portal		],
+	[.Liberate,	.XM,		.Portal,	.Together	],
+	[.See,		.Truth,		.See,		.Future		],
+	[.Less,		.Chaos,		.More,		.Stability	],
+	[.Less,		.Truth,		.More,		.Chaos		],
+	[.Less,		.Soul,		.More,		.Mind		],
+	[.Inside,	.Mind,		.Journey,	.Perfection	],
+	[.Hide,		.Impure,	.Human,		.Thought	],
+	[.Simple,	.Civilization,	.Impure,	.Weak		],
+	[.Simple,	.Truth,		.Breathe,	.Nature		],
+	[.Simple,	.Message,	.Complex,	.Idea		],
+	[.Change,	.Human,		.Potential,	.Use		],
+	[.Change,	.Future,	.Capture,	.Destiny	],
+	[.Change,	.Body,		.Improve,	.Human		],
+	[.Question,	.Truth,		.Gain,		.Future		],
+	[.Escape,	.Simple,	.Human,		.Future		],
+	[.Complex,	.Shaper,	.Civilization,	.Strong		],
+	[.Clear,	.Mind,		.Open,		.Mind		],
+	[.Follow,	.Shaper,	.Portal,	.Message	],
+	[.Lead,		.Pursue,	.React,		.Defend 	],
+	[.Contemplate,	.Complex,	.Shaper,	.Truth		],
+	[.Contemplate,	.Complex,	.Shaper,	.Civilization	],
+	[.Contemplate,	._Self,		.Path,		.Truth		],
+	[.Search,	.Truth,		.Save,		.Civilization	],
+	[.Search,	.XM,		.Save,		.Portal		],
+	[.Search,	.Data,		.Discover,	.Path		],
+	[.Capture,	.Fear,		.Discover,	.Courage	],
+	[.Journey,	.Inside,	.Improve,	.Soul		],
+	[.Ignore,	.Human,		.Chaos,		.Lie		],
+	[.Lose,		.Danger,	.Gain,		.Safety		],
+	[.Improve,	.Body,		.Pursue,	.Journey	],
+	[.Improve,	.Body,		.Mind,		.Soul		],
+	[.Improve,	.Mind,		.Journey,	.Inside		],
+	[.Together,	.Discover,	.Harmony,	.Equal		],
+	[.Struggle,	.Improve,	.Human,		.Soul		],
+	[.Struggle,	.Defend,	.Shaper,	.Danger		],
+	[.Perfection,	.Balance,	.Safety,	.All		],
+	[.Human,	.Have,		.Impure,	.Civilization	],
+	[.Human,	.Soul,		.Strong,	.Pure		],
+	[.Human,	.Past,		.Present,	.Future		],
+	[.Nourish,	.XM,		.Create,	.Thought	],
+	[.Soul,		.Rebel,		.Human,		.Die		],
+	[.All,		.Chaos,		.Inside,	.Body		],
+	[.CloseAll,	.OpenAll,	.Discover,	.Truth		],
+	[.Strong,	.Idea,		.Pursue,	.Truth		],
+	[.Strong,	.Together,	.Avoid,		.War		],
+	[.Strong,	.Resistance,	.Capture,	.Portal		],
+	[.XM,		.Have,		.Mind,		.Journey	],
+	[.XM,		.Die,		.Chaos,		.Live		],
+	[.Truth,	.Idea,		.Discover,	.XM		],
+	[.Portal,	.Have,		.Truth,		.Data		],
+	[.Portal,	.Potential,	.Change,	.Future		],
+	[.Portal,	.Die,		.Civilization,	.Die		],
+	[.Portal,	.Change,	.Civilization,	.End		],
+	[.Peace,	.Path,		.Nourish,	.Present	],
+	]
+
+	public static let glyphSequence5: Array<Array<GTGlyphCharacter>> = [
+	[.Gain,		.Truth,		.Open,		.Human,		.Soul		],
+	[.Old,		.Nature,	.Less,		.Strong,	.Now		],
+	[.Past,		.Chaos,		.Create,	.Future,	.Harmony	],
+	[.Past,		.Path,		.Create,	.Future,	.Journey,	],
+	[.Destroy,	.Lie,		.Inside,	.Gain,		.Soul,		],
+	[.Destroy,	.Civilization,	.End,		.Conflict,	.War		],
+	[.Breathe,	.Inside,	.XM,		.Lose,		._Self		],
+	[.Defend,	.Destiny,	.Defend,	.Human,		.Civilization	],
+	[.Defend,	.Human,		.Civilization,	.XM,		.Message	],
+	[.Defend,	.Human,		.Civilization,	.Shaper,	.Lie		],
+	[.Defend,	.Human,		.Civilization,	.Portal,	.Data		],
+	[.Defend,	.Human,		.Civilization,	.Shaper,	.Portal 	],
+	[.Help,		.Enlightenment,	.Capture,	.All,		.Portal		],
+	[.Help,		.Resistance,	.Capture,	.All,		.Portal		],
+	[.Help,		.Human,		.Civilization,	.Pursue,	.Destiny	],
+	[.Pursue,	.Path,		.Outside,	.Shaper,	.Lie		],
+	[.Pursue,	.Conflict,	.War,		.Advance,	.Chaos		],
+	[.Weak,		.Human,		.Destiny,	.Destroy,	.Civilization	],
+	[.Avoid,	.Chaos,		.Repair,	.Potential,	.War		],
+	[.Avoid,	.Perfection,	.Stay,		.Human,		._Self		],
+	[.Avoid,	.Chaos,		.Avoid,		.Shaper,	.Lie		],
+	[.Rebel,	.Thought,	.Evolution,	.Destiny,	.Now		],
+	[.Separate,	.Mind,		.Body,		.Discover,	.Enlightenment	],
+	[.Separate,	.Truth,		.Lie,		.Shaper,	.Future 	],
+	[.Forget,	.Past,		.See,		.Present,	.Danger 	],
+	[.Forget,	.War,		.See,		.Distance,	.Harmony,	],
+	[.Create,	.Pure,		.Future,	.Not,		.War		],
+	[.Create,	.Pure,		.Future,	.Human,		.Civilization	],
+	[.Create,	.Separate,	.Path,		.End,		.Journey	],
+	[.Advance,	.Civilization,	.Pursue,	.Shaper,	.Path		],
+	[.Distance,	._Self,		.Avoid,		.Human,		.Lie		],
+	[.Courage,	.Attack,	.Shaper,	.Portal,	.Together	],
+	[.Want, 	.Truth,		.Pursue,	.Difficult,	.Path		],
+	[.Stay,		.Strong,	.Together,	.Defend,	.Resistance	],
+	[.Shaper,	.Portal,	.Data,		.Create,	.Chaos		],
+	[.Shaper,	.Portal,	.Message,	.Destroy,	.Civilization	],
+	[.Shaper,	.Want,		.Human,		.Mind,		.Future		],
+	[.Shaper,	.Lead,		.Human,		.Complex,	.Journey	],
+	[.Chaos,	.War,		.Conflict,	.Discover,	.Peace		],
+	[.Liberate,	.Portal,	.Liberate,	.Human,		.Mind		],
+	[.Present,	.Chaos,		.Create,	.Future,	.Civilization	],
+	[.Inside,	.Mind,		.Inside,	.Soul,		.Harmony	],
+	[.Answer,	.Question,	.Discover,	.Difficult,	.Truth		],
+	[.Hide,		.Struggle,	.Advance,	.Strong,	.Together	],
+	[.Simple,	.Truth,		.Shaper,	.Destroy,	.Civilization	],
+	[.Simple,	.Old,		.Truth,		.Journey,	.Inside		],
+	[.More,		.Data,		.Gain,		.Portal,	.Advance	],
+	[.Save,		.Human,		.Civilization,	.Destroy,	.Portal		],
+	[.Question,	.Less,		.Forget,	.All,		.Lie		],
+	[.Escape,	.Body,		.Journey,	.Outside,	.Present	],
+	[.Escape,	.Body,		.Mind,		._Self,		.Want		],
+	[.Clear,	.Mind,		.Liberate,	.Barrier,	.Body		],
+	[.Contemplate,	.Future,	.Not,		.Shaper,	.Path		],
+	[.Contemplate,	.Restraint,	.Discover,	.More,		.Courage	],
+	[.Use,		.Restraint,	.Follow,	.Easy,		.Path		],
+	[.Use,		.Mind,		.Use,		.Courage,	.Change		],
+	[.Search,	.Destiny,	.Create,	.Pure,		.Future		],
+	[.Easy,		.Path,		.Future,	.Follow,	.Shaper	],
+	[.React,	.Rebel,		.Question,	.Shaper,	.Lie		],
+	[.Capture,	.Portal,	.Defend,	.Portal,	.Courage	],
+	[.Lose,		.Shaper,	.Message,	.Gain,		.Chaos		],
+	[.Pure,		.Human,		.Failure,	.Now,		.Chaos		],
+	[.Imperfect,	.XM,		.Message,	.Human,		.Chaos		],
+	[.Imperfect,	.Truth,		.Accept,	.Complex,	.Answer		],
+	[.Human,	.Shaper,	.Together,	.Create,	.Destiny	],
+	[.Human,	.Not,		.Together,	.Civilization,	.Deteriorate 	],
+	[.Recharge,	.Present,	.Recharge,	.Human,		.Soul		],
+	[.Repair,	.Soul,		.Less,		.Human,		.Harm		],
+	[.CloseAll,	.Thought,	.Past,		.Present,	.Future		],
+	[.Strong,	.Together,	.War,		.Together,	.Destiny	],
+	[.Strong,	.Together,	.War,		.Together,	.Chaos		],
+	[.XM,		.Path,		.Future,	.Destiny,	.Harmony	],
+	[.XM,		.Create,	.Complex,	.Human,		.Destiny	],
+	[.Portal,	.Create,	.Danger,	.Pursue,	.Safety		],
+	[.Portal,	.Potential,	.Help,		.Human,		.Future		],
+	[.Portal,	.Barrier,	.Defend,	.Human,		.Shaper	],
+	[.Portal,	.Improve,	.Human,		.Future,	.Civilization	],
+	]
 }
 
-/*
-
-/**
-* @file	KGGlyphSentence.m
-* @brief	Define KGGlyphSentence data structure
-* @par Copyright
-*   Copyright (C) 2015 Steel Wheels Project
-
-*/
-
-#import "KGGlyphSentence.h"
-
-struct KG2WordSentence {
-KGGlyphKind		word_1st ;
-KGGlyphKind		word_2nd ;
-} ;
-
-struct KG3WordSentence {
-KGGlyphKind		word_1st ;
-KGGlyphKind		word_2nd ;
-KGGlyphKind		word_3rd ;
-} ;
-
-struct KG4WordSentence {
-KGGlyphKind		word_1st ;
-KGGlyphKind		word_2nd ;
-KGGlyphKind		word_3rd ;
-KGGlyphKind		word_4th ;
-} ;
-
-struct KG5WordSentence {
-KGGlyphKind		word_1st ;
-KGGlyphKind		word_2nd ;
-KGGlyphKind		word_3rd ;
-KGGlyphKind		word_4th ;
-KGGlyphKind		word_5th ;
-} ;
-
-static const struct KG2WordSentence s_2words[] = {
-{KGCivillizationGlyph,	KGChaosGlyph			},
-{KGPursueGlyph,		KGXMGlyph			},
-{KGPursueGlyph,		KGTruthGlyph			},
-{KGSeparateGlyph,	KGWarGlyph			},
-{KGCreateGlyph,		KGDangerGlyph			},
-{KGPathGlyph,		KGPerfectionGlyph		},
-{KGDiscoverGlyph,	KGSafetyGlyph			},
-{KGDiscoverGlyph,	KGLieGlyph			},
-{KGDiscoverGlyph,	KGPortalGlyph			},
-{KGAttackGlyph,		KGChaosGlyph			},
-{KGAttackGlyph,		KGDifficultGlyph		},
-{KGLiberateGlyph,	KGXMGlyph			},
-{KGQuestionGlyph,	KGWarGlyph			},
-{KGLeadGlyph,		KGEnlightenedGlyph		},
-{KGSearchGlyph,		KGPotencialGlyph		},
-{KGSearchGlyph,		KGPastGlyph			},
-{KGCaptureGlyph,	KGPortalGlyph			},
-{KGPureGlyph,		KGTruthGlyph			},
-{KGPureGlyph,		KGBodyGlyph			},
-{KGPureGlyph,		KGHumanGlyph			},
-{KGNourishGlyph,	KGJourneyGlyph			},
-{KGAllGlyph,		KGChaosGlyph			},
-{KGOpenAllGlyph,	KGTruthGlyph			}
-} ;
-
-static const struct KG3WordSentence s_3words[] = {
-{KGDestroyGlyph,	KGDifficultGlyph,	KGBarrierGlyph		},
-{KGGainGlyph,		KGCivillizationGlyph,	KGPeaceGlyph		},
-{KGDestroyGlyph,	KGWeakGlyph,		KGCivillizationGlyph	},
-{KGDestroyGlyph,	KGDestinyGlyph,		KGBarrierGlyph		},
-{KGCivillizationGlyph,	KGWarGlyph,		KGChaosGlyph		},
-{KGAvoidGlyph,		KGDestinyGlyph,		KGLieGlyph		},
-{KGAvoidGlyph,		KGComplexGlyph,		KGConflictGlyph		},
-{KGSeparateGlyph,	KGFutureGlyph,		KGEvolutionGlyph	},
-{KGPathGlyph,		KGPeaceGlyph,		KGDifficultGlyph	},
-{KGAgainGlyph,		KGJourneyGlyph,		KGOutsideGlyph		},
-{KGDiscoverGlyph,	KGShaperGlyph,		KGLieGlyph		},
-{KGDiscoverGlyph,	KGPureGlyph,		KGTruthGlyph		},
-{KGNatureGlyph,		KGPureGlyph,		KGDefendGlyph		},
-{KGWarGlyph,		KGCreateGlyph,		KGDangerGlyph		},
-{KGWarGlyph,		KGDestroyGlyph,		KGFutureGlyph		},
-{KGAttackGlyph,		KGDifficultGlyph,	KGFutureGlyph		},
-{KGAttackGlyph,		KGShaperGlyph,		KGEvolutionGlyph	},
-{KGLiberateGlyph,	KGPortalGlyph,		KGPotencialGlyph	},
-{KGInsideGlyph,		KGMindGlyph,		KGFutureGlyph		},
-{KGFearGlyph,		KGChaosGlyph,		KGXMGlyph		},
-{KGChangeGlyph,		KGHumanGlyph,		KGFutureGlyph		},
-{KGQuestionGlyph,	KGShaperGlyph,		KGChaosGlyph		},
-{KGQuestionGlyph,	KGHideGlyph,		KGTruthGlyph		},
-{KGQuestionGlyph,	KGConflictGlyph,	KGDataGlyph		},
-{KGEscapeGlyph,		KGImpureGlyph,		KGEvolutionGlyph	},
-{KGComplexGlyph,	KGJourneyGlyph,		KGFutureGlyph		},
-{KGFollowGlyph,		KGPureGlyph,		KGJourneyGlyph		},
-{KGLeadGlyph,		KGResistanceGlyph,	KGQuestionGlyph		},
-{KGReactGlyph,		KGImpureGlyph,		KGCivillizationGlyph	},
-{KGCaptureGlyph,	KGShaperGlyph,		KGPortalGlyph		},
-{KGJourneyGlyph,	KGInsideGlyph,		KGSoulGlyph		},
-{KGLoseGlyph,		KGAttackGlyph,		KGRetreatGlyph		},
-{KGImproveGlyph,	KGAdvanceGlyph,		KGPresentGlyph		},
-{KGImproveGlyph,	KGHumanGlyph,		KGShaperGlyph		},
-{KGFutureGlyph,		KGEqualGlyph,		KGPastGlyph		},
-{KGTogetherGlyph,	KGPursueGlyph,		KGSafetyGlyph		},
-{KGHarmGlyph,		KGDangerGlyph,		KGAvoidGlyph		},
-{KGPerfectGlyph,	KGPathGlyph,		KGPeaceGlyph		},
-{KGMindGlyph,		KGOpenGlyph,		KGLiveGlyph		},
-{KGAllGlyph,		KGXMGlyph,		KGLiberateGlyph		},
-{KGOpenAllGlyph,	KGPortalGlyph,		KGSuccessGlyph		},
-{KGXMGlyph,		KGNourishGlyph,		KGCivillizationGlyph	},
-{KGTruthGlyph,		KGNourishGlyph,		KGSoulGlyph		}
-} ;
-
-static const struct KG4WordSentence s_4words[] = {
-{KGGainGlyph,		KGPortalGlyph,		KGAttackGlyph,		KGWeakGlyph		},
-{KGPastGlyph,		KGAgainGlyph,		KGPresenceGlyph,	KGAgainGlyph		},
-{KGDestroyGlyph,	KGDestinyGlyph,		KGHumanGlyph,		KGLieGlyph		},
-{KGDestinyGlyph,	KGComplexGlyph,		KGShaperGlyph,		KGLieGlyph		},
-{KGRestraintGlyph,	KGPathGlyph,		KGGainGlyph,		KGHarmonyGlyph		},
-{KGRestraintGlyph,	KGFearGlyph,		KGAvoidGlyph,		KGDangerGlyph		},
-{KGBreathGlyph,		KGAgainGlyph,		KGJourneyGlyph,		KGAgainGlyph		},
-{KGBreathGlyph,		KGNatureGlyph,		KGPerfectGlyph,		KGHarmonyGlyph		},
-{KGDefendGlyph,		KGMessageGlyph,		KGAnswerGlyph,		KGIdeaGlyph		},
-{KGHelpGlyph,		KGGainGlyph,		KGCreateGlyph,		KGPursueGlyph		},
-{KGHelpGlyph,		KGShaperGlyph,		KGCreateGlyph,		KGFutureGlyph		},
-{KGAvoidGlyph,		KGXMGlyph,		KGMessageGlyph,		KGLieGlyph		},
-{KGSeparateGlyph,	KGWeakGlyph,		KGIgnoreGlyph,		KGTruthGlyph		},
-{KGForgetGlyph,		KGConflictGlyph,	KGAcceptGlyph,		KGWarGlyph		},
-{KGCreateGlyph,		KGDistanceGlyph,	KGImpureGlyph,		KGPathGlyph		},
-{KGCreateGlyph,		KGFutureGlyph,		KGNotGlyph,		KGWarGlyph		},
-{KGCreateGlyph,		KGFutureGlyph,		KGChangeGlyph,		KGDestinationGlyph	},
-{KGAdvanceGlyph,	KGCivillizationGlyph,	KGRepeatGlyph,		KGFutureGlyph		},
-{KGPathGlyph,		KGRestraintGlyph,	KGStrongGlyph,		KGSafetyGlyph		},
-{KGDeteriorateGlyph,	KGHumanGlyph,		KGWeakGlyph,		KGRebelGlyph		},
-{KGCourageGlyph,	KGWarGlyph,		KGShaperGlyph,		KGFutureGlyph		},
-{KGStayGlyph,		KGTogetherGlyph,	KGDefendGlyph,		KGTruthGlyph		},
-{KGShaperGlyph,		KGSeeGlyph,		KGPotencialGlyph,	KGEvolutionGlyph	},
-{KGShaperGlyph,		KGPortalGlyph,		KGMindGlyph,		KGRestraintGlyph	},
-{KGShaperGlyph,		KGPastGlyph,		KGPresenceGlyph,	KGFutureGlyph		},
-{KGShaperGlyph,		KGMindGlyph,		KGComplexGlyph,		KGHarmonyGlyph		},
-{KGShaperGlyph,		KGHaveGlyph,		KGStrongGlyph,		KGPathGlyph		},
-{KGShaperGlyph,		KGChaosGlyph,		KGPureGlyph,		KGHarmGlyph		},
-{KGShaperGlyph,		KGMessageGlyph,		KGEndGlyph,		KGCivillizationGlyph	},
-{KGAttackGlyph,		KGWeakGlyph,		KGShaperGlyph,		KGLieGlyph		},
-{KGAttackGlyph,		KGResistanceGlyph,	KGPursueGlyph,		KGEnlightenedGlyph	},
-{KGAttackGlyph,		KGEnlightenedGlyph,	KGPursueGlyph,		KGResistanceGlyph	},
-{KGChaosGlyph,		KGBarrierGlyph,		KGShaperGlyph,		KGPortalGlyph		},
-{KGLiberateGlyph,	KGXMGlyph,		KGPortalGlyph,		KGTogetherGlyph		},
-{KGSeeGlyph,		KGTruthGlyph,		KGSeeGlyph,		KGFutureGlyph		},
-{KGLessGlyph,		KGChaosGlyph,		KGMoreGlyph,		KGStabilityGlyph	},
-{KGLessGlyph,		KGTruthGlyph,		KGMoreGlyph,		KGChaosGlyph		},
-{KGLessGlyph,		KGSoulGlyph,		KGMoreGlyph,		KGMindGlyph		},
-{KGInsideGlyph,		KGMindGlyph,		KGJourneyGlyph,		KGPerfectGlyph		},
-{KGHideGlyph,		KGImpureGlyph,		KGHumanGlyph,		KGThoughtGlyph		},
-{KGSimpleGlyph,		KGCivillizationGlyph,	KGImpureGlyph,		KGWeakGlyph		},
-{KGSimpleGlyph,		KGTruthGlyph,		KGBreathGlyph,		KGNatureGlyph		},
-{KGSimpleGlyph,		KGMessageGlyph,		KGComplexGlyph,		KGIdeaGlyph		},
-{KGChangeGlyph,		KGHumanGlyph,		KGPotencialGlyph,	KGUseGlyph		},
-{KGChangeGlyph,		KGFutureGlyph,		KGCaptureGlyph,		KGHarmonyGlyph		},
-{KGChangeGlyph,		KGBodyGlyph,		KGImproveGlyph,		KGHumanGlyph		},
-{KGQuestionGlyph,	KGTruthGlyph,		KGGainGlyph,		KGFutureGlyph		},
-{KGEscapeGlyph,		KGSimpleGlyph,		KGHumanGlyph,		KGFutureGlyph		},
-{KGComplexGlyph,	KGShaperGlyph,		KGCivillizationGlyph,	KGStrongGlyph		},
-{KGClearGlyph,		KGMindGlyph,		KGOpenGlyph,		KGMindGlyph		},
-{KGFollowGlyph,		KGShaperGlyph,		KGPortalGlyph,		KGMessageGlyph		},
-{KGLeadGlyph,		KGPursueGlyph,		KGReactGlyph,		KGDefendGlyph		},
-{KGContemplateGlyph,	KGComplexGlyph,		KGShaperGlyph,		KGTruthGlyph		},
-{KGContemplateGlyph,	KGComplexGlyph,		KGShaperGlyph,		KGCivillizationGlyph	},
-{KGContemplateGlyph,	KGSelfGlyph,		KGPortalGlyph,		KGTruthGlyph		},
-{KGContemplateGlyph,	KGSelfGlyph,		KGPathGlyph,		KGTruthGlyph		},
-{KGSearchGlyph,		KGTruthGlyph,		KGSaveGlyph,		KGCivillizationGlyph	},
-{KGSearchGlyph,		KGXMGlyph,		KGSaveGlyph,		KGPortalGlyph		},
-{KGSearchGlyph,		KGDataGlyph,		KGDiscoverGlyph,	KGPortalGlyph		},
-{KGCaptureGlyph,	KGFearGlyph,		KGDiscoverGlyph,	KGCourageGlyph		},
-{KGJourneyGlyph,	KGInsideGlyph,		KGImproveGlyph,		KGSoulGlyph		},
-{KGIgnoreGlyph,		KGHumanGlyph,		KGChaosGlyph,		KGLieGlyph		},
-{KGLoseGlyph,		KGDangerGlyph,		KGGainGlyph,		KGSafetyGlyph		},
-{KGImproveGlyph,	KGBodyGlyph,		KGPursueGlyph,		KGJourneyGlyph		},
-{KGImproveGlyph,	KGBodyGlyph,		KGMindGlyph,		KGSoulGlyph		},
-{KGImproveGlyph,	KGMindGlyph,		KGJourneyGlyph,		KGInsideGlyph		},
-{KGTogetherGlyph,	KGDiscoverGlyph,	KGHarmonyGlyph,		KGEqualGlyph		},
-{KGStruggleGlyph,	KGImproveGlyph,		KGHumanGlyph,		KGSoulGlyph		},
-{KGStruggleGlyph,	KGDefendGlyph,		KGShaperGlyph,		KGDangerGlyph		},
-{KGPerfectGlyph,	KGBalanceGlyph,		KGSafetyGlyph,		KGAllGlyph		},
-{KGHumanGlyph,		KGHaveGlyph,		KGImpureGlyph,		KGCivillizationGlyph	},
-{KGHumanGlyph,		KGSoulGlyph,		KGStrongGlyph,		KGPureGlyph		},
-{KGHumanGlyph,		KGPastGlyph,		KGPresentGlyph,		KGFutureGlyph		},
-{KGNourishGlyph,	KGXMGlyph,		KGCreateGlyph,		KGThoughtGlyph		},
-{KGSoulGlyph,		KGRebelGlyph,		KGHumanGlyph,		KGDieGlyph		},
-{KGAllGlyph,		KGChaosGlyph,		KGInsideGlyph,		KGBodyGlyph		},
-{KGCloseAllGlyph,	KGOpenAllGlyph,		KGDiscoverGlyph,	KGTruthGlyph		},
-{KGStrongGlyph,		KGIdeaGlyph,		KGPursueGlyph,		KGTruthGlyph		},
-{KGStrongGlyph,		KGTogetherGlyph,	KGAvoidGlyph,		KGWarGlyph		},
-{KGStrongGlyph,		KGResistanceGlyph,	KGCaptureGlyph,		KGPortalGlyph		},
-{KGXMGlyph,		KGHaveGlyph,		KGMindGlyph,		KGJourneyGlyph		},
-{KGXMGlyph,		KGDieGlyph,		KGChaosGlyph,		KGDieGlyph		},
-{KGTruthGlyph,		KGIdeaGlyph,		KGDiscoverGlyph,	KGXMGlyph		},
-{KGPortalGlyph,		KGHaveGlyph,		KGTruthGlyph,		KGDataGlyph		},
-{KGPortalGlyph,		KGPotencialGlyph,	KGChangeGlyph,		KGFutureGlyph		},
-{KGPortalGlyph,		KGDieGlyph,		KGCivillizationGlyph,	KGDieGlyph		},
-{KGPortalGlyph,		KGChangeGlyph,		KGCivillizationGlyph,	KGEndGlyph		},
-{KGPortalGlyph,		KGDieGlyph,		KGCivillizationGlyph,	KGDieGlyph		},
-{KGPortalGlyph,		KGChangeGlyph,		KGCivillizationGlyph,	KGEndGlyph		},
-{KGPeaceGlyph,		KGPathGlyph,		KGNourishGlyph,		KGPresentGlyph		}
-} ;
-
-static const struct KG5WordSentence s_5words[] = {
-{KGGainGlyph,		KGTruthGlyph,		KGOpenGlyph,		KGHumanGlyph,		KGSoulGlyph		},
-{KGOldGlyph,		KGNatureGlyph,		KGLessGlyph,		KGStrongGlyph,		KGNowGlyph		},
-{KGPastGlyph,		KGChaosGlyph,		KGCreateGlyph,		KGFutureGlyph,		KGHarmonyGlyph		},
-{KGPastGlyph,		KGPathGlyph,		KGCreateGlyph,		KGFutureGlyph,		KGJourneyGlyph		},
-{KGDestroyGlyph,	KGLieGlyph,		KGInsideGlyph,		KGGainGlyph,		KGSoulGlyph		},
-{KGDestroyGlyph,	KGCivillizationGlyph,	KGEndGlyph,		KGConflictGlyph,	KGWarGlyph		},
-{KGBreathGlyph,		KGInsideGlyph,		KGXMGlyph,		KGLoseGlyph,		KGSelfGlyph		},
-{KGDefendGlyph,		KGDestinyGlyph,		KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph	},
-{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGXMGlyph,		KGMessageGlyph		},
-{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGShaperGlyph,		KGLieGlyph		},
-{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGPortalGlyph,		KGDataGlyph		},
-{KGDefendGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGShaperGlyph,		KGPortalGlyph		},
-{KGHelpGlyph,		KGEnlightenmentGlyph,	KGCaptureGlyph,		KGAllGlyph,		KGPortalGlyph		},
-{KGHelpGlyph,		KGResistanceGlyph,	KGCaptureGlyph,		KGAllGlyph,		KGPortalGlyph		},
-{KGHelpGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGPursueGlyph,		KGDestinyGlyph		},
-{KGPursueGlyph,		KGPathGlyph,		KGOutsideGlyph,		KGShaperGlyph,		KGLieGlyph		},
-{KGPursueGlyph,		KGConflictGlyph,	KGWarGlyph,		KGAdvanceGlyph,		KGChaosGlyph		},
-{KGWeakGlyph,		KGHumanGlyph,		KGDestinyGlyph,		KGDestroyGlyph,		KGCivillizationGlyph	},
-{KGAvoidGlyph,		KGChaosGlyph,		KGRepairGlyph,		KGPotencialGlyph,	KGWarGlyph		},
-{KGAvoidGlyph,		KGPerfectGlyph,		KGStabilityGlyph,	KGHumanGlyph,		KGSelfGlyph		},
-{KGAvoidGlyph,		KGChaosGlyph,		KGAvoidGlyph,		KGShaperGlyph,		KGLieGlyph		},
-{KGRebelGlyph,		KGThoughtGlyph,		KGEvolutionGlyph,	KGDestinyGlyph,		KGNowGlyph		},
-{KGSeparateGlyph,	KGMindGlyph,		KGBodyGlyph,		KGDiscoverGlyph,	KGEnlightenedGlyph	},
-{KGSeparateGlyph,	KGTruthGlyph,		KGLieGlyph,		KGShaperGlyph,		KGFutureGlyph		},
-{KGForgetGlyph,		KGPastGlyph,		KGSeeGlyph,		KGPresentGlyph,		KGDangerGlyph		},
-{KGForgetGlyph,		KGWarGlyph,		KGSeeGlyph,		KGDistanceGlyph,	KGHarmonyGlyph		},
-{KGCreateGlyph,		KGPureGlyph,		KGFutureGlyph,		KGNotGlyph,		KGWarGlyph		},
-{KGCreateGlyph,		KGPureGlyph,		KGFutureGlyph,		KGHumanGlyph,		KGCivillizationGlyph	},
-{KGCreateGlyph,		KGSeparateGlyph,	KGPathGlyph,		KGEndGlyph,		KGJourneyGlyph		},
-{KGAdvanceGlyph,	KGCivillizationGlyph,	KGPursueGlyph,		KGShaperGlyph,		KGPathGlyph		},
-{KGDistanceGlyph,	KGSelfGlyph,		KGAvoidGlyph,		KGHumanGlyph,		KGLieGlyph		},
-{KGCourageGlyph,	KGAttackGlyph,		KGShaperGlyph,		KGPortalGlyph,		KGTogetherGlyph		},
-{KGWantGlyph,		KGTruthGlyph,		KGPursueGlyph,		KGDifficultGlyph,	KGPathGlyph		},
-{KGStayGlyph,		KGStrongGlyph,		KGTogetherGlyph,	KGDefendGlyph,		KGResistanceGlyph	},
-{KGShaperGlyph,		KGPortalGlyph,		KGDataGlyph,		KGCreateGlyph,		KGChaosGlyph		},
-{KGShaperGlyph,		KGPortalGlyph,		KGMessageGlyph,		KGDestroyGlyph,		KGCivillizationGlyph	},
-{KGShaperGlyph,		KGWantGlyph,		KGHumanGlyph,		KGMindGlyph,		KGFutureGlyph		},
-{KGShaperGlyph,		KGLeadGlyph,		KGHumanGlyph,		KGComplexGlyph,		KGJourneyGlyph		},
-{KGChaosGlyph,		KGWarGlyph,		KGConflictGlyph,	KGDiscoverGlyph,	KGPeaceGlyph		},
-{KGLiberateGlyph,	KGPortalGlyph,		KGLiberateGlyph,	KGHumanGlyph,		KGMindGlyph		},
-{KGPresenceGlyph,	KGChaosGlyph,		KGCreateGlyph,		KGFutureGlyph,		KGCivillizationGlyph	},
-{KGInsideGlyph,		KGMindGlyph,		KGInsideGlyph,		KGSoulGlyph,		KGHarmonyGlyph		},
-{KGAnswerGlyph,		KGQuestionGlyph,	KGDiscoverGlyph,	KGDifficultGlyph,	KGTruthGlyph		},
-{KGHideGlyph,		KGStruggleGlyph,	KGAdvanceGlyph,		KGStrongGlyph,		KGTogetherGlyph		},
-{KGSimpleGlyph,		KGTruthGlyph,		KGShaperGlyph,		KGDestroyGlyph,		KGCivillizationGlyph	},
-{KGSimpleGlyph,		KGOldGlyph,		KGTruthGlyph,		KGJourneyGlyph,		KGInsideGlyph		},
-{KGMoreGlyph,		KGDataGlyph,		KGGainGlyph,		KGPortalGlyph,		KGAdvanceGlyph		},
-{KGSaveGlyph,		KGHumanGlyph,		KGCivillizationGlyph,	KGDestroyGlyph,		KGPortalGlyph		},
-{KGQuestionGlyph,	KGLessGlyph,		KGForgetGlyph,		KGAllGlyph,		KGLieGlyph		},
-{KGEscapeGlyph,		KGBodyGlyph,		KGJourneyGlyph,		KGOutsideGlyph,		KGPresentGlyph		},
-{KGEscapeGlyph,		KGBodyGlyph,		KGMindGlyph,		KGSelfGlyph,		KGWantGlyph		},
-{KGClearGlyph,		KGMindGlyph,		KGLiberateGlyph,	KGBarrierGlyph,		KGBodyGlyph		},
-{KGContemplateGlyph,	KGFutureGlyph,		KGNotGlyph,		KGShaperGlyph,		KGPathGlyph		},
-{KGContemplateGlyph,	KGRestraintGlyph,	KGDiscoverGlyph,	KGMoreGlyph,		KGCourageGlyph		},
-{KGUseGlyph,		KGRestraintGlyph,	KGFollowGlyph,		KGEasyGlyph,		KGPathGlyph		},
-{KGUseGlyph,		KGMindGlyph,		KGUseGlyph,		KGCourageGlyph,		KGChangeGlyph		},
-{KGSearchGlyph,		KGDestinyGlyph,		KGCreateGlyph,		KGPureGlyph,		KGFutureGlyph		},
-{KGEasyGlyph,		KGPathGlyph,		KGFutureGlyph,		KGFollowGlyph,		KGShaperGlyph		},
-{KGReactGlyph,		KGRebelGlyph,		KGQuestionGlyph,	KGShaperGlyph,		KGLieGlyph		},
-{KGCaptureGlyph,	KGPortalGlyph,		KGDefendGlyph,		KGPortalGlyph,		KGCourageGlyph		},
-{KGLoseGlyph,		KGShaperGlyph,		KGMessageGlyph,		KGGainGlyph,		KGChaosGlyph		},
-{KGPureGlyph,		KGHumanGlyph,		KGFailureGlyph,		KGNowGlyph,		KGChaosGlyph		},
-{KGImperfectGlyph,	KGXMGlyph,		KGMessageGlyph,		KGHumanGlyph,		KGChaosGlyph		},
-{KGImperfectGlyph,	KGTruthGlyph,		KGAcceptGlyph,		KGComplexGlyph,		KGAnswerGlyph		},
-{KGHumanGlyph,		KGShaperGlyph,		KGTogetherGlyph,	KGCreateGlyph,		KGDestinyGlyph		},
-{KGHumanGlyph,		KGNotGlyph,		KGTogetherGlyph,	KGCivillizationGlyph,	KGDeteriorateGlyph	},
-{KGRechargeGlyph,	KGPresentGlyph,		KGRechargeGlyph,	KGHumanGlyph,		KGSoulGlyph		},
-{KGRepairGlyph,		KGSoulGlyph,		KGLessGlyph,		KGHumanGlyph,		KGHarmGlyph		},
-{KGCloseAllGlyph,	KGThoughtGlyph,		KGPastGlyph,		KGPresentGlyph,		KGFutureGlyph		},
-{KGStrongGlyph,		KGTogetherGlyph,	KGWarGlyph,		KGTogetherGlyph,	KGDestinyGlyph		},
-{KGStrongGlyph,		KGTogetherGlyph,	KGWarGlyph,		KGTogetherGlyph,	KGChaosGlyph		},
-{KGXMGlyph,		KGPathGlyph,		KGFutureGlyph,		KGDestinyGlyph,		KGHarmonyGlyph		},
-{KGXMGlyph,		KGCreateGlyph,		KGComplexGlyph,		KGHumanGlyph,		KGDestinyGlyph		},
-{KGPortalGlyph,		KGCreateGlyph,		KGDangerGlyph,		KGPursueGlyph,		KGSafetyGlyph		},
-{KGPortalGlyph,		KGPotencialGlyph,	KGHelpGlyph,		KGHumanGlyph,		KGFutureGlyph		},
-{KGPortalGlyph,		KGBarrierGlyph,		KGDefendGlyph,		KGHumanGlyph,		KGShaperGlyph		},
-{KGPortalGlyph,		KGImproveGlyph,		KGHumanGlyph,		KGFutureGlyph,		KGCivillizationGlyph	}
-} ;
-
-struct KGGlyphSentence
-KGGetEmptySentence(void)
-{
-struct KGGlyphSentence sentence = {
-.wordNum	= 0
-} ;
-return sentence ;
-}
-
-unsigned int
-KGGet2WordSentenceNum(void)
-{
-return sizeof(s_2words) / sizeof(struct KG2WordSentence) ;
-}
-
-struct KGGlyphSentence
-KGGet2WordSentence(unsigned int index)
-{
-unsigned int sentnum = KGGet2WordSentenceNum() ;
-if(index < sentnum){
-const struct KG2WordSentence * srcsent = &(s_2words[index]) ;
-struct KGGlyphSentence result ;
-result.wordNum		= 2 ;
-result.glyphWords[0]	= srcsent->word_1st ;
-result.glyphWords[1]	= srcsent->word_2nd ;
-return result ;
-} else {
-return KGGetEmptySentence() ;
-}
-}
-
-unsigned int
-KGGet3WordSentenceNum(void)
-{
-return sizeof(s_3words) / sizeof(struct KG3WordSentence) ;
-}
-
-struct KGGlyphSentence
-KGGet3WordSentence(unsigned int index)
-{
-unsigned int sentnum = KGGet3WordSentenceNum() ;
-if(index < sentnum){
-const struct KG3WordSentence * srcsent = &(s_3words[index]) ;
-struct KGGlyphSentence result ;
-result.wordNum		= 3 ;
-result.glyphWords[0]	= srcsent->word_1st ;
-result.glyphWords[1]	= srcsent->word_2nd ;
-result.glyphWords[2]	= srcsent->word_3rd ;
-return result ;
-} else {
-return KGGetEmptySentence() ;
-}
-}
-
-unsigned int
-KGGet4WordSentenceNum(void)
-{
-return sizeof(s_4words) / sizeof(struct KG4WordSentence) ;
-}
-
-struct KGGlyphSentence
-KGGet4WordSentence(unsigned int index)
-{
-unsigned int sentnum = KGGet4WordSentenceNum() ;
-if(index < sentnum){
-const struct KG4WordSentence * srcsent = &(s_4words[index]) ;
-struct KGGlyphSentence result ;
-result.wordNum		= 4 ;
-result.glyphWords[0]	= srcsent->word_1st ;
-result.glyphWords[1]	= srcsent->word_2nd ;
-result.glyphWords[2]	= srcsent->word_3rd ;
-result.glyphWords[3]	= srcsent->word_4th ;
-return result ;
-} else {
-return KGGetEmptySentence() ;
-}
-}
-
-unsigned int
-KGGet5WordSentenceNum(void)
-{
-return sizeof(s_5words) / sizeof(struct KG5WordSentence) ;
-}
-
-struct KGGlyphSentence
-KGGet5WordSentence(unsigned int index)
-{
-unsigned int sentnum = KGGet5WordSentenceNum() ;
-if(index < sentnum){
-const struct KG5WordSentence * srcsent = &(s_5words[index]) ;
-struct KGGlyphSentence result ;
-result.wordNum		= 5 ;
-result.glyphWords[0]	= srcsent->word_1st ;
-result.glyphWords[1]	= srcsent->word_2nd ;
-result.glyphWords[2]	= srcsent->word_3rd ;
-result.glyphWords[3]	= srcsent->word_4th ;
-result.glyphWords[4]	= srcsent->word_5th ;
-return result ;
-} else {
-return KGGetEmptySentence() ;
-}
-}
-
-*/
