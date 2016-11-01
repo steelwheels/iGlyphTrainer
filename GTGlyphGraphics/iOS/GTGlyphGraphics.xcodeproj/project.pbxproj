@@ -7,100 +7,109 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		053B540E1DA8027200557B29 /* GTGlyphData.h in Headers */ = {isa = PBXBuildFile; fileRef = 053B540C1DA8027200557B29 /* GTGlyphData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0568BD3A1DB3AED000A9EB3E /* GTGlyphSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0568BD391DB3AED000A9EB3E /* GTGlyphSentence.swift */; };
-		0588D49E1DA8040B00BFCEE5 /* GTGlyphCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0588D49D1DA8040B00BFCEE5 /* GTGlyphCharacter.swift */; };
+		0567D7441DC5759000D418E3 /* GTGlyphGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05CFDA391DC577970090D672 /* GTGlyphData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA381DC577970090D672 /* GTGlyphData.framework */; };
+		05CFDA3C1DC5785E0090D672 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
+		05CFDA3E1DC578710090D672 /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
+		05CFDA401DC579180090D672 /* GTGlyphDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFDA3F1DC579180090D672 /* GTGlyphDrawerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05CFC88C1DC5738B00AB91D3 /* PBXContainerItemProxy */ = {
+		05C13DCB1DC7B73A004B6763 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 053B54001DA8027200557B29 /* Project object */;
+			containerPortal = 0567D7361DC5759000D418E3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 053B54081DA8027200557B29;
-			remoteInfo = GTGlyphData;
+			remoteGlobalIDString = 0567D73E1DC5759000D418E3;
+			remoteInfo = GTGlyphGraphics;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		053B54091DA8027200557B29 /* GTGlyphData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGlyphData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		053B540C1DA8027200557B29 /* GTGlyphData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGlyphData.h; sourceTree = "<group>"; };
-		053B540D1DA8027200557B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0568BD391DB3AED000A9EB3E /* GTGlyphSentence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphSentence.swift; sourceTree = "<group>"; };
-		0588D49D1DA8040B00BFCEE5 /* GTGlyphCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphCharacter.swift; sourceTree = "<group>"; };
+		0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGlyphGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGlyphGraphics.h; sourceTree = "<group>"; };
+		0567D7431DC5759000D418E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		05CFDA381DC577970090D672 /* GTGlyphData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTGlyphData.framework; path = ../../../../local/Frameworks/GTGlyphData.framework; sourceTree = "<group>"; };
+		05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KiwiGraphics.framework; path = ../../../../local/Frameworks/KiwiGraphics.framework; sourceTree = "<group>"; };
+		05CFDA3D1DC578710090D672 /* KiwiControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KiwiControls.framework; path = ../../../../local/Frameworks/KiwiControls.framework; sourceTree = "<group>"; };
+		05CFDA3F1DC579180090D672 /* GTGlyphDrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphDrawerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		053B54051DA8027200557B29 /* Frameworks */ = {
+		0567D73B1DC5759000D418E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CFDA391DC577970090D672 /* GTGlyphData.framework in Frameworks */,
+				05CFDA3C1DC5785E0090D672 /* KiwiGraphics.framework in Frameworks */,
+				05CFDA3E1DC578710090D672 /* KiwiControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		053B53FF1DA8027200557B29 = {
+		0567D7351DC5759000D418E3 = {
 			isa = PBXGroup;
 			children = (
-				0588D49C1DA802DC00BFCEE5 /* Source */,
-				053B540B1DA8027200557B29 /* GTGlyphData */,
-				053B540A1DA8027200557B29 /* Products */,
+				0567D7411DC5759000D418E3 /* Source */,
+				05CFDA3A1DC577B90090D672 /* Reference */,
+				0567D7401DC5759000D418E3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		053B540A1DA8027200557B29 /* Products */ = {
+		0567D7401DC5759000D418E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				053B54091DA8027200557B29 /* GTGlyphData.framework */,
+				0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		053B540B1DA8027200557B29 /* GTGlyphData */ = {
+		0567D7411DC5759000D418E3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				053B540D1DA8027200557B29 /* Info.plist */,
-			);
-			path = GTGlyphData;
-			sourceTree = "<group>";
-		};
-		0588D49C1DA802DC00BFCEE5 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				053B540C1DA8027200557B29 /* GTGlyphData.h */,
-				0588D49D1DA8040B00BFCEE5 /* GTGlyphCharacter.swift */,
-				0568BD391DB3AED000A9EB3E /* GTGlyphSentence.swift */,
+				0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */,
+				05CFDA3F1DC579180090D672 /* GTGlyphDrawerView.swift */,
+				0567D7431DC5759000D418E3 /* Info.plist */,
 			);
 			name = Source;
 			path = ../Source;
 			sourceTree = SOURCE_ROOT;
 		};
+		05CFDA3A1DC577B90090D672 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				05CFDA3D1DC578710090D672 /* KiwiControls.framework */,
+				05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */,
+				05CFDA381DC577970090D672 /* GTGlyphData.framework */,
+			);
+			name = Reference;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		053B54061DA8027200557B29 /* Headers */ = {
+		0567D73C1DC5759000D418E3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				053B540E1DA8027200557B29 /* GTGlyphData.h in Headers */,
+				0567D7441DC5759000D418E3 /* GTGlyphGraphics.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXLegacyTarget section */
-		05CFC8881DC5738000AB91D3 /* Install */ = {
+		05C13DC71DC7B733004B6763 /* Install */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "-f ../../Script/install_ios.mk";
-			buildConfigurationList = 05CFC8891DC5738000AB91D3 /* Build configuration list for PBXLegacyTarget "Install" */;
+			buildConfigurationList = 05C13DCA1DC7B733004B6763 /* Build configuration list for PBXLegacyTarget "Install" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "";
 			dependencies = (
-				05CFC88D1DC5738B00AB91D3 /* PBXTargetDependency */,
+				05C13DCC1DC7B73A004B6763 /* PBXTargetDependency */,
 			);
 			name = Install;
 			passBuildSettingsInEnvironment = 1;
@@ -109,66 +118,66 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		053B54081DA8027200557B29 /* GTGlyphData */ = {
+		0567D73E1DC5759000D418E3 /* GTGlyphGraphics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 053B54111DA8027200557B29 /* Build configuration list for PBXNativeTarget "GTGlyphData" */;
+			buildConfigurationList = 0567D7471DC5759000D418E3 /* Build configuration list for PBXNativeTarget "GTGlyphGraphics" */;
 			buildPhases = (
-				053B54041DA8027200557B29 /* Sources */,
-				053B54051DA8027200557B29 /* Frameworks */,
-				053B54061DA8027200557B29 /* Headers */,
-				053B54071DA8027200557B29 /* Resources */,
+				0567D73A1DC5759000D418E3 /* Sources */,
+				0567D73B1DC5759000D418E3 /* Frameworks */,
+				0567D73C1DC5759000D418E3 /* Headers */,
+				0567D73D1DC5759000D418E3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GTGlyphData;
-			productName = GTGlyphData;
-			productReference = 053B54091DA8027200557B29 /* GTGlyphData.framework */;
+			name = GTGlyphGraphics;
+			productName = GTGlyphGraphics;
+			productReference = 0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		053B54001DA8027200557B29 /* Project object */ = {
+		0567D7361DC5759000D418E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Steel Wheels Project";
 				TargetAttributes = {
-					053B54081DA8027200557B29 = {
-						CreatedOnToolsVersion = 8.0;
+					0567D73E1DC5759000D418E3 = {
+						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = TR2DNF3P93;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
-					05CFC8881DC5738000AB91D3 = {
+					05C13DC71DC7B733004B6763 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = TR2DNF3P93;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 053B54031DA8027200557B29 /* Build configuration list for PBXProject "GTGlyphData" */;
+			buildConfigurationList = 0567D7391DC5759000D418E3 /* Build configuration list for PBXProject "GTGlyphGraphics" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 053B53FF1DA8027200557B29;
-			productRefGroup = 053B540A1DA8027200557B29 /* Products */;
+			mainGroup = 0567D7351DC5759000D418E3;
+			productRefGroup = 0567D7401DC5759000D418E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				053B54081DA8027200557B29 /* GTGlyphData */,
-				05CFC8881DC5738000AB91D3 /* Install */,
+				0567D73E1DC5759000D418E3 /* GTGlyphGraphics */,
+				05C13DC71DC7B733004B6763 /* Install */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		053B54071DA8027200557B29 /* Resources */ = {
+		0567D73D1DC5759000D418E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,27 +187,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		053B54041DA8027200557B29 /* Sources */ = {
+		0567D73A1DC5759000D418E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0568BD3A1DB3AED000A9EB3E /* GTGlyphSentence.swift in Sources */,
-				0588D49E1DA8040B00BFCEE5 /* GTGlyphCharacter.swift in Sources */,
+				05CFDA401DC579180090D672 /* GTGlyphDrawerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		05CFC88D1DC5738B00AB91D3 /* PBXTargetDependency */ = {
+		05C13DCC1DC7B73A004B6763 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 053B54081DA8027200557B29 /* GTGlyphData */;
-			targetProxy = 05CFC88C1DC5738B00AB91D3 /* PBXContainerItemProxy */;
+			target = 0567D73E1DC5759000D418E3 /* GTGlyphGraphics */;
+			targetProxy = 05C13DCB1DC7B73A004B6763 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		053B540F1DA8027200557B29 /* Debug */ = {
+		0567D7451DC5759000D418E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +224,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -226,6 +233,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/local/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -240,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -252,7 +260,7 @@
 			};
 			name = Debug;
 		};
-		053B54101DA8027200557B29 /* Release */ = {
+		0567D7461DC5759000D418E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +278,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -280,6 +287,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/local/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -288,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -299,7 +307,7 @@
 			};
 			name = Release;
 		};
-		053B54121DA8027200557B29 /* Debug */ = {
+		0567D7481DC5759000D418E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -309,21 +317,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.GTGlyphData";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.GTGlyphGraphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		053B54131DA8027200557B29 /* Release */ = {
+		0567D7491DC5759000D418E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -333,20 +338,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.GTGlyphData";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.GTGlyphGraphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = NO;
-				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		05CFC88A1DC5738000AB91D3 /* Debug */ = {
+		05C13DC81DC7B733004B6763 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUGGING_SYMBOLS = YES;
@@ -360,7 +362,7 @@
 			};
 			name = Debug;
 		};
-		05CFC88B1DC5738000AB91D3 /* Release */ = {
+		05C13DC91DC7B733004B6763 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -374,33 +376,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		053B54031DA8027200557B29 /* Build configuration list for PBXProject "GTGlyphData" */ = {
+		0567D7391DC5759000D418E3 /* Build configuration list for PBXProject "GTGlyphGraphics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				053B540F1DA8027200557B29 /* Debug */,
-				053B54101DA8027200557B29 /* Release */,
+				0567D7451DC5759000D418E3 /* Debug */,
+				0567D7461DC5759000D418E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		053B54111DA8027200557B29 /* Build configuration list for PBXNativeTarget "GTGlyphData" */ = {
+		0567D7471DC5759000D418E3 /* Build configuration list for PBXNativeTarget "GTGlyphGraphics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				053B54121DA8027200557B29 /* Debug */,
-				053B54131DA8027200557B29 /* Release */,
+				0567D7481DC5759000D418E3 /* Debug */,
+				0567D7491DC5759000D418E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05CFC8891DC5738000AB91D3 /* Build configuration list for PBXLegacyTarget "Install" */ = {
+		05C13DCA1DC7B733004B6763 /* Build configuration list for PBXLegacyTarget "Install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05CFC88A1DC5738000AB91D3 /* Debug */,
-				05CFC88B1DC5738000AB91D3 /* Release */,
+				05C13DC81DC7B733004B6763 /* Debug */,
+				05C13DC91DC7B733004B6763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 053B54001DA8027200557B29 /* Project object */;
+	rootObject = 0567D7361DC5759000D418E3 /* Project object */;
 }
