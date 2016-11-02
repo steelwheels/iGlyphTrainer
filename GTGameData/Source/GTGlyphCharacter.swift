@@ -140,7 +140,7 @@ public enum GTGlyphCharacter
 	case XM
 	case You ;	case Other
 
-	func title() -> String {
+	public func title() -> String {
 		let result: String
 		switch self {
 		case .Abandon:		result = "Abandon"
@@ -329,7 +329,7 @@ public enum GTGlyphCharacter
 		return result
 	}
 
-	func stroke() -> Array<(Int, Int)> {
+	public func stroke() -> Array<(Int, Int)> {
 		let result: Array<(Int, Int)>
 		switch self {
 		case .Abandon:		result = [( 3, 4), ( 4, 9), ( 9, 7), ( 7, 10), (10, 1)]
