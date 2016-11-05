@@ -12,6 +12,7 @@
 		05659C671DC8F18F0043B24A /* GTState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05659C661DC8F18F0043B24A /* GTState.swift */; };
 		05659C6B1DC8F28D0043B24A /* Canary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6A1DC8F28D0043B24A /* Canary.framework */; };
 		05B72DE31DC8EE40006E52FA /* GTGameData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B72DE11DC8EE40006E52FA /* GTGameData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F4FD061DCD4AC9001A0EEE /* GTGlyphPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		05B72DDE1DC8EE40006E52FA /* GTGameData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGameData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B72DE11DC8EE40006E52FA /* GTGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGameData.h; sourceTree = "<group>"; };
 		05B72DE21DC8EE40006E52FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphPreference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				05659C661DC8F18F0043B24A /* GTState.swift */,
 				05659C5C1DC8F0AC0043B24A /* GTGlyphCharacter.swift */,
 				05659C5D1DC8F0AC0043B24A /* GTGlyphSentence.swift */,
+				05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */,
 			);
 			name = Source;
 			path = ../Source;
@@ -192,6 +195,7 @@
 				05659C5F1DC8F0AC0043B24A /* GTGlyphSentence.swift in Sources */,
 				05659C671DC8F18F0043B24A /* GTState.swift in Sources */,
 				05659C5E1DC8F0AC0043B24A /* GTGlyphCharacter.swift in Sources */,
+				05F4FD061DCD4AC9001A0EEE /* GTGlyphPreference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +391,7 @@
 				05659C631DC8F0C50043B24A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05B72DD81DC8EE40006E52FA /* Build configuration list for PBXProject "GTGameData" */ = {
 			isa = XCConfigurationList;

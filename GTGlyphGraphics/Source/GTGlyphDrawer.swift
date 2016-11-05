@@ -17,7 +17,7 @@ private class GTVertexDrawer: KCGraphicsLayer
 	public init(bounds b: CGRect, color c: CGColor){
 		let center = b.center
 		let radius = min(b.size.width, b.size.height)/2.0
-		mEclipse  = KGEclipse(center: center, innerRadius: radius*0.4, outerRadius: radius)
+		mEclipse  = KGEclipse(center: center, innerRadius: radius*0.5, outerRadius: radius)
 		mGradient = KGGradientTable.sharedGradientTable.gradient(forColor: c)
 		super.init(bounds: b)
 	}
@@ -43,7 +43,7 @@ public class GTGlyphDrawer: KCGraphicsLayer
 		let vradius = mGlyphShape.elementRadius
 		let vbounds = CGRect(origin: CGPoint.zero, size: CGSize(width: vradius, height: vradius))
 
-		let vdrawer = GTVertexDrawer(bounds: vbounds, color: KGColorTable.gold.cgColor)
+		let vdrawer = GTVertexDrawer(bounds: vbounds, color: GTGlyphPreference.glyphVertexColor)
 		mVerticeDrawer = KCRepetitiveDrawer(bounds: b, elementDrawer: vdrawer)
 
 		let halfradius = vradius / 2.0
@@ -56,9 +56,14 @@ public class GTGlyphDrawer: KCGraphicsLayer
 	}
 
 	open override func drawContent(context ctxt:CGContext, bounds bnd:CGRect, dirtyRect drect:CGRect){
+		/* Draw vertices */
 		mVerticeDrawer.drawContent(context: ctxt, bounds: bnd, dirtyRect: drect)
+
+		/* Draw strokes */
 		if let glyph = glyphCharacter {
-			ctxt.setStrokeColor(KGColorTable.gold.cgColor)
+			ctxt.setLineWidth(GTGlyphPreference.glyphStrokeWidth)
+			ctxt.setLineCap(.round)
+			ctxt.setStrokeColor(GTGlyphPreference.glyphStrokeColor)
 			let stroke = glyph.stroke()
 			for (fromidx, toidx) in stroke {
 				let fromvt = mGlyphShape.vertices[fromidx]

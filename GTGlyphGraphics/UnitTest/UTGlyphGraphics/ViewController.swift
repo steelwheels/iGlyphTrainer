@@ -30,6 +30,12 @@ class ViewController: KCViewController
 		background.color = KGColorTable.black.cgColor
 		mGraphicsDrawer.addLayer(layer: background)
 
+		/* Add GlyphDrawer */
+		let glyphdrawer = GTGlyphDrawer(bounds: bounds)
+		mGraphicsDrawer.addLayer(layer: glyphdrawer)
+
+		glyphdrawer.glyphCharacter = .Destiny
+		
 		mGraphicsView!.drawCallback = {
 			(context:CGContext, bounds:CGRect, dirtyRect:CGRect) -> Void in
 			if ViewController.DO_DEBUG {
