@@ -30,6 +30,10 @@ class ViewController: KCViewController
 		background.color = KGColorTable.black.cgColor
 		mGraphicsDrawer.addLayer(layer: background)
 
+		/* Add GlyphVertex */
+		let verticedrawer = GTVerticesDrawer(bounds: bounds)
+		mGraphicsDrawer.addLayer(layer: verticedrawer)
+
 		/* Add GlyphDrawer */
 		let glyphdrawer = GTGlyphDrawer(bounds: bounds)
 		mGraphicsDrawer.addLayer(layer: glyphdrawer)

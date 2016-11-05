@@ -16,6 +16,7 @@
 		0567D7441DC5759000D418E3 /* GTGlyphGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		057C8D871DCA3E3A00FECA25 /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
 		057C8D881DCA3E3F00FECA25 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
+		05C32D9B1DCE05330036CD0D /* GTVerticesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C32D9A1DCE05330036CD0D /* GTVerticesDrawer.swift */; };
 		05CFDA3C1DC5785E0090D672 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
 		05CFDA3E1DC578710090D672 /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
 		05CFDA401DC579180090D672 /* GTGlyphDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFDA3F1DC579180090D672 /* GTGlyphDrawer.swift */; };
@@ -50,6 +51,7 @@
 		0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGlyphGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGlyphGraphics.h; sourceTree = "<group>"; };
 		0567D7431DC5759000D418E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		05C32D9A1DCE05330036CD0D /* GTVerticesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTVerticesDrawer.swift; sourceTree = "<group>"; };
 		05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KiwiGraphics.framework; path = ../../../../local/Frameworks/KiwiGraphics.framework; sourceTree = "<group>"; };
 		05CFDA3D1DC578710090D672 /* KiwiControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KiwiControls.framework; path = ../../../../local/Frameworks/KiwiControls.framework; sourceTree = "<group>"; };
 		05CFDA3F1DC579180090D672 /* GTGlyphDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphDrawer.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */,
+				05C32D9A1DCE05330036CD0D /* GTVerticesDrawer.swift */,
 				05CFDA3F1DC579180090D672 /* GTGlyphDrawer.swift */,
 				0567D7431DC5759000D418E3 /* Info.plist */,
 			);
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C32D9B1DCE05330036CD0D /* GTVerticesDrawer.swift in Sources */,
 				05CFDA401DC579180090D672 /* GTGlyphDrawer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
