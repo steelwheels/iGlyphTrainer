@@ -30,29 +30,22 @@ private class GTVertexDrawer: KCGraphicsLayer
 	}
 }
 
-public class GTVerticesDrawer: KCGraphicsLayer
+public class GTVerticesDrawer: KCRepetitiveDrawer
 {
-	private var mRepetitiveDrawer:	KCRepetitiveDrawer
 	private var mGlyphShape:	KGGlyph
 
-	public override init(bounds b: CGRect){
+	public init(bounds b: CGRect){
 		mGlyphShape = KGGlyph(bounds: b)
 
 		let vradius = mGlyphShape.elementRadius
 		let vbounds = CGRect(origin: CGPoint.zero, size: CGSize(width: vradius, height: vradius))
-
 		let vdrawer = GTVertexDrawer(bounds: vbounds)
-		mRepetitiveDrawer = KCRepetitiveDrawer(bounds: b, elementDrawer: vdrawer)
+		super.init(bounds: b, elementDrawer: vdrawer)
+
 		let halfradius = vradius / 2.0
 		for vertex in mGlyphShape.vertices {
 			let pt = CGPoint(x: vertex.x - halfradius, y: vertex.y - halfradius)
-			mRepetitiveDrawer.add(location: pt)
+			super.add(location: pt)
 		}
-
-		super.init(bounds: b)
-	}
-
-	public override func drawContent(context ctxt:CGContext, bounds bnd:CGRect, dirtyRect drect:CGRect){
-		mRepetitiveDrawer.drawContent(context: ctxt, bounds: bnd, dirtyRect: drect)
 	}
 }
