@@ -16,6 +16,13 @@
 		0567D7441DC5759000D418E3 /* GTGlyphGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		057C8D871DCA3E3A00FECA25 /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
 		057C8D881DCA3E3F00FECA25 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
+		0598F60D1DD896CC00FCFFB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0598F60C1DD896CC00FCFFB6 /* AppDelegate.swift */; };
+		0598F60F1DD896CC00FCFFB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0598F60E1DD896CC00FCFFB6 /* ViewController.swift */; };
+		0598F6121DD896CC00FCFFB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0598F6101DD896CC00FCFFB6 /* Main.storyboard */; };
+		0598F6141DD896CC00FCFFB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0598F6131DD896CC00FCFFB6 /* Assets.xcassets */; };
+		0598F6171DD896CC00FCFFB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0598F6151DD896CC00FCFFB6 /* LaunchScreen.storyboard */; };
+		0599BC241DD8980100BA656E /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
+		0599BC251DD8980400BA656E /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
 		05C32D9B1DCE05330036CD0D /* GTVerticesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C32D9A1DCE05330036CD0D /* GTVerticesDrawer.swift */; };
 		05C32D9D1DCE13AF0036CD0D /* GTGlyphEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C32D9C1DCE13AF0036CD0D /* GTGlyphEditor.swift */; };
 		05CFDA3C1DC5785E0090D672 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
@@ -25,6 +32,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		055DD07A1DCA3B6D00DCA22C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0567D7361DC5759000D418E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05C13DC71DC7B733004B6763;
+			remoteInfo = Install;
+		};
+		0598F61C1DD896D700FCFFB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0567D7361DC5759000D418E3 /* Project object */;
 			proxyType = 1;
@@ -52,6 +66,13 @@
 		0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGlyphGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGlyphGraphics.h; sourceTree = "<group>"; };
 		0567D7431DC5759000D418E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		0598F60A1DD896CC00FCFFB6 /* UTGlyphEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTGlyphEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0598F60C1DD896CC00FCFFB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0598F60E1DD896CC00FCFFB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0598F6111DD896CC00FCFFB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0598F6131DD896CC00FCFFB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0598F6161DD896CC00FCFFB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0598F6181DD896CC00FCFFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05C32D9A1DCE05330036CD0D /* GTVerticesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTVerticesDrawer.swift; sourceTree = "<group>"; };
 		05C32D9C1DCE13AF0036CD0D /* GTGlyphEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphEditor.swift; sourceTree = "<group>"; };
 		05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KiwiGraphics.framework; path = ../../../../local/Frameworks/KiwiGraphics.framework; sourceTree = "<group>"; };
@@ -76,6 +97,15 @@
 				05CFDA3C1DC5785E0090D672 /* KiwiGraphics.framework in Frameworks */,
 				05CFDA3E1DC578710090D672 /* KiwiControls.framework in Frameworks */,
 				05659C6D1DC900970043B24A /* GTGameData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0598F6071DD896CC00FCFFB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0599BC251DD8980400BA656E /* KiwiControls.framework in Frameworks */,
+				0599BC241DD8980100BA656E /* KiwiGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +140,7 @@
 			children = (
 				0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */,
 				055DD0681DCA3B6400DCA22C /* UTGlyphGraphics.app */,
+				0598F60A1DD896CC00FCFFB6 /* UTGlyphEditor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,11 +161,25 @@
 		057C8D861DCA3C3E00FECA25 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				0598F60B1DD896CC00FCFFB6 /* UTGlyphEditor */,
 				055DD0691DCA3B6400DCA22C /* UTGlyphGraphics */,
 			);
 			name = UnitTest;
 			path = ../UnitTest;
 			sourceTree = SOURCE_ROOT;
+		};
+		0598F60B1DD896CC00FCFFB6 /* UTGlyphEditor */ = {
+			isa = PBXGroup;
+			children = (
+				0598F60C1DD896CC00FCFFB6 /* AppDelegate.swift */,
+				0598F60E1DD896CC00FCFFB6 /* ViewController.swift */,
+				0598F6101DD896CC00FCFFB6 /* Main.storyboard */,
+				0598F6131DD896CC00FCFFB6 /* Assets.xcassets */,
+				0598F6151DD896CC00FCFFB6 /* LaunchScreen.storyboard */,
+				0598F6181DD896CC00FCFFB6 /* Info.plist */,
+			);
+			path = UTGlyphEditor;
+			sourceTree = "<group>";
 		};
 		05CFDA3A1DC577B90090D672 /* Reference */ = {
 			isa = PBXGroup;
@@ -214,6 +259,24 @@
 			productReference = 0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		0598F6091DD896CC00FCFFB6 /* UTGlyphEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0598F6191DD896CC00FCFFB6 /* Build configuration list for PBXNativeTarget "UTGlyphEditor" */;
+			buildPhases = (
+				0598F6061DD896CC00FCFFB6 /* Sources */,
+				0598F6071DD896CC00FCFFB6 /* Frameworks */,
+				0598F6081DD896CC00FCFFB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0598F61D1DD896D700FCFFB6 /* PBXTargetDependency */,
+			);
+			name = UTGlyphEditor;
+			productName = UTGlyphEditor;
+			productReference = 0598F60A1DD896CC00FCFFB6 /* UTGlyphEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,6 +296,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = TR2DNF3P93;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					0598F6091DD896CC00FCFFB6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TR2DNF3P93;
 						ProvisioningStyle = Automatic;
 					};
 					05C13DC71DC7B733004B6763 = {
@@ -258,6 +326,7 @@
 				0567D73E1DC5759000D418E3 /* GTGlyphGraphics */,
 				05C13DC71DC7B733004B6763 /* Install */,
 				055DD0671DCA3B6400DCA22C /* UTGlyphGraphics */,
+				0598F6091DD896CC00FCFFB6 /* UTGlyphEditor */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +346,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0598F6081DD896CC00FCFFB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0598F6171DD896CC00FCFFB6 /* LaunchScreen.storyboard in Resources */,
+				0598F6141DD896CC00FCFFB6 /* Assets.xcassets in Resources */,
+				0598F6121DD896CC00FCFFB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +381,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0598F6061DD896CC00FCFFB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0598F60F1DD896CC00FCFFB6 /* ViewController.swift in Sources */,
+				0598F60D1DD896CC00FCFFB6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -309,6 +397,11 @@
 			isa = PBXTargetDependency;
 			target = 05C13DC71DC7B733004B6763 /* Install */;
 			targetProxy = 055DD07A1DCA3B6D00DCA22C /* PBXContainerItemProxy */;
+		};
+		0598F61D1DD896D700FCFFB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05C13DC71DC7B733004B6763 /* Install */;
+			targetProxy = 0598F61C1DD896D700FCFFB6 /* PBXContainerItemProxy */;
 		};
 		05C13DCC1DC7B73A004B6763 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -330,6 +423,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				055DD0741DCA3B6400DCA22C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0598F6101DD896CC00FCFFB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0598F6111DD896CC00FCFFB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0598F6151DD896CC00FCFFB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0598F6161DD896CC00FCFFB6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -509,6 +618,37 @@
 			};
 			name = Release;
 		};
+		0598F61A1DD896CC00FCFFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = ../UnitTest/UTGlyphEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(HOME)/local/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.UTGlyphEditor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0598F61B1DD896CC00FCFFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = ../UnitTest/UTGlyphEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(HOME)/local/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.UTGlyphEditor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		05C13DC81DC7B733004B6763 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,6 +700,15 @@
 			buildConfigurations = (
 				0567D7481DC5759000D418E3 /* Debug */,
 				0567D7491DC5759000D418E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0598F6191DD896CC00FCFFB6 /* Build configuration list for PBXNativeTarget "UTGlyphEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0598F61A1DD896CC00FCFFB6 /* Debug */,
+				0598F61B1DD896CC00FCFFB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,31 +1,33 @@
 //
 //  ViewController.swift
-//  UTGlyphGraphics
+//  UTGlyphEditor
 //
-//  Created by Tomoo Hamada on 2016/11/03.
+//  Created by Tomoo Hamada on 2016/11/13.
 //  Copyright © 2016年 Steel Wheels Project. All rights reserved.
 //
 
 import UIKit
-import GTGlyphGraphics
 import KiwiControls
+import KiwiGraphics
+import GTGlyphGraphics
 
-class ViewController: KCViewController
+class ViewController: UIViewController
 {
-    
 	@IBOutlet weak var mGraphicsView: KCGraphicsView!
 	private var mGraphicsDrawer = KCGraphicsDrawer()
 
 	private static let DO_DEBUG = false
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
 	override func viewDidLayoutSubviews() {
-		let bounds = mGraphicsView.bounds
+		super.viewDidLayoutSubviews()
 
+		let bounds = mGraphicsView.bounds
+		
 		/* Add Background */
 		let background = KCBackgroundDrawer(bounds: bounds)
 		background.color = KGColorTable.black.cgColor
@@ -35,11 +37,9 @@ class ViewController: KCViewController
 		let verticedrawer = GTVerticesDrawer(bounds: bounds)
 		mGraphicsDrawer.addLayer(layer: verticedrawer)
 
-		/* Add GlyphDrawer */
-		let glyphdrawer = GTGlyphDrawer(bounds: bounds)
-		mGraphicsDrawer.addLayer(layer: glyphdrawer)
-
-		glyphdrawer.glyphCharacter = .Destiny
+		/* Add GlyphEditor */
+		let glypheditor = GTGlyphEditor(bounds: bounds)
+		mGraphicsDrawer.addLayer(layer: glypheditor)
 		
 		mGraphicsView!.drawCallback = {
 			(context:CGContext, bounds:CGRect, dirtyRect:CGRect) -> Void in
@@ -54,7 +54,7 @@ class ViewController: KCViewController
 			return self.mGraphicsDrawer.mouseEvent(event: event, at: point)
 		}
 	}
-
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
