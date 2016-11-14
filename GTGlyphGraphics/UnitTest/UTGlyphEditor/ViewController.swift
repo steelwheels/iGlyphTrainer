@@ -10,17 +10,19 @@ import UIKit
 import KiwiControls
 import KiwiGraphics
 import GTGlyphGraphics
+import GTGameData
 
-class ViewController: UIViewController
+class ViewController: KCViewController
 {
 	@IBOutlet weak var mGraphicsView: KCGraphicsView!
 	private var mGraphicsDrawer = KCGraphicsDrawer()
-
 	private static let DO_DEBUG = false
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+
+		/* Set state */
+		self.state = GTState()
 	}
 
 	override func viewDidLayoutSubviews() {
@@ -38,7 +40,9 @@ class ViewController: UIViewController
 		mGraphicsDrawer.addLayer(layer: verticedrawer)
 
 		/* Add GlyphEditor */
-		let glypheditor = GTGlyphEditor(bounds: bounds)
+		let state = self.state as! GTState
+		state.scene = .EditScene
+		let glypheditor = GTGlyphEditor(state: state, bounds: bounds)
 		mGraphicsDrawer.addLayer(layer: glypheditor)
 		
 		mGraphicsView!.drawCallback = {
@@ -60,6 +64,12 @@ class ViewController: UIViewController
 		// Dispose of any resources that can be recreated.
 	}
 
-
+	open override func observe(state s: CNState){
+		if let state = s as? GTState {
+			print("state: \(state.description)")
+		} else {
+			fatalError("Invalid state")
+		}
+	}
 }
 
