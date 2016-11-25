@@ -12,9 +12,7 @@ import KiwiControls
 
 class ViewController: KCViewController
 {
-    
 	@IBOutlet weak var mGraphicsView: KCGraphicsView!
-	private var mGraphicsDrawer = KCGraphicsDrawer()
 
 	private static let DO_DEBUG = false
 
@@ -26,33 +24,19 @@ class ViewController: KCViewController
 	override func viewDidLayoutSubviews() {
 		let bounds = mGraphicsView.bounds
 
-		/* Add Background */
-		let background = KCBackgroundDrawer(bounds: bounds)
-		background.color = KGColorTable.black.cgColor
-		mGraphicsDrawer.addLayer(layer: background)
+		/* Add background layer */
+		let backgroundLayer = KCBackgroundLayer(frame: bounds)
+		backgroundLayer.color = KGColorTable.black.cgColor
+		mGraphicsView.rootLayer.addSublayer(backgroundLayer)
 
-		/* Add GlyphVertex */
-		let verticedrawer = GTVerticesDrawer(bounds: bounds)
-		mGraphicsDrawer.addLayer(layer: verticedrawer)
+		/* Add vertices layer */
+		let verticesLayer = GTVerticesLayer(frame: bounds)
+		mGraphicsView.rootLayer.addSublayer(verticesLayer)
 
-		/* Add GlyphDrawer */
-		let glyphdrawer = GTGlyphDrawer(bounds: bounds)
-		mGraphicsDrawer.addLayer(layer: glyphdrawer)
-
-		glyphdrawer.glyphCharacter = .Destiny
-		
-		mGraphicsView!.drawCallback = {
-			(context:CGContext, bounds:CGRect, dirtyRect:CGRect) -> Void in
-			if ViewController.DO_DEBUG {
-				Swift.print("ViewController.drawCallback: bounds:\(bounds.description) dirty:\(dirtyRect.description)")
-			}
-			self.mGraphicsDrawer.drawContent(context: context, bounds: bounds, dirtyRect: dirtyRect)
-		}
-
-		mGraphicsView!.mouseEventCallback = {
-			(event: KCMouseEvent, point: CGPoint) -> KCMouseEventResult in
-			return self.mGraphicsDrawer.mouseEvent(event: event, at: point)
-		}
+		/* Drawer */
+		let glyphdrawer = GTGlyphDrawLayer(frame: bounds)
+		mGraphicsView.rootLayer.addSublayer(glyphdrawer)
+		glyphdrawer.glyphCharacter = .Human
 	}
 
 	override func didReceiveMemoryWarning() {
