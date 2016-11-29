@@ -26,6 +26,8 @@
                                 <rect key="frame" x="16" y="316" width="343" height="343"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="343" id="4f6-1f-rSL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="EnD-MB-z0d"/>
                                     <constraint firstAttribute="width" constant="343" id="JoD-dJ-m2J"/>
                                     <constraint firstAttribute="height" constant="343" id="U65-BP-ibl"/>
                                 </constraints>
@@ -34,7 +36,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hcS-10-Uxi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="07l-WD-a0L"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hcS-10-Uxi" secondAttribute="bottom" constant="8" id="68C-PO-PoZ"/>
                             <constraint firstItem="hcS-10-Uxi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="L6d-CU-pRx"/>
+                            <constraint firstItem="hcS-10-Uxi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ewt-BL-Env"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hcS-10-Uxi" secondAttribute="bottom" constant="8" id="mYg-sB-b3U"/>
                         </constraints>
                     </view>

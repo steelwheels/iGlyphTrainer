@@ -15,7 +15,6 @@ import GTGameData
 class ViewController: KCViewController
 {
 	@IBOutlet weak var mGraphicsView: KCGraphicsView!
-	private var mGraphicsDrawer = KCGraphicsDrawer()
 	private static let DO_DEBUG = false
 	
 	override func viewDidLoad() {
@@ -29,34 +28,19 @@ class ViewController: KCViewController
 		super.viewDidLayoutSubviews()
 
 		let bounds = mGraphicsView.bounds
-		
-		/* Add Background */
-		let background = KCBackgroundDrawer(bounds: bounds)
-		background.color = KGColorTable.black.cgColor
-		mGraphicsDrawer.addLayer(layer: background)
 
-		/* Add GlyphVertex */
-		let verticedrawer = GTVerticesDrawer(bounds: bounds)
-		mGraphicsDrawer.addLayer(layer: verticedrawer)
+		/* Add background layer */
+		let backgroundLayer = KCBackgroundLayer(frame: bounds)
+		backgroundLayer.color = KGColorTable.black.cgColor
+		mGraphicsView.rootLayer.addSublayer(backgroundLayer)
 
-		/* Add GlyphEditor */
-		let state = self.state as! GTState
-		state.scene = .EditScene
-		let glypheditor = GTGlyphEditor(state: state, bounds: bounds)
-		mGraphicsDrawer.addLayer(layer: glypheditor)
-		
-		mGraphicsView!.drawCallback = {
-			(context:CGContext, bounds:CGRect, dirtyRect:CGRect) -> Void in
-			if ViewController.DO_DEBUG {
-				Swift.print("ViewController.drawCallback: bounds:\(bounds.description) dirty:\(dirtyRect.description)")
-			}
-			self.mGraphicsDrawer.drawContent(context: context, bounds: bounds, dirtyRect: dirtyRect)
-		}
+		/* Add vertices layer */
+		let verticesLayer = GTVerticesLayer(frame: bounds)
+		mGraphicsView.rootLayer.addSublayer(verticesLayer)
 
-		mGraphicsView!.mouseEventCallback = {
-			(event: KCMouseEvent, point: CGPoint) -> CGRect in
-			return self.mGraphicsDrawer.mouseEvent(event: event, at: point)
-		}
+		/* Editor */
+		let strokelayer = GTGlyphEditLayer(frame: bounds)
+		mGraphicsView.rootLayer.addSublayer(strokelayer)
 	}
 	
 	override func didReceiveMemoryWarning() {

@@ -34,14 +34,23 @@ public class GTGlyphDrawLayer: KCLayer
 	}
 
 	open override func drawContent(in context: CGContext){
+		context.setLineWidth(GTGlyphPreference.glyphStrokeWidth)
+		context.setStrokeColor(GTGlyphPreference.glyphStrokeColor)
+		context.setLineCap(.round)
 		if let c = mGlyphCharacter {
-			context.setLineWidth(GTGlyphPreference.glyphStrokeWidth)
-			context.setStrokeColor(GTGlyphPreference.glyphStrokeColor)
-			for (fromidx, toidx) in c.stroke() {
-				let frompt = mGlyph.vertices[fromidx]
-				let topt   = mGlyph.vertices[toidx]
-				context.move(to: frompt)
-				context.addLine(to: topt)
+			let strokes = c.stroke()
+			if strokes.count > 0 {
+				let (fromidx0, toidx0) = strokes[0]
+				context.move(to: mGlyph.vertices[fromidx0])
+				context.addLine(to: mGlyph.vertices[toidx0])
+				var previdx = toidx0
+				for (fromidx, toidx) in strokes.dropFirst(1) {
+					if fromidx != previdx {
+						context.move(to: mGlyph.vertices[fromidx])
+					}
+					context.addLine(to: mGlyph.vertices[toidx])
+					previdx = toidx
+				}
 			}
 			context.strokePath()
 		}
