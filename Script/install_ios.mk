@@ -6,23 +6,25 @@
 
 INSTALL_PATH ?= $(HOME)/local/Frameworks
 
-OS_DIR     = $(BUILD_DIR)/Release-iphoneos/
-SIM_DIR	   = $(BUILD_DIR)/Release-iphonesimulator/
+OS_DIR     = $(INSTALL_PATH)/iphoneos
+SIM_DIR	   = $(INSTALL_PATH)/iphonesimulator
 
 install: dummy
 	# Build framework for device
-	xcodebuild build -scheme $(PROJECT_NAME) \
+	xcodebuild install -scheme $(PROJECT_NAME) \
 	  -project $(PROJECT_NAME).xcodeproj \
 	  -configuration Release \
 	  -sdk iphoneos \
-	  ONLY_ACTIVE_ARCH=NO DSTROOT=/
+	  ONLY_ACTIVE_ARCH=NO DSTROOT=/ \
+	  INSTALL_PATH=$(INSTALL_PATH)/iphoneos
 
 	# Build framework for simulator
-	xcodebuild build -scheme $(PROJECT_NAME) \
+	xcodebuild install -scheme $(PROJECT_NAME) \
 	  -project $(PROJECT_NAME).xcodeproj \
 	  -configuration Release \
 	  -sdk iphonesimulator \
-	  ONLY_ACTIVE_ARCH=NO DSTROOT=/
+	  ONLY_ACTIVE_ARCH=NO DSTROOT=/ \
+	  INSTALL_PATH=$(INSTALL_PATH)/iphonesimulator
 
  	# Copy framework
 	(cd $(OS_DIR); tar cf - $(PROJECT_NAME).framework) \
