@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0549E3BE1DF421B90013021A /* GTStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549E3BD1DF421B90013021A /* GTStartState.swift */; };
+		0549E3C01DF433340013021A /* GTQuestionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549E3BF1DF433340013021A /* GTQuestionState.swift */; };
+		0549E3C21DF433C50013021A /* GTAnswerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549E3C11DF433C50013021A /* GTAnswerState.swift */; };
+		0549E3C41DF434210013021A /* GTSubState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549E3C31DF434210013021A /* GTSubState.swift */; };
+		0549E3C61DF4357E0013021A /* GTCheckState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549E3C51DF4357E0013021A /* GTCheckState.swift */; };
 		05659C5E1DC8F0AC0043B24A /* GTGlyphCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05659C5C1DC8F0AC0043B24A /* GTGlyphCharacter.swift */; };
 		05659C5F1DC8F0AC0043B24A /* GTGlyphSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05659C5D1DC8F0AC0043B24A /* GTGlyphSentence.swift */; };
-		05659C671DC8F18F0043B24A /* GTState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05659C661DC8F18F0043B24A /* GTState.swift */; };
+		05659C671DC8F18F0043B24A /* GTMainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05659C661DC8F18F0043B24A /* GTMainState.swift */; };
 		05659C6B1DC8F28D0043B24A /* Canary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6A1DC8F28D0043B24A /* Canary.framework */; };
 		05B72DE31DC8EE40006E52FA /* GTGameData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B72DE11DC8EE40006E52FA /* GTGameData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F4FD061DCD4AC9001A0EEE /* GTGlyphPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */; };
@@ -26,14 +31,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05659C5C1DC8F0AC0043B24A /* GTGlyphCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphCharacter.swift; sourceTree = "<group>"; };
-		05659C5D1DC8F0AC0043B24A /* GTGlyphSentence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphSentence.swift; sourceTree = "<group>"; };
-		05659C661DC8F18F0043B24A /* GTState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTState.swift; sourceTree = "<group>"; };
+		0549E3BD1DF421B90013021A /* GTStartState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTStartState.swift; path = State/GTStartState.swift; sourceTree = "<group>"; };
+		0549E3BF1DF433340013021A /* GTQuestionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTQuestionState.swift; path = State/GTQuestionState.swift; sourceTree = "<group>"; };
+		0549E3C11DF433C50013021A /* GTAnswerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTAnswerState.swift; path = State/GTAnswerState.swift; sourceTree = "<group>"; };
+		0549E3C31DF434210013021A /* GTSubState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTSubState.swift; path = State/GTSubState.swift; sourceTree = "<group>"; };
+		0549E3C51DF4357E0013021A /* GTCheckState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTCheckState.swift; path = State/GTCheckState.swift; sourceTree = "<group>"; };
+		05659C5C1DC8F0AC0043B24A /* GTGlyphCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTGlyphCharacter.swift; path = Glyph/GTGlyphCharacter.swift; sourceTree = "<group>"; };
+		05659C5D1DC8F0AC0043B24A /* GTGlyphSentence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTGlyphSentence.swift; path = Glyph/GTGlyphSentence.swift; sourceTree = "<group>"; };
+		05659C661DC8F18F0043B24A /* GTMainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTMainState.swift; path = State/GTMainState.swift; sourceTree = "<group>"; };
 		05659C6A1DC8F28D0043B24A /* Canary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Canary.framework; path = ../../../../../local/Frameworks/Canary.framework; sourceTree = "<group>"; };
 		05B72DDE1DC8EE40006E52FA /* GTGameData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGameData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B72DE11DC8EE40006E52FA /* GTGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGameData.h; sourceTree = "<group>"; };
 		05B72DE21DC8EE40006E52FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphPreference.swift; sourceTree = "<group>"; };
+		05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTGlyphPreference.swift; path = Glyph/GTGlyphPreference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +58,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0549E3BB1DF420F60013021A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				05659C661DC8F18F0043B24A /* GTMainState.swift */,
+				0549E3C31DF434210013021A /* GTSubState.swift */,
+				0549E3BD1DF421B90013021A /* GTStartState.swift */,
+				0549E3BF1DF433340013021A /* GTQuestionState.swift */,
+				0549E3C11DF433C50013021A /* GTAnswerState.swift */,
+				0549E3C51DF4357E0013021A /* GTCheckState.swift */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		0549E3BC1DF4211D0013021A /* Glyph */ = {
+			isa = PBXGroup;
+			children = (
+				05659C5C1DC8F0AC0043B24A /* GTGlyphCharacter.swift */,
+				05659C5D1DC8F0AC0043B24A /* GTGlyphSentence.swift */,
+				05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */,
+			);
+			name = Glyph;
+			sourceTree = "<group>";
+		};
 		05B72DD41DC8EE40006E52FA = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				05B72DE11DC8EE40006E52FA /* GTGameData.h */,
-				05659C661DC8F18F0043B24A /* GTState.swift */,
-				05659C5C1DC8F0AC0043B24A /* GTGlyphCharacter.swift */,
-				05659C5D1DC8F0AC0043B24A /* GTGlyphSentence.swift */,
-				05F4FD051DCD4AC9001A0EEE /* GTGlyphPreference.swift */,
+				0549E3BB1DF420F60013021A /* State */,
+				0549E3BC1DF4211D0013021A /* Glyph */,
 			);
 			name = Source;
 			path = ../Source;
@@ -192,10 +223,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0549E3C21DF433C50013021A /* GTAnswerState.swift in Sources */,
+				0549E3C41DF434210013021A /* GTSubState.swift in Sources */,
+				0549E3C01DF433340013021A /* GTQuestionState.swift in Sources */,
 				05659C5F1DC8F0AC0043B24A /* GTGlyphSentence.swift in Sources */,
-				05659C671DC8F18F0043B24A /* GTState.swift in Sources */,
+				05659C671DC8F18F0043B24A /* GTMainState.swift in Sources */,
 				05659C5E1DC8F0AC0043B24A /* GTGlyphCharacter.swift in Sources */,
+				0549E3BE1DF421B90013021A /* GTStartState.swift in Sources */,
 				05F4FD061DCD4AC9001A0EEE /* GTGlyphPreference.swift in Sources */,
+				0549E3C61DF4357E0013021A /* GTCheckState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
