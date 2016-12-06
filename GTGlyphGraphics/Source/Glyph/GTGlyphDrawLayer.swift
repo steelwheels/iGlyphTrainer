@@ -34,8 +34,8 @@ public class GTGlyphDrawLayer: KCLayer
 	}
 
 	open override func drawContent(in context: CGContext){
-		context.setLineWidth(GTGlyphPreference.glyphStrokeWidth)
-		context.setStrokeColor(GTGlyphPreference.glyphStrokeColor)
+		context.setLineWidth(GTColorPreference.glyphStrokeWidth)
+		context.setStrokeColor(GTColorPreference.glyphStrokeColor)
 		context.setLineCap(.round)
 		if let c = mGlyphCharacter {
 			let strokes = c.stroke()

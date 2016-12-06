@@ -21,7 +21,7 @@ class ViewController: KCViewController
 		super.viewDidLoad()
 
 		/* Set state */
-		self.state = GTState()
+		self.state = GTMainState()
 	}
 
 	override func viewDidLayoutSubviews() {
@@ -49,7 +49,7 @@ class ViewController: KCViewController
 	}
 
 	open override func observe(state s: CNState){
-		if let state = s as? GTState {
+		if let state = s as? GTMainState {
 			print("state: \(state.description)")
 		} else {
 			fatalError("Invalid state")
