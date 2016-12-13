@@ -14,7 +14,7 @@ import GTGameData
 
 class ViewController: KCViewController
 {
-	@IBOutlet weak var mGraphicsView: KCGraphicsView!
+	@IBOutlet weak var mLayerView: KCLayerView!
 	private static let DO_DEBUG = false
 	
 	override func viewDidLoad() {
@@ -27,20 +27,20 @@ class ViewController: KCViewController
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 
-		let bounds = mGraphicsView.bounds
+		let bounds = mLayerView.bounds
 
 		/* Add background layer */
 		let backgroundLayer = KCBackgroundLayer(frame: bounds)
 		backgroundLayer.color = KGColorTable.black.cgColor
-		mGraphicsView.rootLayer.addSublayer(backgroundLayer)
+		mLayerView.rootLayer.addSublayer(backgroundLayer)
 
 		/* Add vertices layer */
 		let verticesLayer = GTVerticesLayer(frame: bounds)
-		mGraphicsView.rootLayer.addSublayer(verticesLayer)
+		mLayerView.rootLayer.addSublayer(verticesLayer)
 
 		/* Editor */
 		let strokelayer = GTGlyphEditLayer(frame: bounds)
-		mGraphicsView.rootLayer.addSublayer(strokelayer)
+		mLayerView.rootLayer.addSublayer(strokelayer)
 	}
 	
 	override func didReceiveMemoryWarning() {

@@ -12,7 +12,7 @@ import KiwiControls
 
 class ViewController: KCViewController
 {
-	@IBOutlet weak var mGraphicsView: KCGraphicsView!
+	@IBOutlet weak var mLayerView: KCLayerView!
 
 	private static let DO_DEBUG = false
 
@@ -22,20 +22,20 @@ class ViewController: KCViewController
 	}
 
 	override func viewDidLayoutSubviews() {
-		let bounds = mGraphicsView.bounds
+		let bounds = mLayerView.bounds
 
 		/* Add background layer */
 		let backgroundLayer = KCBackgroundLayer(frame: bounds)
 		backgroundLayer.color = KGColorTable.black.cgColor
-		mGraphicsView.rootLayer.addSublayer(backgroundLayer)
+		mLayerView.rootLayer.addSublayer(backgroundLayer)
 
 		/* Add vertices layer */
 		let verticesLayer = GTVerticesLayer(frame: bounds)
-		mGraphicsView.rootLayer.addSublayer(verticesLayer)
+		mLayerView.rootLayer.addSublayer(verticesLayer)
 
 		/* Drawer */
 		let glyphdrawer = GTGlyphDrawLayer(frame: bounds)
-		mGraphicsView.rootLayer.addSublayer(glyphdrawer)
+		mLayerView.rootLayer.addSublayer(glyphdrawer)
 		glyphdrawer.glyphCharacter = .Human
 	}
 

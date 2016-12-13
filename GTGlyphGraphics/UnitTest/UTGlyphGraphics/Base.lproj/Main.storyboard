@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDo-mY-kSZ" customClass="KCGraphicsView" customModule="KiwiControls">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDo-mY-kSZ" customClass="KCLayerView" customModule="KiwiControls">
                                 <rect key="frame" x="16" y="304" width="343" height="343"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -37,7 +37,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mGraphicsView" destination="ZDo-mY-kSZ" id="fEa-Jh-WOo"/>
+                        <outlet property="mLayerView" destination="ZDo-mY-kSZ" id="fEa-Jh-WOo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

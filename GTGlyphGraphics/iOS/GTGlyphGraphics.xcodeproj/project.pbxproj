@@ -22,11 +22,10 @@
 		055DD0751DCA3B6400DCA22C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055DD0731DCA3B6400DCA22C /* LaunchScreen.storyboard */; };
 		05659C6D1DC900970043B24A /* GTGameData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6C1DC900970043B24A /* GTGameData.framework */; };
 		0567D7441DC5759000D418E3 /* GTGlyphGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0569622B1DF43FCE00821177 /* GTProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569622A1DF43FCE00821177 /* GTProgressView.swift */; };
+		0569622B1DF43FCE00821177 /* GTProgressLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569622A1DF43FCE00821177 /* GTProgressLayer.swift */; };
 		056B7CEB1DE921470033261A /* GTGlyphEditLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056B7CEA1DE921470033261A /* GTGlyphEditLayer.swift */; };
 		057C8D871DCA3E3A00FECA25 /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
 		057C8D881DCA3E3F00FECA25 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
-		058AE49A1DF5BDBA006AA2DE /* GTProgressSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AE4991DF5BDBA006AA2DE /* GTProgressSymbol.swift */; };
 		0598F60D1DD896CC00FCFFB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0598F60C1DD896CC00FCFFB6 /* AppDelegate.swift */; };
 		0598F60F1DD896CC00FCFFB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0598F60E1DD896CC00FCFFB6 /* ViewController.swift */; };
 		0598F6121DD896CC00FCFFB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0598F6101DD896CC00FCFFB6 /* Main.storyboard */; };
@@ -34,6 +33,11 @@
 		0598F6171DD896CC00FCFFB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0598F6151DD896CC00FCFFB6 /* LaunchScreen.storyboard */; };
 		0599BC241DD8980100BA656E /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
 		0599BC251DD8980400BA656E /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
+		05AC47381E00460F00A99421 /* KiwiControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3D1DC578710090D672 /* KiwiControls.framework */; };
+		05AC47391E00461200A99421 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
+		05AC473A1E00461700A99421 /* GTGameData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6C1DC900970043B24A /* GTGameData.framework */; };
+		05AC473B1E00461800A99421 /* GTGameData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6C1DC900970043B24A /* GTGameData.framework */; };
+		05AC473C1E00461900A99421 /* GTGameData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6C1DC900970043B24A /* GTGameData.framework */; };
 		05B49E511DE743C500CFF591 /* GTGlyphDrawLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B49E501DE743C500CFF591 /* GTGlyphDrawLayer.swift */; };
 		05C32D9B1DCE05330036CD0D /* GTVerticesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C32D9A1DCE05330036CD0D /* GTVerticesLayer.swift */; };
 		05CFDA3C1DC5785E0090D672 /* KiwiGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CFDA3B1DC5785E0090D672 /* KiwiGraphics.framework */; };
@@ -90,9 +94,8 @@
 		0567D73F1DC5759000D418E3 /* GTGlyphGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGlyphGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0567D7421DC5759000D418E3 /* GTGlyphGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGlyphGraphics.h; sourceTree = "<group>"; };
 		0567D7431DC5759000D418E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
-		0569622A1DF43FCE00821177 /* GTProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTProgressView.swift; path = Progress/GTProgressView.swift; sourceTree = "<group>"; };
+		0569622A1DF43FCE00821177 /* GTProgressLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTProgressLayer.swift; path = Progress/GTProgressLayer.swift; sourceTree = "<group>"; };
 		056B7CEA1DE921470033261A /* GTGlyphEditLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGlyphEditLayer.swift; sourceTree = "<group>"; };
-		058AE4991DF5BDBA006AA2DE /* GTProgressSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTProgressSymbol.swift; path = Progress/GTProgressSymbol.swift; sourceTree = "<group>"; };
 		0598F60A1DD896CC00FCFFB6 /* UTGlyphEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTGlyphEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0598F60C1DD896CC00FCFFB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0598F60E1DD896CC00FCFFB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +114,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AC47391E00461200A99421 /* KiwiGraphics.framework in Frameworks */,
+				05AC47381E00460F00A99421 /* KiwiControls.framework in Frameworks */,
 				051852B21DF70347004167F3 /* GTGlyphGraphics.framework in Frameworks */,
+				05AC473A1E00461700A99421 /* GTGameData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +128,7 @@
 				057C8D871DCA3E3A00FECA25 /* KiwiControls.framework in Frameworks */,
 				054E41141DF443D9000101D4 /* GTGlyphGraphics.framework in Frameworks */,
 				057C8D881DCA3E3F00FECA25 /* KiwiGraphics.framework in Frameworks */,
+				05AC473C1E00461900A99421 /* GTGameData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +149,7 @@
 				0599BC251DD8980400BA656E /* KiwiControls.framework in Frameworks */,
 				054E41131DF443D1000101D4 /* GTGlyphGraphics.framework in Frameworks */,
 				0599BC241DD8980100BA656E /* KiwiGraphics.framework in Frameworks */,
+				05AC473B1E00461800A99421 /* GTGameData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +228,7 @@
 		056962291DF43DF800821177 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				0569622A1DF43FCE00821177 /* GTProgressView.swift */,
-				058AE4991DF5BDBA006AA2DE /* GTProgressSymbol.swift */,
+				0569622A1DF43FCE00821177 /* GTProgressLayer.swift */,
 			);
 			name = Progress;
 			sourceTree = "<group>";
@@ -489,9 +496,8 @@
 			files = (
 				05B49E511DE743C500CFF591 /* GTGlyphDrawLayer.swift in Sources */,
 				056B7CEB1DE921470033261A /* GTGlyphEditLayer.swift in Sources */,
-				0569622B1DF43FCE00821177 /* GTProgressView.swift in Sources */,
+				0569622B1DF43FCE00821177 /* GTProgressLayer.swift in Sources */,
 				05C32D9B1DCE05330036CD0D /* GTVerticesLayer.swift in Sources */,
-				058AE49A1DF5BDBA006AA2DE /* GTProgressSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +857,7 @@
 				051852AE1DF70205004167F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		055DD0791DCA3B6400DCA22C /* Build configuration list for PBXNativeTarget "UTGlyphGraphics" */ = {
 			isa = XCConfigurationList;
