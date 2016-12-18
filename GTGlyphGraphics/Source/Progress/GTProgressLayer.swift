@@ -14,7 +14,7 @@ public enum GTProgressKind {
 	case Answer
 }
 
-public class GTProgressLayer: KCGraphicsLayer
+public class GTProgressLayer: KCLayer
 {
 	private enum StepState {
 		case Active
@@ -29,108 +29,129 @@ public class GTProgressLayer: KCGraphicsLayer
 	private static let MAX_STEP_NUM: Int = 5
 
 	private var mKind:		GTProgressKind
-	private var mStepNum:		Int
-	private var mSymbolSize:	CGSize
 	private var mSymbols:		Array<Symbol>
 
-	private var mActiveSymbol:	CGImage?
-	private var mInactiveSymbol:	CGImage?
+	private var mActiveSymbol:	CGImage
+	private var mInactiveSymbol:	CGImage
 
-	public init(kind knd: GTProgressKind, stepNum snum: Int, frame frm: CGRect){
-		mKind		= knd
-		mStepNum	= snum
-		mSymbols	= []
+	public init(kind knd: GTProgressKind, frame frm: CGRect){
+		mKind			= knd
+		mSymbols		= []
 
-		var symbounds = GTProgressLayer.calcSymbolBounds(stepNum: snum, frame: frm)
-		mSymbolSize = symbounds.size
-		
-		for _ in 0..<snum {
-			let symol = Symbol(state: .Inactive, bounds: symbounds)
-			mSymbols.append(symol)
-			symbounds.origin.x += symbounds.size.width
+		let color: CGColor
+		switch mKind {
+		case .Answer:	color = GTColorPreference.answerProgressColor
+		case .Question:	color = GTColorPreference.questionProgressColor
 		}
+
+		let symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: 1, frame: frm)
+		let size      = symbounds.size
+
+		mActiveSymbol   = GTProgressLayer.allocateActiveSymbol(symbolSize: size, color: color)
+		mInactiveSymbol = GTProgressLayer.allocateInactiveSymbol(symbolSize: size, color: color)
+
 		super.init(frame: frm)
-		self.layerDrawer = {
-			(size: CGSize, context: CGContext) -> Void in
-			self.drawSymbols(size: size, context: context)
-		}
 	}
 
 	public required init?(coder decoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	private static func calcSymbolBounds(stepNum snum: Int, frame frm: CGRect) -> CGRect {
+	var mPreviousProgress = GTSubState.NO_PROGRESS
+
+	public override func observe(state s: CNState)
+	{
+		Swift.print("observe at GTProgressLayer")
+		if let state = s as? GTSubState {
+			//Swift.print("observe")
+
+			var doupdate = false
+
+			if mSymbols.count != state.sequenceNum {
+				mSymbols = []
+				let seqnum = state.sequenceNum
+				var symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: seqnum, frame: frame)
+				for _ in 0..<seqnum {
+					let symol = Symbol(state: .Inactive, bounds: symbounds)
+					mSymbols.append(symol)
+					symbounds.origin.x += symbounds.size.width
+				}
+				mPreviousProgress = GTSubState.NO_PROGRESS
+				doupdate = true
+			}
+
+			if mPreviousProgress != state.progress {
+				/* Inactivate all symbols */
+				for i in 0..<mSymbols.count {
+					mSymbols[i].state = .Inactive
+				}
+				/* Active only one */
+				let newprogress = state.progress
+				if 0<=newprogress && newprogress < mSymbols.count {
+					mSymbols[newprogress].state = .Active
+				}
+
+				mPreviousProgress = newprogress
+				doupdate = true
+			}
+
+			if doupdate {
+				//Swift.print("setNeedsDisplay")
+				setNeedsDisplay()
+			}
+		}
+	}
+
+	private static func calcSymbolBounds(sequenceNum snum:Int, frame frm: CGRect) -> CGRect {
 		let width  = min(frm.size.width / CGFloat(MAX_STEP_NUM), frm.size.height)
 		let x      = (frm.size.width  - width * CGFloat(snum)) / 2.0
 		let y	   = (frm.size.height - width) / 2.0
 		return CGRect(x: x, y: y, width: width, height: width)
 	}
 
-	private func drawSymbols(size sz: CGSize, context ctxt: CGContext){
-
-		let actimage   = allocateActiveSymbol()
-		let inactimage = allocateInactiveSymbol()
+	open override func drawContent(in context: CGContext){
+		//Swift.print("drawSymbols - begin")
 		for symbol in mSymbols {
 			let image: CGImage
 			if symbol.state == .Active {
-				image = actimage
+				image = mActiveSymbol
 			} else {
-				image = inactimage
+				image = mInactiveSymbol
 			}
 			//Swift.print("drawSymbols: \(symbol.bounds.description)")
-			ctxt.draw(image, in: symbol.bounds)
+			context.draw(image, in: symbol.bounds)
 		}
+		//Swift.print("drawSymbols - end")
 	}
 
-	private func allocateActiveSymbol() -> CGImage {
-		if let symbol = mActiveSymbol {
-			return symbol
-		} else {
-			let newimage = KGImage.generate(size: mSymbolSize, drawFunc: {
-				(size: CGSize, context: CGContext) -> Void in
-				let gradient = KGGradientTable.sharedGradientTable.gradient(forColor: color)
-				context.draw(hexagon: hexagon, withGradient: gradient)
-			})
-			let newsymbol = newimage.toCGImage
-			mActiveSymbol = newsymbol
-			return newsymbol
-		}
+	private static func allocateActiveSymbol(symbolSize size: CGSize, color col: CGColor) -> CGImage {
+		let newimage = KGImage.generate(size: size, drawFunc: {
+			(size: CGSize, context: CGContext) -> Void in
+			context.setStrokeColor(col)
+			context.setLineWidth(GTColorPreference.progressStrokeWidth)
+			context.setLineCap(.round)
+			let gradient = KGGradientTable.sharedGradientTable.gradient(forColor: col)
+			context.draw(hexagon: hexagon(symbolSize: size), withGradient: gradient)
+		})
+		let newsymbol = newimage.toCGImage
+		return newsymbol
 	}
 
-	private func allocateInactiveSymbol() -> CGImage {
-		if let symbol = mInactiveSymbol {
-			return symbol
-		} else {
-			let newimage = KGImage.generate(size: mSymbolSize, drawFunc: {
-				(size: CGSize, context: CGContext) -> Void in
-				context.setStrokeColor(color)
-				context.setLineWidth(GTColorPreference.progressStrokeWidth)
-				context.setLineCap(.round)
-				context.draw(hexagon: hexagon, withGradient: nil)
-			})
-			let newsymbol = newimage.toCGImage
-			mInactiveSymbol = newsymbol
-			return newsymbol
-		}
+	private static func allocateInactiveSymbol(symbolSize size: CGSize, color col: CGColor) -> CGImage {
+		let newimage = KGImage.generate(size: size, drawFunc: {
+			(size: CGSize, context: CGContext) -> Void in
+			context.setStrokeColor(col)
+			context.setLineWidth(GTColorPreference.progressStrokeWidth)
+			context.setLineCap(.round)
+			context.draw(hexagon: hexagon(symbolSize: size), withGradient: nil)
+		})
+		let newsymbol = newimage.toCGImage
+		return newsymbol
 	}
 
-	private var hexagon: KGHexagon {
-		get {
-			let center   = CGPoint(x: mSymbolSize.width/2.0, y: mSymbolSize.height/2.0)
-			return KGHexagon(center: center, radius: center.x)
-		}
-	}
-
-	private var color: CGColor {
-		get {
-			let color: CGColor
-			switch mKind {
-			case .Answer:	color = GTColorPreference.answerProgressColor
-			case .Question:	color = GTColorPreference.questionProgressColor
-			}
-			return color
-		}
+	private class func hexagon(symbolSize size: CGSize) -> KGHexagon {
+		let center   = CGPoint(x: size.width/2.0, y: size.height/2.0)
+		return KGHexagon(center: center, radius: center.x)
 	}
 }
 
