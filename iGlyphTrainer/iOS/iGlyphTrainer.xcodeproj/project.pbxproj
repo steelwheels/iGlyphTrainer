@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05A0B4561E0AD505001515DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B4551E0AD505001515DB /* AppDelegate.swift */; };
+		05A0B4581E0AD505001515DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0B4571E0AD505001515DB /* ViewController.swift */; };
+		05A0B45B1E0AD505001515DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A0B4591E0AD505001515DB /* Main.storyboard */; };
+		05A0B45D1E0AD505001515DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A0B45C1E0AD505001515DB /* Assets.xcassets */; };
+		05A0B4601E0AD505001515DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A0B45E1E0AD505001515DB /* LaunchScreen.storyboard */; };
+		05C8A1211E0AD82400191BD4 /* Canary.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05C8A1201E0AD82400191BD4 /* Canary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05C8A1231E0AD8B000191BD4 /* KiwiGraphics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05C8A1221E0AD8B000191BD4 /* KiwiGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05C8A1251E0AD8DA00191BD4 /* KiwiControls.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05C8A1241E0AD8DA00191BD4 /* KiwiControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05C8A1271E0AD8FE00191BD4 /* GTGameData.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05C8A1261E0AD8FE00191BD4 /* GTGameData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05C8A1291E0AD91100191BD4 /* GTGlyphGraphics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05C8A1281E0AD91100191BD4 /* GTGlyphGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05C8A11F1E0AD76E00191BD4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				05C8A1291E0AD91100191BD4 /* GTGlyphGraphics.framework in CopyFiles */,
+				05C8A1271E0AD8FE00191BD4 /* GTGameData.framework in CopyFiles */,
+				05C8A1251E0AD8DA00191BD4 /* KiwiControls.framework in CopyFiles */,
+				05C8A1231E0AD8B000191BD4 /* KiwiGraphics.framework in CopyFiles */,
+				05C8A1211E0AD82400191BD4 /* Canary.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05A0B4521E0AD505001515DB /* iGlyphTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlyphTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A0B4551E0AD505001515DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05A0B4571E0AD505001515DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05A0B45A1E0AD505001515DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05A0B45C1E0AD505001515DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05A0B45F1E0AD505001515DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05A0B4611E0AD505001515DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05C8A1201E0AD82400191BD4 /* Canary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Canary.framework; path = ../../../../local/Frameworks/Canary.framework; sourceTree = "<group>"; };
+		05C8A1221E0AD8B000191BD4 /* KiwiGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KiwiGraphics.framework; path = ../../../../local/Frameworks/KiwiGraphics.framework; sourceTree = "<group>"; };
+		05C8A1241E0AD8DA00191BD4 /* KiwiControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KiwiControls.framework; path = ../../../../local/Frameworks/KiwiControls.framework; sourceTree = "<group>"; };
+		05C8A1261E0AD8FE00191BD4 /* GTGameData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTGameData.framework; path = ../../../../local/Frameworks/GTGameData.framework; sourceTree = "<group>"; };
+		05C8A1281E0AD91100191BD4 /* GTGlyphGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTGlyphGraphics.framework; path = ../../../../local/Frameworks/GTGlyphGraphics.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05A0B44F1E0AD505001515DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05A0B4491E0AD504001515DB = {
+			isa = PBXGroup;
+			children = (
+				05C8A11E1E0AD69F00191BD4 /* iGlyphTrainer */,
+				05A0B4541E0AD505001515DB /* Source */,
+				05A0B4531E0AD505001515DB /* Products */,
+				05A0B4671E0AD584001515DB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		05A0B4531E0AD505001515DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05A0B4521E0AD505001515DB /* iGlyphTrainer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05A0B4541E0AD505001515DB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				05A0B4551E0AD505001515DB /* AppDelegate.swift */,
+				05A0B4571E0AD505001515DB /* ViewController.swift */,
+				05A0B4591E0AD505001515DB /* Main.storyboard */,
+				05A0B45C1E0AD505001515DB /* Assets.xcassets */,
+				05A0B45E1E0AD505001515DB /* LaunchScreen.storyboard */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		05A0B4671E0AD584001515DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05C8A1281E0AD91100191BD4 /* GTGlyphGraphics.framework */,
+				05C8A1261E0AD8FE00191BD4 /* GTGameData.framework */,
+				05C8A1241E0AD8DA00191BD4 /* KiwiControls.framework */,
+				05C8A1221E0AD8B000191BD4 /* KiwiGraphics.framework */,
+				05C8A1201E0AD82400191BD4 /* Canary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05C8A11E1E0AD69F00191BD4 /* iGlyphTrainer */ = {
+			isa = PBXGroup;
+			children = (
+				05A0B4611E0AD505001515DB /* Info.plist */,
+			);
+			name = iGlyphTrainer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05A0B4511E0AD505001515DB /* iGlyphTrainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A0B4641E0AD505001515DB /* Build configuration list for PBXNativeTarget "iGlyphTrainer" */;
+			buildPhases = (
+				05A0B44E1E0AD505001515DB /* Sources */,
+				05A0B44F1E0AD505001515DB /* Frameworks */,
+				05A0B4501E0AD505001515DB /* Resources */,
+				05C8A11F1E0AD76E00191BD4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iGlyphTrainer;
+			productName = iGlyphTrainer;
+			productReference = 05A0B4521E0AD505001515DB /* iGlyphTrainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05A0B44A1E0AD504001515DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Steel Wheels Project";
+				TargetAttributes = {
+					05A0B4511E0AD505001515DB = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TR2DNF3P93;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 05A0B44D1E0AD504001515DB /* Build configuration list for PBXProject "iGlyphTrainer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05A0B4491E0AD504001515DB;
+			productRefGroup = 05A0B4531E0AD505001515DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05A0B4511E0AD505001515DB /* iGlyphTrainer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05A0B4501E0AD505001515DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A0B4601E0AD505001515DB /* LaunchScreen.storyboard in Resources */,
+				05A0B45D1E0AD505001515DB /* Assets.xcassets in Resources */,
+				05A0B45B1E0AD505001515DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05A0B44E1E0AD505001515DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A0B4581E0AD505001515DB /* ViewController.swift in Sources */,
+				05A0B4561E0AD505001515DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		05A0B4591E0AD505001515DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05A0B45A1E0AD505001515DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05A0B45E1E0AD505001515DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05A0B45F1E0AD505001515DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05A0B4621E0AD505001515DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05A0B4631E0AD505001515DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05A0B4651E0AD505001515DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.iGlyphTrainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		05A0B4661E0AD505001515DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "steel-wheels-project.iGlyphTrainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05A0B44D1E0AD504001515DB /* Build configuration list for PBXProject "iGlyphTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A0B4621E0AD505001515DB /* Debug */,
+				05A0B4631E0AD505001515DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A0B4641E0AD505001515DB /* Build configuration list for PBXNativeTarget "iGlyphTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A0B4651E0AD505001515DB /* Debug */,
+				05A0B4661E0AD505001515DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05A0B44A1E0AD504001515DB /* Project object */;
+}

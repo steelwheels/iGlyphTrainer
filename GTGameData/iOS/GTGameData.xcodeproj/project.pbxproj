@@ -17,6 +17,7 @@
 		05659C671DC8F18F0043B24A /* GTMainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05659C661DC8F18F0043B24A /* GTMainState.swift */; };
 		05659C6B1DC8F28D0043B24A /* Canary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6A1DC8F28D0043B24A /* Canary.framework */; };
 		05B72DE31DC8EE40006E52FA /* GTGameData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B72DE11DC8EE40006E52FA /* GTGameData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05D4C5091E084F6600AE6FFC /* GTFontPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4C5081E084F6600AE6FFC /* GTFontPreference.swift */; };
 		05F4FD061DCD4AC9001A0EEE /* GTColorPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4FD051DCD4AC9001A0EEE /* GTColorPreference.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		05B72DDE1DC8EE40006E52FA /* GTGameData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTGameData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B72DE11DC8EE40006E52FA /* GTGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGameData.h; sourceTree = "<group>"; };
 		05B72DE21DC8EE40006E52FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D4C5081E084F6600AE6FFC /* GTFontPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTFontPreference.swift; sourceTree = "<group>"; };
 		05F4FD051DCD4AC9001A0EEE /* GTColorPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTColorPreference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				05F4FD051DCD4AC9001A0EEE /* GTColorPreference.swift */,
+				05D4C5081E084F6600AE6FFC /* GTFontPreference.swift */,
 			);
 			path = Preference;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D4C5091E084F6600AE6FFC /* GTFontPreference.swift in Sources */,
 				0549E3C21DF433C50013021A /* GTAnswerState.swift in Sources */,
 				0549E3C41DF434210013021A /* GTSubState.swift in Sources */,
 				0549E3C01DF433340013021A /* GTQuestionState.swift in Sources */,
