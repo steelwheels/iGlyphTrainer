@@ -22,7 +22,7 @@ class ViewController: UIViewController
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view, typically from a nib
-		mTimer = KCTimer(startValue: 4.0, stopValue: 1.0, stepValue: -1.0)
+		mTimer = KCTimer(startValue: 4.0, stopValue: 0.0, stepValue: -1.0)
 		mTimer?.updateCallback = {
 			(time:TimeInterval) -> Bool in
 			if let qstate = self.mLayerView.state as? GTSubState {

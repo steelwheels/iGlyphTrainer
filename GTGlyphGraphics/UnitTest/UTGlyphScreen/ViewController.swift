@@ -1,14 +1,17 @@
 //
 //  ViewController.swift
-//  iGlyphTrainer
+//  UTGlyphScreen
 //
-//  Created by Tomoo Hamada on 2016/12/22.
+//  Created by Tomoo Hamada on 2016/12/30.
 //  Copyright © 2016年 Steel Wheels Project. All rights reserved.
 //
 
 import UIKit
+import GTGlyphGraphics
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+	@IBOutlet weak var mGlyphScreen: GTGlyphScreen!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,7 +22,5 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-
 }
 

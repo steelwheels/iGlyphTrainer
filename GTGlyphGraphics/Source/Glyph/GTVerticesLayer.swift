@@ -18,7 +18,7 @@ private class GTVertexDrawer
 		let center = b.center
 		let radius = min(b.size.width, b.size.height)/2.0
 		mEclipse  = KGEclipse(center: center, innerRadius: radius*0.5, outerRadius: radius)
-		mGradient = KGGradientTable.sharedGradientTable.gradient(forColor: GTColorPreference.glyphVertexColor)
+		mGradient = KGGradientTable.sharedGradientTable.Gradient(forColor: GTColorPreference.glyphVertexColor)
 	}
 
 	public func draw(in context:CGContext){

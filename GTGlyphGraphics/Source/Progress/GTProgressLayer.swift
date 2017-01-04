@@ -57,36 +57,36 @@ public class GTProgressLayer: KCLayer
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	var mPreviousProgress = GTSubState.NO_PROGRESS
+	var mPreviousProgress = GTGameState.NO_PROGRESS
 
 	public override func observe(state s: CNState)
 	{
 		Swift.print("observe at GTProgressLayer")
-		if let state = s as? GTSubState {
+		if let state = s as? GTGameState {
 			//Swift.print("observe")
 
 			var doupdate = false
 
-			if mSymbols.count != state.sequenceNum {
+			if mSymbols.count != state.glyphSequence.count {
 				mSymbols = []
-				let seqnum = state.sequenceNum
+				let seqnum = state.glyphSequence.count
 				var symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: seqnum, frame: frame)
 				for _ in 0..<seqnum {
-					let symol = Symbol(state: .Inactive, bounds: symbounds)
-					mSymbols.append(symol)
+					let symbol = Symbol(state: .Inactive, bounds: symbounds)
+					mSymbols.append(symbol)
 					symbounds.origin.x += symbounds.size.width
 				}
-				mPreviousProgress = GTSubState.NO_PROGRESS
+				mPreviousProgress = GTGameState.NO_PROGRESS
 				doupdate = true
 			}
 
-			if mPreviousProgress != state.progress {
+			if mPreviousProgress != state.glyphProgress {
 				/* Inactivate all symbols */
 				for i in 0..<mSymbols.count {
 					mSymbols[i].state = .Inactive
 				}
 				/* Active only one */
-				let newprogress = state.progress
+				let newprogress = state.glyphProgress
 				if 0<=newprogress && newprogress < mSymbols.count {
 					mSymbols[newprogress].state = .Active
 				}
@@ -130,7 +130,7 @@ public class GTProgressLayer: KCLayer
 			context.setStrokeColor(col)
 			context.setLineWidth(GTColorPreference.progressStrokeWidth)
 			context.setLineCap(.round)
-			let gradient = KGGradientTable.sharedGradientTable.gradient(forColor: col)
+			let gradient = KGGradientTable.sharedGradientTable.Gradient(forColor: col)
 			context.draw(hexagon: hexagon(symbolSize: size), withGradient: gradient)
 		})
 		let newsymbol = newimage.toCGImage
