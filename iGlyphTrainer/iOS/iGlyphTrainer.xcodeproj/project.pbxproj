@@ -22,6 +22,8 @@
 		05A0B45B1E0AD505001515DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A0B4591E0AD505001515DB /* Main.storyboard */; };
 		05A0B45D1E0AD505001515DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A0B45C1E0AD505001515DB /* Assets.xcassets */; };
 		05A0B4601E0AD505001515DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A0B45E1E0AD505001515DB /* LaunchScreen.storyboard */; };
+		05D107DC1E2093F5006195DB /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D107DB1E2093F5006195DB /* SetupViewController.swift */; };
+		05D107DE1E209558006195DB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D107DD1E209558006195DB /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +57,8 @@
 		05A0B45C1E0AD505001515DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A0B45F1E0AD505001515DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05A0B4611E0AD505001515DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D107DB1E2093F5006195DB /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		05D107DD1E209558006195DB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				05A0B4551E0AD505001515DB /* AppDelegate.swift */,
 				05A0B4571E0AD505001515DB /* GameViewController.swift */,
+				05D107DB1E2093F5006195DB /* SetupViewController.swift */,
+				05D107DD1E209558006195DB /* AboutViewController.swift */,
 				05A0B4591E0AD505001515DB /* Main.storyboard */,
 				05A0B45C1E0AD505001515DB /* Assets.xcassets */,
 				05A0B45E1E0AD505001515DB /* LaunchScreen.storyboard */,
@@ -199,6 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A0B4581E0AD505001515DB /* GameViewController.swift in Sources */,
+				05D107DC1E2093F5006195DB /* SetupViewController.swift in Sources */,
+				05D107DE1E209558006195DB /* AboutViewController.swift in Sources */,
 				05A0B4561E0AD505001515DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

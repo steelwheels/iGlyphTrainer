@@ -35,8 +35,16 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="iGlyphTrainer" id="xgU-4z-7x5">
-                                        <barButtonItem key="leftBarButtonItem" title="Setup" id="yHo-GB-3Kq"/>
-                                        <barButtonItem key="rightBarButtonItem" title="About" id="lME-3t-NaF"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Setup" id="yHo-GB-3Kq">
+                                            <connections>
+                                                <segue destination="JNh-wJ-qe6" kind="presentation" id="WuW-Q7-rCS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="About" id="lME-3t-NaF">
+                                            <connections>
+                                                <segue destination="rAw-Hv-ty0" kind="presentation" id="Aji-kU-I8J"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -68,5 +76,98 @@
             </objects>
             <point key="canvasLocation" x="28" y="143.47826086956522"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="cGm-gs-9gC">
+            <objects>
+                <viewController id="rAw-Hv-ty0" customClass="AboutViewController" customModule="iGlyphTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="acf-Rx-O6H"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQo-ey-2e5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3pE-P7-k6N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-YY-gVz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="QgV-PX-fVp"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="iGlyphTrainer" id="vYQ-Je-sCt">
+                                        <barButtonItem key="leftBarButtonItem" title="Main" id="d8g-nr-AuS">
+                                            <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="mrZ-Mq-oSW" kind="presentation" id="G4K-cc-BUL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GQP-YY-gVz" secondAttribute="trailing" id="OQY-iP-laO"/>
+                            <constraint firstItem="GQP-YY-gVz" firstAttribute="leading" secondItem="3pE-P7-k6N" secondAttribute="leading" id="qzD-Zr-WS4"/>
+                            <constraint firstItem="GQP-YY-gVz" firstAttribute="top" secondItem="acf-Rx-O6H" secondAttribute="bottom" constant="8" id="xFw-pR-c7z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZQ-sQ-2jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="143"/>
+        </scene>
+        <!--Setup View Controller-->
+        <scene sceneID="D9O-cF-vin">
+            <objects>
+                <viewController id="JNh-wJ-qe6" customClass="SetupViewController" customModule="iGlyphTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="na4-aE-F8B"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ut-9W-lrB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9LO-V2-2JL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AzB-LO-v26">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2Zx-B7-IG7"/>
+                                </constraints>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="iGlyphTrainer" id="rKZ-Mn-Ri6">
+                                        <barButtonItem key="leftBarButtonItem" title="Main" id="3Va-Lk-xNG">
+                                            <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="mrZ-Mq-oSW" kind="presentation" id="G3e-kC-OPF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AzB-LO-v26" firstAttribute="leading" secondItem="9LO-V2-2JL" secondAttribute="leading" id="k3O-U2-gza"/>
+                            <constraint firstAttribute="trailing" secondItem="AzB-LO-v26" secondAttribute="trailing" id="pgM-nH-VAa"/>
+                            <constraint firstItem="AzB-LO-v26" firstAttribute="top" secondItem="na4-aE-F8B" secondAttribute="bottom" id="vFi-jD-nmM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hU2-ez-bJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="143"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="G4K-cc-BUL"/>
+    </inferredMetricsTieBreakers>
 </document>
