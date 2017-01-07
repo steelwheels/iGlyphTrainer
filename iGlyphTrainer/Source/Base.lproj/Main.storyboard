@@ -28,6 +28,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Zq8-UK-FW1"/>
                                 </constraints>
+                                <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
