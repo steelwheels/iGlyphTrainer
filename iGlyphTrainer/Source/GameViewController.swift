@@ -9,17 +9,20 @@
 import UIKit
 import KiwiControls
 import GTGameData
+import GTGlyphGraphics
 
 class GameViewController: UIViewController
 {
 	@IBOutlet weak var mSetupBarButton: UIBarButtonItem!
 	@IBOutlet weak var mAboutBarButton: UIBarButtonItem!
 	@IBOutlet weak var mStartButton: KCButton!
+	@IBOutlet weak var mLayerView: KCLayerView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		setupStartButton()
+		setupGlyphView()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -68,6 +71,15 @@ class GameViewController: UIViewController
 			() -> Void in
 			Swift.print("start button pressed")
 		}
+	}
+
+	private func setupGlyphView() {
+		let bounds = mLayerView.bounds
+
+		/* Add vertices layer */
+		let verticesLayer = GTVerticesLayer(frame: bounds)
+		mLayerView.rootLayer.addSublayer(verticesLayer)
+		
 	}
 }
 

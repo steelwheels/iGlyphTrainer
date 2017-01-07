@@ -55,19 +55,30 @@
                                     <constraint firstAttribute="height" constant="32" id="Vdn-AI-AjS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxu-kt-ZoD" customClass="KCLayerView" customModule="KiwiControls">
+                                <rect key="frame" x="16" y="264" width="343" height="343"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="343" id="7Gr-Gg-r7X"/>
+                                    <constraint firstAttribute="width" constant="343" id="frg-LA-Ma3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kaz-VK-f9N" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="5DR-7y-oal"/>
                             <constraint firstItem="ZQe-S2-gna" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="ExZ-Q6-TZD"/>
                             <constraint firstItem="ZQe-S2-gna" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="bV2-h8-XGz"/>
+                            <constraint firstItem="gxu-kt-ZoD" firstAttribute="centerX" secondItem="jlL-su-dbJ" secondAttribute="centerX" id="jwR-4f-Ns5"/>
                             <constraint firstItem="kaz-VK-f9N" firstAttribute="top" secondItem="Yiq-xd-b8E" secondAttribute="bottom" id="kXh-sG-UMO"/>
                             <constraint firstItem="1id-NE-aAt" firstAttribute="top" secondItem="ZQe-S2-gna" secondAttribute="bottom" constant="20" id="nNN-fj-2I6"/>
                             <constraint firstAttribute="trailing" secondItem="kaz-VK-f9N" secondAttribute="trailing" id="sJ9-OY-8lW"/>
+                            <constraint firstItem="ZQe-S2-gna" firstAttribute="top" secondItem="gxu-kt-ZoD" secondAttribute="bottom" constant="8" id="zGB-TK-s0X"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mAboutBarButton" destination="lME-3t-NaF" id="pZA-em-8U7"/>
+                        <outlet property="mLayerView" destination="gxu-kt-ZoD" id="y3v-Cb-rfr"/>
                         <outlet property="mSetupBarButton" destination="yHo-GB-3Kq" id="ACX-sW-myK"/>
                         <outlet property="mStartButton" destination="ZQe-S2-gna" id="rpy-em-MQh"/>
                     </connections>
