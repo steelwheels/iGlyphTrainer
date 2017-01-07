@@ -29,6 +29,7 @@ class GameViewController: UIViewController
 
 	private func setupStartButton() {
 		mStartButton.title = "start"
+		mStartButton.setColors(colors: GTColorPreference.buttonColor)
 		mStartButton.decideVisibleCallback = {
 			(s: CNState) -> Bool? in
 			if let state = s as? GTGameState {

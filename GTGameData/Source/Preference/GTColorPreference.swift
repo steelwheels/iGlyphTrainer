@@ -7,6 +7,7 @@
 
 import Foundation
 import KiwiGraphics
+import KiwiControls
 
 public class GTColorPreference
 {
@@ -19,4 +20,7 @@ public class GTColorPreference
 	public static let glyphVertexColor: CGColor		= KGColorTable.white.cgColor
 	public static let glyphStrokeWidth: CGFloat		= 10.0
 	public static let glyphStrokeColor: CGColor		= KGColorTable.gold.cgColor
+
+	public static let buttonColor = KGColorPreference.ButtonColors(title: KGColorTable.cyan,
+		background: KGColorPreference.BackgroundColors(highlight: KGColorTable.darkGray, normal: KGColorTable.black))
 }
