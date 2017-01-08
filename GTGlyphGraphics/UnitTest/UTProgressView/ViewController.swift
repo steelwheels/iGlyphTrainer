@@ -15,37 +15,40 @@ class ViewController: UIViewController
 {
 	@IBOutlet weak var mLayerView: KCLayerView!
 
-	private var mMainState		: GTMainState = GTMainState()
+	private var mGameState		= GTGameState()
+	private var mGamePreference	= GTGamePreference.sharedPreference
 	private var mTimer		: KCTimer? = nil
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view, typically from a nib
-		mTimer = KCTimer(startValue: 4.0, stopValue: 0.0, stepValue: -1.0)
-		mTimer?.updateCallback = {
+		let timer = KCTimer()
+		timer.updateCallback = {
 			(time:TimeInterval) -> Bool in
-			if let qstate = self.mLayerView.state as? GTSubState {
+			if let state = self.mLayerView.state as? GTGameState {
 				Swift.print("timer: \(time)")
-				qstate.incrementProgress()
+				let progress = state.glyphProgress
+				if state.scene == .QuestionScene {
+					Swift.print("Increment progress: \(progress)")
+					state.incrementGlyphProgress()
+				}
 			}
 			return true
 		}
-
-		let qstate = GTQuestionState(mainState: mMainState)
-		mLayerView.state = qstate
+		mTimer = timer
 	}
 
 	override func viewDidLayoutSubviews() {
 		let progress = GTProgressLayer(kind: .Question, frame: mLayerView.bounds)
-		//progress.backgroundColor = KGColorTable.yellow.cgColor
+		mLayerView.state = mGameState
 		mLayerView.rootLayer.addSublayer(progress)
 
-		if let qstate = mLayerView.state as? GTSubState {
-			qstate.setGlyphSequence(glyphSequence: GTGlyphSentence.glyphSequence4[0])
-		}
+		mGameState.scene = .QuestionScene
 		if let timer = mTimer {
-			timer.start()
+			let interval = mGamePreference.glyphInterval
+			let seqnum   = mGameState.glyphSequenceCount
+			timer.start(startValue: interval*Double(seqnum), stopValue: 0.0, stepValue: -interval)
 		}
 	}
 
