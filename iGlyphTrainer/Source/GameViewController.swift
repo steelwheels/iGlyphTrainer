@@ -15,6 +15,7 @@ class GameViewController: UIViewController
 {
 	@IBOutlet weak var mSetupBarButton: UIBarButtonItem!
 	@IBOutlet weak var mAboutBarButton: UIBarButtonItem!
+	@IBOutlet weak var mProgressView: KCLayerView!
 	@IBOutlet weak var mStartButton: KCButton!
 	@IBOutlet weak var mLayerView: KCLayerView!
 
@@ -23,6 +24,7 @@ class GameViewController: UIViewController
 
 		let state = sharedState()
 		setupStartButton(gameState: state)
+		setupProgressView(gameState: state)
 		setupGlyphView(gameState: state)
 	}
 
@@ -73,6 +75,12 @@ class GameViewController: UIViewController
 			() -> Void in
 			Swift.print("start button pressed")
 		}
+	}
+
+	private func setupProgressView(gameState state: GTGameState) {
+		let progress = GTProgressLayer(kind: .Question, frame: mProgressView.bounds)
+		mProgressView.state = state
+		mProgressView.rootLayer.addSublayer(progress)
 	}
 
 	private func setupGlyphView(gameState state: GTGameState) {

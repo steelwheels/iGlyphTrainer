@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaz-VK-f9N">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaz-VK-f9N">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,19 +60,33 @@
                                     <constraint firstAttribute="height" constant="343" id="sMZ-Ov-Zgc"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn9-Vw-9d8" customClass="KCLayerView" customModule="KiwiControls">
+                                <rect key="frame" x="16" y="64" width="343" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Ly-Bm-HCc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="top" secondItem="kaz-VK-f9N" secondAttribute="bottom" id="AXT-kr-xqI"/>
                             <constraint firstItem="ZQe-S2-gna" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="Fii-i6-Pkm"/>
                             <constraint firstItem="gxu-kt-ZoD" firstAttribute="centerX" secondItem="jlL-su-dbJ" secondAttribute="centerX" id="G1a-yV-F2D"/>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="Glm-eG-y2p"/>
+                            <constraint firstItem="kaz-VK-f9N" firstAttribute="centerX" secondItem="mn9-Vw-9d8" secondAttribute="centerX" id="Hxe-bW-Jk5"/>
+                            <constraint firstItem="kaz-VK-f9N" firstAttribute="top" secondItem="Yiq-xd-b8E" secondAttribute="bottom" id="Irh-YE-lq6"/>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="JQX-KS-YAW"/>
                             <constraint firstItem="ZQe-S2-gna" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="P7J-9D-xmG"/>
                             <constraint firstItem="1id-NE-aAt" firstAttribute="top" secondItem="ZQe-S2-gna" secondAttribute="bottom" constant="20" id="aL0-mY-WfX"/>
+                            <constraint firstItem="kaz-VK-f9N" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="qHu-tw-WDA"/>
                             <constraint firstItem="ZQe-S2-gna" firstAttribute="top" secondItem="gxu-kt-ZoD" secondAttribute="bottom" constant="8" id="zIG-Lz-1xX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mAboutBarButton" destination="lME-3t-NaF" id="pZA-em-8U7"/>
                         <outlet property="mLayerView" destination="gxu-kt-ZoD" id="y3v-Cb-rfr"/>
+                        <outlet property="mProgressView" destination="mn9-Vw-9d8" id="1lY-eN-FF0"/>
                         <outlet property="mSetupBarButton" destination="yHo-GB-3Kq" id="ACX-sW-myK"/>
                         <outlet property="mStartButton" destination="ZQe-S2-gna" id="rpy-em-MQh"/>
                     </connections>
