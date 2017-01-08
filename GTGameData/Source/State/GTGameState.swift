@@ -84,15 +84,44 @@ public class GTGameState: CNState
 
 	private func selectSequence() -> Array<GTGlyphCharacter>
 	{
-		return []
+		let pref    = GTGamePreference.sharedPreference
+		let minnum  = UInt32(pref.minimumWordNum)
+		let maxnum  = UInt32(pref.maxmumWordNum)
+		let wordnum = random(between: minnum, and: maxnum)
+
+		var sequences: Array<Array<GTGlyphCharacter>>
+		switch wordnum {
+		case 1: sequences = GTGlyphSentence.glyphSequence1
+		case 2: sequences = GTGlyphSentence.glyphSequence2
+		case 3: sequences = GTGlyphSentence.glyphSequence3
+		case 4: sequences = GTGlyphSentence.glyphSequence4
+		case 5: sequences = GTGlyphSentence.glyphSequence5
+		default: fatalError("Illegal word num")
+		}
+
+		let seqnum = UInt32(sequences.count)
+		let seqid: UInt32
+		if seqnum > 0 {
+			seqid = random(between: 0, and: seqnum-1)
+		} else {
+			fatalError("Illegal sequence num")
+		}
+
+		return sequences[Int(seqid)]
 	}
 
 	public var glyphSequence: Array<GTGlyphCharacter> {
 		get { return mGlyphSequence }
 	}
 
+	public var glyphSequenceCount: Int {
+		get { return mGlyphSequence.count }
+	}
+
 	public var glyphProgress: Int {
-		get { return mGlyphProgress }
+		get {
+			return mGlyphProgress
+		}
 	}
 
 	public func incrementGlyphProgress(){

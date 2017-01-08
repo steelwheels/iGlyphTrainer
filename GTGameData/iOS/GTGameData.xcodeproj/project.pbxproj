@@ -13,6 +13,7 @@
 		05659C6B1DC8F28D0043B24A /* Canary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05659C6A1DC8F28D0043B24A /* Canary.framework */; };
 		05B72DE31DC8EE40006E52FA /* GTGameData.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B72DE11DC8EE40006E52FA /* GTGameData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05D4C5091E084F6600AE6FFC /* GTFontPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4C5081E084F6600AE6FFC /* GTFontPreference.swift */; };
+		05DB48C71E21111A00D3669E /* GTGamePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DB48C61E21111A00D3669E /* GTGamePreference.swift */; };
 		05F4FD061DCD4AC9001A0EEE /* GTColorPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4FD051DCD4AC9001A0EEE /* GTColorPreference.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		05B72DE11DC8EE40006E52FA /* GTGameData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTGameData.h; sourceTree = "<group>"; };
 		05B72DE21DC8EE40006E52FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D4C5081E084F6600AE6FFC /* GTFontPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTFontPreference.swift; sourceTree = "<group>"; };
+		05DB48C61E21111A00D3669E /* GTGamePreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGamePreference.swift; sourceTree = "<group>"; };
 		05F4FD051DCD4AC9001A0EEE /* GTColorPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTColorPreference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			children = (
 				05F4FD051DCD4AC9001A0EEE /* GTColorPreference.swift */,
 				05D4C5081E084F6600AE6FFC /* GTFontPreference.swift */,
+				05DB48C61E21111A00D3669E /* GTGamePreference.swift */,
 			);
 			path = Preference;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				05D4C5091E084F6600AE6FFC /* GTFontPreference.swift in Sources */,
 				05659C5F1DC8F0AC0043B24A /* GTGlyphSentence.swift in Sources */,
 				05659C671DC8F18F0043B24A /* GTGameState.swift in Sources */,
+				05DB48C71E21111A00D3669E /* GTGamePreference.swift in Sources */,
 				05659C5E1DC8F0AC0043B24A /* GTGlyphCharacter.swift in Sources */,
 				05F4FD061DCD4AC9001A0EEE /* GTColorPreference.swift in Sources */,
 			);
