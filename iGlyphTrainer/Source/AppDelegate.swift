@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import GTGameData
+
+public func sharedState() -> GTGameState
+{
+	if let appdelegate = UIApplication.shared.delegate as? AppDelegate {
+		return appdelegate.state
+	} else {
+		fatalError("No app delegate")
+	}
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	var state:  GTGameState	= GTGameState()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.

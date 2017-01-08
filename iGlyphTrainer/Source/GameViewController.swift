@@ -21,8 +21,9 @@ class GameViewController: UIViewController
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		setupStartButton()
-		setupGlyphView()
+		let state = sharedState()
+		setupStartButton(gameState: state)
+		setupGlyphView(gameState: state)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -30,7 +31,8 @@ class GameViewController: UIViewController
 		// Dispose of any resources that can be recreated.
 	}
 
-	private func setupStartButton() {
+	private func setupStartButton(gameState state: GTGameState) {
+		mStartButton.state = state
 		mStartButton.title = "Start"
 		mStartButton.setColors(colors: GTColorPreference.buttonColor)
 		mStartButton.decideVisibleCallback = {
@@ -73,13 +75,13 @@ class GameViewController: UIViewController
 		}
 	}
 
-	private func setupGlyphView() {
+	private func setupGlyphView(gameState state: GTGameState) {
+		mLayerView.state = state
 		let bounds = mLayerView.bounds
 
 		/* Add vertices layer */
 		let verticesLayer = GTVerticesLayer(frame: bounds)
 		mLayerView.rootLayer.addSublayer(verticesLayer)
-		
 	}
 }
 
