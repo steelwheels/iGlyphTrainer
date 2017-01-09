@@ -40,7 +40,7 @@ class ViewController: UIViewController
 	}
 
 	override func viewDidLayoutSubviews() {
-		let progress = GTProgressLayer(kind: .Question, frame: mLayerView.bounds)
+		let progress = GTProgressLayer(frame: mLayerView.bounds)
 		mLayerView.state = mGameState
 		mLayerView.rootLayer.addSublayer(progress)
 

@@ -26,30 +26,27 @@ public class GTProgressLayer: KCLayer
 		var bounds:	CGRect
 	}
 
-	private static let MAX_STEP_NUM: Int = 5
+	struct SceneSymbolImages {
+		var activeSymbol:	CGImage
+		var inactiveSymbol:	CGImage
+	}
 
-	private var mKind:		GTProgressKind
+	struct SymbolImages {
+		var questionScene:	SceneSymbolImages
+		var answerScene:	SceneSymbolImages
+	}
+
 	private var mSymbols:		Array<Symbol>
+	private var mSymbolImages:	SymbolImages
+	private var mCurrentImages:	SceneSymbolImages
 
-	private var mActiveSymbol:	CGImage
-	private var mInactiveSymbol:	CGImage
-
-	public init(kind knd: GTProgressKind, frame frm: CGRect){
-		mKind			= knd
-		mSymbols		= []
-
-		let color: CGColor
-		switch mKind {
-		case .Answer:	color = GTColorPreference.answerProgressColor
-		case .Question:	color = GTColorPreference.questionProgressColor
-		}
-
-		let symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: 1, frame: frm)
-		let size      = symbounds.size
-
-		mActiveSymbol   = GTProgressLayer.allocateActiveSymbol(symbolSize: size, color: color)
-		mInactiveSymbol = GTProgressLayer.allocateInactiveSymbol(symbolSize: size, color: color)
-
+	public override init(frame frm: CGRect)
+	{
+		let symbounds	= GTProgressLayer.calcSymbolBounds(sequenceNum: 1, frame: frm)
+		let size	= symbounds.size
+		mSymbols	= []
+		mSymbolImages	= GTProgressLayer.allocateImages(symbolSize: size)
+		mCurrentImages	= mSymbolImages.questionScene
 		super.init(frame: frm)
 	}
 
@@ -57,71 +54,102 @@ public class GTProgressLayer: KCLayer
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	var mPreviousProgress = GTGameState.NO_PROGRESS
+	private class func allocateImages(symbolSize size: CGSize) -> SymbolImages {
+		let qimages = allocateSceneImages(scene: .QuestionScene, symbolSize: size)
+		let aimages = allocateSceneImages(scene: .AnswerScene,   symbolSize: size)
+		return SymbolImages.init(questionScene: qimages, answerScene: aimages)
+	}
 
-	public override func observe(state s: CNState)
-	{
-		Swift.print("observe at GTProgressLayer")
+	private class func allocateSceneImages(scene s:GTScene, symbolSize size: CGSize) -> SceneSymbolImages {
+		let color = GTColorPreference.progressColor(scene: s)
+		let actsymbol   = GTProgressLayer.allocateActiveSymbol(symbolSize: size, color: color)
+		let inactsymbol = GTProgressLayer.allocateInactiveSymbol(symbolSize: size, color: color)
+		return SceneSymbolImages.init(activeSymbol: actsymbol, inactiveSymbol: inactsymbol)
+	}
+
+	private var mPreviousProgress = GTGameState.NO_PROGRESS
+
+	public override func observe(state s: CNState) {
 		if let state = s as? GTGameState {
-			//Swift.print("observe")
-
 			var doupdate = false
-
-			if mSymbols.count != state.glyphSequence.count {
-				mSymbols = []
-				let seqnum = state.glyphSequence.count
-				var symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: seqnum, frame: frame)
-				for _ in 0..<seqnum {
-					let symbol = Symbol(state: .Inactive, bounds: symbounds)
-					mSymbols.append(symbol)
-					symbounds.origin.x += symbounds.size.width
+			switch state.scene {
+			case .StartScene:
+				if state.previousScene != state.scene {
+					updateSymbols(state: state, clear: true)
+					doupdate = true
 				}
-				mPreviousProgress = GTGameState.NO_PROGRESS
-				doupdate = true
+			case .QuestionScene, .AnswerScene, .CheckScene:
+				if mPreviousProgress != state.glyphProgress {
+					updateSymbols(state: state, clear: false)
+					doupdate = true
+				}
+				mPreviousProgress = state.glyphProgress
 			}
-
-			if mPreviousProgress != state.glyphProgress {
-				/* Inactivate all symbols */
-				for i in 0..<mSymbols.count {
-					mSymbols[i].state = .Inactive
-				}
-				/* Active only one */
-				let newprogress = state.glyphProgress
-				if 0<=newprogress && newprogress < mSymbols.count {
-					mSymbols[newprogress].state = .Active
-				}
-
-				mPreviousProgress = newprogress
-				doupdate = true
+			switch state.scene {
+			case .StartScene, .CheckScene:
+				break
+			case .QuestionScene:
+				mCurrentImages = mSymbolImages.questionScene
+			case .AnswerScene:
+				mCurrentImages = mSymbolImages.answerScene
 			}
-
 			if doupdate {
-				//Swift.print("setNeedsDisplay")
 				setNeedsDisplay()
 			}
 		}
 	}
 
-	private static func calcSymbolBounds(sequenceNum snum:Int, frame frm: CGRect) -> CGRect {
-		let width  = min(frm.size.width / CGFloat(MAX_STEP_NUM), frm.size.height)
-		let x      = (frm.size.width  - width * CGFloat(snum)) / 2.0
-		let y	   = (frm.size.height - width) / 2.0
-		return CGRect(x: x, y: y, width: width, height: width)
+	private func updateSymbols(state s: GTGameState, clear c: Bool){
+		if c {
+			mSymbols = []
+		} else {
+			let newcount = s.glyphSequenceCount
+			if mSymbols.count != newcount {
+				mSymbols = []
+				var symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: newcount, frame: frame)
+				for _ in 0..<newcount {
+					let symbol = Symbol(state: .Inactive, bounds: symbounds)
+					mSymbols.append(symbol)
+					symbounds.origin.x += symbounds.size.width
+				}
+			}
+			if mPreviousProgress != s.glyphProgress {
+				/* Inactivate all symbols */
+				for i in 0..<mSymbols.count {
+					mSymbols[i].state = .Inactive
+				}
+				/* Active only one */
+				let newprogress = s.glyphProgress
+				if 0<=newprogress && newprogress < mSymbols.count {
+					mSymbols[newprogress].state = .Active
+				}
+			}
+		}
+
 	}
 
 	open override func drawContent(in context: CGContext){
-		//Swift.print("drawSymbols - begin")
-		for symbol in mSymbols {
-			let image: CGImage
-			if symbol.state == .Active {
-				image = mActiveSymbol
-			} else {
-				image = mInactiveSymbol
+		if mSymbols.count > 0 {
+			for symbol in mSymbols {
+				let image: CGImage
+				if symbol.state == .Active {
+					image = mCurrentImages.activeSymbol
+				} else {
+					image = mCurrentImages.inactiveSymbol
+				}
+				//Swift.print("drawSymbols: \(symbol.bounds.description)")
+				context.draw(image, in: symbol.bounds)
 			}
-			//Swift.print("drawSymbols: \(symbol.bounds.description)")
-			context.draw(image, in: symbol.bounds)
+		} else {
+			context.fill(bounds)
 		}
-		//Swift.print("drawSymbols - end")
+	}
+
+	private static func calcSymbolBounds(sequenceNum snum:Int, frame frm: CGRect) -> CGRect {
+		let width  = min(frm.size.width / CGFloat(GTGlyphSentence.MAX_GLYPH_SENTENCE_NUM), frm.size.height)
+		let x      = (frm.size.width  - width * CGFloat(snum)) / 2.0
+		let y	   = (frm.size.height - width) / 2.0
+		return CGRect(x: x, y: y, width: width, height: width)
 	}
 
 	private static func allocateActiveSymbol(symbolSize size: CGSize, color col: CGColor) -> CGImage {
