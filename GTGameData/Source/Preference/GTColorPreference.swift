@@ -11,6 +11,8 @@ import KiwiControls
 
 public class GTColorPreference
 {
+	public static let backgroundColor: CGColor		= KGColorTable.black.cgColor
+
 	public static func progressColor(scene s:GTScene) -> CGColor {
 		var result: CGColor
 		switch s {
@@ -25,7 +27,7 @@ public class GTColorPreference
 	public static let progressStrokeWidth: CGFloat		= 2.0
 
 	public static let timerFontColor:CGColor		= KGColorTable.gold.cgColor
-	
+
 	public static let glyphVertexColor: CGColor		= KGColorTable.white.cgColor
 	public static let glyphStrokeWidth: CGFloat		= 10.0
 	public static let glyphStrokeColor: CGColor		= KGColorTable.gold.cgColor
