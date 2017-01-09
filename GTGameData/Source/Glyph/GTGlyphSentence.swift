@@ -11,6 +11,8 @@ import Foundation
 
 public class GTGlyphSentence
 {
+	public static let MAX_GLYPH_SENTENCE_NUM = 5
+
 	public static let glyphSequence1: Array<Array<GTGlyphCharacter>> = [
 		[.Gain		],
 		[.Old		],

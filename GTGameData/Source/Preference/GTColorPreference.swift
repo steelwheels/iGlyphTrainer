@@ -11,8 +11,17 @@ import KiwiControls
 
 public class GTColorPreference
 {
-	public static let questionProgressColor: CGColor	= KGColorTable.gold.cgColor
-	public static let answerProgressColor: CGColor		= KGColorTable.cyan.cgColor
+	public static func progressColor(scene s:GTScene) -> CGColor {
+		var result: CGColor
+		switch s {
+		case .StartScene:	result = KGColorTable.gold.cgColor
+		case .QuestionScene:	result = KGColorTable.gold.cgColor
+		case .AnswerScene:	result = KGColorTable.cyan.cgColor
+		case .CheckScene:	result = KGColorTable.cyan.cgColor
+		}
+		return result
+	}
+
 	public static let progressStrokeWidth: CGFloat		= 2.0
 
 	public static let timerFontColor:CGColor		= KGColorTable.gold.cgColor
