@@ -29,15 +29,26 @@
                                     <constraint firstAttribute="height" constant="40" id="6nC-sy-wPT"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tm-om-RHX" customClass="KCButton" customModule="KiwiControls">
+                                <rect key="frame" x="16" y="607" width="343" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TiP-f7-skg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5tm-om-RHX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1S4-x1-2yR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5tm-om-RHX" secondAttribute="bottom" constant="20" id="A3E-Nu-3D8"/>
                             <constraint firstItem="krE-Su-ECq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QPj-Fg-Urs"/>
+                            <constraint firstItem="5tm-om-RHX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="S6m-Z1-Oft"/>
                             <constraint firstItem="krE-Su-ECq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ip3-06-6cm"/>
                             <constraint firstItem="krE-Su-ECq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yfM-ba-LZX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mButton" destination="5tm-om-RHX" id="hWD-AY-oGD"/>
                         <outlet property="mLayerView" destination="krE-Su-ECq" id="Yl2-kh-1Yf"/>
                     </connections>
                 </viewController>

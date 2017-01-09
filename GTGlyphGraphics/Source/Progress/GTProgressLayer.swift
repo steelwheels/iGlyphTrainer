@@ -70,6 +70,7 @@ public class GTProgressLayer: KCLayer
 	private var mPreviousProgress = GTGameState.NO_PROGRESS
 
 	public override func observe(state s: CNState) {
+		//Swift.print("GTProgressLayer.observe")
 		if let state = s as? GTGameState {
 			var doupdate = false
 			switch state.scene {
@@ -79,7 +80,7 @@ public class GTProgressLayer: KCLayer
 					doupdate = true
 				}
 			case .QuestionScene, .AnswerScene, .CheckScene:
-				if mPreviousProgress != state.glyphProgress {
+				if state.previousScene != state.scene || mPreviousProgress != state.glyphProgress {
 					updateSymbols(state: state, clear: false)
 					doupdate = true
 				}
@@ -141,6 +142,7 @@ public class GTProgressLayer: KCLayer
 				context.draw(image, in: symbol.bounds)
 			}
 		} else {
+			context.setFillColor(GTColorPreference.backgroundColor)
 			context.fill(bounds)
 		}
 	}

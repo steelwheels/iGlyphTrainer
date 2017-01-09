@@ -14,6 +14,7 @@ import KiwiControls
 class ViewController: UIViewController
 {
 	@IBOutlet weak var mLayerView: KCLayerView!
+	@IBOutlet weak var mButton: KCButton!
 
 	private var mGameState		= GTGameState()
 	private var mGamePreference	= GTGamePreference.sharedPreference
@@ -22,6 +23,9 @@ class ViewController: UIViewController
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		mGamePreference.minimumWordNum = 5
+		mGamePreference.maxmumWordNum  = 5
+		
 		// Do any additional setup after loading the view, typically from a nib
 		let timer = KCTimer()
 		timer.updateCallback = {
@@ -29,14 +33,26 @@ class ViewController: UIViewController
 			if let state = self.mLayerView.state as? GTGameState {
 				Swift.print("timer: \(time)")
 				let progress = state.glyphProgress
-				if state.scene == .QuestionScene {
-					Swift.print("Increment progress: \(progress)")
-					state.incrementGlyphProgress()
-				}
+				Swift.print("Increment progress: \(progress)")
+				state.incrementGlyphProgress()
 			}
 			return true
 		}
 		mTimer = timer
+
+		mButton.title = "Start"
+		mButton.buttonPressedCallback = {
+			() -> Void in
+			if self.mGameState.scene == .QuestionScene {
+				self.mGameState.scene = .AnswerScene
+			} else {
+				self.mGameState.scene = .QuestionScene
+			}
+			let interval = self.mGamePreference.glyphInterval
+			let seqnum   = self.mGameState.glyphSequenceCount
+			Swift.print("button pressed: interval=\(interval), seqnum=\(seqnum)")
+			timer.start(startValue: interval*Double(seqnum), stopValue: 0.0, stepValue: -interval)
+		}
 	}
 
 	override func viewDidLayoutSubviews() {
@@ -45,11 +61,6 @@ class ViewController: UIViewController
 		mLayerView.rootLayer.addSublayer(progress)
 
 		mGameState.scene = .QuestionScene
-		if let timer = mTimer {
-			let interval = mGamePreference.glyphInterval
-			let seqnum   = mGameState.glyphSequenceCount
-			timer.start(startValue: interval*Double(seqnum), stopValue: 0.0, stepValue: -interval)
-		}
 	}
 
 	override func didReceiveMemoryWarning() {
