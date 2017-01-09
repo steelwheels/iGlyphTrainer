@@ -18,6 +18,7 @@ class GameViewController: UIViewController
 	@IBOutlet weak var mProgressView: KCLayerView!
 	@IBOutlet weak var mStartButton: KCButton!
 	@IBOutlet weak var mLayerView: KCLayerView!
+	private var	   mTimer = KCTimer()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,6 +27,7 @@ class GameViewController: UIViewController
 		setupStartButton(gameState: state)
 		setupProgressView(gameState: state)
 		setupGlyphView(gameState: state)
+		setupTimer(gameState: state)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -78,7 +80,7 @@ class GameViewController: UIViewController
 	}
 
 	private func setupProgressView(gameState state: GTGameState) {
-		let progress = GTProgressLayer(kind: .Question, frame: mProgressView.bounds)
+		let progress = GTProgressLayer(frame: mProgressView.bounds)
 		mProgressView.state = state
 		mProgressView.rootLayer.addSublayer(progress)
 	}
@@ -90,6 +92,31 @@ class GameViewController: UIViewController
 		/* Add vertices layer */
 		let verticesLayer = GTVerticesLayer(frame: bounds)
 		mLayerView.rootLayer.addSublayer(verticesLayer)
+	}
+
+	private func setupTimer(gameState state: GTGameState) {
+		mTimer.updateCallback = {
+			(time:TimeInterval) -> Bool in
+			switch state.scene {
+			case .StartScene:
+				/* do nothing */
+				break
+			case .QuestionScene, .AnswerScene, .CheckScene:
+				state.incrementGlyphProgress()
+			}
+			return true
+		}
+		mTimer.doneCallback = {
+			() -> Void in
+			let nextscene: GTScene
+			switch state.scene {
+			case .StartScene:	nextscene = .QuestionScene
+			case .QuestionScene:	nextscene = .AnswerScene
+			case .AnswerScene:	nextscene = .CheckScene
+			case .CheckScene:	nextscene = .StartScene
+			}
+			state.scene = nextscene
+		}
 	}
 }
 
