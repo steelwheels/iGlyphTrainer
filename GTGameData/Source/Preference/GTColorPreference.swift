@@ -23,8 +23,12 @@ public class GTColorPreference
 		}
 		return result
 	}
-
 	public static let progressStrokeWidth: CGFloat		= 2.0
+
+	public static let hintTextColor				= KGColorPreference.TextColors(foreground: KGColorTable.darkGoldenrod4,
+	                               				                               background: KGColorTable.darkGoldenrod3)
+	public static let glyphNameTextColor			= KGColorPreference.TextColors(foreground: KGColorTable.gold,
+	                                    			                               background: KGColorTable.black)
 
 	public static let timerFontColor:CGColor		= KGColorTable.gold.cgColor
 

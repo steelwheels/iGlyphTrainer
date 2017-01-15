@@ -15,6 +15,7 @@ class GameViewController: UIViewController
 {
 	@IBOutlet weak var mSetupBarButton: UIBarButtonItem!
 	@IBOutlet weak var mAboutBarButton: UIBarButtonItem!
+	@IBOutlet weak var mHintText: KCTextField!
 	@IBOutlet weak var mProgressView: KCLayerView!
 	@IBOutlet weak var mStartButton: KCButton!
 	@IBOutlet weak var mLayerView: KCLayerView!
@@ -25,6 +26,7 @@ class GameViewController: UIViewController
 
 		let state = sharedState()
 		setupStartButton(gameState: state)
+		setupHintText(gameState: state)
 		setupProgressView(gameState: state)
 		setupGlyphView(gameState: state)
 		setupTimer(gameState: state)
@@ -77,6 +79,10 @@ class GameViewController: UIViewController
 			() -> Void in
 			Swift.print("start button pressed")
 		}
+	}
+
+	private func setupHintText(gameState state: GTGameState) {
+		mHintText.backgroundColor = KGColorTable.gold
 	}
 
 	private func setupProgressView(gameState state: GTGameState) {

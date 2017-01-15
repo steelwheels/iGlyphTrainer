@@ -25,6 +25,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaz-VK-f9N">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="crx-9w-m05"/>
+                                </constraints>
                                 <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <textAttributes key="titleTextAttributes">
@@ -49,42 +52,53 @@
                                 <rect key="frame" x="16" y="615" width="343" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="VYa-FU-v5e"/>
+                                    <constraint firstAttribute="height" constant="32" id="2eZ-3E-VcU"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxu-kt-ZoD" customClass="KCLayerView" customModule="KiwiControls">
                                 <rect key="frame" x="16" y="264" width="343" height="343"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="9nd-ws-TLL"/>
-                                    <constraint firstAttribute="height" constant="343" id="sMZ-Ov-Zgc"/>
+                                    <constraint firstAttribute="width" constant="343" id="CzQ-HN-VWY"/>
+                                    <constraint firstAttribute="height" constant="343" id="Tm4-SO-QOc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn9-Vw-9d8" customClass="KCLayerView" customModule="KiwiControls">
-                                <rect key="frame" x="16" y="64" width="343" height="40"/>
+                                <rect key="frame" x="16" y="93" width="343" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3Ly-Bm-HCc"/>
+                                    <constraint firstAttribute="height" constant="40" id="MWX-SY-cOw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfk-sF-esN" customClass="KCTextField" customModule="KiwiControls">
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="44d-J5-UjQ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="top" secondItem="kaz-VK-f9N" secondAttribute="bottom" id="AXT-kr-xqI"/>
-                            <constraint firstItem="ZQe-S2-gna" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="Fii-i6-Pkm"/>
-                            <constraint firstItem="gxu-kt-ZoD" firstAttribute="centerX" secondItem="jlL-su-dbJ" secondAttribute="centerX" id="G1a-yV-F2D"/>
-                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="Glm-eG-y2p"/>
-                            <constraint firstItem="kaz-VK-f9N" firstAttribute="centerX" secondItem="mn9-Vw-9d8" secondAttribute="centerX" id="Hxe-bW-Jk5"/>
-                            <constraint firstItem="kaz-VK-f9N" firstAttribute="top" secondItem="Yiq-xd-b8E" secondAttribute="bottom" id="Irh-YE-lq6"/>
-                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="JQX-KS-YAW"/>
-                            <constraint firstItem="ZQe-S2-gna" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="P7J-9D-xmG"/>
-                            <constraint firstItem="1id-NE-aAt" firstAttribute="top" secondItem="ZQe-S2-gna" secondAttribute="bottom" constant="20" id="aL0-mY-WfX"/>
-                            <constraint firstItem="kaz-VK-f9N" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="qHu-tw-WDA"/>
-                            <constraint firstItem="ZQe-S2-gna" firstAttribute="top" secondItem="gxu-kt-ZoD" secondAttribute="bottom" constant="8" id="zIG-Lz-1xX"/>
+                            <constraint firstAttribute="trailing" secondItem="kaz-VK-f9N" secondAttribute="trailing" id="AwK-uJ-Q4R"/>
+                            <constraint firstItem="kaz-VK-f9N" firstAttribute="top" secondItem="Yiq-xd-b8E" secondAttribute="bottom" id="CN4-De-wxp"/>
+                            <constraint firstItem="kaz-VK-f9N" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="Htk-Ah-T6g"/>
+                            <constraint firstItem="Jfk-sF-esN" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="S9E-It-79o"/>
+                            <constraint firstItem="ZQe-S2-gna" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="ZbR-wl-G6b"/>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="top" secondItem="Jfk-sF-esN" secondAttribute="bottom" constant="8" id="cDt-JB-d0C"/>
+                            <constraint firstItem="1id-NE-aAt" firstAttribute="top" secondItem="ZQe-S2-gna" secondAttribute="bottom" constant="20" id="g14-4V-cTS"/>
+                            <constraint firstItem="ZQe-S2-gna" firstAttribute="top" secondItem="gxu-kt-ZoD" secondAttribute="bottom" constant="8" id="gVc-7j-NT8"/>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="hnf-mu-9cQ"/>
+                            <constraint firstItem="gxu-kt-ZoD" firstAttribute="centerX" secondItem="jlL-su-dbJ" secondAttribute="centerX" id="k9g-AV-YXX"/>
+                            <constraint firstItem="Jfk-sF-esN" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="kgf-9D-Arv"/>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="trailing" secondItem="jlL-su-dbJ" secondAttribute="trailingMargin" id="mwI-7G-ZGs"/>
+                            <constraint firstItem="Jfk-sF-esN" firstAttribute="top" secondItem="kaz-VK-f9N" secondAttribute="bottom" id="x67-gc-8Wy"/>
+                            <constraint firstItem="ZQe-S2-gna" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leadingMargin" id="xSa-Ci-7Cn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mAboutBarButton" destination="lME-3t-NaF" id="pZA-em-8U7"/>
+                        <outlet property="mHintText" destination="Jfk-sF-esN" id="GYv-jB-xCC"/>
                         <outlet property="mLayerView" destination="gxu-kt-ZoD" id="y3v-Cb-rfr"/>
                         <outlet property="mProgressView" destination="mn9-Vw-9d8" id="1lY-eN-FF0"/>
                         <outlet property="mSetupBarButton" destination="yHo-GB-3Kq" id="ACX-sW-myK"/>

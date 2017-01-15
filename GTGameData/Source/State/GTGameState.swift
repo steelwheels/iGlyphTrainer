@@ -29,12 +29,33 @@ public enum GTScene {
 
 public class GTGameState: CNState
 {
-	public static let NO_PROGRESS		: Int = -1
+	public enum Factor: Int {
+		case Scene
+		case GlyphProgress
+	}
+
+	public static let NO_PROGRESS	: Int = -1
 
 	private var mScene		: GTScene
-	private var mPrevScene		: GTScene
 	private var mGlyphSequence	: Array<GTGlyphCharacter>
 	private var mGlyphProgress	: Int
+
+	public override init(){
+		mScene		= .StartScene
+		mGlyphSequence	= []
+		mGlyphProgress	= GTGameState.NO_PROGRESS
+
+		super.init()
+		transitScene(scene: .StartScene)
+	}
+
+	public var factor: Factor {
+		if let f = Factor(rawValue: factorValue) {
+			return f
+		} else {
+			fatalError("Invalid factor")
+		}
+	}
 
 	public var scene: GTScene {
 		get {
@@ -42,28 +63,13 @@ public class GTGameState: CNState
 		}
 		set(newscene){
 			if mScene != newscene {
-				mPrevScene = mScene
 				mScene = newscene
 				transitScene(scene: newscene)
-				self.updateState()
+				self.updateState(factorValue: Factor.Scene.rawValue)
 			}
 		}
 	}
-
-	public var previousScene: GTScene {
-		get { return mPrevScene }
-	}
 	
-	public override init(){
-		mScene		= .StartScene
-		mPrevScene	= .StartScene
-		mGlyphSequence	= []
-		mGlyphProgress	= GTGameState.NO_PROGRESS
-		
-		super.init()
-		transitScene(scene: .StartScene)
-	}
-
 	private func transitScene(scene newScene: GTScene) -> Void
 	{
 		switch newScene {
@@ -132,7 +138,7 @@ public class GTGameState: CNState
 		} else {
 			mGlyphProgress = GTGameState.NO_PROGRESS
 		}
-		self.updateState()
+		self.updateState(factorValue: Factor.GlyphProgress.rawValue)
 	}
 }
 
