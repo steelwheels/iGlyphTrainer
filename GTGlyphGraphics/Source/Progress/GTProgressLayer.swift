@@ -72,61 +72,53 @@ public class GTProgressLayer: KCLayer
 	public override func observe(state s: CNState) {
 		//Swift.print("GTProgressLayer.observe")
 		if let state = s as? GTGameState {
-			var doupdate = false
-			switch state.scene {
-			case .StartScene:
-				if state.previousScene != state.scene {
-					updateSymbols(state: state, clear: true)
-					doupdate = true
+			if state.factor == .Scene {
+				switch state.scene {
+				case .StartScene, .CheckScene:
+					break
+				case .QuestionScene:
+					mCurrentImages = mSymbolImages.questionScene
+				case .AnswerScene:
+					mCurrentImages = mSymbolImages.answerScene
 				}
-			case .QuestionScene, .AnswerScene, .CheckScene:
-				if state.previousScene != state.scene || mPreviousProgress != state.glyphProgress {
-					updateSymbols(state: state, clear: false)
-					doupdate = true
-				}
+			}
+
+			var updated = false
+			if mSymbols.count != state.glyphSequenceCount {
+				updateSymbols(symbolNum:  state.glyphSequenceCount)
+				updated = true
+				/* mSymbols.count == state.glyphSequenceCount */
+			}
+			if updated || (mPreviousProgress != state.glyphProgress) {
+				updateProgress(progress: state.glyphProgress)
 				mPreviousProgress = state.glyphProgress
+				updated = true
 			}
-			switch state.scene {
-			case .StartScene, .CheckScene:
-				break
-			case .QuestionScene:
-				mCurrentImages = mSymbolImages.questionScene
-			case .AnswerScene:
-				mCurrentImages = mSymbolImages.answerScene
-			}
-			if doupdate {
+			if updated {
 				setNeedsDisplay()
 			}
 		}
 	}
 
-	private func updateSymbols(state s: GTGameState, clear c: Bool){
-		if c {
-			mSymbols = []
-		} else {
-			let newcount = s.glyphSequenceCount
-			if mSymbols.count != newcount {
-				mSymbols = []
-				var symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: newcount, frame: frame)
-				for _ in 0..<newcount {
-					let symbol = Symbol(state: .Inactive, bounds: symbounds)
-					mSymbols.append(symbol)
-					symbounds.origin.x += symbounds.size.width
-				}
-			}
-			if mPreviousProgress != s.glyphProgress {
-				/* Inactivate all symbols */
-				for i in 0..<mSymbols.count {
-					mSymbols[i].state = .Inactive
-				}
-				/* Active only one */
-				let newprogress = s.glyphProgress
-				if 0<=newprogress && newprogress < mSymbols.count {
-					mSymbols[newprogress].state = .Active
-				}
-			}
+	private func updateSymbols(symbolNum num: Int){
+		mSymbols = []
+		var symbounds = GTProgressLayer.calcSymbolBounds(sequenceNum: num, frame: frame)
+		for _ in 0..<num {
+			let symbol = Symbol(state: .Inactive, bounds: symbounds)
+			mSymbols.append(symbol)
+			symbounds.origin.x += symbounds.size.width
 		}
+	}
 
+	private func updateProgress(progress prog: Int){
+		/* Inactivate all symbols */
+		for i in 0..<mSymbols.count {
+			mSymbols[i].state = .Inactive
+		}
+		/* Active only one */
+		if 0<=prog && prog < mSymbols.count {
+			mSymbols[prog].state = .Active
+		}
 	}
 
 	open override func drawContent(in context: CGContext){
