@@ -17,6 +17,8 @@ class GameViewController: UIViewController
 	@IBOutlet weak var mAboutBarButton: UIBarButtonItem!
 	@IBOutlet weak var mHintText: KCTextField!
 	@IBOutlet weak var mProgressView: KCLayerView!
+	@IBOutlet weak var mTimerText: KCTextField!
+	@IBOutlet weak var mGlyphName: KCTextField!
 	@IBOutlet weak var mStartButton: KCButton!
 	@IBOutlet weak var mLayerView: KCLayerView!
 	private var	   mTimer = KCTimer()
@@ -27,9 +29,16 @@ class GameViewController: UIViewController
 		let state = sharedState()
 		setupStartButton(gameState: state)
 		setupHintText(gameState: state)
+		setupTimerText(gameState: state)
+		setupGlyphName(gameState: state)
+
+		setupTimer(gameState: state)
+	}
+
+	override func viewDidLayoutSubviews() {
+		let state = sharedState()
 		setupProgressView(gameState: state)
 		setupGlyphView(gameState: state)
-		setupTimer(gameState: state)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -82,13 +91,50 @@ class GameViewController: UIViewController
 	}
 
 	private func setupHintText(gameState state: GTGameState) {
-		mHintText.backgroundColor = KGColorTable.gold
+		let colors = GTColorPreference.hintTextColor
+		mHintText.state = state
+		mHintText.setColors(colors: colors)
+		mHintText.text = "Press \"Start\" for glyph game"
+		mHintText.alignment = .left
+		mHintText.decideTextCallback = {
+			(state: CNState) -> String? in
+			if let s = state as? GTGameState {
+				if s.factor == .Scene {
+					let text: String
+					switch s.scene {
+					case .StartScene:	text = "Press \"Start\" for glyph game"
+					case .QuestionScene:	text = "Memorize glyph sequence"
+					case .AnswerScene:	text = "Trace the shown glyph sequence"
+					case .CheckScene:	text = "Check the sequence"
+					}
+					return text
+				}
+			}
+			return nil
+		}
 	}
 
 	private func setupProgressView(gameState state: GTGameState) {
 		let progress = GTProgressLayer(frame: mProgressView.bounds)
 		mProgressView.state = state
 		mProgressView.rootLayer.addSublayer(progress)
+	}
+
+	private func setupTimerText(gameState state: GTGameState) {
+		let colors = GTColorPreference.glyphNameTextColor
+		mTimerText.state = state
+		mTimerText.alignment = .center
+		mTimerText.text = "Timer Text"
+		mTimerText.setColors(colors: colors)
+	}
+
+	private func setupGlyphName(gameState state: GTGameState) {
+		let colors = GTColorPreference.glyphNameTextColor
+		mGlyphName.state	= state
+		mGlyphName.alignment	= .center
+		mGlyphName.text		= "Glyph Name"
+		mGlyphName.setColors(colors: colors)
+
 	}
 
 	private func setupGlyphView(gameState state: GTGameState) {
