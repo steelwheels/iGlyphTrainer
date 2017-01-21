@@ -18,7 +18,7 @@ private class GTVertexDrawer
 		let center = b.center
 		let radius = min(b.size.width, b.size.height)/2.0
 		mEclipse  = KGEclipse(center: center, innerRadius: radius*0.5, outerRadius: radius)
-		mGradient = KGGradientTable.sharedGradientTable.Gradient(forColor: GTColorPreference.glyphVertexColor)
+		mGradient = KGGradientTable.sharedGradientTable.Gradient(forColor: GTGUIPreference.glyphVertexColor)
 	}
 
 	public func draw(in context:CGContext){
@@ -30,7 +30,8 @@ private class GTVertexDrawer
 public class GTVerticesLayer: KCRepetitiveLayer
 {
 	public init(frame frm: CGRect){
-		let glyph   = KGGlyph(bounds: frm)
+		let maxsize = GTGUIPreference.maxGlyphSize
+		let glyph   = KGGlyph(bounds: frm, maxSize: maxsize)
 		let eradius = glyph.elementRadius
 		let esize   = CGSize(width: eradius*2.0, height: eradius*2.0)
 

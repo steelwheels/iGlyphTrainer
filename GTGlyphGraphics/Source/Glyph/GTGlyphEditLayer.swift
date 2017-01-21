@@ -13,8 +13,8 @@ public class GTGlyphEditLayer: KCStrokeLayer
 {
 	public override init(frame frm: CGRect){
 		super.init(frame: frm)
-		lineWidth = GTColorPreference.glyphStrokeWidth
-		lineColor = GTColorPreference.glyphStrokeColor
+		lineWidth = GTGUIPreference.glyphStrokeWidth
+		lineColor = GTGUIPreference.glyphStrokeColor
 	}
 
 	public required init?(coder decoder: NSCoder) {

@@ -15,7 +15,8 @@ public class GTGlyphDrawLayer: KCLayer
 	private var mGlyphCharacter:	GTGlyphCharacter? = nil
 
 	public override init(frame frm: CGRect){
-		mGlyph = KGGlyph(bounds: frm)
+		let maxsize = GTGUIPreference.maxGlyphSize
+		mGlyph = KGGlyph(bounds: frm, maxSize: maxsize)
 		super.init(frame: frm)
 	}
 
@@ -34,8 +35,8 @@ public class GTGlyphDrawLayer: KCLayer
 	}
 
 	open override func drawContent(in context: CGContext){
-		context.setLineWidth(GTColorPreference.glyphStrokeWidth)
-		context.setStrokeColor(GTColorPreference.glyphStrokeColor)
+		context.setLineWidth(GTGUIPreference.glyphStrokeWidth)
+		context.setStrokeColor(GTGUIPreference.glyphStrokeColor)
 		context.setLineCap(.round)
 		if let c = mGlyphCharacter {
 			let strokes = c.stroke()

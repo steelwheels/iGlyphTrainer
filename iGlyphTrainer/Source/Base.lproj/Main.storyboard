@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="crx-9w-m05"/>
+                                    <constraint firstAttribute="height" constant="44" id="btp-nS-hTb"/>
                                 </constraints>
                                 <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,77 +48,64 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQe-S2-gna" customClass="KCButton" customModule="KiwiControls">
-                                <rect key="frame" x="0.0" y="619" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="EG1-IN-cGj"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn9-Vw-9d8" customClass="KCLayerView" customModule="KiwiControls">
-                                <rect key="frame" x="0.0" y="85" width="375" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="sjS-bT-nZ1"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfk-sF-esN" customClass="KCTextField" customModule="KiwiControls">
-                                <rect key="frame" x="0.0" y="64" width="375" height="21"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="VjH-dW-dOV"/>
+                                    <constraint firstAttribute="height" constant="40" id="NUs-Ro-hTI"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-mg-Dbj" customClass="KCTextField" customModule="KiwiControls">
-                                <rect key="frame" x="0.0" y="125" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="hS0-51-khw"/>
+                                    <constraint firstAttribute="height" constant="40" id="jYg-ZK-lFM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evo-f3-NpG" customClass="KCTextField" customModule="KiwiControls">
-                                <rect key="frame" x="0.0" y="164" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Bsx-f9-uz1"/>
+                                    <constraint firstAttribute="height" constant="40" id="b1C-Iw-7tk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxu-kt-ZoD" customClass="KCLayerView" customModule="KiwiControls">
-                                <rect key="frame" x="32" y="300" width="311" height="311"/>
+                                <rect key="frame" x="0.0" y="184" width="375" height="443"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn9-Vw-9d8" customClass="KCLayerView" customModule="KiwiControls">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="311" id="RH0-kn-obJ"/>
-                                    <constraint firstAttribute="height" constant="311" id="XFI-av-ZF3"/>
+                                    <constraint firstAttribute="height" constant="40" id="F8z-pu-y58"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jfk-sF-esN" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="2Gy-nt-7n2"/>
-                            <constraint firstItem="gxu-kt-ZoD" firstAttribute="centerX" secondItem="jlL-su-dbJ" secondAttribute="centerX" id="4ap-LC-cP7"/>
-                            <constraint firstItem="evo-f3-NpG" firstAttribute="top" secondItem="mn9-Vw-9d8" secondAttribute="bottom" constant="39" id="66u-dd-376"/>
-                            <constraint firstAttribute="trailing" secondItem="evo-f3-NpG" secondAttribute="trailing" id="8fI-eg-dHO"/>
-                            <constraint firstAttribute="trailing" secondItem="kaz-VK-f9N" secondAttribute="trailing" id="AwK-uJ-Q4R"/>
-                            <constraint firstAttribute="trailing" secondItem="Jfk-sF-esN" secondAttribute="trailing" id="BF5-Nj-ztV"/>
-                            <constraint firstItem="1id-NE-aAt" firstAttribute="top" secondItem="ZQe-S2-gna" secondAttribute="bottom" constant="8" id="Bbx-Jf-c9A"/>
-                            <constraint firstItem="kaz-VK-f9N" firstAttribute="top" secondItem="Yiq-xd-b8E" secondAttribute="bottom" id="CN4-De-wxp"/>
-                            <constraint firstItem="9ng-mg-Dbj" firstAttribute="top" secondItem="mn9-Vw-9d8" secondAttribute="bottom" id="FId-fw-ttz"/>
-                            <constraint firstItem="kaz-VK-f9N" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="Htk-Ah-T6g"/>
-                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="Huh-NF-jVc"/>
-                            <constraint firstItem="ZQe-S2-gna" firstAttribute="top" secondItem="gxu-kt-ZoD" secondAttribute="bottom" constant="8" id="NgR-da-Prc"/>
-                            <constraint firstAttribute="trailing" secondItem="mn9-Vw-9d8" secondAttribute="trailing" id="XVf-0p-eHh"/>
-                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="top" secondItem="Jfk-sF-esN" secondAttribute="bottom" id="ZxU-mP-CA6"/>
-                            <constraint firstItem="evo-f3-NpG" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="ahx-oT-J9y"/>
-                            <constraint firstAttribute="trailing" secondItem="ZQe-S2-gna" secondAttribute="trailing" id="ob7-zP-3tE"/>
-                            <constraint firstItem="Jfk-sF-esN" firstAttribute="top" secondItem="kaz-VK-f9N" secondAttribute="bottom" id="rZj-Ub-vyX"/>
-                            <constraint firstItem="9ng-mg-Dbj" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="uu6-b4-IdB"/>
-                            <constraint firstAttribute="trailing" secondItem="9ng-mg-Dbj" secondAttribute="trailing" id="vNg-92-HdB"/>
-                            <constraint firstItem="ZQe-S2-gna" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="wxA-hg-h3z"/>
+                            <constraint firstItem="gxu-kt-ZoD" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="2AT-am-2ua"/>
+                            <constraint firstAttribute="trailing" secondItem="mn9-Vw-9d8" secondAttribute="trailing" id="99n-r4-cUa"/>
+                            <constraint firstItem="evo-f3-NpG" firstAttribute="top" secondItem="9ng-mg-Dbj" secondAttribute="bottom" id="9n2-Qn-CAw"/>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="top" secondItem="kaz-VK-f9N" secondAttribute="bottom" id="BZD-qI-Est"/>
+                            <constraint firstItem="ZQe-S2-gna" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="G0E-jR-LbC"/>
+                            <constraint firstItem="mn9-Vw-9d8" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="NpC-f3-F4x"/>
+                            <constraint firstAttribute="trailing" secondItem="gxu-kt-ZoD" secondAttribute="trailing" id="Qfx-l9-Jjb"/>
+                            <constraint firstItem="1id-NE-aAt" firstAttribute="top" secondItem="ZQe-S2-gna" secondAttribute="bottom" id="R8b-zj-NJa"/>
+                            <constraint firstAttribute="trailing" secondItem="kaz-VK-f9N" secondAttribute="trailing" id="SUA-y9-k1m"/>
+                            <constraint firstItem="kaz-VK-f9N" firstAttribute="top" secondItem="Yiq-xd-b8E" secondAttribute="bottom" id="UAI-s6-B7T"/>
+                            <constraint firstAttribute="trailing" secondItem="9ng-mg-Dbj" secondAttribute="trailing" id="eZM-cl-4Yu"/>
+                            <constraint firstItem="evo-f3-NpG" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="fQl-b2-t0a"/>
+                            <constraint firstAttribute="trailing" secondItem="ZQe-S2-gna" secondAttribute="trailing" id="jJW-bV-m6S"/>
+                            <constraint firstItem="gxu-kt-ZoD" firstAttribute="top" secondItem="evo-f3-NpG" secondAttribute="bottom" id="lPJ-ge-NwQ"/>
+                            <constraint firstAttribute="trailing" secondItem="evo-f3-NpG" secondAttribute="trailing" id="nKe-QK-12j"/>
+                            <constraint firstItem="kaz-VK-f9N" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="oTQ-Ft-lzv"/>
+                            <constraint firstItem="ZQe-S2-gna" firstAttribute="top" secondItem="gxu-kt-ZoD" secondAttribute="bottom" id="qhI-dL-KDX"/>
+                            <constraint firstItem="9ng-mg-Dbj" firstAttribute="leading" secondItem="jlL-su-dbJ" secondAttribute="leading" id="uHT-Zc-B7F"/>
+                            <constraint firstItem="9ng-mg-Dbj" firstAttribute="top" secondItem="mn9-Vw-9d8" secondAttribute="bottom" id="xLf-0x-T4f"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mAboutBarButton" destination="lME-3t-NaF" id="pZA-em-8U7"/>
                         <outlet property="mGlyphName" destination="evo-f3-NpG" id="aq5-lS-asT"/>
-                        <outlet property="mHintText" destination="Jfk-sF-esN" id="GYv-jB-xCC"/>
                         <outlet property="mLayerView" destination="gxu-kt-ZoD" id="y3v-Cb-rfr"/>
                         <outlet property="mProgressView" destination="mn9-Vw-9d8" id="1lY-eN-FF0"/>
                         <outlet property="mSetupBarButton" destination="yHo-GB-3Kq" id="ACX-sW-myK"/>
@@ -128,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ms-sB-zOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="143.47826086956522"/>
+            <point key="canvasLocation" x="24.637681159420293" y="141.84782608695653"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="cGm-gs-9gC">

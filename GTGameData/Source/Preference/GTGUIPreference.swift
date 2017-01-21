@@ -1,15 +1,15 @@
 /**
- * @file	GTColorPreference.m
- * @brief	Define GTColorPreference
+ * @file	GTGUIPreference.m
+ * @brief	Define GTGUIPreference
  * @par Copyright
- *   Copyright (C) 2016 Steel Wheels Project
+ *   Copyright (C) 2016-2017 Steel Wheels Project
  */
 
 import Foundation
 import KiwiGraphics
 import KiwiControls
 
-public class GTColorPreference
+public class GTGUIPreference
 {
 	public static let backgroundColor: CGColor		= KGColorTable.black.cgColor
 
@@ -32,6 +32,8 @@ public class GTColorPreference
 
 	public static let timerFontColor:CGColor		= KGColorTable.gold.cgColor
 
+	public static let maxGlyphSize: CGFloat			= 375
+	
 	public static let glyphVertexColor: CGColor		= KGColorTable.white.cgColor
 	public static let glyphStrokeWidth: CGFloat		= 10.0
 	public static let glyphStrokeColor: CGColor		= KGColorTable.gold.cgColor

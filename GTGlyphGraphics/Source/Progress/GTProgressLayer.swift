@@ -61,7 +61,7 @@ public class GTProgressLayer: KCLayer
 	}
 
 	private class func allocateSceneImages(scene s:GTScene, symbolSize size: CGSize) -> SceneSymbolImages {
-		let color = GTColorPreference.progressColor(scene: s)
+		let color = GTGUIPreference.progressColor(scene: s)
 		let actsymbol   = GTProgressLayer.allocateActiveSymbol(symbolSize: size, color: color)
 		let inactsymbol = GTProgressLayer.allocateInactiveSymbol(symbolSize: size, color: color)
 		return SceneSymbolImages.init(activeSymbol: actsymbol, inactiveSymbol: inactsymbol)
@@ -84,16 +84,22 @@ public class GTProgressLayer: KCLayer
 			}
 
 			var updated = false
-			if mSymbols.count != state.glyphSequenceCount {
-				updateSymbols(symbolNum:  state.glyphSequenceCount)
-				updated = true
-				/* mSymbols.count == state.glyphSequenceCount */
+			switch state.scene {
+			case .StartScene:
+				mSymbols = []
+			case .QuestionScene, .AnswerScene, .CheckScene:
+				if mSymbols.count != state.glyphSequenceCount {
+					updateSymbols(symbolNum:  state.glyphSequenceCount)
+					updated = true
+					/* mSymbols.count == state.glyphSequenceCount */
+				}
+				if updated || (mPreviousProgress != state.glyphProgress) {
+					updateProgress(progress: state.glyphProgress)
+					mPreviousProgress = state.glyphProgress
+					updated = true
+				}
 			}
-			if updated || (mPreviousProgress != state.glyphProgress) {
-				updateProgress(progress: state.glyphProgress)
-				mPreviousProgress = state.glyphProgress
-				updated = true
-			}
+
 			if updated {
 				setNeedsDisplay()
 			}
@@ -134,7 +140,7 @@ public class GTProgressLayer: KCLayer
 				context.draw(image, in: symbol.bounds)
 			}
 		} else {
-			context.setFillColor(GTColorPreference.backgroundColor)
+			context.setFillColor(GTGUIPreference.backgroundColor)
 			context.fill(bounds)
 		}
 	}
@@ -150,7 +156,7 @@ public class GTProgressLayer: KCLayer
 		let newimage = KGImage.generate(size: size, drawFunc: {
 			(size: CGSize, context: CGContext) -> Void in
 			context.setStrokeColor(col)
-			context.setLineWidth(GTColorPreference.progressStrokeWidth)
+			context.setLineWidth(GTGUIPreference.progressStrokeWidth)
 			context.setLineCap(.round)
 			let gradient = KGGradientTable.sharedGradientTable.Gradient(forColor: col)
 			context.draw(hexagon: hexagon(symbolSize: size), withGradient: gradient)
@@ -163,7 +169,7 @@ public class GTProgressLayer: KCLayer
 		let newimage = KGImage.generate(size: size, drawFunc: {
 			(size: CGSize, context: CGContext) -> Void in
 			context.setStrokeColor(col)
-			context.setLineWidth(GTColorPreference.progressStrokeWidth)
+			context.setLineWidth(GTGUIPreference.progressStrokeWidth)
 			context.setLineCap(.round)
 			context.draw(hexagon: hexagon(symbolSize: size), withGradient: nil)
 		})

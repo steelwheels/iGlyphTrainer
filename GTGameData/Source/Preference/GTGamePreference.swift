@@ -7,17 +7,23 @@
 
 import Foundation
 
+public enum GTGlyphHackLevel {
+	case High
+	case Normal
+	case Low
+}
+
 public class GTGamePreference
 {
 	public static var sharedPreference = GTGamePreference()
 
 	public var minimumWordNum	: Int
-	public var maxmumWordNum	:  Int
-	public var glyphInterval	: Double
+	public var maxmumWordNum	: Int
+	public var glyphHackLevel	: GTGlyphHackLevel
 
 	private init(){
 		minimumWordNum	= 1
 		maxmumWordNum	= 5
-		glyphInterval	= 1.0
+		glyphHackLevel	= .Normal
 	}
 }
